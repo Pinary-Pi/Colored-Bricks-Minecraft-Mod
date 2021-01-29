@@ -28,4 +28,23 @@ A block item for each added block.
 Added Recipes: 
 2 Recipes for each brick slab.
 	1 brick slab + dye = 1 colored slab or
-	3 colored brick slabs = 6 colored slabs
+	3 colored brick blocks = 6 colored slabs
+
+=====
+Version 1.0
+
+Add Blocks:
+A brick wall variant for each of the 16 minecraft colors.
+A brick stairs variant for each of the 16 minecraft colors.
+
+Added Items:
+A block item for each added block.
+
+Added Recipes:
+2 Recipes for each brick stairs.
+	1 brick stair + dye = 1 colored stairs or
+	6 colored brick blocks = 6 colored stairs
+
+2 Recipes for each brick wall.
+	1 brick wall + dye = 1 colored wall or
+	6 colored brick blocks = 6 colored walls
