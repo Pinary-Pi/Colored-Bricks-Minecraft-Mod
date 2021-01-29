@@ -1,0 +1,31 @@
+=====
+Version: 0.1 Beta
+
+Added Blocks:
+A brick (the block) varient for each of the 16 minecraft colors.
+
+Added Items:
+A block item for each added block.
+
+A brick (the item) varient for each of the 16 minecraft colors.
+
+Added Recipes:
+One recipe for each brick item. 1 dye + brick
+
+2 recipes for each brick block
+	1 brick + 1 dye = 1 colored brick or
+	4 colored brick items = 1 colored brick
+
+=====
+Version 0.2 Beta
+
+Added Blocks:
+A brick slab varient for each of the 16 minecraft colors.
+
+Added Items:
+A block item for each added block.
+
+Added Recipes: 
+2 Recipes for each brick slab.
+	1 brick slab + dye = 1 colored slab or
+	3 colored brick slabs = 6 colored slabs
