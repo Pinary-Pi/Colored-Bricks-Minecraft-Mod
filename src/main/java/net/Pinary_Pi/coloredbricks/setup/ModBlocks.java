@@ -134,7 +134,7 @@ public class ModBlocks {
     public static final RegistryObject<StairsBlock> RED_BRICK_STAIRS = register("red_brick_stairs", () -> 
         new StairsBlock(RED_BRICKS.get().getDefaultState(), AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
 
-    // Stairs
+    // Wall
 
     public static final RegistryObject<WallBlock> WHITE_BRICK_WALL = register("white_brick_wall", () ->
         new WallBlock(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
