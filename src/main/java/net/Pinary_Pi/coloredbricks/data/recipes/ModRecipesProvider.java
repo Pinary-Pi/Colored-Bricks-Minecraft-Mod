@@ -292,6 +292,19 @@ public class ModRecipesProvider extends RecipeProvider {
         .addCriterion("has item", hasItem(ModTags.Items.BRICK_LIGHT_GRAY))
         .build(consumer, coloredbricks.getId("light_gray_bricks_alt"));
 
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.GRAY_BRICKS.get())
+        .addIngredient(Blocks.BRICKS)
+        .addIngredient(Tags.Items.DYES_GRAY)
+        .addCriterion("has item", hasItem(Blocks.BRICKS))
+        .build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.GRAY_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_GRAY)
+        .patternLine("##")
+        .patternLine("##")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_GRAY))
+        .build(consumer, coloredbricks.getId("gray_bricks_alt"));
+
         ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.BLACK_BRICKS.get())
         .addIngredient(Blocks.BRICKS)
         .addIngredient(Tags.Items.DYES_BLACK)
