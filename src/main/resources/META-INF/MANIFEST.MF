@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Implementation-Title: SilentGear
-Implementation-Version: 1.1
-Specification-Vendor: Pinary_Pi
-Specification-Title: pinary_pi
-Implementation-Timestamp: 2021-01-02T15:16:47-0600
-Specification-Version: 1.1
-Implementation-Vendor: Pinary_Pi
