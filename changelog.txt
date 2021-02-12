@@ -54,3 +54,8 @@ Version 1.1
 
 Bug Fixes:
 	Fixed Gray Bricks recipe not working.
+
+=====
+Version 1.2
+
+Added Language Chinese(Taiwan) - zh-tw.json
