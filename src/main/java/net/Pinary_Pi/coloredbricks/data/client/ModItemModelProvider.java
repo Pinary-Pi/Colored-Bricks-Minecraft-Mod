@@ -62,22 +62,6 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("gray_brick_stairs", modLoc("block/gray_brick_stairs"));
         withExistingParent("black_brick_stairs", modLoc("block/black_brick_stairs"));
         withExistingParent("red_brick_stairs", modLoc("block/red_brick_stairs"));
-        /* withExistingParent("white_brick_wall", modLoc("block/white_brick_wall_post"));
-        withExistingParent("orange_brick_wall", modLoc("block/orange_brick_wall_post"));
-        withExistingParent("pink_brick_wall", modLoc("block/pink_brick_wall_post"));
-        withExistingParent("yellow_brick_wall", modLoc("block/yellow_brick_wall_post"));
-        withExistingParent("lime_brick_wall", modLoc("block/lime_brick_wall_post"));
-        withExistingParent("green_brick_wall", modLoc("block/green_brick_wall_post"));
-        withExistingParent("light_blue_brick_wall", modLoc("block/light_blue_brick_wall_post"));
-        withExistingParent("cyan_brick_wall", modLoc("block/cyan_brick_wall_post"));
-        withExistingParent("blue_brick_wall", modLoc("block/blue_brick_wall_post"));
-        withExistingParent("magenta_brick_wall", modLoc("block/magenta_brick_wall_post"));
-        withExistingParent("purple_brick_wall", modLoc("block/purple_brick_wall_post"));
-        withExistingParent("brown_brick_wall", modLoc("block/brown_brick_wall_post"));
-        withExistingParent("light_gray_brick_wall", modLoc("block/light_gray_brick_wall_post"));
-        withExistingParent("gray_brick_wall", modLoc("block/gray_brick_wall_post"));
-        withExistingParent("black_brick_wall", modLoc("block/black_brick_wall_post"));
-        withExistingParent("red_brick_wall", modLoc("block/red_brick_wall_post")); */
 
         wallBuilder("white");
         wallBuilder("orange");

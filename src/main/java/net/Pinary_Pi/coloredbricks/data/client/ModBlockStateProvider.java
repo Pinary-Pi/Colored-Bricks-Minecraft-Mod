@@ -29,6 +29,25 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.LIGHT_GRAY_BRICKS.get());
         simpleBlock(ModBlocks.BLACK_BRICKS.get());
         simpleBlock(ModBlocks.RED_BRICKS.get());
+
+        // Chiseled Bricks
+
+        simpleBlock(ModBlocks.WHITE_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.ORANGE_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.PINK_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.YELLOW_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.LIME_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.GREEN_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.LIGHT_BLUE_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.CYAN_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.BLUE_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.MAGENTA_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.PURPLE_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.BROWN_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.GRAY_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.LIGHT_GRAY_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.BLACK_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.RED_CHISELED_BRICKS.get());
         
         slabBlock(ModBlocks.WHITE_BRICK_SLAB.get(), modLoc("block/white_bricks"), modLoc("block/white_bricks"));
         slabBlock(ModBlocks.ORANGE_BRICK_SLAB.get(), modLoc("block/orange_bricks"), modLoc("block/orange_bricks"));    
