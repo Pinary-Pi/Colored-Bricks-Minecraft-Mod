@@ -62,6 +62,22 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("gray_brick_stairs", modLoc("block/gray_brick_stairs"));
         withExistingParent("black_brick_stairs", modLoc("block/black_brick_stairs"));
         withExistingParent("red_brick_stairs", modLoc("block/red_brick_stairs"));
+        withExistingParent("white_chiseled_bricks", modLoc("block/white_chiseled_bricks"));
+        withExistingParent("orange_chiseled_bricks", modLoc("block/orange_chiseled_bricks"));
+        withExistingParent("pink_chiseled_bricks", modLoc("block/pink_chiseled_bricks"));
+        withExistingParent("yellow_chiseled_bricks", modLoc("block/yellow_chiseled_bricks"));
+        withExistingParent("lime_chiseled_bricks", modLoc("block/lime_chiseled_bricks"));
+        withExistingParent("green_chiseled_bricks", modLoc("block/green_chiseled_bricks"));
+        withExistingParent("light_blue_chiseled_bricks", modLoc("block/light_blue_chiseled_bricks"));
+        withExistingParent("cyan_chiseled_bricks", modLoc("block/cyan_chiseled_bricks"));
+        withExistingParent("blue_chiseled_bricks", modLoc("block/blue_chiseled_bricks"));
+        withExistingParent("magenta_chiseled_bricks", modLoc("block/magenta_chiseled_bricks"));
+        withExistingParent("purple_chiseled_bricks", modLoc("block/purple_chiseled_bricks"));
+        withExistingParent("brown_chiseled_bricks", modLoc("block/brown_chiseled_bricks"));
+        withExistingParent("gray_chiseled_bricks", modLoc("block/gray_chiseled_bricks"));
+        withExistingParent("light_gray_chiseled_bricks", modLoc("block/light_gray_chiseled_bricks"));
+        withExistingParent("black_chiseled_bricks", modLoc("block/black_chiseled_bricks"));
+        withExistingParent("red_chiseled_bricks", modLoc("block/red_chiseled_bricks"));
 
         wallBuilder("white");
         wallBuilder("orange");
