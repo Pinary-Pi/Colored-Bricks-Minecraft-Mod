@@ -92,6 +92,7 @@ public class ModBlockLootTables extends BlockLootTables {
         registerDropSelfLootTable(ModBlocks.GRAY_CHISELED_BRICKS.get());
         registerDropSelfLootTable(ModBlocks.BLACK_CHISELED_BRICKS.get());
         registerDropSelfLootTable(ModBlocks.RED_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.CHISELED_BRICKS.get());
     }
 
     @Override

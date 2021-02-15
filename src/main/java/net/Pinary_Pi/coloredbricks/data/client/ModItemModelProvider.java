@@ -78,6 +78,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("light_gray_chiseled_bricks", modLoc("block/light_gray_chiseled_bricks"));
         withExistingParent("black_chiseled_bricks", modLoc("block/black_chiseled_bricks"));
         withExistingParent("red_chiseled_bricks", modLoc("block/red_chiseled_bricks"));
+        withExistingParent("chiseled_bricks", modLoc("block/chiseled_bricks"));
 
         wallBuilder("white");
         wallBuilder("orange");

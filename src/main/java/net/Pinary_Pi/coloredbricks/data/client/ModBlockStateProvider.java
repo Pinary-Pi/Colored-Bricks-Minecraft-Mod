@@ -48,6 +48,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlock(ModBlocks.LIGHT_GRAY_CHISELED_BRICKS.get());
         simpleBlock(ModBlocks.BLACK_CHISELED_BRICKS.get());
         simpleBlock(ModBlocks.RED_CHISELED_BRICKS.get());
+        simpleBlock(ModBlocks.CHISELED_BRICKS.get());
         
         slabBlock(ModBlocks.WHITE_BRICK_SLAB.get(), modLoc("block/white_bricks"), modLoc("block/white_bricks"));
         slabBlock(ModBlocks.ORANGE_BRICK_SLAB.get(), modLoc("block/orange_bricks"), modLoc("block/orange_bricks"));    

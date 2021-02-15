@@ -84,6 +84,8 @@ public class ModBlocks {
             new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
     public static final RegistryObject<Block> RED_CHISELED_BRICKS = register("red_chiseled_bricks", () -> 
             new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> CHISELED_BRICKS = register("chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
 
     // Slabs
 
