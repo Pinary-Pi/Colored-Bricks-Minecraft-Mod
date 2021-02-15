@@ -76,6 +76,22 @@ public class ModBlockLootTables extends BlockLootTables {
         registerDropSelfLootTable(ModBlocks.GRAY_BRICK_WALL.get());
         registerDropSelfLootTable(ModBlocks.BLACK_BRICK_WALL.get());
         registerDropSelfLootTable(ModBlocks.RED_BRICK_WALL.get());
+        registerDropSelfLootTable(ModBlocks.WHITE_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.ORANGE_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.PINK_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.YELLOW_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.LIME_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.GREEN_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.LIGHT_BLUE_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.CYAN_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.BLUE_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.MAGENTA_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.PURPLE_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.BROWN_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.LIGHT_GRAY_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.GRAY_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.BLACK_CHISELED_BRICKS.get());
+        registerDropSelfLootTable(ModBlocks.RED_CHISELED_BRICKS.get());
     }
 
     @Override

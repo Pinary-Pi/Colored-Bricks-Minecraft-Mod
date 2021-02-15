@@ -15,6 +15,8 @@ import net.minecraftforge.fml.RegistryObject;
 import java.util.function.Supplier;
 
 public class ModBlocks {
+    // Blocks
+
     public static final RegistryObject<Block> WHITE_BRICKS = register("white_bricks", () -> 
             new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
     public static final RegistryObject<Block> ORANGE_BRICKS = register("orange_bricks", () -> 
@@ -46,6 +48,41 @@ public class ModBlocks {
     public static final RegistryObject<Block> BLACK_BRICKS = register("black_bricks", () -> 
             new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
     public static final RegistryObject<Block> RED_BRICKS = register("red_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+
+            // Chiseled Blocks
+
+    public static final RegistryObject<Block> WHITE_CHISELED_BRICKS = register("white_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> ORANGE_CHISELED_BRICKS = register("orange_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> PINK_CHISELED_BRICKS = register("pink_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> YELLOW_CHISELED_BRICKS = register("yellow_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> LIME_CHISELED_BRICKS = register("lime_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> GREEN_CHISELED_BRICKS = register("green_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> LIGHT_BLUE_CHISELED_BRICKS = register("light_blue_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> CYAN_CHISELED_BRICKS = register("cyan_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> BLUE_CHISELED_BRICKS = register("blue_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> MAGENTA_CHISELED_BRICKS = register("magenta_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> PURPLE_CHISELED_BRICKS = register("purple_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> BROWN_CHISELED_BRICKS = register("brown_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> GRAY_CHISELED_BRICKS = register("gray_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> LIGHT_GRAY_CHISELED_BRICKS = register("light_gray_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> BLACK_CHISELED_BRICKS = register("black_chiseled_bricks", () -> 
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<Block> RED_CHISELED_BRICKS = register("red_chiseled_bricks", () -> 
             new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
 
     // Slabs
