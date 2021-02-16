@@ -180,5 +180,42 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_BLACK_MINECRAFT);
         getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_RED_MINECRAFT).add(ModBlocks.RED_BRICK_WALL.get());
         getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_RED_MINECRAFT);
+
+        // Chiseled Bricks
+
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_WHITE);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_WHITE).add(ModBlocks.WHITE_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_ORANGE);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_ORANGE).add(ModBlocks.ORANGE_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_PINK);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_PINK).add(ModBlocks.PINK_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_YELLOW);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_YELLOW).add(ModBlocks.YELLOW_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_LIME);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_LIME).add(ModBlocks.LIME_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_GREEN);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_GREEN).add(ModBlocks.GREEN_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_LIGHT_BLUE);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_LIGHT_BLUE).add(ModBlocks.LIGHT_BLUE_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_CYAN);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_CYAN).add(ModBlocks.CYAN_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_BLUE);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_BLUE).add(ModBlocks.BLUE_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_MAGENTA);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_MAGENTA).add(ModBlocks.MAGENTA_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_PURPLE);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_PURPLE).add(ModBlocks.PURPLE_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_BROWN);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_BROWN).add(ModBlocks.BROWN_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_LIGHT_GRAY);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_LIGHT_GRAY).add(ModBlocks.LIGHT_GRAY_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_GRAY);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_GRAY).add(ModBlocks.GRAY_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_BLACK);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_BLACK).add(ModBlocks.BLACK_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED_RED);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED_RED).add(ModBlocks.RED_CHISELED_BRICKS.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICKS_CHISELED);
+        getOrCreateBuilder(ModTags.Blocks.BRICKS_CHISELED).add(ModBlocks.CHISELED_BRICKS.get());
     }
 }

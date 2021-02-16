@@ -81,12 +81,24 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         copy(ModTags.Blocks.BRICK_WALL_GRAY, ModTags.Items.BRICK_WALL_GRAY);
         copy(ModTags.Blocks.BRICK_WALL_BLACK, ModTags.Items.BRICK_WALL_BLACK);
         copy(ModTags.Blocks.BRICK_WALL_RED, ModTags.Items.BRICK_WALL_RED);
+        copy(ModTags.Blocks.BRICKS_CHISELED_WHITE, ModTags.Items.BRICKS_CHISELED_WHITE);
+        copy(ModTags.Blocks.BRICKS_CHISELED_ORANGE, ModTags.Items.BRICKS_CHISELED_ORANGE);
+        copy(ModTags.Blocks.BRICKS_CHISELED_PINK, ModTags.Items.BRICKS_CHISELED_PINK);
+        copy(ModTags.Blocks.BRICKS_CHISELED_YELLOW, ModTags.Items.BRICKS_CHISELED_YELLOW);
+        copy(ModTags.Blocks.BRICKS_CHISELED_LIME, ModTags.Items.BRICKS_CHISELED_LIME);
+        copy(ModTags.Blocks.BRICKS_CHISELED_GREEN, ModTags.Items.BRICKS_CHISELED_GREEN);
+        copy(ModTags.Blocks.BRICKS_CHISELED_LIGHT_BLUE, ModTags.Items.BRICKS_CHISELED_LIGHT_BLUE);
+        copy(ModTags.Blocks.BRICKS_CHISELED_CYAN, ModTags.Items.BRICKS_CHISELED_CYAN);
+        copy(ModTags.Blocks.BRICKS_CHISELED_BLUE, ModTags.Items.BRICKS_CHISELED_BLUE);
+        copy(ModTags.Blocks.BRICKS_CHISELED_MAGENTA, ModTags.Items.BRICKS_CHISELED_MAGENTA);
+        copy(ModTags.Blocks.BRICKS_CHISELED_PURPLE, ModTags.Items.BRICKS_CHISELED_PURPLE);
+        copy(ModTags.Blocks.BRICKS_CHISELED_BROWN, ModTags.Items.BRICKS_CHISELED_BROWN);
+        copy(ModTags.Blocks.BRICKS_CHISELED_LIGHT_GRAY, ModTags.Items.BRICKS_CHISELED_LIGHT_GRAY);
+        copy(ModTags.Blocks.BRICKS_CHISELED_GRAY, ModTags.Items.BRICKS_CHISELED_GRAY);
+        copy(ModTags.Blocks.BRICKS_CHISELED_BLACK, ModTags.Items.BRICKS_CHISELED_BLACK);
+        copy(ModTags.Blocks.BRICKS_CHISELED_RED, ModTags.Items.BRICKS_CHISELED_RED);
+        copy(ModTags.Blocks.BRICKS_CHISELED, ModTags.Items.BRICKS_CHISELED);
 
-
-
-
-
-        
         copy(Tags.Blocks.STONE, Tags.Items.STONE);
 
         getOrCreateBuilder(ModTags.Items.BRICK_WHITE).add(ModItems.WHITE_BRICK.get());
