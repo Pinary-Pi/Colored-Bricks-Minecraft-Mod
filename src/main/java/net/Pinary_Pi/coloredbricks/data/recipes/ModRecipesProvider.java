@@ -1234,5 +1234,107 @@ public class ModRecipesProvider extends RecipeProvider {
             ModBlocks.RED_BRICK_WALL.get())
             .addCriterion("has item", hasItem(ModTags.Items.BRICKS_RED))
             .build(consumer, coloredbricks.getId("red_brick_wall_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_WHITE),
+            ModBlocks.WHITE_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_WHITE))
+            .build(consumer, coloredbricks.getId("white_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_ORANGE),
+            ModBlocks.ORANGE_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_ORANGE))
+            .build(consumer, coloredbricks.getId("orange_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_PINK),
+            ModBlocks.PINK_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_PINK))
+            .build(consumer, coloredbricks.getId("pink_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_YELLOW),
+            ModBlocks.YELLOW_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_YELLOW))
+            .build(consumer, coloredbricks.getId("yellow_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_LIME),
+            ModBlocks.LIME_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_LIME))
+            .build(consumer, coloredbricks.getId("lime_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_GREEN),
+            ModBlocks.GREEN_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_GREEN))
+            .build(consumer, coloredbricks.getId("green_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_LIGHT_BLUE),
+            ModBlocks.LIGHT_BLUE_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_LIGHT_BLUE))
+            .build(consumer, coloredbricks.getId("light_blue_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CYAN),
+            ModBlocks.CYAN_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CYAN))
+            .build(consumer, coloredbricks.getId("cyan_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_BLUE),
+            ModBlocks.BLUE_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_BLUE))
+            .build(consumer, coloredbricks.getId("blue_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_MAGENTA),
+            ModBlocks.MAGENTA_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_MAGENTA))
+            .build(consumer, coloredbricks.getId("magenta_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_PURPLE),
+            ModBlocks.PURPLE_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_PURPLE))
+            .build(consumer, coloredbricks.getId("purple_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_BROWN),
+            ModBlocks.BROWN_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_BROWN))
+            .build(consumer, coloredbricks.getId("brown_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_LIGHT_GRAY),
+            ModBlocks.LIGHT_GRAY_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_LIGHT_GRAY))
+            .build(consumer, coloredbricks.getId("light_gray_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_GRAY),
+            ModBlocks.GRAY_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_GRAY))
+            .build(consumer, coloredbricks.getId("gray_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_BLACK),
+            ModBlocks.BLACK_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_BLACK))
+            .build(consumer, coloredbricks.getId("black_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_RED),
+            ModBlocks.RED_CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_RED))
+            .build(consumer, coloredbricks.getId("red_chiseled_bricks_stonecutter"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromItems(
+            Blocks.BRICKS.asItem()),
+            ModBlocks.CHISELED_BRICKS.get())
+            .addCriterion("has item", hasItem(Blocks.BRICKS))
+            .build(consumer, coloredbricks.getId("chiseled_bricks_stonecutter"));
     }
 }
