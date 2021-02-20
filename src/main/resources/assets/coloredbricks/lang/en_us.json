@@ -82,5 +82,23 @@
     "block.coloredbricks.light_gray_brick_wall" : "Light Gray Brick Wall",
     "block.coloredbricks.gray_brick_wall" : "Gray Brick Wall",
     "block.coloredbricks.black_brick_wall" : "Black Brick Wall",
-    "block.coloredbricks.red_brick_wall" : "Red Brick Wall"
+    "block.coloredbricks.red_brick_wall" : "Red Brick Wall",
+
+    "block.coloredbricks.chiseled_bricks" : "Chiseled Bricks",
+    "block.coloredbricks.white_chiseled_bricks" : "White Chiseled Bricks",
+    "block.coloredbricks.orange_chiseled_bricks" : "Orange Chiseled Bricks",
+    "block.coloredbricks.pink_chiseled_bricks" : "Pink Chiseled Bricks",
+    "block.coloredbricks.yellow_chiseled_bricks" : "Yellow Chiseled Bricks",
+    "block.coloredbricks.lime_chiseled_bricks" : "Lime Chiseled Bricks",
+    "block.coloredbricks.green_chiseled_bricks" : "Green Chiseled Bricks",
+    "block.coloredbricks.light_blue_chiseled_bricks" : "Light Blue Chiseled Bricks",
+    "block.coloredbricks.cyan_chiseled_bricks" : "Cyan Chiseled Bricks",
+    "block.coloredbricks.blue_chiseled_bricks" : "Blue Chiseled Bricks",
+    "block.coloredbricks.magenta_chiseled_bricks" : "Magenta Chiseled Bricks",
+    "block.coloredbricks.purple_chiseled_bricks" : "Purple Chiseled Bricks",
+    "block.coloredbricks.brown_chiseled_bricks" : "Brown Chiseled Bricks",
+    "block.coloredbricks.light_gray_chiseled_bricks" : "Light Gray Chiseled Bricks",
+    "block.coloredbricks.gray_chiseled_bricks" : "Gray Chiseled Bricks",
+    "block.coloredbricks.black_chiseled_bricks" : "Black Chiseled Bricks",
+    "block.coloredbricks.red_chiseled_bricks" : "Red Chiseled Bricks"
 }
