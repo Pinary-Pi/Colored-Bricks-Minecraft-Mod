@@ -1336,5 +1336,220 @@ public class ModRecipesProvider extends RecipeProvider {
             ModBlocks.CHISELED_BRICKS.get())
             .addCriterion("has item", hasItem(Blocks.BRICKS))
             .build(consumer, coloredbricks.getId("chiseled_bricks_stonecutter"));
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.WHITE_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_WHITE)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.WHITE_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_WHITE)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_WHITE))
+        .build(consumer, coloredbricks.getId("white_chiseled_bricks_alt"));
+        
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.ORANGE_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_ORANGE)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.ORANGE_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_ORANGE)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_ORANGE))
+        .build(consumer, coloredbricks.getId("orange_chiseled_bricks_alt"));
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.PINK_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_PINK)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.PINK_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_PINK)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_PINK))
+        .build(consumer, coloredbricks.getId("pink_chiseled_bricks_alt"));
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.YELLOW_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_YELLOW)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.YELLOW_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_YELLOW)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_YELLOW))
+        .build(consumer, coloredbricks.getId("yellow_chiseled_bricks_alt"));
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.LIME_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_LIME)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.LIME_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_LIME)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_LIME))
+        .build(consumer, coloredbricks.getId("lime_chiseled_bricks_alt"));
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.GREEN_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_GREEN)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.GREEN_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_GREEN)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_GREEN))
+        .build(consumer, coloredbricks.getId("green_chiseled_bricks_alt"));
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.LIGHT_BLUE_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_LIGHT_BLUE)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.LIGHT_BLUE_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_LIGHT_BLUE)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_LIGHT_BLUE))
+        .build(consumer, coloredbricks.getId("light_blue_chiseled_bricks_alt"));
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.CYAN_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_CYAN)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.CYAN_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_CYAN)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CYAN))
+        .build(consumer, coloredbricks.getId("cyan_chiseled_bricks_alt"));
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.BLUE_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_BLUE)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.BLUE_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_BLUE)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_BLUE))
+        .build(consumer, coloredbricks.getId("blue_chiseled_bricks_alt"));
+        
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.MAGENTA_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_MAGENTA)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.MAGENTA_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_MAGENTA)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_MAGENTA))
+        .build(consumer, coloredbricks.getId("magenta_chiseled_bricks_alt"));
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.PURPLE_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_PURPLE)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.PURPLE_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_PURPLE)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_PURPLE))
+        .build(consumer, coloredbricks.getId("purple_chiseled_bricks_alt"));
+        
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.BROWN_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_BROWN)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.BROWN_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_BROWN)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_BROWN))
+        .build(consumer, coloredbricks.getId("brown_chiseled_bricks_alt"));
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.LIGHT_GRAY_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_LIGHT_GRAY)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.LIGHT_GRAY_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_LIGHT_GRAY)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_LIGHT_GRAY))
+        .build(consumer, coloredbricks.getId("light_gray_chiseled_bricks_alt"));
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.GRAY_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_GRAY)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.GRAY_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_GRAY)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_GRAY))
+        .build(consumer, coloredbricks.getId("gray_chiseled_bricks_alt"));
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.BLACK_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_BLACK)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.BLACK_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_BLACK)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_BLACK))
+        .build(consumer, coloredbricks.getId("black_chiseled_bricks_alt"));
+        
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.RED_CHISELED_BRICKS.get())
+        .addIngredient(ModBlocks.CHISELED_BRICKS.get())
+        .addIngredient(Tags.Items.DYES_RED)
+        .addCriterion("has item", hasItem(ModBlocks.CHISELED_BRICKS.get()))
+        .build(consumer);
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.RED_CHISELED_BRICKS.get())
+        .key('#', ModTags.Items.BRICK_SLAB_RED)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_RED))
+        .build(consumer, coloredbricks.getId("red_chiseled_bricks_alt"));
+
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.CHISELED_BRICKS.get())
+        .key('#', Blocks.BRICK_SLAB)
+        .patternLine("#")
+        .patternLine("#")
+        .addCriterion("has item", hasItem(Blocks.BRICK_SLAB))
+        .build(consumer);
     }
 }

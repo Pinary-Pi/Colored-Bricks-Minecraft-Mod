@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:stone/gray_slab"
+    }
+  },
+  "result": {
+    "item": "coloredbricks:gray_chiseled_bricks"
+  }
+}
