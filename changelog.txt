@@ -59,3 +59,36 @@ Bug Fixes:
 Version 1.2
 
 Added Language Chinese(Taiwan) - zh-tw.json
+
+=====
+Version 2.0
+
+Added Chiseled Bricks
+
+Designs:
+	Normal - Plain Design
+	White - Sheep
+	Orange - Fox
+	Pink - Pig
+	Yellow - Bee
+	Lime - Creeper
+	Green - Zombie
+	Light Blue - Dolphin
+	Cyan - Cod 
+	Blue - Squid
+	Magenta - Parrot
+	Purple - Shulker
+	Brown - Villager
+	Light Gray - Skeleton 
+	Gray - Pillager
+	Black - Enderman
+	Red - Chicken
+
+Recipes:
+
+	Stonecutter:
+		Brick -> Chiseled Brick
+	Crafting Table
+		Brick + Dye -> Chiseled Brick
+		2 Slabs -> Chiseled Brick
+
