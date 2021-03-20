@@ -96,3 +96,8 @@ Version 3.0
 
 Added German Language de_de.json 
 
+=====
+Version 3.1
+
+Updated zh_tw.json (Taiwan Language) to include the Chiseled Bricks
+
