@@ -86,6 +86,42 @@ public class ModBlocks {
             new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
     public static final RegistryObject<Block> CHISELED_BRICKS = register("chiseled_bricks", () -> 
             new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    
+    // Cracked Bricks
+        public static final RegistryObject<Block> CRACKED_BRICKS = register("cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> WHITE_CRACKED_BRICKS = register("white_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> ORANGE_CRACKED_BRICKS = register("orange_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> PINK_CRACKED_BRICKS = register("pink_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> YELLOW_CRACKED_BRICKS = register("yellow_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> LIME_CRACKED_BRICKS = register("lime_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> GREEN_CRACKED_BRICKS = register("green_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> LIGHT_BLUE_CRACKED_BRICKS = register("light_blue_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> CYAN_CRACKED_BRICKS = register("cyan_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> BLUE_CRACKED_BRICKS = register("blue_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> MAGENTA_CRACKED_BRICKS = register("magenta_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> PURPLE_CRACKED_BRICKS = register("purple_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> BROWN_CRACKED_BRICKS = register("brown_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> LIGHT_GRAY_CRACKED_BRICKS = register("light_gray_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> GRAY_CRACKED_BRICKS = register("gray_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> BLACK_CRACKED_BRICKS = register("black_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+        public static final RegistryObject<Block> RED_CRACKED_BRICKS = register("red_cracked_bricks", () ->
+            new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
 
     // Slabs
 
