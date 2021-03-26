@@ -98,7 +98,25 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         copy(ModTags.Blocks.BRICKS_CHISELED_BLACK, ModTags.Items.BRICKS_CHISELED_BLACK);
         copy(ModTags.Blocks.BRICKS_CHISELED_RED, ModTags.Items.BRICKS_CHISELED_RED);
         copy(ModTags.Blocks.BRICKS_CHISELED, ModTags.Items.BRICKS_CHISELED);
+        copy(ModTags.Blocks.BRICKS_CRACKED, ModTags.Items.BRICKS_CRACKED);
+        copy(ModTags.Blocks.BRICKS_CRACKED_WHITE, ModTags.Items.BRICKS_CRACKED_WHITE);
+        copy(ModTags.Blocks.BRICKS_CRACKED_ORANGE, ModTags.Items.BRICKS_CRACKED_ORANGE);
+        copy(ModTags.Blocks.BRICKS_CRACKED_PINK, ModTags.Items.BRICKS_CRACKED_PINK);
+        copy(ModTags.Blocks.BRICKS_CRACKED_YELLOW, ModTags.Items.BRICKS_CRACKED_YELLOW);
+        copy(ModTags.Blocks.BRICKS_CRACKED_LIME, ModTags.Items.BRICKS_CRACKED_LIME);
+        copy(ModTags.Blocks.BRICKS_CRACKED_GREEN, ModTags.Items.BRICKS_CRACKED_GREEN);
+        copy(ModTags.Blocks.BRICKS_CRACKED_LIGHT_BLUE, ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE);
+        copy(ModTags.Blocks.BRICKS_CRACKED_CYAN, ModTags.Items.BRICKS_CRACKED_CYAN);
+        copy(ModTags.Blocks.BRICKS_CRACKED_BLUE, ModTags.Items.BRICKS_CRACKED_BLUE);
+        copy(ModTags.Blocks.BRICKS_CRACKED_MAGENTA, ModTags.Items.BRICKS_CRACKED_MAGENTA);
+        copy(ModTags.Blocks.BRICKS_CRACKED_PURPLE, ModTags.Items.BRICKS_CRACKED_PURPLE);
+        copy(ModTags.Blocks.BRICKS_CRACKED_BROWN, ModTags.Items.BRICKS_CRACKED_BROWN);
+        copy(ModTags.Blocks.BRICKS_CRACKED_GRAY, ModTags.Items.BRICKS_CRACKED_GRAY);
+        copy(ModTags.Blocks.BRICKS_CRACKED_LIGHT_GRAY, ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY);
+        copy(ModTags.Blocks.BRICKS_CRACKED_BLACK, ModTags.Items.BRICKS_CRACKED_BLACK);
+        copy(ModTags.Blocks.BRICKS_CRACKED_RED, ModTags.Items.BRICKS_CRACKED_RED);
 
+        // Don't Touch
         copy(Tags.Blocks.STONE, Tags.Items.STONE);
 
         getOrCreateBuilder(ModTags.Items.BRICK_WHITE).add(ModItems.WHITE_BRICK.get());
