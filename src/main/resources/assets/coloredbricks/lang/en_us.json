@@ -100,5 +100,23 @@
     "block.coloredbricks.light_gray_chiseled_bricks" : "Light Gray Chiseled Bricks",
     "block.coloredbricks.gray_chiseled_bricks" : "Gray Chiseled Bricks",
     "block.coloredbricks.black_chiseled_bricks" : "Black Chiseled Bricks",
-    "block.coloredbricks.red_chiseled_bricks" : "Red Chiseled Bricks"
+    "block.coloredbricks.red_chiseled_bricks" : "Red Chiseled Bricks",
+
+    "block.coloredbricks.cracked_bricks" : "Cracked Bricks",
+    "block.coloredbricks.white_cracked_bricks" : "White Cracked Bricks",
+    "block.coloredbricks.orange_cracked_bricks" : "Orange Cracked Bricks",
+    "block.coloredbricks.pink_cracked_bricks" : "Pink Cracked Bricks",
+    "block.coloredbricks.yellow_cracked_bricks" : "Yellow Cracked Bricks",
+    "block.coloredbricks.lime_cracked_bricks" : "Lime Cracked Bricks",
+    "block.coloredbricks.green_cracked_bricks" : "Green Cracked Bricks",
+    "block.coloredbricks.cyan_cracked_bricks" : "Cyan Cracked Bricks",
+    "block.coloredbricks.light_blue_cracked_bricks" : "Light Blue Cracked Bricks",
+    "block.coloredbricks.blue_cracked_bricks" : "Blue Cracked Bricks",
+    "block.coloredbricks.magenta_cracked_bricks" : "Magenta Cracked Bricks",
+    "block.coloredbricks.purple_cracked_bricks" : "Purple Cracked Bricks",
+    "block.coloredbricks.brown_cracked_bricks" : "Brown Cracked Bricks",
+    "block.coloredbricks.light_gray_cracked_bricks" : "Light Gray Cracked Bricks",
+    "block.coloredbricks.gray_cracked_bricks" : "Gray Cracked Bricks",
+    "block.coloredbricks.black_cracked_bricks" : "Black Cracked Bricks",
+    "block.coloredbricks.red_cracked_bricks" : "Red Cracked Bricks"
 }
