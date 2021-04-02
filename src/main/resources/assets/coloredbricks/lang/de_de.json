@@ -100,5 +100,23 @@
     "block.coloredbricks.light_gray_chiseled_bricks" : "Hellgraue Gemeißelte Ziegelsteine",
     "block.coloredbricks.gray_chiseled_bricks" : "Graue Gemeißelte Ziegelsteine",
     "block.coloredbricks.black_chiseled_bricks" : "Schwarze Gemeißelte Ziegelsteine",
-    "block.coloredbricks.red_chiseled_bricks" : "Rote Gemeißelte Ziegelsteine"
+    "block.coloredbricks.red_chiseled_bricks" : "Rote Gemeißelte Ziegelsteine",
+
+    "block.coloredbricks.cracked_bricks" : "Rissige Ziegelsteine",
+    "block.coloredbricks.white_cracked_bricks" : "Weiße Rissige Ziegelsteine",
+    "block.coloredbricks.orange_cracked_bricks" : "Orange Rissige Ziegelsteine",
+    "block.coloredbricks.pink_cracked_bricks" : "Pinke Rissige Ziegelsteine",
+    "block.coloredbricks.yellow_cracked_bricks" : "Gelbe Rissige Ziegelsteine",
+    "block.coloredbricks.lime_cracked_bricks" : "Hellgrüne Rissige Ziegelsteine",
+    "block.coloredbricks.green_cracked_bricks" : "Grüne Rissige Ziegelsteine",
+    "block.coloredbricks.cyan_cracked_bricks" : "Türkise Rissige Ziegelsteine",
+    "block.coloredbricks.light_blue_cracked_bricks" : "Hellblaue Rissige Ziegelsteine",
+    "block.coloredbricks.blue_cracked_bricks" : "Blaue Rissige Ziegelsteine",
+    "block.coloredbricks.magenta_cracked_bricks" : "Magenta Rissige Ziegelsteine",
+    "block.coloredbricks.purple_cracked_bricks" : "Lila Rissige Ziegelsteine",
+    "block.coloredbricks.brown_cracked_bricks" : "Braune Rissige Ziegelsteine",
+    "block.coloredbricks.light_gray_cracked_bricks" : "Hellgraue Rissige Ziegelsteine",
+    "block.coloredbricks.gray_cracked_bricks" : "Graue Rissige Ziegelsteine",
+    "block.coloredbricks.black_cracked_bricks" : "Schwarze Rissige Ziegelsteine",
+    "block.coloredbricks.red_cracked_bricks" : "Rote Rissige Ziegelsteine"
 }
