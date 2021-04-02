@@ -101,3 +101,9 @@ Version 3.1
 
 Updated zh_tw.json (Taiwan Language) to include the Chiseled Bricks
 
+=====
+Version 4.0
+
+Adds Cracked Bricks, block version only so far.
+English and Gerrman full support, Taiwan partial.
+
