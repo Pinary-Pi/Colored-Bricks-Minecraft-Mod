@@ -110,6 +110,23 @@ public class ModBlockLootTables extends BlockLootTables {
         registerDropSelfLootTable(ModBlocks.GRAY_CRACKED_BRICKS.get());
         registerDropSelfLootTable(ModBlocks.BLACK_CRACKED_BRICKS.get());
         registerDropSelfLootTable(ModBlocks.RED_CRACKED_BRICKS.get());
+        registerLootTable(ModBlocks.CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.WHITE_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.ORANGE_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.PINK_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.YELLOW_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.LIME_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.GREEN_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.CYAN_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.LIGHT_BLUE_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.BLUE_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.MAGENTA_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.PURPLE_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.BROWN_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.LIGHT_GRAY_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.GRAY_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.BLACK_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerLootTable(ModBlocks.RED_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
     }
 
     @Override
