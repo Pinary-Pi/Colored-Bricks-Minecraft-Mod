@@ -125,6 +125,24 @@ public class ModTags {
         public static final ITag.INamedTag<Block> BRICKS_CRACKED_GRAY = forge("stone/gray_cracked_block");
         public static final ITag.INamedTag<Block> BRICKS_CRACKED_BLACK = forge("stone/black_cracked_block");
         public static final ITag.INamedTag<Block> BRICKS_CRACKED_RED = forge("stone/red_cracked_block");
+
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED = forge("stone/cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_WHITE = forge("stone/white_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_ORANGE = forge("stone/orange_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_PINK = forge("stone/pink_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_YELLOW = forge("stone/yellow_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_LIME = forge("stone/lime_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_GREEN = forge("stone/green_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_CYAN = forge("stone/cyan_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_LIGHT_BLUE = forge("stone/light_blue_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_BLUE = forge("stone/blue_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_MAGENTA = forge("stone/magenta_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_PURPLE = forge("stone/purple_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_BROWN = forge("stone/brown_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_LIGHT_GRAY = forge("stone/light_gray_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_GRAY = forge("stone/gray_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_BLACK = forge("stone/black_cracked_slab");
+        public static final ITag.INamedTag<Block> BRICK_SLAB_CRACKED_RED = forge("stone/red_cracked_slab");
         
         private static ITag.INamedTag<Block> forge(String path) {
             return BlockTags.makeWrapperTag(new ResourceLocation("forge", path).toString());
@@ -238,6 +256,24 @@ public class ModTags {
         public static final ITag.INamedTag<Item> BRICKS_CRACKED_GRAY = forge("stone/gray_cracked_block");
         public static final ITag.INamedTag<Item> BRICKS_CRACKED_BLACK = forge("stone/black_cracked_block");
         public static final ITag.INamedTag<Item> BRICKS_CRACKED_RED = forge("stone/red_cracked_block");
+
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED = forge("stone/cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_WHITE = forge("stone/white_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_ORANGE = forge("stone/orange_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_PINK = forge("stone/pink_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_YELLOW = forge("stone/yellow_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_LIME = forge("stone/lime_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_GREEN = forge("stone/green_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_CYAN = forge("stone/cyan_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_LIGHT_BLUE = forge("stone/light_blue_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_BLUE = forge("stone/blue_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_MAGENTA = forge("stone/magenta_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_PURPLE = forge("stone/purple_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_BROWN = forge("stone/brown_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_LIGHT_GRAY = forge("stone/light_gray_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_GRAY = forge("stone/gray_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_BLACK = forge("stone/black_cracked_slab");
+        public static final ITag.INamedTag<Item> BRICK_SLAB_CRACKED_RED = forge("stone/red_cracked_slab");
 
         // Item Items
 

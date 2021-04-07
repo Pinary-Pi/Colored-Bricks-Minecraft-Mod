@@ -98,6 +98,23 @@
     "#forge:stone/light_gray_cracked_block",
     "#forge:stone/gray_cracked_block",
     "#forge:stone/black_cracked_block",
-    "#forge:stone/red_cracked_block"
+    "#forge:stone/red_cracked_block",
+    "#forge:stone/cracked_slab",
+    "#forge:stone/white_cracked_slab",
+    "#forge:stone/orange_cracked_slab",
+    "#forge:stone/pink_cracked_slab",
+    "#forge:stone/yellow_cracked_slab",
+    "#forge:stone/lime_cracked_slab",
+    "#forge:stone/green_cracked_slab",
+    "#forge:stone/cyan_cracked_slab",
+    "#forge:stone/light_blue_cracked_slab",
+    "#forge:stone/blue_cracked_slab",
+    "#forge:stone/magenta_cracked_slab",
+    "#forge:stone/purple_cracked_slab",
+    "#forge:stone/brown_cracked_slab",
+    "#forge:stone/light_gray_cracked_slab",
+    "#forge:stone/gray_cracked_slab",
+    "#forge:stone/black_cracked_slab",
+    "#forge:stone/red_cracked_slab"
   ]
 }
