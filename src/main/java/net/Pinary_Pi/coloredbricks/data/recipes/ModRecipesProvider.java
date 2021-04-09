@@ -1653,119 +1653,238 @@ public class ModRecipesProvider extends RecipeProvider {
             Blocks.BRICKS.asItem()), 
             ModBlocks.CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(Blocks.BRICKS.asItem()))
+            .addCriterion("has item", hasItem(Blocks.BRICKS.asItem()))
             .build(consumer, coloredbricks.getId("cracked_bricks_furnace"));
         
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_WHITE), 
             ModBlocks.WHITE_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_WHITE))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_WHITE))
             .build(consumer, coloredbricks.getId("white_cracked_bricks_furnace"));     
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_ORANGE), 
             ModBlocks.ORANGE_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_ORANGE))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_ORANGE))
             .build(consumer, coloredbricks.getId("orange_cracked_bricks_furnace"));
                 
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_PINK), 
             ModBlocks.PINK_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_PINK))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_PINK))
             .build(consumer, coloredbricks.getId("pink_cracked_bricks_furnace"));
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_YELLOW), 
             ModBlocks.YELLOW_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_YELLOW))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_YELLOW))
             .build(consumer, coloredbricks.getId("yellow_cracked_bricks_furnace"));
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_LIME), 
             ModBlocks.LIME_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_LIME))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_LIME))
             .build(consumer, coloredbricks.getId("lime_cracked_bricks_furnace")); 
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_GREEN), 
             ModBlocks.GREEN_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_GREEN))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_GREEN))
             .build(consumer, coloredbricks.getId("green_cracked_bricks_furnace")); 
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_CYAN), 
             ModBlocks.CYAN_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_CYAN))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CYAN))
             .build(consumer, coloredbricks.getId("cyan_cracked_bricks_furnace"));  
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_LIGHT_BLUE), 
             ModBlocks.LIGHT_BLUE_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_LIGHT_BLUE))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_LIGHT_BLUE))
             .build(consumer, coloredbricks.getId("light_blue_cracked_bricks_furnace"));
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_BLUE), 
             ModBlocks.BLUE_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_BLUE))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_BLUE))
             .build(consumer, coloredbricks.getId("blue_cracked_bricks_furnace"));
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_MAGENTA), 
             ModBlocks.MAGENTA_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_MAGENTA))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_MAGENTA))
             .build(consumer, coloredbricks.getId("magenta_cracked_bricks_furnace")); 
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_PURPLE), 
             ModBlocks.PURPLE_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_PURPLE))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_PURPLE))
             .build(consumer, coloredbricks.getId("purple_cracked_bricks_furnace")); 
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_BROWN), 
             ModBlocks.BROWN_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_BROWN))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_BROWN))
             .build(consumer, coloredbricks.getId("brown_cracked_bricks_furnace")); 
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_LIGHT_GRAY), 
             ModBlocks.LIGHT_GRAY_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_LIGHT_GRAY))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_LIGHT_GRAY))
             .build(consumer, coloredbricks.getId("light_gray_cracked_bricks_furnace")); 
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_GRAY), 
             ModBlocks.GRAY_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_GRAY))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_GRAY))
             .build(consumer, coloredbricks.getId("gray_cracked_bricks_furnace"));  
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_BLACK), 
             ModBlocks.BLACK_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_BLACK))
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_BLACK))
             .build(consumer, coloredbricks.getId("black_cracked_bricks_furnace"));
                     
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
             ModTags.Items.BRICKS_RED), 
             ModBlocks.RED_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .addCriterion("name", hasItem(ModTags.Items.BRICKS_RED))
-            .build(consumer, coloredbricks.getId("red_cracked_bricks_furnace"));     
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_RED))
+            .build(consumer, coloredbricks.getId("red_cracked_bricks_furnace"));
+                                
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromItems(
+            Blocks.BRICK_SLAB.asItem()), 
+            ModBlocks.CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(Blocks.BRICK_SLAB.asItem()))
+            .build(consumer, coloredbricks.getId("cracked_brick_slab_furnace"));
+
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_WHITE), 
+            ModBlocks.WHITE_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_WHITE))
+            .build(consumer, coloredbricks.getId("white_cracked_brick_slab_furnace"));  
+        
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_ORANGE), 
+            ModBlocks.ORANGE_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_ORANGE))
+            .build(consumer, coloredbricks.getId("orange_cracked_brick_slab_furnace"));       
+            
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_PINK), 
+            ModBlocks.PINK_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_PINK))
+            .build(consumer, coloredbricks.getId("pink_cracked_brick_slab_furnace"));
+            
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_YELLOW), 
+            ModBlocks.YELLOW_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_YELLOW))
+            .build(consumer, coloredbricks.getId("yellow_cracked_brick_slab_furnace"));
+            
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_LIME), 
+            ModBlocks.LIME_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_LIME))
+            .build(consumer, coloredbricks.getId("lime_cracked_brick_slab_furnace"));
+            
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_GREEN), 
+            ModBlocks.GREEN_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_GREEN))
+            .build(consumer, coloredbricks.getId("green_cracked_brick_slab_furnace"));
+            
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_CYAN), 
+            ModBlocks.CYAN_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CYAN))
+            .build(consumer, coloredbricks.getId("cyan_cracked_brick_slab_furnace"));
+        
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_LIGHT_BLUE), 
+            ModBlocks.LIGHT_BLUE_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_LIGHT_BLUE))
+            .build(consumer, coloredbricks.getId("light_blue_cracked_brick_slab_furnace"));
+            
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_BLUE), 
+            ModBlocks.BLUE_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_BLUE))
+            .build(consumer, coloredbricks.getId("blue_cracked_brick_slab_furnace"));
+            
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_MAGENTA), 
+            ModBlocks.MAGENTA_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_MAGENTA))
+            .build(consumer, coloredbricks.getId("magenta_cracked_brick_slab_furnace"));
+            
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_PURPLE), 
+            ModBlocks.PURPLE_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_PURPLE))
+            .build(consumer, coloredbricks.getId("purple_cracked_brick_slab_furnace"));
+            
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_BROWN), 
+            ModBlocks.BROWN_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_BROWN))
+            .build(consumer, coloredbricks.getId("brown_cracked_brick_slab_furnace"));
+            
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_LIGHT_GRAY), 
+            ModBlocks.LIGHT_GRAY_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_LIGHT_GRAY))
+            .build(consumer, coloredbricks.getId("light_gray_cracked_brick_slab_furnace"));
+            
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_GRAY), 
+            ModBlocks.GRAY_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_GRAY))
+            .build(consumer, coloredbricks.getId("gray_cracked_brick_slab_furnace"));
+            
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_BLACK), 
+            ModBlocks.BLACK_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_BLACK))
+            .build(consumer, coloredbricks.getId("black_cracked_brick_slab_furnace"));
+            
+        CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICK_SLAB_RED), 
+            ModBlocks.RED_CRACKED_BRICK_SLAB.get(), 
+            0.1f, 200)
+            .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_RED))
+            .build(consumer, coloredbricks.getId("red_cracked_brick_slab_furnace"));
     }
 }

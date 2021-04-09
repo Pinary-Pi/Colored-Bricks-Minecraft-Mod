@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "coloredbricks:lime_cracked_bricks_furnace"
+      "coloredbricks:magenta_cracked_brick_slab_furnace"
     ]
   },
   "criteria": {
@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:stone/lime_block"
+            "tag": "forge:stone/magenta_slab"
           }
         ]
       }
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "coloredbricks:lime_cracked_bricks_furnace"
+        "recipe": "coloredbricks:magenta_cracked_brick_slab_furnace"
       }
     }
   },
