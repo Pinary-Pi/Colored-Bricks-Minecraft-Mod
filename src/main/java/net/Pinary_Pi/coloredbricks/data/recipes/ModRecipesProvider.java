@@ -1886,5 +1886,101 @@ public class ModRecipesProvider extends RecipeProvider {
             0.1f, 200)
             .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_RED))
             .build(consumer, coloredbricks.getId("red_cracked_brick_slab_furnace"));
+        
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.WHITE_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_WHITE)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.ORANGE_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_ORANGE)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.PINK_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_PINK)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.YELLOW_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_YELLOW)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.LIME_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_LIME)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.GREEN_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_GREEN)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.CYAN_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_CYAN)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.LIGHT_BLUE_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_LIGHT_BLUE)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.BLUE_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_BLUE)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.MAGENTA_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_MAGENTA)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.PURPLE_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_PURPLE)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.BROWN_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_BROWN)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.LIGHT_GRAY_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_LIGHT_GRAY)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.GRAY_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_GRAY)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.BLACK_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_BLACK)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
+
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.RED_CRACKED_BRICK_SLAB.get())
+        .addIngredient(ModTags.Items.BRICK_SLAB_CRACKED)
+        .addIngredient(Tags.Items.DYES_RED)
+        .addCriterion("has item", hasItem(ModTags.Items.BRICK_SLAB_CRACKED))
+        .build(consumer);
     }
 }
