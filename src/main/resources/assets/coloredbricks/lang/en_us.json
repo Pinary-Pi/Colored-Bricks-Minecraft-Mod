@@ -118,5 +118,23 @@
     "block.coloredbricks.light_gray_cracked_bricks" : "Light Gray Cracked Bricks",
     "block.coloredbricks.gray_cracked_bricks" : "Gray Cracked Bricks",
     "block.coloredbricks.black_cracked_bricks" : "Black Cracked Bricks",
-    "block.coloredbricks.red_cracked_bricks" : "Red Cracked Bricks"
+    "block.coloredbricks.red_cracked_bricks" : "Red Cracked Bricks",
+
+    "block.coloredbricks.cracked_brick_slab" : "Cracked Brick Slab",
+    "block.coloredbricks.white_cracked_brick_slab" : "White Cracked Brick Slab",
+    "block.coloredbricks.orange_cracked_brick_slab" : "Orange Cracked Brick Slab",
+    "block.coloredbricks.pink_cracked_brick_slab" : "Pink Cracked Brick Slab",
+    "block.coloredbricks.yellow_cracked_brick_slab" : "Yellow Cracked Brick Slab",
+    "block.coloredbricks.lime_cracked_brick_slab" : "Lime Cracked Brick Slab",
+    "block.coloredbricks.green_cracked_brick_slab" : "Green Cracked Brick Slab",
+    "block.coloredbricks.cyan_cracked_brick_slab" : "Cyan Cracked Brick Slab",
+    "block.coloredbricks.light_blue_cracked_brick_slab" : "Light Blue Cracked Brick Slab",
+    "block.coloredbricks.blue_cracked_brick_slab" : "Blue Cracked Brick Slab",
+    "block.coloredbricks.magenta_cracked_brick_slab" : "Magenta Cracked Brick Slab",
+    "block.coloredbricks.purple_cracked_brick_slab" : "Purple Cracked Brick Slab",
+    "block.coloredbricks.brown_cracked_brick_slab" : "Brown Cracked Brick Slab",
+    "block.coloredbricks.light_gray_cracked_brick_slab" : "Light Gray Cracked Brick Slab",
+    "block.coloredbricks.gray_cracked_brick_slab" : "Gray Cracked Brick Slab",
+    "block.coloredbricks.black_cracked_brick_slab" : "Black Cracked Brick Slab",
+    "block.coloredbricks.red_cracked_brick_slab" : "Red Cracked Brick Slab"
 }
