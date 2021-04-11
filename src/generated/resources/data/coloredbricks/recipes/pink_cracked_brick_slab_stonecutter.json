@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "forge:stone/pink_cracked_slab"
+  },
+  "result": "coloredbricks:pink_cracked_brick_slab",
+  "count": 2
+}

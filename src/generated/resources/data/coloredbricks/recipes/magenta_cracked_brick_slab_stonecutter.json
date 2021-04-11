@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "forge:stone/magenta_cracked_slab"
+  },
+  "result": "coloredbricks:magenta_cracked_brick_slab",
+  "count": 2
+}
