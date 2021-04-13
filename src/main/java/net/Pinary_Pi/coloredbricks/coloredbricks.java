@@ -1,9 +1,11 @@
 package net.Pinary_Pi.coloredbricks;
 
 import net.Pinary_Pi.coloredbricks.setup.Registration;
+import net.Pinary_Pi.gear.util.ColoredbricksRenderer;
 import net.Pinary_Pi.gear.util.ModResourceLocation;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -28,17 +30,17 @@ public class coloredbricks
     public coloredbricks() {
         Registration.register();
 
-        // Register the setup method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        // Register the enqueueIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::enqueueIMC);
-        // Register the processIMC method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::processIMC);
-        // Register the doClientStuff method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        // Register the setup method for modloading
+        bus.addListener(this::setup);
+        bus.addListener(this::enqueueIMC);
+        bus.addListener(this::processIMC);
+        bus.addListener(this::clientSetup);
+
     }
 
     private void setup(final FMLCommonSetupEvent event)
@@ -48,12 +50,13 @@ public class coloredbricks
         LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
-    private void doClientStuff(final FMLClientSetupEvent event) {
-        // do something that can only be done on the client
-        LOGGER.info("Got game settings {}", event.getMinecraftSupplier().get().gameSettings); // Isn't an actual problem as far as I can tell
+    private void clientSetup(final FMLClientSetupEvent event) {
+        event.enqueueWork(() -> {
+            ColoredbricksRenderer.registerRenderLayers();
+        });
     }
 
-    private void enqueueIMC(final InterModEnqueueEvent event)
+   private void enqueueIMC(final InterModEnqueueEvent event)
     {
         // some example code to dispatch IMC to another mod
         InterModComms.sendTo("examplemod", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
