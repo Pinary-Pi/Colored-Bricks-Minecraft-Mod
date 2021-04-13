@@ -118,5 +118,23 @@
     "block.coloredbricks.light_gray_cracked_bricks" : "Hellgraue Rissige Ziegelsteine",
     "block.coloredbricks.gray_cracked_bricks" : "Graue Rissige Ziegelsteine",
     "block.coloredbricks.black_cracked_bricks" : "Schwarze Rissige Ziegelsteine",
-    "block.coloredbricks.red_cracked_bricks" : "Rote Rissige Ziegelsteine"
+    "block.coloredbricks.red_cracked_bricks" : "Rote Rissige Ziegelsteine",
+
+    "block.coloredbricks.cracked_brick_slab" : "Rissige Ziegelstufe",
+    "block.coloredbricks.white_cracked_brick_slab" : "Weiße Rissige Ziegelstufe",
+    "block.coloredbricks.orange_cracked_brick_slab" : "Orange Rissige Ziegelstufe",
+    "block.coloredbricks.pink_cracked_brick_slab" : "Pinke Rissige Ziegelstufe",
+    "block.coloredbricks.yellow_cracked_brick_slab" : "Gelbe Rissige Ziegelstufe",
+    "block.coloredbricks.lime_cracked_brick_slab" : "Hellgrüne Rissige Ziegelstufe",
+    "block.coloredbricks.green_cracked_brick_slab" : "Grüne Rissige Ziegelstufe",
+    "block.coloredbricks.cyan_cracked_brick_slab" : "Türkise Rissige Ziegelstufe",
+    "block.coloredbricks.light_blue_cracked_brick_slab" : "Hellblaue Rissige Ziegelstufe",
+    "block.coloredbricks.blue_cracked_brick_slab" : "Blaue Rissige Ziegelstufe",
+    "block.coloredbricks.magenta_cracked_brick_slab" : "Magenta Rissige Ziegelstufe",
+    "block.coloredbricks.purple_cracked_brick_slab" : "Lila Rissige Ziegelstufe",
+    "block.coloredbricks.brown_cracked_brick_slab" : "Braune Rissige Ziegelstufe",
+    "block.coloredbricks.light_gray_cracked_brick_slab" : "Hellgraue Rissige Ziegelstufe",
+    "block.coloredbricks.gray_cracked_brick_slab" : "Graue Rissige Ziegelstufe",
+    "block.coloredbricks.black_cracked_brick_slab" : "Schwarze Rissige Ziegelstufe",
+    "block.coloredbricks.red_cracked_brick_slab" : "Rote Rissige Ziegelstufe"
 }
