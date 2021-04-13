@@ -107,3 +107,10 @@ Version 4.0
 Adds Cracked Bricks, block version only so far.
 English and Gerrman full support, Taiwan partial.
 
+=====
+Version 4.1
+
+Adds Cracked Brick Slabs
+English and German full support, Taiwan partial.
+
+
