@@ -1,8 +1,8 @@
 package net.Pinary_Pi.gear.util;
 
-import net.Pinary_Pi.coloredbricks.setup.ModBlocks;
-import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.RenderTypeLookup;
+// import net.Pinary_Pi.coloredbricks.setup.ModBlocks;
+// import net.minecraft.client.renderer.RenderType;
+// import net.minecraft.client.renderer.RenderTypeLookup;
 
 public class ColoredbricksRenderer {
 
