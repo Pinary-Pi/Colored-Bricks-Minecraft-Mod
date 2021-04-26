@@ -247,7 +247,62 @@ public class ModBlocks {
     public static final RegistryObject<SlabBlock> RED_CRACKED_BRICK_SLAB = register("red_cracked_brick_slab", () -> 
         new SlabBlock(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
 
-        // Chiseled Blocks
+    // Cracked Stairs
+
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED = () -> CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_WHITE = () -> WHITE_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_ORANGE = () -> ORANGE_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_PINK = () -> PINK_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_YELLOW = () -> YELLOW_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_LIME = () -> LIME_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_GREEN = () -> GREEN_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_LIGHT_BLUE = () -> LIGHT_BLUE_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_CYAN = () -> CYAN_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_BLUE = () -> BLUE_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_MAGENTA = () -> MAGENTA_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_PURPLE = () -> PURPLE_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_BROWN = () -> BROWN_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_LIGHT_GRAY = () -> LIGHT_GRAY_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_GRAY = () -> GRAY_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_BLACK = () -> BLACK_CRACKED_BRICKS.get().getDefaultState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_RED = () -> RED_CRACKED_BRICKS.get().getDefaultState();
+    
+    public static final RegistryObject<StairsBlock> CRACKED_BRICK_STAIRS = register("cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> WHITE_CRACKED_BRICK_STAIRS = register("white_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_WHITE, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> ORANGE_CRACKED_BRICK_STAIRS = register("orange_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_ORANGE, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> PINK_CRACKED_BRICK_STAIRS = register("pink_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_PINK, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> YELLOW_CRACKED_BRICK_STAIRS = register("yellow_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_YELLOW, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> LIME_CRACKED_BRICK_STAIRS = register("lime_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_LIME, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> GREEN_CRACKED_BRICK_STAIRS = register("green_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_GREEN, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> LIGHT_BLUE_CRACKED_BRICK_STAIRS = register("light_blue_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_LIGHT_BLUE, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> CYAN_CRACKED_BRICK_STAIRS = register("cyan_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_CYAN, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> BLUE_CRACKED_BRICK_STAIRS = register("blue_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_BLUE, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> MAGENTA_CRACKED_BRICK_STAIRS = register("magenta_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_MAGENTA, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> PURPLE_CRACKED_BRICK_STAIRS = register("purple_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_PURPLE, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> BROWN_CRACKED_BRICK_STAIRS = register("brown_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_BROWN, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> LIGHT_GRAY_CRACKED_BRICK_STAIRS = register("light_gray_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_LIGHT_GRAY, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> GRAY_CRACKED_BRICK_STAIRS = register("gray_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_GRAY, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> BLACK_CRACKED_BRICK_STAIRS = register("black_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_BLACK, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+    public static final RegistryObject<StairsBlock> RED_CRACKED_BRICK_STAIRS = register("red_cracked_brick_stairs", () ->
+        new StairsBlock(STAIR_BLOCKSTATE_CRACKED_RED, AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));
+
+    // Chiseled Blocks
 
     public static final RegistryObject<Block> WHITE_CHISELED_BRICKS = register("white_chiseled_bricks", () -> 
         new Block(AbstractBlock.Properties.create(Material.ROCK).hardnessAndResistance(2, 6).sound(SoundType.STONE)));

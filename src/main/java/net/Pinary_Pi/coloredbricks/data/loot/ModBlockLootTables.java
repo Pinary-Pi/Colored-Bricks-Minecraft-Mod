@@ -127,6 +127,23 @@ public class ModBlockLootTables extends BlockLootTables {
         registerLootTable(ModBlocks.GRAY_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
         registerLootTable(ModBlocks.BLACK_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
         registerLootTable(ModBlocks.RED_CRACKED_BRICK_SLAB.get(), BlockLootTables::droppingSlab);
+        registerDropSelfLootTable(ModBlocks.CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.WHITE_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.ORANGE_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.PINK_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.YELLOW_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.LIME_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.GREEN_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.LIGHT_BLUE_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.CYAN_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.BLUE_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.MAGENTA_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.PURPLE_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.BROWN_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.LIGHT_GRAY_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.GRAY_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.BLACK_CRACKED_BRICK_STAIRS.get());
+        registerDropSelfLootTable(ModBlocks.RED_CRACKED_BRICK_STAIRS.get());
     }
 
     @Override
