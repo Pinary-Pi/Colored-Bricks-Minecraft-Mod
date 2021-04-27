@@ -128,6 +128,26 @@ public class ModBlockStateProvider extends BlockStateProvider {
         stairsBlock(ModBlocks.BLACK_BRICK_STAIRS.get(), modLoc("block/black_bricks"));
         stairsBlock(ModBlocks.RED_BRICK_STAIRS.get(), modLoc("block/red_bricks"));
 
+        // Cracked Stairs
+
+        stairsBlock(ModBlocks.CRACKED_BRICK_STAIRS.get(), modLoc("block/cracked_bricks"));
+        stairsBlock(ModBlocks.WHITE_CRACKED_BRICK_STAIRS.get(), modLoc("block/white_cracked_bricks"));
+        stairsBlock(ModBlocks.ORANGE_CRACKED_BRICK_STAIRS.get(), modLoc("block/orange_cracked_bricks"));
+        stairsBlock(ModBlocks.PINK_CRACKED_BRICK_STAIRS.get(), modLoc("block/pink_cracked_bricks"));
+        stairsBlock(ModBlocks.YELLOW_CRACKED_BRICK_STAIRS.get(), modLoc("block/yellow_cracked_bricks"));
+        stairsBlock(ModBlocks.LIME_CRACKED_BRICK_STAIRS.get(), modLoc("block/lime_cracked_bricks"));
+        stairsBlock(ModBlocks.GREEN_CRACKED_BRICK_STAIRS.get(), modLoc("block/green_cracked_bricks"));
+        stairsBlock(ModBlocks.LIGHT_BLUE_CRACKED_BRICK_STAIRS.get(), modLoc("block/light_blue_cracked_bricks"));
+        stairsBlock(ModBlocks.CYAN_CRACKED_BRICK_STAIRS.get(), modLoc("block/cyan_cracked_bricks"));
+        stairsBlock(ModBlocks.BLUE_CRACKED_BRICK_STAIRS.get(), modLoc("block/blue_cracked_bricks"));
+        stairsBlock(ModBlocks.MAGENTA_CRACKED_BRICK_STAIRS.get(), modLoc("block/magenta_cracked_bricks"));
+        stairsBlock(ModBlocks.PURPLE_CRACKED_BRICK_STAIRS.get(), modLoc("block/purple_cracked_bricks"));
+        stairsBlock(ModBlocks.BROWN_CRACKED_BRICK_STAIRS.get(), modLoc("block/brown_cracked_bricks"));
+        stairsBlock(ModBlocks.LIGHT_GRAY_CRACKED_BRICK_STAIRS.get(), modLoc("block/light_gray_cracked_bricks"));
+        stairsBlock(ModBlocks.GRAY_CRACKED_BRICK_STAIRS.get(), modLoc("block/gray_cracked_bricks"));
+        stairsBlock(ModBlocks.BLACK_CRACKED_BRICK_STAIRS.get(), modLoc("block/black_cracked_bricks"));
+        stairsBlock(ModBlocks.RED_CRACKED_BRICK_STAIRS.get(), modLoc("block/red_cracked_bricks"));
+
         // Walls
 
         wallBlock(ModBlocks.WHITE_BRICK_WALL.get(), modLoc("block/white_bricks"));
