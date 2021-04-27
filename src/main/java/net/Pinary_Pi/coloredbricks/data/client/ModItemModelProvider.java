@@ -116,6 +116,24 @@ public class ModItemModelProvider extends ItemModelProvider {
         withExistingParent("black_cracked_brick_slab", modLoc("block/black_cracked_brick_slab"));
         withExistingParent("red_cracked_brick_slab", modLoc("block/red_cracked_brick_slab"));
 
+        withExistingParent("cracked_brick_stairs", modLoc("block/cracked_brick_stairs"));
+        withExistingParent("white_cracked_brick_stairs", modLoc("block/white_cracked_brick_stairs"));
+        withExistingParent("orange_cracked_brick_stairs", modLoc("block/orange_cracked_brick_stairs"));
+        withExistingParent("pink_cracked_brick_stairs", modLoc("block/pink_cracked_brick_stairs"));
+        withExistingParent("yellow_cracked_brick_stairs", modLoc("block/yellow_cracked_brick_stairs"));
+        withExistingParent("lime_cracked_brick_stairs", modLoc("block/lime_cracked_brick_stairs"));
+        withExistingParent("green_cracked_brick_stairs", modLoc("block/green_cracked_brick_stairs"));
+        withExistingParent("light_blue_cracked_brick_stairs", modLoc("block/light_blue_cracked_brick_stairs"));
+        withExistingParent("cyan_cracked_brick_stairs", modLoc("block/cyan_cracked_brick_stairs"));
+        withExistingParent("blue_cracked_brick_stairs", modLoc("block/blue_cracked_brick_stairs"));
+        withExistingParent("magenta_cracked_brick_stairs", modLoc("block/magenta_cracked_brick_stairs"));
+        withExistingParent("purple_cracked_brick_stairs", modLoc("block/purple_cracked_brick_stairs"));
+        withExistingParent("brown_cracked_brick_stairs", modLoc("block/brown_cracked_brick_stairs"));
+        withExistingParent("light_gray_cracked_brick_stairs", modLoc("block/light_gray_cracked_brick_stairs"));
+        withExistingParent("gray_cracked_brick_stairs", modLoc("block/gray_cracked_brick_stairs"));
+        withExistingParent("black_cracked_brick_stairs", modLoc("block/black_cracked_brick_stairs"));
+        withExistingParent("red_cracked_brick_stairs", modLoc("block/red_cracked_brick_stairs"));
+
         wallBuilder("white");
         wallBuilder("orange");
         wallBuilder("pink");
