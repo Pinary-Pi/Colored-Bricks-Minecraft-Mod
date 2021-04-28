@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "forge:stone/black_cracked_stairs"
+  },
+  "result": "coloredbricks:black_cracked_brick_stairs",
+  "count": 1
+}
