@@ -115,6 +115,23 @@
     "#forge:stone/light_gray_cracked_slab",
     "#forge:stone/gray_cracked_slab",
     "#forge:stone/black_cracked_slab",
-    "#forge:stone/red_cracked_slab"
+    "#forge:stone/red_cracked_slab",
+    "#forge:stone/cracked_stairs",
+    "#forge:stone/white_cracked_stairs",
+    "#forge:stone/orange_cracked_stairs",
+    "#forge:stone/pink_cracked_stairs",
+    "#forge:stone/yellow_cracked_stairs",
+    "#forge:stone/lime_cracked_stairs",
+    "#forge:stone/green_cracked_stairs",
+    "#forge:stone/light_blue_cracked_stairs",
+    "#forge:stone/cyan_cracked_stairs",
+    "#forge:stone/blue_cracked_stairs",
+    "#forge:stone/magenta_cracked_stairs",
+    "#forge:stone/purple_cracked_stairs",
+    "#forge:stone/brown_cracked_stairs",
+    "#forge:stone/light_gray_cracked_stairs",
+    "#forge:stone/gray_cracked_stairs",
+    "#forge:stone/black_cracked_stairs",
+    "#forge:stone/red_cracked_stairs"
   ]
 }

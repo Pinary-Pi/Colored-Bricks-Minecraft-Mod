@@ -1319,11 +1319,12 @@ f513cdeae48eb292a4b1ea173539b879ff7ec135 data/coloredbricks/recipes/yellow_chise
 45ec7d6c9b0c2a25ee8e83aa2ce80136c7e81ec2 data/coloredbricks/recipes/yellow_cracked_brick_slab_stonecutter.json
 2fe797444a4a3aea84e75553b0f872e39dbd9aab data/coloredbricks/recipes/yellow_cracked_bricks.json
 b17a8cf86fa7412c3c9ddb852d7ceb95b4b61b7c data/coloredbricks/recipes/yellow_cracked_bricks_furnace.json
-4399455b6e1cff568662db1f564a6b6327d6cc2f data/forge/tags/blocks/stone.json
+3f118ab30a1a15ee4fba7a3e0b54dc16db572c2f data/forge/tags/blocks/stone.json
 ee87b251663ba0ba97149ba0a30e3768d738e62e data/forge/tags/blocks/stone/black_block.json
 77d60b474ec5fe85618933a7f4501624bff197f4 data/forge/tags/blocks/stone/black_chiseled_block.json
 b7fe247bd438d58722c9c966d86c2c2d8331a0ae data/forge/tags/blocks/stone/black_cracked_block.json
 805d9f7d5285d37b8f3677561c1d469a8cf9f8ca data/forge/tags/blocks/stone/black_cracked_slab.json
+57740cbfe8c8f60bf0ed42171ac720a02c7824f8 data/forge/tags/blocks/stone/black_cracked_stairs.json
 437b699afdf6619d022d6f3b0cff4e2b5c6011c0 data/forge/tags/blocks/stone/black_slab.json
 7ba3aec037f6b141338ab8808dc795c93bef1700 data/forge/tags/blocks/stone/black_stairs.json
 3182d5b637d220e77b1d41bb8ebeebc85f27158a data/forge/tags/blocks/stone/black_wall.json
@@ -1331,6 +1332,7 @@ b7fe247bd438d58722c9c966d86c2c2d8331a0ae data/forge/tags/blocks/stone/black_crac
 3f26d9311bff35eb25a4a63ec2fe4faac6231abd data/forge/tags/blocks/stone/blue_chiseled_block.json
 90d21c11841be1251b0d33fa0e73b03c4b7c819c data/forge/tags/blocks/stone/blue_cracked_block.json
 0c2b03cdbda5c7c5ec20976e177f26852b519259 data/forge/tags/blocks/stone/blue_cracked_slab.json
+17d3791092517dd2aac9792781312ae80de52e53 data/forge/tags/blocks/stone/blue_cracked_stairs.json
 907a9acd608e95d20d00134d687698e7dbb969bc data/forge/tags/blocks/stone/blue_slab.json
 80edc3709f1d11067959dcef5ae6b192733f9e65 data/forge/tags/blocks/stone/blue_stairs.json
 a130179c7a82add2a04880ae3bd41d808cac1bbb data/forge/tags/blocks/stone/blue_wall.json
@@ -1338,16 +1340,19 @@ bff69425cfc2d7b02a9bbb531320b1a685e40886 data/forge/tags/blocks/stone/brown_bloc
 74fb789cda013fed352d05ff2dcbe0ccfd696a5e data/forge/tags/blocks/stone/brown_chiseled_block.json
 691796876151f64dc1d65073610f9fd8254c144a data/forge/tags/blocks/stone/brown_cracked_block.json
 f098aa78ec32522aec5676457d96d84352d3618c data/forge/tags/blocks/stone/brown_cracked_slab.json
+c15c8512091a47139904cc9d45a46a00332b6d6a data/forge/tags/blocks/stone/brown_cracked_stairs.json
 6c6dd845480dbf310f553d6d2a92174524b292f5 data/forge/tags/blocks/stone/brown_slab.json
 669146f5db546411c4e61d330439545aea325df6 data/forge/tags/blocks/stone/brown_stairs.json
 5f36a298540ce0dc6236c95d10f107a8fb6d0935 data/forge/tags/blocks/stone/brown_wall.json
 e3ce05761044ffb47f313ea5080342394457b0ef data/forge/tags/blocks/stone/chiseled_block.json
 eaf1a94cd3725dc9483f2d9c2add40076254a86b data/forge/tags/blocks/stone/cracked_block.json
 ae1caf674f896e44772b0ad76193cf2453adcc8b data/forge/tags/blocks/stone/cracked_slab.json
+121a606c6bd1fb8c4d7215c997cf9f4b53b0283d data/forge/tags/blocks/stone/cracked_stairs.json
 ea5b547e286c059cc78ac279019b75a1d9905800 data/forge/tags/blocks/stone/cyan_block.json
 07c19082fc6fed3ec6c8f16cafe01a65566e4844 data/forge/tags/blocks/stone/cyan_chiseled_block.json
 dd10088b261b36e0250ce85ea1beb0a0225a86c8 data/forge/tags/blocks/stone/cyan_cracked_block.json
 d9341773b526ec5b58f0f8b29cd1cfd425676508 data/forge/tags/blocks/stone/cyan_cracked_slab.json
+262c9f2281d6377416a8529f87cdcc0fb63d4116 data/forge/tags/blocks/stone/cyan_cracked_stairs.json
 4a55a55b89714fbcc868216a287741486b7e4b59 data/forge/tags/blocks/stone/cyan_slab.json
 b44b10adeace6c1b927ba635b1d7747389b807a6 data/forge/tags/blocks/stone/cyan_stairs.json
 2467f3707c55eaeac41bb286f716887a200992be data/forge/tags/blocks/stone/cyan_wall.json
@@ -1355,6 +1360,7 @@ b44b10adeace6c1b927ba635b1d7747389b807a6 data/forge/tags/blocks/stone/cyan_stair
 c195264d11c3a519a47dc181de80c5c41c444219 data/forge/tags/blocks/stone/gray_chiseled_block.json
 bb7df3fa597c39611197ed7568ce124d8b97cc8f data/forge/tags/blocks/stone/gray_cracked_block.json
 d21d3b87af6967e223df15859c04e8d5e32a6097 data/forge/tags/blocks/stone/gray_cracked_slab.json
+5ac2c516af231b068037ad8551f489aeb701bcee data/forge/tags/blocks/stone/gray_cracked_stairs.json
 24b4c72ed298c448928cd0d172a8a2ae9774b8ea data/forge/tags/blocks/stone/gray_slab.json
 3f03818cf9155134a706fbac824912af18098c1c data/forge/tags/blocks/stone/gray_stairs.json
 d86f0fda515355f4751b64a704986166845aa633 data/forge/tags/blocks/stone/gray_wall.json
@@ -1362,6 +1368,7 @@ a88e2eec78390239c2de529e83a994cb828940a8 data/forge/tags/blocks/stone/green_bloc
 f929636a1c9054c0108f238ea4203885561acc47 data/forge/tags/blocks/stone/green_chiseled_block.json
 b044cd02f2b7bbf0e0071ebe9c8bb24b1d23678e data/forge/tags/blocks/stone/green_cracked_block.json
 c4fd6e7f3ad6102ebb5a884432c90ada3ebd1704 data/forge/tags/blocks/stone/green_cracked_slab.json
+dce3dfb781ba9d95d7ee5083964e00506cf12965 data/forge/tags/blocks/stone/green_cracked_stairs.json
 8552fb88a7cd2419dd2019c81151030150c3ee97 data/forge/tags/blocks/stone/green_slab.json
 1b516964e3814fd19085ec38c6860f523e85a061 data/forge/tags/blocks/stone/green_stairs.json
 1abdc5c077a30fe6441a386ac852f247e3b5dbef data/forge/tags/blocks/stone/green_wall.json
@@ -1369,6 +1376,7 @@ bf1d3919fc6207905bce2d62cda549c18a7a8eb8 data/forge/tags/blocks/stone/light_blue
 87bd8803b223fb7fb985d76da738c41a9fa9e0b8 data/forge/tags/blocks/stone/light_blue_chiseled_block.json
 1448299baaa3a8e04e99c3d82210821df6fbb023 data/forge/tags/blocks/stone/light_blue_cracked_block.json
 31c0ca377986037f8e925cdeb9478714d55672da data/forge/tags/blocks/stone/light_blue_cracked_slab.json
+a1ebd76392e4c03b13dbc5d9bc8f509211c17864 data/forge/tags/blocks/stone/light_blue_cracked_stairs.json
 9ee76320086bea9083d361db3a66f382dc4ba4ae data/forge/tags/blocks/stone/light_blue_slab.json
 96f5d6816b4ca2e2b987ccd7094dd3d96399752f data/forge/tags/blocks/stone/light_blue_stairs.json
 57c3e59f08b7978be474e0d9c6a7e6d402931967 data/forge/tags/blocks/stone/light_blue_wall.json
@@ -1376,6 +1384,7 @@ bf1d3919fc6207905bce2d62cda549c18a7a8eb8 data/forge/tags/blocks/stone/light_blue
 de4dac267aae36a59b36b864130327c96c51da68 data/forge/tags/blocks/stone/light_gray_chiseled_block.json
 f02fe753f4e4c3fde0dff74d592e65028dfad660 data/forge/tags/blocks/stone/light_gray_cracked_block.json
 d9e3034d59a8b4799b86111dde691e6549bf088c data/forge/tags/blocks/stone/light_gray_cracked_slab.json
+70b976b6d38143b580a0d5a4cff729a687465e08 data/forge/tags/blocks/stone/light_gray_cracked_stairs.json
 0f83c2164a5d6b76f85cb498e336b36efa912599 data/forge/tags/blocks/stone/light_gray_slab.json
 deb1bb6a86925522cbbff7831044c7fc033b8140 data/forge/tags/blocks/stone/light_gray_stairs.json
 a72aae9272c43b8042b10cd2961cdb7b0d4f44fe data/forge/tags/blocks/stone/light_gray_wall.json
@@ -1383,6 +1392,7 @@ e06e4851639cb591a314d17d9bacce15ebb8e218 data/forge/tags/blocks/stone/lime_block
 93130c0990f52d60b119288674e756a18fcec289 data/forge/tags/blocks/stone/lime_chiseled_block.json
 1641c3e426357f170edb1148451f9b4afad28ec9 data/forge/tags/blocks/stone/lime_cracked_block.json
 6c54a2ce78d1c79d6baf0c69340576d70d15a6ad data/forge/tags/blocks/stone/lime_cracked_slab.json
+e98a8e581b99d4ef56e76712bb34575d6d25cb76 data/forge/tags/blocks/stone/lime_cracked_stairs.json
 7940903a18611d32c230565bc108c1981f128149 data/forge/tags/blocks/stone/lime_slab.json
 3f9cfd78496a0eaae55c4cc45bb40dbefbd8a6f4 data/forge/tags/blocks/stone/lime_stairs.json
 7b66ad8e2f55efb440395fbe8c20c6eea2776a7d data/forge/tags/blocks/stone/lime_wall.json
@@ -1390,6 +1400,7 @@ bc6b0c27e8a0872f4f110471811d29a53e5e58f3 data/forge/tags/blocks/stone/magenta_bl
 f91626fc5b282a78f808cd7ebf3663520e1832ef data/forge/tags/blocks/stone/magenta_chiseled_block.json
 da320a904cf29816910df0f6f77f15039e505770 data/forge/tags/blocks/stone/magenta_cracked_block.json
 3cabf230998296e2774e06bbbce7ac64a8ef36db data/forge/tags/blocks/stone/magenta_cracked_slab.json
+ece0ba55cbb1d819815b7d8a012e9377a0b12724 data/forge/tags/blocks/stone/magenta_cracked_stairs.json
 a80b7f94a271c941b7ded0b8bce4876446cb6de1 data/forge/tags/blocks/stone/magenta_slab.json
 1b75644d31c7ea9ad3b11cf0e7b527e3b4586b3e data/forge/tags/blocks/stone/magenta_stairs.json
 edd95b6dd857df0a663a105153f6122079619516 data/forge/tags/blocks/stone/magenta_wall.json
@@ -1397,6 +1408,7 @@ b161add52afafa9009cefbce14cc850f45a26674 data/forge/tags/blocks/stone/orange_blo
 1676b2c0ff1441bdff42504d77be9fc63f7ada5e data/forge/tags/blocks/stone/orange_chiseled_block.json
 776f76a988e83c55acc46a9b87102f80cc367951 data/forge/tags/blocks/stone/orange_cracked_block.json
 1da7bd9b4ea283ad219ff80a0efbd37b0c461c13 data/forge/tags/blocks/stone/orange_cracked_slab.json
+b90a8cc42422420d29543fdb8d504e4cfe7abb87 data/forge/tags/blocks/stone/orange_cracked_stairs.json
 34769cbbe8d42ea648a541a8784f0467a806e35b data/forge/tags/blocks/stone/orange_slab.json
 19985aeb86540239713df415aa581c558ac8ac31 data/forge/tags/blocks/stone/orange_stairs.json
 181b8f3161850bc7876ba3f74ac1659cd5fc4b0e data/forge/tags/blocks/stone/orange_wall.json
@@ -1404,6 +1416,7 @@ b161add52afafa9009cefbce14cc850f45a26674 data/forge/tags/blocks/stone/orange_blo
 5546de8df1b7d01a01b3b85e47efcf96032af1c6 data/forge/tags/blocks/stone/pink_chiseled_block.json
 8be8ec121028f20eb119282749b9f7f7fb88a7c7 data/forge/tags/blocks/stone/pink_cracked_block.json
 075fca8bbb18063dbc58c9613f1a19bd67aa817d data/forge/tags/blocks/stone/pink_cracked_slab.json
+88b79c1e057622aa71d0f0fa0485466cf56c6946 data/forge/tags/blocks/stone/pink_cracked_stairs.json
 a5cb641edacc3706e06f896fea1f7f54ec1a4c80 data/forge/tags/blocks/stone/pink_slab.json
 6baf5ac17d476e9b7b90f4c262e36c1a1391a123 data/forge/tags/blocks/stone/pink_stairs.json
 40cccc24d569de4932904be86ed4ba7959b442f7 data/forge/tags/blocks/stone/pink_wall.json
@@ -1411,6 +1424,7 @@ d2d5054aa84082a0fb47ecd15b1c8c7f6e13580d data/forge/tags/blocks/stone/purple_blo
 a7371648de0fc194afd91a8cf5c98bfc08d8c098 data/forge/tags/blocks/stone/purple_chiseled_block.json
 14ec96e7433bb1539aa02e6e272fc1db0c4fd73e data/forge/tags/blocks/stone/purple_cracked_block.json
 0eff71b937acb7b776a284c79b574a96791f1209 data/forge/tags/blocks/stone/purple_cracked_slab.json
+0fa91fb3329566c9a4cdd2bc1c0badb816eb358a data/forge/tags/blocks/stone/purple_cracked_stairs.json
 98d4e0c9274d42dddfbb0796ef86a85e4c137759 data/forge/tags/blocks/stone/purple_slab.json
 0fe7a9f14d5eada592f998442a4958c6fcd4ed51 data/forge/tags/blocks/stone/purple_stairs.json
 d3211b7f779b81c57daf251f19132d4887f848d1 data/forge/tags/blocks/stone/purple_wall.json
@@ -1418,6 +1432,7 @@ d3211b7f779b81c57daf251f19132d4887f848d1 data/forge/tags/blocks/stone/purple_wal
 be22dbd49b3717ed788b5b7212323923d8e75066 data/forge/tags/blocks/stone/red_chiseled_block.json
 4cd3ddf248923dcc9f52c55e8e9eed8426ef0d74 data/forge/tags/blocks/stone/red_cracked_block.json
 3f68bb1f337344b023cdcb6b27825c1736335f49 data/forge/tags/blocks/stone/red_cracked_slab.json
+d781ad93911e4d90c01b0f40656ebce69bd2b99f data/forge/tags/blocks/stone/red_cracked_stairs.json
 9456308c6c4138b42bf7dc73363e80e21335582c data/forge/tags/blocks/stone/red_slab.json
 534331c7e60d2640829db18e0950d86ae325fea7 data/forge/tags/blocks/stone/red_stairs.json
 5a7efdb6d16cf7d4a0a72d1f94ce78e2f1f75bfe data/forge/tags/blocks/stone/red_wall.json
@@ -1425,6 +1440,7 @@ fc3737618ecb939107ed6538789e826b8c00efaa data/forge/tags/blocks/stone/white_bloc
 176b244e068e428396f7c9032d909c82ce5b28d0 data/forge/tags/blocks/stone/white_chiseled_block.json
 744dbd715d464740224e2b7f1e07f248c8f551d9 data/forge/tags/blocks/stone/white_cracked_block.json
 7325a853a4d8521295ea24686e578daf7af41074 data/forge/tags/blocks/stone/white_cracked_slab.json
+670529319602e196281ce007bc327bf87a90bce5 data/forge/tags/blocks/stone/white_cracked_stairs.json
 d2f4acaa9df1367fd3df889ace07178db0d9f697 data/forge/tags/blocks/stone/white_slab.json
 71facb155bb3da94c745c3deb83cff7f6727488b data/forge/tags/blocks/stone/white_stairs.json
 758235bec0e799839e9857b360b411b1bcae4407 data/forge/tags/blocks/stone/white_wall.json
@@ -1432,14 +1448,16 @@ d2f4acaa9df1367fd3df889ace07178db0d9f697 data/forge/tags/blocks/stone/white_slab
 3d409b5051036243893f6403df28040c9b2cb77b data/forge/tags/blocks/stone/yellow_chiseled_block.json
 946556d2deffd3c1f9a89bb1c2af1e4f34ceb4ff data/forge/tags/blocks/stone/yellow_cracked_block.json
 b1860c020b31cd824449db6cd094788057f6c7b5 data/forge/tags/blocks/stone/yellow_cracked_slab.json
+5bc38b57fb42d62b23163e33c487561440e832fd data/forge/tags/blocks/stone/yellow_cracked_stairs.json
 08c063a335efd3da88024cba7b9c6532ea637965 data/forge/tags/blocks/stone/yellow_slab.json
 efc3bd81b90e2859debaefb4fa0c0404020117dd data/forge/tags/blocks/stone/yellow_stairs.json
 79d010574e8ab5d1dbd5ac3b351b7fe50161e113 data/forge/tags/blocks/stone/yellow_wall.json
-d48dd2b5d64ac1ca36e9df379a6b8e5e4062b8f6 data/forge/tags/items/stone.json
+5a65b87976d76d6835c6a89e88f2a29f47a7bd13 data/forge/tags/items/stone.json
 ee87b251663ba0ba97149ba0a30e3768d738e62e data/forge/tags/items/stone/black_block.json
 77d60b474ec5fe85618933a7f4501624bff197f4 data/forge/tags/items/stone/black_chiseled_block.json
 b7fe247bd438d58722c9c966d86c2c2d8331a0ae data/forge/tags/items/stone/black_cracked_block.json
 805d9f7d5285d37b8f3677561c1d469a8cf9f8ca data/forge/tags/items/stone/black_cracked_slab.json
+57740cbfe8c8f60bf0ed42171ac720a02c7824f8 data/forge/tags/items/stone/black_cracked_stairs.json
 e13107f717daa66a1fa4ed965770cea2c8907e9e data/forge/tags/items/stone/black_item.json
 437b699afdf6619d022d6f3b0cff4e2b5c6011c0 data/forge/tags/items/stone/black_slab.json
 7ba3aec037f6b141338ab8808dc795c93bef1700 data/forge/tags/items/stone/black_stairs.json
@@ -1449,6 +1467,7 @@ e13107f717daa66a1fa4ed965770cea2c8907e9e data/forge/tags/items/stone/black_item.
 3f26d9311bff35eb25a4a63ec2fe4faac6231abd data/forge/tags/items/stone/blue_chiseled_block.json
 90d21c11841be1251b0d33fa0e73b03c4b7c819c data/forge/tags/items/stone/blue_cracked_block.json
 0c2b03cdbda5c7c5ec20976e177f26852b519259 data/forge/tags/items/stone/blue_cracked_slab.json
+17d3791092517dd2aac9792781312ae80de52e53 data/forge/tags/items/stone/blue_cracked_stairs.json
 907a9acd608e95d20d00134d687698e7dbb969bc data/forge/tags/items/stone/blue_slab.json
 80edc3709f1d11067959dcef5ae6b192733f9e65 data/forge/tags/items/stone/blue_stairs.json
 a130179c7a82add2a04880ae3bd41d808cac1bbb data/forge/tags/items/stone/blue_wall.json
@@ -1456,6 +1475,7 @@ bff69425cfc2d7b02a9bbb531320b1a685e40886 data/forge/tags/items/stone/brown_block
 74fb789cda013fed352d05ff2dcbe0ccfd696a5e data/forge/tags/items/stone/brown_chiseled_block.json
 691796876151f64dc1d65073610f9fd8254c144a data/forge/tags/items/stone/brown_cracked_block.json
 f098aa78ec32522aec5676457d96d84352d3618c data/forge/tags/items/stone/brown_cracked_slab.json
+c15c8512091a47139904cc9d45a46a00332b6d6a data/forge/tags/items/stone/brown_cracked_stairs.json
 48b7bc1391964fad69eb2bd836ae6a8fe4882094 data/forge/tags/items/stone/brown_item.json
 6c6dd845480dbf310f553d6d2a92174524b292f5 data/forge/tags/items/stone/brown_slab.json
 669146f5db546411c4e61d330439545aea325df6 data/forge/tags/items/stone/brown_stairs.json
@@ -1463,10 +1483,12 @@ f098aa78ec32522aec5676457d96d84352d3618c data/forge/tags/items/stone/brown_crack
 e3ce05761044ffb47f313ea5080342394457b0ef data/forge/tags/items/stone/chiseled_block.json
 eaf1a94cd3725dc9483f2d9c2add40076254a86b data/forge/tags/items/stone/cracked_block.json
 ae1caf674f896e44772b0ad76193cf2453adcc8b data/forge/tags/items/stone/cracked_slab.json
+121a606c6bd1fb8c4d7215c997cf9f4b53b0283d data/forge/tags/items/stone/cracked_stairs.json
 ea5b547e286c059cc78ac279019b75a1d9905800 data/forge/tags/items/stone/cyan_block.json
 07c19082fc6fed3ec6c8f16cafe01a65566e4844 data/forge/tags/items/stone/cyan_chiseled_block.json
 dd10088b261b36e0250ce85ea1beb0a0225a86c8 data/forge/tags/items/stone/cyan_cracked_block.json
 d9341773b526ec5b58f0f8b29cd1cfd425676508 data/forge/tags/items/stone/cyan_cracked_slab.json
+262c9f2281d6377416a8529f87cdcc0fb63d4116 data/forge/tags/items/stone/cyan_cracked_stairs.json
 e92f5469bc6fed62d6025eaf30593a7476771d90 data/forge/tags/items/stone/cyan_item.json
 4a55a55b89714fbcc868216a287741486b7e4b59 data/forge/tags/items/stone/cyan_slab.json
 b44b10adeace6c1b927ba635b1d7747389b807a6 data/forge/tags/items/stone/cyan_stairs.json
@@ -1475,6 +1497,7 @@ b44b10adeace6c1b927ba635b1d7747389b807a6 data/forge/tags/items/stone/cyan_stairs
 c195264d11c3a519a47dc181de80c5c41c444219 data/forge/tags/items/stone/gray_chiseled_block.json
 bb7df3fa597c39611197ed7568ce124d8b97cc8f data/forge/tags/items/stone/gray_cracked_block.json
 d21d3b87af6967e223df15859c04e8d5e32a6097 data/forge/tags/items/stone/gray_cracked_slab.json
+5ac2c516af231b068037ad8551f489aeb701bcee data/forge/tags/items/stone/gray_cracked_stairs.json
 3719857cc0d2c31b480c72cdab7544a95670d950 data/forge/tags/items/stone/gray_item.json
 24b4c72ed298c448928cd0d172a8a2ae9774b8ea data/forge/tags/items/stone/gray_slab.json
 3f03818cf9155134a706fbac824912af18098c1c data/forge/tags/items/stone/gray_stairs.json
@@ -1483,6 +1506,7 @@ a88e2eec78390239c2de529e83a994cb828940a8 data/forge/tags/items/stone/green_block
 f929636a1c9054c0108f238ea4203885561acc47 data/forge/tags/items/stone/green_chiseled_block.json
 b044cd02f2b7bbf0e0071ebe9c8bb24b1d23678e data/forge/tags/items/stone/green_cracked_block.json
 c4fd6e7f3ad6102ebb5a884432c90ada3ebd1704 data/forge/tags/items/stone/green_cracked_slab.json
+dce3dfb781ba9d95d7ee5083964e00506cf12965 data/forge/tags/items/stone/green_cracked_stairs.json
 670cbbd1389b668ec9d5b89841c720dae128fc8e data/forge/tags/items/stone/green_item.json
 8552fb88a7cd2419dd2019c81151030150c3ee97 data/forge/tags/items/stone/green_slab.json
 1b516964e3814fd19085ec38c6860f523e85a061 data/forge/tags/items/stone/green_stairs.json
@@ -1491,6 +1515,7 @@ bf1d3919fc6207905bce2d62cda549c18a7a8eb8 data/forge/tags/items/stone/light_blue_
 87bd8803b223fb7fb985d76da738c41a9fa9e0b8 data/forge/tags/items/stone/light_blue_chiseled_block.json
 1448299baaa3a8e04e99c3d82210821df6fbb023 data/forge/tags/items/stone/light_blue_cracked_block.json
 31c0ca377986037f8e925cdeb9478714d55672da data/forge/tags/items/stone/light_blue_cracked_slab.json
+a1ebd76392e4c03b13dbc5d9bc8f509211c17864 data/forge/tags/items/stone/light_blue_cracked_stairs.json
 5ad1900fcc49f3c22f54fe5c0f2e87806ec5b8bc data/forge/tags/items/stone/light_blue_item.json
 9ee76320086bea9083d361db3a66f382dc4ba4ae data/forge/tags/items/stone/light_blue_slab.json
 96f5d6816b4ca2e2b987ccd7094dd3d96399752f data/forge/tags/items/stone/light_blue_stairs.json
@@ -1499,6 +1524,7 @@ bf1d3919fc6207905bce2d62cda549c18a7a8eb8 data/forge/tags/items/stone/light_blue_
 de4dac267aae36a59b36b864130327c96c51da68 data/forge/tags/items/stone/light_gray_chiseled_block.json
 f02fe753f4e4c3fde0dff74d592e65028dfad660 data/forge/tags/items/stone/light_gray_cracked_block.json
 d9e3034d59a8b4799b86111dde691e6549bf088c data/forge/tags/items/stone/light_gray_cracked_slab.json
+70b976b6d38143b580a0d5a4cff729a687465e08 data/forge/tags/items/stone/light_gray_cracked_stairs.json
 a73d5fec21141a5d2d3f5d324515a233a2c0d020 data/forge/tags/items/stone/light_gray_item.json
 0f83c2164a5d6b76f85cb498e336b36efa912599 data/forge/tags/items/stone/light_gray_slab.json
 deb1bb6a86925522cbbff7831044c7fc033b8140 data/forge/tags/items/stone/light_gray_stairs.json
@@ -1507,6 +1533,7 @@ e06e4851639cb591a314d17d9bacce15ebb8e218 data/forge/tags/items/stone/lime_block.
 93130c0990f52d60b119288674e756a18fcec289 data/forge/tags/items/stone/lime_chiseled_block.json
 1641c3e426357f170edb1148451f9b4afad28ec9 data/forge/tags/items/stone/lime_cracked_block.json
 6c54a2ce78d1c79d6baf0c69340576d70d15a6ad data/forge/tags/items/stone/lime_cracked_slab.json
+e98a8e581b99d4ef56e76712bb34575d6d25cb76 data/forge/tags/items/stone/lime_cracked_stairs.json
 604bebe0052bfc9ed25ee340b91f2ccf2ac8b8d5 data/forge/tags/items/stone/lime_item.json
 7940903a18611d32c230565bc108c1981f128149 data/forge/tags/items/stone/lime_slab.json
 3f9cfd78496a0eaae55c4cc45bb40dbefbd8a6f4 data/forge/tags/items/stone/lime_stairs.json
@@ -1515,6 +1542,7 @@ bc6b0c27e8a0872f4f110471811d29a53e5e58f3 data/forge/tags/items/stone/magenta_blo
 f91626fc5b282a78f808cd7ebf3663520e1832ef data/forge/tags/items/stone/magenta_chiseled_block.json
 da320a904cf29816910df0f6f77f15039e505770 data/forge/tags/items/stone/magenta_cracked_block.json
 3cabf230998296e2774e06bbbce7ac64a8ef36db data/forge/tags/items/stone/magenta_cracked_slab.json
+ece0ba55cbb1d819815b7d8a012e9377a0b12724 data/forge/tags/items/stone/magenta_cracked_stairs.json
 3f46c2dabd5851c4b35c27b678d62af615644226 data/forge/tags/items/stone/magenta_item.json
 a80b7f94a271c941b7ded0b8bce4876446cb6de1 data/forge/tags/items/stone/magenta_slab.json
 1b75644d31c7ea9ad3b11cf0e7b527e3b4586b3e data/forge/tags/items/stone/magenta_stairs.json
@@ -1523,6 +1551,7 @@ b161add52afafa9009cefbce14cc850f45a26674 data/forge/tags/items/stone/orange_bloc
 1676b2c0ff1441bdff42504d77be9fc63f7ada5e data/forge/tags/items/stone/orange_chiseled_block.json
 776f76a988e83c55acc46a9b87102f80cc367951 data/forge/tags/items/stone/orange_cracked_block.json
 1da7bd9b4ea283ad219ff80a0efbd37b0c461c13 data/forge/tags/items/stone/orange_cracked_slab.json
+b90a8cc42422420d29543fdb8d504e4cfe7abb87 data/forge/tags/items/stone/orange_cracked_stairs.json
 6eccae871dc7b61455b40d13425e1cca6346217a data/forge/tags/items/stone/orange_item.json
 34769cbbe8d42ea648a541a8784f0467a806e35b data/forge/tags/items/stone/orange_slab.json
 19985aeb86540239713df415aa581c558ac8ac31 data/forge/tags/items/stone/orange_stairs.json
@@ -1531,6 +1560,7 @@ b161add52afafa9009cefbce14cc850f45a26674 data/forge/tags/items/stone/orange_bloc
 5546de8df1b7d01a01b3b85e47efcf96032af1c6 data/forge/tags/items/stone/pink_chiseled_block.json
 8be8ec121028f20eb119282749b9f7f7fb88a7c7 data/forge/tags/items/stone/pink_cracked_block.json
 075fca8bbb18063dbc58c9613f1a19bd67aa817d data/forge/tags/items/stone/pink_cracked_slab.json
+88b79c1e057622aa71d0f0fa0485466cf56c6946 data/forge/tags/items/stone/pink_cracked_stairs.json
 2cf6a51d7d6d6b9a90f7053a853eac10ebcbc3fd data/forge/tags/items/stone/pink_item.json
 a5cb641edacc3706e06f896fea1f7f54ec1a4c80 data/forge/tags/items/stone/pink_slab.json
 6baf5ac17d476e9b7b90f4c262e36c1a1391a123 data/forge/tags/items/stone/pink_stairs.json
@@ -1539,6 +1569,7 @@ d2d5054aa84082a0fb47ecd15b1c8c7f6e13580d data/forge/tags/items/stone/purple_bloc
 a7371648de0fc194afd91a8cf5c98bfc08d8c098 data/forge/tags/items/stone/purple_chiseled_block.json
 14ec96e7433bb1539aa02e6e272fc1db0c4fd73e data/forge/tags/items/stone/purple_cracked_block.json
 0eff71b937acb7b776a284c79b574a96791f1209 data/forge/tags/items/stone/purple_cracked_slab.json
+0fa91fb3329566c9a4cdd2bc1c0badb816eb358a data/forge/tags/items/stone/purple_cracked_stairs.json
 da9cd6299c70cfc04ef56687a051ee0df72c1acd data/forge/tags/items/stone/purple_item.json
 98d4e0c9274d42dddfbb0796ef86a85e4c137759 data/forge/tags/items/stone/purple_slab.json
 0fe7a9f14d5eada592f998442a4958c6fcd4ed51 data/forge/tags/items/stone/purple_stairs.json
@@ -1547,6 +1578,7 @@ d3211b7f779b81c57daf251f19132d4887f848d1 data/forge/tags/items/stone/purple_wall
 be22dbd49b3717ed788b5b7212323923d8e75066 data/forge/tags/items/stone/red_chiseled_block.json
 4cd3ddf248923dcc9f52c55e8e9eed8426ef0d74 data/forge/tags/items/stone/red_cracked_block.json
 3f68bb1f337344b023cdcb6b27825c1736335f49 data/forge/tags/items/stone/red_cracked_slab.json
+d781ad93911e4d90c01b0f40656ebce69bd2b99f data/forge/tags/items/stone/red_cracked_stairs.json
 77f8424ede9716331c5e8e2a97ba8ba59738d0bd data/forge/tags/items/stone/red_item.json
 9456308c6c4138b42bf7dc73363e80e21335582c data/forge/tags/items/stone/red_slab.json
 534331c7e60d2640829db18e0950d86ae325fea7 data/forge/tags/items/stone/red_stairs.json
@@ -1555,6 +1587,7 @@ fc3737618ecb939107ed6538789e826b8c00efaa data/forge/tags/items/stone/white_block
 176b244e068e428396f7c9032d909c82ce5b28d0 data/forge/tags/items/stone/white_chiseled_block.json
 744dbd715d464740224e2b7f1e07f248c8f551d9 data/forge/tags/items/stone/white_cracked_block.json
 7325a853a4d8521295ea24686e578daf7af41074 data/forge/tags/items/stone/white_cracked_slab.json
+670529319602e196281ce007bc327bf87a90bce5 data/forge/tags/items/stone/white_cracked_stairs.json
 1c9363e036e989dab15fc5d914b8de1b253b1e1a data/forge/tags/items/stone/white_item.json
 d2f4acaa9df1367fd3df889ace07178db0d9f697 data/forge/tags/items/stone/white_slab.json
 71facb155bb3da94c745c3deb83cff7f6727488b data/forge/tags/items/stone/white_stairs.json
@@ -1563,6 +1596,7 @@ d2f4acaa9df1367fd3df889ace07178db0d9f697 data/forge/tags/items/stone/white_slab.
 3d409b5051036243893f6403df28040c9b2cb77b data/forge/tags/items/stone/yellow_chiseled_block.json
 946556d2deffd3c1f9a89bb1c2af1e4f34ceb4ff data/forge/tags/items/stone/yellow_cracked_block.json
 b1860c020b31cd824449db6cd094788057f6c7b5 data/forge/tags/items/stone/yellow_cracked_slab.json
+5bc38b57fb42d62b23163e33c487561440e832fd data/forge/tags/items/stone/yellow_cracked_stairs.json
 46eacbb37b8feee99c3312eb3f0d4a98eb3223e5 data/forge/tags/items/stone/yellow_item.json
 08c063a335efd3da88024cba7b9c6532ea637965 data/forge/tags/items/stone/yellow_slab.json
 efc3bd81b90e2859debaefb4fa0c0404020117dd data/forge/tags/items/stone/yellow_stairs.json

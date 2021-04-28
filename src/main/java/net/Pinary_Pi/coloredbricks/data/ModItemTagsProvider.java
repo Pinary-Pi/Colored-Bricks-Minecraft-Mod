@@ -134,6 +134,24 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         copy(ModTags.Blocks.BRICK_SLAB_CRACKED_BLACK, ModTags.Items.BRICK_SLAB_CRACKED_BLACK);
         copy(ModTags.Blocks.BRICK_SLAB_CRACKED_RED, ModTags.Items.BRICK_SLAB_CRACKED_RED);
 
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED, ModTags.Items.BRICK_STAIRS_CRACKED);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_WHITE, ModTags.Items.BRICK_STAIRS_CRACKED_WHITE);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_ORANGE, ModTags.Items.BRICK_STAIRS_CRACKED_ORANGE);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_PINK, ModTags.Items.BRICK_STAIRS_CRACKED_PINK);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_YELLOW, ModTags.Items.BRICK_STAIRS_CRACKED_YELLOW);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_LIME, ModTags.Items.BRICK_STAIRS_CRACKED_LIME);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_GREEN, ModTags.Items.BRICK_STAIRS_CRACKED_GREEN);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_LIGHT_BLUE, ModTags.Items.BRICK_STAIRS_CRACKED_LIGHT_BLUE);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_CYAN, ModTags.Items.BRICK_STAIRS_CRACKED_CYAN);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_BLUE, ModTags.Items.BRICK_STAIRS_CRACKED_BLUE);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_MAGENTA, ModTags.Items.BRICK_STAIRS_CRACKED_MAGENTA);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_PURPLE, ModTags.Items.BRICK_STAIRS_CRACKED_PURPLE);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_BROWN, ModTags.Items.BRICK_STAIRS_CRACKED_BROWN);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_LIGHT_GRAY, ModTags.Items.BRICK_STAIRS_CRACKED_LIGHT_GRAY);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_GRAY, ModTags.Items.BRICK_STAIRS_CRACKED_GRAY);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_BLACK, ModTags.Items.BRICK_STAIRS_CRACKED_BLACK);
+        copy(ModTags.Blocks.BRICK_STAIRS_CRACKED_RED, ModTags.Items.BRICK_STAIRS_CRACKED_RED);
+
         // Don't Touch
         copy(Tags.Blocks.STONE, Tags.Items.STONE);
 
