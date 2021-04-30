@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:stone/orange_cracked_stairs"
+            "tag": "forge:stone/orange_cracked_block"
           }
         ]
       }
