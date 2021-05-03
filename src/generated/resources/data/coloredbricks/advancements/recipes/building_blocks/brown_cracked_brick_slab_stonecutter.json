@@ -11,7 +11,7 @@
       "conditions": {
         "items": [
           {
-            "tag": "forge:stone/brown_cracked_slab"
+            "tag": "forge:stone/brown_cracked_block"
           }
         ]
       }
