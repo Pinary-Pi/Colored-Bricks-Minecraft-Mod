@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "coloredbricks:light_blue_cracked_brick_stairs_alt"
+    ]
+  },
+  "criteria": {
+    "has item": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:stone/light_blue_cracked_block"
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "coloredbricks:light_blue_cracked_brick_stairs_alt"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has item",
+      "has_the_recipe"
+    ]
+  ]
+}
