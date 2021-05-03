@@ -113,4 +113,26 @@ Version 4.1
 Adds Cracked Brick Slabs
 English and German full support, Taiwan partial.
 
+=====
+Version 4.2
 
+Languages
+- English: Full Support
+- German: Full Support
+- Taiwan: Support up to 3.1
+
+Bug Fixes
+- Fixed Cracked Brick Slab Stonecutter Recipes
+
+New Features
+- Cracked Brick Stairs for all 16 vanilla Minecraft colors.
+
+Recipes:
+
+Furnace: Brick Stairs -> Cracked Brick Stairs
+Crafting Table: Cracked Brick Stairs + Dye = Dyed Cracked Brick Stairs
+Crafting Table: Cracked Bricks = '#'
+						#
+						##  -> 4 Cracked Brick Stairs
+						###
+Stonecutter: Cracked Bricks -> Cracked Brick Stairs
