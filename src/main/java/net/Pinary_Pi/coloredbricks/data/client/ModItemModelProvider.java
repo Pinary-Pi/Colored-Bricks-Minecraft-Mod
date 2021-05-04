@@ -151,6 +151,24 @@ public class ModItemModelProvider extends ItemModelProvider {
         wallBuilder("black");
         wallBuilder("red");
 
+        wallBuilder("cracked");
+        wallBuilder("white_cracked");
+        wallBuilder("orange_cracked");
+        wallBuilder("pink_cracked");
+        wallBuilder("yellow_cracked");
+        wallBuilder("lime_cracked");
+        wallBuilder("green_cracked");
+        wallBuilder("light_blue_cracked");
+        wallBuilder("cyan_cracked");
+        wallBuilder("blue_cracked");
+        wallBuilder("magenta_cracked");
+        wallBuilder("purple_cracked");
+        wallBuilder("brown_cracked");
+        wallBuilder("light_gray_cracked");
+        wallBuilder("gray_cracked");
+        wallBuilder("black_cracked");
+        wallBuilder("red_cracked");
+
         ModelFile itemGenerated = getExistingFile(mcLoc("item/generated"));
 
         builder(itemGenerated, "white_brick");
