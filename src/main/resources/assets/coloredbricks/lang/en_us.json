@@ -154,5 +154,23 @@
     "block.coloredbricks.light_gray_cracked_brick_stairs" : "Light Gray Cracked Brick Stairs",
     "block.coloredbricks.gray_cracked_brick_stairs" : "Gray Cracked Brick Stairs",
     "block.coloredbricks.black_cracked_brick_stairs" : "Black Cracked Brick Stairs",
-    "block.coloredbricks.red_cracked_brick_stairs" : "Red Cracked Brick Stairs"
+    "block.coloredbricks.red_cracked_brick_stairs" : "Red Cracked Brick Stairs",
+
+    "block.coloredbricks.cracked_brick_wall" : "Cracked Brick Wall",
+    "block.coloredbricks.white_cracked_brick_wall" : "White Cracked Brick Wall",
+    "block.coloredbricks.orange_cracked_brick_wall" : "Orange Cracked Brick Wall",
+    "block.coloredbricks.pink_cracked_brick_wall" : "Pink Cracked Brick Wall",
+    "block.coloredbricks.yellow_cracked_brick_wall" : "Yellow Cracked Brick Wall",
+    "block.coloredbricks.lime_cracked_brick_wall" : "Lime Cracked Brick Wall",
+    "block.coloredbricks.green_cracked_brick_wall" : "Green Cracked Brick Wall",
+    "block.coloredbricks.light_blue_cracked_brick_wall" : "Light Blue Cracked Brick Wall",
+    "block.coloredbricks.cyan_cracked_brick_wall" : "Cyan Cracked Brick Wall",
+    "block.coloredbricks.blue_cracked_brick_wall" : "Blue Cracked Brick Wall",
+    "block.coloredbricks.magenta_cracked_brick_wall" : "Magenta Cracked Brick Wall",
+    "block.coloredbricks.purple_cracked_brick_wall" : "Purple Cracked Brick Wall",
+    "block.coloredbricks.brown_cracked_brick_wall" : "Brown Cracked Brick Wall",
+    "block.coloredbricks.light_gray_cracked_brick_wall" : "Light Gray Cracked Brick Wall",
+    "block.coloredbricks.gray_cracked_brick_wall" : "Gray Cracked Brick Wall",
+    "block.coloredbricks.black_cracked_brick_wall" : "Black Cracked Brick Wall",
+    "block.coloredbricks.red_cracked_brick_wall" : "Red Cracked Brick Wall"
 }
