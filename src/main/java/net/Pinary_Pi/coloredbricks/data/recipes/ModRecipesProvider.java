@@ -2537,5 +2537,107 @@ public class ModRecipesProvider extends RecipeProvider {
             0.1f, 200)
             .addCriterion("has item", hasItem(ModTags.Items.BRICK_STAIRS_RED))
             .build(consumer, coloredbricks.getId("red_cracked_brick_stairs_furnace"));
+
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED), 
+            ModBlocks.CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED))
+            .build(consumer, coloredbricks.getId("cracked_brick_wall_stonecutter"));
+        
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_WHITE), 
+            ModBlocks.WHITE_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_WHITE))
+            .build(consumer, coloredbricks.getId("white_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_ORANGE), 
+            ModBlocks.ORANGE_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_ORANGE))
+            .build(consumer, coloredbricks.getId("orange_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_PINK), 
+            ModBlocks.PINK_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_PINK))
+            .build(consumer, coloredbricks.getId("pink_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_YELLOW), 
+            ModBlocks.YELLOW_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_YELLOW))
+            .build(consumer, coloredbricks.getId("yellow_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_LIME), 
+            ModBlocks.LIME_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_LIME))
+            .build(consumer, coloredbricks.getId("lime_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_GREEN), 
+            ModBlocks.GREEN_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_GREEN))
+            .build(consumer, coloredbricks.getId("green_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE), 
+            ModBlocks.LIGHT_BLUE_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE))
+            .build(consumer, coloredbricks.getId("light_blue_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_CYAN), 
+            ModBlocks.CYAN_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_CYAN))
+            .build(consumer, coloredbricks.getId("cyan_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_BLUE), 
+            ModBlocks.BLUE_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_BLUE))
+            .build(consumer, coloredbricks.getId("blue_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_MAGENTA), 
+            ModBlocks.MAGENTA_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_MAGENTA))
+            .build(consumer, coloredbricks.getId("magenta_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_PURPLE), 
+            ModBlocks.PURPLE_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_PURPLE))
+            .build(consumer, coloredbricks.getId("purple_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_BROWN), 
+            ModBlocks.BROWN_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_BROWN))
+            .build(consumer, coloredbricks.getId("brown_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY), 
+            ModBlocks.LIGHT_GRAY_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY))
+            .build(consumer, coloredbricks.getId("light_gray_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_GRAY), 
+            ModBlocks.GRAY_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_GRAY))
+            .build(consumer, coloredbricks.getId("gray_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_BLACK), 
+            ModBlocks.BLACK_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_BLACK))
+            .build(consumer, coloredbricks.getId("black_cracked_brick_wall_stonecutter"));
+                    
+        SingleItemRecipeBuilder.stonecuttingRecipe(Ingredient.fromTag(
+            ModTags.Items.BRICKS_CRACKED_RED), 
+            ModBlocks.RED_CRACKED_BRICK_WALL.get())
+            .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_RED))
+            .build(consumer, coloredbricks.getId("red_cracked_brick_wall_stonecutter"));
     }
 }
