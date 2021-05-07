@@ -328,5 +328,77 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         getOrCreateBuilder(ModTags.Blocks.BRICK_STAIRS_CRACKED_BLACK).add(ModBlocks.BLACK_CRACKED_BRICK_STAIRS.get());
         getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_STAIRS_CRACKED_RED);
         getOrCreateBuilder(ModTags.Blocks.BRICK_STAIRS_CRACKED_RED).add(ModBlocks.RED_CRACKED_BRICK_STAIRS.get());
+
+        // Cracked Brick Walls
+
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED).add(ModBlocks.CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_WHITE);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_WHITE).add(ModBlocks.WHITE_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_ORANGE);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_ORANGE).add(ModBlocks.ORANGE_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_PINK);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_PINK).add(ModBlocks.PINK_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_YELLOW);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_YELLOW).add(ModBlocks.YELLOW_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_LIME);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_LIME).add(ModBlocks.LIME_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_GREEN);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_GREEN).add(ModBlocks.GREEN_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_LIGHT_BLUE);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_LIGHT_BLUE).add(ModBlocks.LIGHT_BLUE_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_CYAN);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_CYAN).add(ModBlocks.CYAN_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_BLUE);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_BLUE).add(ModBlocks.BLUE_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_MAGENTA);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_MAGENTA).add(ModBlocks.MAGENTA_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_PURPLE);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_PURPLE).add(ModBlocks.PURPLE_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_BROWN);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_BROWN).add(ModBlocks.BROWN_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_LIGHT_GRAY);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_LIGHT_GRAY).add(ModBlocks.LIGHT_GRAY_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_GRAY);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_GRAY).add(ModBlocks.GRAY_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_BLACK);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_BLACK).add(ModBlocks.BLACK_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(Tags.Blocks.STONE).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_RED);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_RED).add(ModBlocks.RED_CRACKED_BRICK_WALL.get());
+
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_MINECRAFT).add(ModBlocks.CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_WHITE_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_WHITE_MINECRAFT).add(ModBlocks.WHITE_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_ORANGE_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_ORANGE_MINECRAFT).add(ModBlocks.ORANGE_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_PINK_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_PINK_MINECRAFT).add(ModBlocks.PINK_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_YELLOW_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_YELLOW_MINECRAFT).add(ModBlocks.YELLOW_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_LIME_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_LIME_MINECRAFT).add(ModBlocks.LIME_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_GREEN_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_GREEN_MINECRAFT).add(ModBlocks.GREEN_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_LIGHT_BLUE_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_LIGHT_BLUE_MINECRAFT).add(ModBlocks.LIGHT_BLUE_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_CYAN_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_CYAN_MINECRAFT).add(ModBlocks.CYAN_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_BLUE_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_BLUE_MINECRAFT).add(ModBlocks.BLUE_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_MAGENTA_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_MAGENTA_MINECRAFT).add(ModBlocks.MAGENTA_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_PURPLE_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_PURPLE_MINECRAFT).add(ModBlocks.PURPLE_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_BROWN_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_BROWN_MINECRAFT).add(ModBlocks.BROWN_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_LIGHT_GRAY_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_LIGHT_GRAY_MINECRAFT).add(ModBlocks.LIGHT_GRAY_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_GRAY_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_GRAY_MINECRAFT).add(ModBlocks.GRAY_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_BLACK_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_BLACK_MINECRAFT).add(ModBlocks.BLACK_CRACKED_BRICK_WALL.get());
+        getOrCreateBuilder(BlockTags.WALLS).addTag(ModTags.Blocks.BRICK_WALL_CRACKED_RED_MINECRAFT);
+        getOrCreateBuilder(ModTags.Blocks.BRICK_WALL_CRACKED_RED_MINECRAFT).add(ModBlocks.RED_CRACKED_BRICK_WALL.get());
     }
 }
