@@ -2854,5 +2854,124 @@ public class ModRecipesProvider extends RecipeProvider {
         .addIngredient(Tags.Items.DYES_RED)
         .addCriterion("has item", hasItem(ModTags.Items.BRICK_WALL_CRACKED))
         .build(consumer);
+
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED))
+        .build(consumer, coloredbricks.getId("cracked_brick_wall_alt"));
+        
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.WHITE_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_WHITE)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_WHITE))
+        .build(consumer, coloredbricks.getId("white_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.ORANGE_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_ORANGE)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_ORANGE))
+        .build(consumer, coloredbricks.getId("orange_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.PINK_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_PINK)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_PINK))
+        .build(consumer, coloredbricks.getId("pink_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.YELLOW_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_YELLOW)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_YELLOW))
+        .build(consumer, coloredbricks.getId("yellow_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.LIME_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_LIME)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_LIME))
+        .build(consumer, coloredbricks.getId("lime_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.GREEN_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_GREEN)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_GREEN))
+        .build(consumer, coloredbricks.getId("green_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.LIGHT_BLUE_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE))
+        .build(consumer, coloredbricks.getId("light_blue_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.CYAN_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_CYAN)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_CYAN))
+        .build(consumer, coloredbricks.getId("cyan_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.BLUE_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_BLUE)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_BLUE))
+        .build(consumer, coloredbricks.getId("blue_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.MAGENTA_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_MAGENTA)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_MAGENTA))
+        .build(consumer, coloredbricks.getId("magenta_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.PURPLE_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_PURPLE)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_PURPLE))
+        .build(consumer, coloredbricks.getId("purple_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.BROWN_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_BROWN)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_BROWN))
+        .build(consumer, coloredbricks.getId("brown_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.LIGHT_GRAY_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY))
+        .build(consumer, coloredbricks.getId("light_gray_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.GRAY_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_GRAY)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_GRAY))
+        .build(consumer, coloredbricks.getId("gray_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.BLACK_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_BLACK)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_BLACK))
+        .build(consumer, coloredbricks.getId("black_cracked_brick_wall_alt"));
+                
+        ShapedRecipeBuilder.shapedRecipe(ModBlocks.RED_CRACKED_BRICK_WALL.get(), 6)
+        .key('#', ModTags.Items.BRICKS_CRACKED_RED)
+        .patternLine("###")
+        .patternLine("###")
+        .addCriterion("has item", hasItem(ModTags.Items.BRICKS_CRACKED_RED))
+        .build(consumer, coloredbricks.getId("red_cracked_brick_wall_alt"));
     }
 }
