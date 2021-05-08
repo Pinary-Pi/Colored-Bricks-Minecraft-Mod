@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:stone/cyan_wall"
+  },
+  "result": "coloredbricks:cyan_cracked_brick_wall",
+  "experience": 0.1,
+  "cookingtime": 200
+}
