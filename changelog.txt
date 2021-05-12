@@ -2,12 +2,12 @@
 Version: 0.1 Beta
 
 Added Blocks:
-A brick (the block) varient for each of the 16 minecraft colors.
+A brick (the block) variant for each of the 16 Minecraft colors.
 
 Added Items:
 A block item for each added block.
 
-A brick (the item) varient for each of the 16 minecraft colors.
+A brick (the item) variant for each of the 16 minecraft colors.
 
 Added Recipes:
 One recipe for each brick item. 1 dye + brick
@@ -20,7 +20,7 @@ One recipe for each brick item. 1 dye + brick
 Version 0.2 Beta
 
 Added Blocks:
-A brick slab varient for each of the 16 minecraft colors.
+A brick slab variant for each of the 16 minecraft colors.
 
 Added Items:
 A block item for each added block.
@@ -105,7 +105,7 @@ Updated zh_tw.json (Taiwan Language) to include the Chiseled Bricks
 Version 4.0
 
 Adds Cracked Bricks, block version only so far.
-English and Gerrman full support, Taiwan partial.
+English and German full support, Taiwan partial.
 
 =====
 Version 4.1
@@ -127,7 +127,7 @@ Bug Fixes
 New Features
 - Cracked Brick Stairs for all 16 vanilla Minecraft colors.
 
-Recipes:
+Recipes
 
 Furnace: Brick Stairs -> Cracked Brick Stairs
 Crafting Table: Cracked Brick Stairs + Dye = Dyed Cracked Brick Stairs
@@ -136,3 +136,26 @@ Crafting Table: Cracked Bricks = '#'
 						##  -> 4 Cracked Brick Stairs
 						###
 Stonecutter: Cracked Bricks -> Cracked Brick Stairs
+
+=====
+Version 4.3
+
+Languages
+- English: Full Support
+- German: Should have full support by the time I post this mod.
+- Taiwan: Partial: Support up to 3.1
+
+Bug Fixes
+- You now need at least a wooden pickaxe to mine any of the bricks I've added.
+
+New Features
+- Cracked Brick Walls in all 16 vanilla Minecraft colors.
+
+Recipes
+
+Furnace: Brick Wall -> Cracked Brick Wall
+Crafting Table: Cracked Brick Wall + Dye = Dyed Cracked Brick Stairs
+Crafting Table: Cracked Bricks = '#'
+						###
+						### = 6 Cracked Brick Walls
+Stonecutter: Cracked Bricks -> Cracked Brick Wall
