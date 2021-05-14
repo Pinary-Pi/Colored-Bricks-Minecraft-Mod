@@ -210,6 +210,7 @@ public class ModBlocks {
 
     // Chiseled Blocks
 
+    public static final RegistryObject<Block> CHISELED_BRICKS = register("chiseled_bricks", () -> getBlockBrick());
     public static final RegistryObject<Block> WHITE_CHISELED_BRICKS = register("white_chiseled_bricks", () -> getBlockBrick());
     public static final RegistryObject<Block> ORANGE_CHISELED_BRICKS = register("orange_chiseled_bricks", () -> getBlockBrick());
     public static final RegistryObject<Block> PINK_CHISELED_BRICKS = register("pink_chiseled_bricks", () -> getBlockBrick());
@@ -226,7 +227,6 @@ public class ModBlocks {
     public static final RegistryObject<Block> LIGHT_GRAY_CHISELED_BRICKS = register("light_gray_chiseled_bricks", () -> getBlockBrick());
     public static final RegistryObject<Block> BLACK_CHISELED_BRICKS = register("black_chiseled_bricks", () -> getBlockBrick());
     public static final RegistryObject<Block> RED_CHISELED_BRICKS = register("red_chiseled_bricks", () -> getBlockBrick());
-    public static final RegistryObject<Block> CHISELED_BRICKS = register("chiseled_bricks", () -> getBlockBrick());
 
     static void register() {}
 
