@@ -154,5 +154,23 @@
     "block.coloredbricks.light_gray_cracked_brick_stairs" : "Hellgraue Rissige Ziegeltreppe",
     "block.coloredbricks.gray_cracked_brick_stairs" : "Graue Rissige Ziegeltreppe",
     "block.coloredbricks.black_cracked_brick_stairs" : "Schwarze Rissige Ziegeltreppe",
-    "block.coloredbricks.red_cracked_brick_stairs" : "Rote Rissige Ziegeltreppe"
+    "block.coloredbricks.red_cracked_brick_stairs" : "Rote Rissige Ziegeltreppe",
+
+    "block.coloredbricks.cracked_brick_wall" : "Rissige Ziegelmauer",
+    "block.coloredbricks.white_cracked_brick_wall" : "Weiße Rissige Ziegelmauer",
+    "block.coloredbricks.orange_cracked_brick_wall" : "Orange Rissige Ziegelmauer",
+    "block.coloredbricks.pink_cracked_brick_wall" : "Pinke Rissige Ziegelmauer",
+    "block.coloredbricks.yellow_cracked_brick_wall" : "Gelbe Rissige Ziegelmauer",
+    "block.coloredbricks.lime_cracked_brick_wall" : "Hellgrüne Rissige Ziegelmauer",
+    "block.coloredbricks.green_cracked_brick_wall" : "Grüne Rissige Ziegelmauer",
+    "block.coloredbricks.light_blue_cracked_brick_wall" : "Hellblaue Rissige Ziegelmauer",
+    "block.coloredbricks.cyan_cracked_brick_wall" : "Türkise Rissige Ziegelmauer",
+    "block.coloredbricks.blue_cracked_brick_wall" : "Blaue Rissige Ziegelmauer",
+    "block.coloredbricks.magenta_cracked_brick_wall" : "Magenta Rissige Ziegelmauer",
+    "block.coloredbricks.purple_cracked_brick_wall" : "Lila Rissige Ziegelmauer",
+    "block.coloredbricks.brown_cracked_brick_wall" : "Braune Rissige Ziegelmauer",
+    "block.coloredbricks.light_gray_cracked_brick_wall" : "Hellgraue Rissige Ziegelmauer",
+    "block.coloredbricks.gray_cracked_brick_wall" : "Graue Rissige Ziegelmauer",
+    "block.coloredbricks.black_cracked_brick_wall" : "Schwarze Rissige Ziegelmauer",
+    "block.coloredbricks.red_cracked_brick_wall" : "Rote Rissige Ziegelmauer"
 }
