@@ -3,6 +3,10 @@
     "cSpell.words": [
         "Enderman",
         "Shulker",
-        "coloredbricks"
-    ]
+        "coloredbricks",
+        "examplemod",
+        "modid",
+        "validationtracker"
+    ],
+    "cSpell.language": "en,de"
 }

@@ -122,7 +122,7 @@ public class ModRecipesProvider extends RecipeProvider {
         .addCriterion("has item", hasItem(Tags.Items.INGOTS_BRICK))
         .build(consumer);
 
-        // Brick Block Recipies
+        // Brick Block Recipes
 
         ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.WHITE_BRICKS.get())
         .addIngredient(Blocks.BRICKS)
