@@ -35,7 +35,7 @@ public class coloredbricks
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
-        // Register the setup method for modloading
+        // Register the setup method for mod loading
         bus.addListener(this::setup);
         bus.addListener(this::enqueueIMC);
         bus.addListener(this::processIMC);
