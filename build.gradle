@@ -22,7 +22,7 @@ version = '4.3'
 group = 'net.Pinary_Pi.coloredbricks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'coloredbricks'
 
-sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '15' // Need this here so eclipse task generates correctly.
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '8' // Need this here so eclipse task generates correctly.
 
 println('Java: ' + System.getProperty('java.version') + ' JVM: ' + System.getProperty('java.vm.version') + '(' + System.getProperty('java.vendor') + ') Arch: ' + System.getProperty('os.arch'))
 minecraft {
@@ -115,7 +115,7 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.8.7'
 
-    compile fg.deobf('net.Pinary_Pi.pinaryslib:pinarys-library:1.0.1') {
+    compile fg.deobf('net.Pinary_Pi.pinaryslib:pinarys-library:1.0.2') {
         exclude module: "forge"
     }
     // compile fileTree(dir: 'libs', include: ['*.jar'])
