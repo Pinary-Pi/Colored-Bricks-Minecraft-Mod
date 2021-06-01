@@ -48,6 +48,12 @@ Adds a different varient of each brick for all 16 colors there are in minecraft.
     ordering="NONE"
     # Side this dependency is applied on - BOTH, CLIENT or SERVER
     side="BOTH"
+[[dependencies.coloredbricks]]
+    modId="pinaryslib"
+    mandatory=true
+    versionRange="[1.0,)"
+    ordering="NONE"
+    side="BOTH"
 # Here's another dependency
 [[dependencies.coloredbricks]]
     modId="minecraft"
