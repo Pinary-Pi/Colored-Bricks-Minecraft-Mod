@@ -142,8 +142,8 @@ Version 4.3
 
 Languages
 - English: Full Support
-- German: Should have full support by the time I post this mod.
-- Taiwan: Partial: Support up to 3.1
+- German: Full Support
+- Taiwan: Full Support
 
 Bug Fixes
 - You now need at least a wooden pickaxe to mine any of the bricks I've added.
