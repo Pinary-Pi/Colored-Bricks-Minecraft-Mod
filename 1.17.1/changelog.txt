@@ -1,0 +1,166 @@
+=====
+Version: 0.1 Beta
+
+Added Blocks:
+A brick (the block) variant for each of the 16 Minecraft colors.
+
+Added Items:
+A block item for each added block.
+
+A brick (the item) variant for each of the 16 minecraft colors.
+
+Added Recipes:
+One recipe for each brick item. 1 dye + brick
+
+2 recipes for each brick block
+	1 brick + 1 dye = 1 colored brick or
+	4 colored brick items = 1 colored brick
+
+=====
+Version 0.2 Beta
+
+Added Blocks:
+A brick slab variant for each of the 16 minecraft colors.
+
+Added Items:
+A block item for each added block.
+
+Added Recipes: 
+2 Recipes for each brick slab.
+	1 brick slab + dye = 1 colored slab or
+	3 colored brick blocks = 6 colored slabs
+
+=====
+Version 1.0
+
+Add Blocks:
+A brick wall variant for each of the 16 minecraft colors.
+A brick stairs variant for each of the 16 minecraft colors.
+
+Added Items:
+A block item for each added block.
+
+Added Recipes:
+2 Recipes for each brick stairs.
+	1 brick stair + dye = 1 colored stairs or
+	6 colored brick blocks = 6 colored stairs
+
+2 Recipes for each brick wall.
+	1 brick wall + dye = 1 colored wall or
+	6 colored brick blocks = 6 colored walls
+
+=====
+Version 1.1
+
+Bug Fixes:
+	Fixed Gray Bricks recipe not working.
+
+=====
+Version 1.2
+
+Added Language Chinese(Taiwan) - zh-tw.json
+
+=====
+Version 2.0
+
+Added Chiseled Bricks
+
+Designs:
+	Normal - Plain Design
+	White - Sheep
+	Orange - Fox
+	Pink - Pig
+	Yellow - Bee
+	Lime - Creeper
+	Green - Zombie
+	Light Blue - Dolphin
+	Cyan - Cod 
+	Blue - Squid
+	Magenta - Parrot
+	Purple - Shulker
+	Brown - Villager
+	Light Gray - Skeleton 
+	Gray - Pillager
+	Black - Enderman
+	Red - Chicken
+
+Recipes:
+
+	Stonecutter:
+		Brick -> Chiseled Brick
+	Crafting Table
+		Brick + Dye -> Chiseled Brick
+		2 Slabs -> Chiseled Brick
+=====
+Version 3.0
+
+Added German Language de_de.json 
+
+=====
+Version 3.1
+
+Updated zh_tw.json (Taiwan Language) to include the Chiseled Bricks
+
+=====
+Version 4.0
+
+Adds Cracked Bricks, block version only so far.
+English and German full support, Taiwan partial.
+
+=====
+Version 4.1
+
+Adds Cracked Brick Slabs
+English and German full support, Taiwan partial.
+
+=====
+Version 4.2
+
+Languages
+- English: Full Support
+- German: Full Support
+- Taiwan: Support up to 3.1
+
+Bug Fixes
+- Fixed Cracked Brick Slab Stonecutter Recipes
+
+New Features
+- Cracked Brick Stairs for all 16 vanilla Minecraft colors.
+
+Recipes
+
+Furnace: Brick Stairs -> Cracked Brick Stairs
+Crafting Table: Cracked Brick Stairs + Dye = Dyed Cracked Brick Stairs
+Crafting Table: Cracked Bricks = '#'
+						#
+						##  -> 4 Cracked Brick Stairs
+						###
+Stonecutter: Cracked Bricks -> Cracked Brick Stairs
+
+=====
+Version 4.3
+
+Languages
+- English: Full Support
+- German: Should have full support by the time I post this mod.
+- Taiwan: Partial: Support up to 3.1
+
+Bug Fixes
+- You now need at least a wooden pickaxe to mine any of the bricks I've added.
+
+New Features
+- Cracked Brick Walls in all 16 vanilla Minecraft colors.
+
+Recipes
+
+Furnace: Brick Wall -> Cracked Brick Wall
+Crafting Table: Cracked Brick Wall + Dye = Dyed Cracked Brick Stairs
+Crafting Table: Cracked Bricks = '#'
+						###
+						### = 6 Cracked Brick Walls
+Stonecutter: Cracked Bricks -> Cracked Brick Wall
+
+=====
+Version 1.17.1-4.3
+
+Makes Colored Bricks 4.3 available for Minecraft 1.17.1
