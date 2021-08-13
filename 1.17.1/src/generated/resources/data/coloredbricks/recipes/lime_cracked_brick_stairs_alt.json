@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#  ",
+    "## ",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:stone/lime_cracked_block"
+    }
+  },
+  "result": {
+    "item": "coloredbricks:lime_cracked_brick_stairs",
+    "count": 4
+  }
+}

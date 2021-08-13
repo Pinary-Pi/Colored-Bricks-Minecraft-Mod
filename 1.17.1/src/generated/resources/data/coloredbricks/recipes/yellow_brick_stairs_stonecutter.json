@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "forge:stone/yellow_block"
+  },
+  "result": "coloredbricks:yellow_brick_stairs",
+  "count": 1
+}

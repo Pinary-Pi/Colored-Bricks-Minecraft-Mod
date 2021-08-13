@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "forge:stone/pink_block"
+  },
+  "result": "coloredbricks:pink_brick_stairs",
+  "count": 1
+}
