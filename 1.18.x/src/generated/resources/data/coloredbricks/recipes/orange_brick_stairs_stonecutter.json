@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "forge:stone/orange_block"
+  },
+  "result": "coloredbricks:orange_brick_stairs",
+  "count": 1
+}

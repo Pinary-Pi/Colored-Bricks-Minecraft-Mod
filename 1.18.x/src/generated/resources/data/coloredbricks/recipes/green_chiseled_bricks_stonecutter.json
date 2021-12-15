@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "forge:stone/green_block"
+  },
+  "result": "coloredbricks:green_chiseled_bricks",
+  "count": 1
+}

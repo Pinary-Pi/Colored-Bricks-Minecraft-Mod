@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "forge:stone/yellow_block"
+  },
+  "result": "coloredbricks:yellow_chiseled_bricks",
+  "count": 1
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "forge:stone/lime_block"
+  },
+  "result": "coloredbricks:lime_brick_slab",
+  "count": 2
+}
