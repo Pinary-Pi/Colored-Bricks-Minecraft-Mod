@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:brick_wall"
+    },
+    {
+      "tag": "forge:dyes/black"
+    }
+  ],
+  "result": {
+    "item": "coloredbricks:black_brick_wall"
+  }
+}

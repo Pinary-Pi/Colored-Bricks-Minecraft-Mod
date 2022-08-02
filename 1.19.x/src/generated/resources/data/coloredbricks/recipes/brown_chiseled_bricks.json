@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "coloredbricks:chiseled_bricks"
+    },
+    {
+      "tag": "forge:dyes/brown"
+    }
+  ],
+  "result": {
+    "item": "coloredbricks:brown_chiseled_bricks"
+  }
+}

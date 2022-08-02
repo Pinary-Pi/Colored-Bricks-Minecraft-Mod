@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "tag": "forge:stone/cracked_block"
+    },
+    {
+      "tag": "forge:dyes/gray"
+    }
+  ],
+  "result": {
+    "item": "coloredbricks:gray_cracked_bricks"
+  }
+}

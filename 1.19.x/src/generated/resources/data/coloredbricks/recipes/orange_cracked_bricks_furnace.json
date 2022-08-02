@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "forge:stone/orange_block"
+  },
+  "result": "coloredbricks:orange_cracked_bricks",
+  "experience": 0.1,
+  "cookingtime": 200
+}

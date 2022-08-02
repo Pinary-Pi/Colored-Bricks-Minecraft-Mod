@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "forge:stone/magenta_block"
+  },
+  "result": "coloredbricks:magenta_chiseled_bricks",
+  "count": 1
+}

@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "tag": "forge:stone/yellow_slab"
+    }
+  },
+  "result": {
+    "item": "coloredbricks:yellow_chiseled_bricks"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "side": "coloredbricks:block/red_bricks",
+    "bottom": "coloredbricks:block/red_bricks",
+    "top": "coloredbricks:block/red_bricks"
+  }
+}
