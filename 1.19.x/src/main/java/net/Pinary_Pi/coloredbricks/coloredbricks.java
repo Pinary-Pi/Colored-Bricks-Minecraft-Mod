@@ -3,7 +3,7 @@ package net.Pinary_Pi.coloredbricks;
 import net.Pinary_Pi.coloredbricks.setup.Registration;
 import net.Pinary_Pi.gear.util.ColoredbricksRenderer;
 import net.Pinary_Pi.gear.util.ModResourceLocation;
-import net.minecraft.world.level.block.Blocks;
+// import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.InterModComms;
@@ -49,7 +49,7 @@ public class coloredbricks
     {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
+        // LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {

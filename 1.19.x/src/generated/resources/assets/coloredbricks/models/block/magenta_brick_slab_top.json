@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/slab_top",
   "textures": {
-    "side": "coloredbricks:block/magenta_bricks",
     "bottom": "coloredbricks:block/magenta_bricks",
+    "side": "coloredbricks:block/magenta_bricks",
     "top": "coloredbricks:block/magenta_bricks"
   }
 }

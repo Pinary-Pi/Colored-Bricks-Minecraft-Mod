@@ -1,15 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "###"
-  ],
   "key": {
     "#": {
       "tag": "forge:stone/magenta_block"
     }
   },
+  "pattern": [
+    "###"
+  ],
   "result": {
-    "item": "coloredbricks:magenta_brick_slab",
-    "count": 6
+    "count": 6,
+    "item": "coloredbricks:magenta_brick_slab"
   }
 }

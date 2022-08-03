@@ -1,9 +1,9 @@
 {
   "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.1,
   "ingredient": {
     "tag": "forge:stone/light_blue_block"
   },
-  "result": "coloredbricks:light_blue_cracked_bricks",
-  "experience": 0.1,
-  "cookingtime": 200
+  "result": "coloredbricks:light_blue_cracked_bricks"
 }

@@ -162,11 +162,11 @@ public class ModBlockLootTables extends BlockLoot {
         this.dropSelf(ModBlocks.BLACK_CRACKED_BRICK_WALL.get());
         this.dropSelf(ModBlocks.RED_CRACKED_BRICK_WALL.get());
     }
-
+    
     @Override
     protected Iterable<Block> getKnownBlocks() {
         return ForgeRegistries.BLOCKS.getValues().stream()
-                .filter(block -> coloredbricks.MOD_ID.equals(block.getRegistryName().getNamespace()))
-                .collect(Collectors.toSet());
+            .filter(block -> coloredbricks.MOD_ID.equals(block.getLootTable().getNamespace()))
+            .collect(Collectors.toSet());
     }
 }

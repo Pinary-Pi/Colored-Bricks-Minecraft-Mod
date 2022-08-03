@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#",
-    "#"
-  ],
   "key": {
     "#": {
       "tag": "forge:stone/white_slab"
     }
   },
+  "pattern": [
+    "#",
+    "#"
+  ],
   "result": {
     "item": "coloredbricks:white_chiseled_bricks"
   }

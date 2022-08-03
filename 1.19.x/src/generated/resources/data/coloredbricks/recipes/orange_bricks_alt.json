@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "##",
-    "##"
-  ],
   "key": {
     "#": {
       "tag": "forge:stone/orange_item"
     }
   },
+  "pattern": [
+    "##",
+    "##"
+  ],
   "result": {
     "item": "coloredbricks:orange_bricks"
   }

@@ -1,14 +1,14 @@
 {
   "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "#",
-    "#"
-  ],
   "key": {
     "#": {
       "tag": "forge:stone/cyan_slab"
     }
   },
+  "pattern": [
+    "#",
+    "#"
+  ],
   "result": {
     "item": "coloredbricks:cyan_chiseled_bricks"
   }

@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "coloredbricks:block/orange_brick_slab_top"
-    },
     "type=bottom": {
       "model": "coloredbricks:block/orange_brick_slab"
     },
     "type=double": {
       "model": "coloredbricks:block/orange_bricks"
+    },
+    "type=top": {
+      "model": "coloredbricks:block/orange_brick_slab_top"
     }
   }
 }

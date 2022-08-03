@@ -169,3 +169,8 @@ Makes Colored Bricks 4.3 available for Minecraft 1.17.1
 Version 1.18-4.3
 
 Makes Colored Bricks 4.3 available for Minecraft 1.18.1
+
+=====
+Version 1.19-4.3
+
+Makes Colored Bricks available for 1.19

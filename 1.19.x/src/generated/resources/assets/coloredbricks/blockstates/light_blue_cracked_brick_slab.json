@@ -1,13 +1,13 @@
 {
   "variants": {
-    "type=top": {
-      "model": "coloredbricks:block/light_blue_cracked_brick_slab_top"
-    },
     "type=bottom": {
       "model": "coloredbricks:block/light_blue_cracked_brick_slab"
     },
     "type=double": {
       "model": "coloredbricks:block/light_blue_cracked_bricks"
+    },
+    "type=top": {
+      "model": "coloredbricks:block/light_blue_cracked_brick_slab_top"
     }
   }
 }
