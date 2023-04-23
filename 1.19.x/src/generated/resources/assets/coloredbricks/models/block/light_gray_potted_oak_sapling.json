@@ -1,0 +1,6 @@
+{
+  "parent": "coloredbricks:block/light_flower_pot_cross",
+  "textures": {
+    "plant": "minecraft:block/oak_sapling"
+  }
+}
