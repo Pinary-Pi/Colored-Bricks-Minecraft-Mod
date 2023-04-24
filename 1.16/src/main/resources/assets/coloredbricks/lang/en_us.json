@@ -172,5 +172,22 @@
     "block.coloredbricks.light_gray_cracked_brick_wall" : "Light Gray Cracked Brick Wall",
     "block.coloredbricks.gray_cracked_brick_wall" : "Gray Cracked Brick Wall",
     "block.coloredbricks.black_cracked_brick_wall" : "Black Cracked Brick Wall",
-    "block.coloredbricks.red_cracked_brick_wall" : "Red Cracked Brick Wall"
+    "block.coloredbricks.red_cracked_brick_wall" : "Red Cracked Brick Wall",
+
+    "block.coloredbricks.white_flower_pot" : "White Flower Pot",
+    "block.coloredbricks.orange_flower_pot" : "Orange Flower Pot",
+    "block.coloredbricks.pink_flower_pot" : "Pink Flower Pot",
+    "block.coloredbricks.yellow_flower_pot" : "Yellow Flower Pot",
+    "block.coloredbricks.lime_flower_pot" : "Lime Flower Pot",
+    "block.coloredbricks.green_flower_pot" : "Green Flower Pot",
+    "block.coloredbricks.light_blue_flower_pot" : "Light Blue Flower Pot",
+    "block.coloredbricks.cyan_flower_pot" : "Cyan Flower Pot",
+    "block.coloredbricks.blue_flower_pot" : "Blue Flower Pot",
+    "block.coloredbricks.magenta_flower_pot" : "Magenta Flower Pot",
+    "block.coloredbricks.purple_flower_pot" : "Purple Flower Pot",
+    "block.coloredbricks.brown_flower_pot" : "Brown Flower Pot",
+    "block.coloredbricks.light_gray_flower_pot" : "Light Gray Flower Pot",
+    "block.coloredbricks.gray_flower_pot" : "Gray Flower Pot",
+    "block.coloredbricks.black_flower_pot" : "Black Flower Pot",
+    "block.coloredbricks.red_flower_pot" : "Red Flower Pot"
 }
