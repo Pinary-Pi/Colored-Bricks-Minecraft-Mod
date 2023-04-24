@@ -154,5 +154,22 @@
     "block.coloredbricks.light_gray_cracked_brick_stairs" : "裂紋淺灰磚階梯",
     "block.coloredbricks.gray_cracked_brick_stairs" : "裂紋灰磚階梯",
     "block.coloredbricks.black_cracked_brick_stairs" : "裂紋黑磚階梯",
-    "block.coloredbricks.red_cracked_brick_stairs" : "裂紋鮮紅磚階梯"
+    "block.coloredbricks.red_cracked_brick_stairs" : "裂紋鮮紅磚階梯",
+
+    "item.coloredbricks.white_flower_pot" : "白花盆",
+    "item.coloredbricks.orange_flower_pot" : "橙花盆",
+    "item.coloredbricks.pink_flower_pot" : "粉花盆",
+    "item.coloredbricks.yellow_flower_pot" : "黃花盆",
+    "item.coloredbricks.lime_flower_pot" : "淺綠花盆",
+    "item.coloredbricks.green_flower_pot" : "綠花盆",
+    "item.coloredbricks.light_blue_flower_pot" : "淺藍花盆",
+    "item.coloredbricks.cyan_flower_pot" : "青花盆",
+    "item.coloredbricks.blue_flower_pot" : "藍花盆",
+    "item.coloredbricks.magenta_flower_pot" : "洋紅花盆",
+    "item.coloredbricks.purple_flower_pot" : "紫花盆",
+    "item.coloredbricks.brown_flower_pot" : "棕花盆",
+    "item.coloredbricks.light_gray_flower_pot" : "淺灰花盆",
+    "item.coloredbricks.gray_flower_pot" : "灰花盆",
+    "item.coloredbricks.black_flower_pot" : "黑花盆",
+    "item.coloredbricks.red_flower_pot" : "鮮紅花盆"
 }
