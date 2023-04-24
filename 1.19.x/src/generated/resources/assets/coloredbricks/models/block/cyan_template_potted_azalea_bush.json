@@ -5,7 +5,7 @@
         "particle": "coloredbricks:block/cyan_flower_pot",
         "flowerpot": "coloredbricks:block/cyan_flower_pot",
         "dirt": "block/dirt",
-        "azalea_plant": "block/cyan_potted_azalea_bush_plant"
+        "azalea_plant": "block/potted_azalea_bush_plant"
     },
     "elements": [
         {   "from": [ 5, 0, 5 ],

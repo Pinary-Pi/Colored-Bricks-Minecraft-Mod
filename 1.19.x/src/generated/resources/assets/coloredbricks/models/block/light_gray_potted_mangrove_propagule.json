@@ -2,9 +2,9 @@
   "ambientocclusion": false,
   "render_type": "cutout",
   "textures": {
-    "particle": "coloredbricks:block/light_flower_pot",
+    "particle": "coloredbricks:block/light_gray_flower_pot",
     "sapling": "block/mangrove_propagule",
-    "flowerpot": "coloredbricks:block/light_flower_pot",
+    "flowerpot": "coloredbricks:block/light_gray_flower_pot",
     "dirt": "block/dirt"
   },
   "elements": [

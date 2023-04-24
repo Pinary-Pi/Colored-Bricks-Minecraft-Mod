@@ -1,5 +1,5 @@
 {
-  "parent": "coloredbricks:block/light_flower_pot_cross",
+  "parent": "coloredbricks:block/light_gray_flower_pot_cross",
   "textures": {
     "plant": "minecraft:block/pink_tulip"
   }

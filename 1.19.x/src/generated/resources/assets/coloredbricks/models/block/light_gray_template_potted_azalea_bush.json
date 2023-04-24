@@ -2,8 +2,8 @@
     "ambientocclusion": false,
     "render_type": "cutout",
     "textures": {
-        "particle": "coloredbricks:block/light_flower_pot",
-        "flowerpot": "coloredbricks:block/light_flower_pot",
+        "particle": "coloredbricks:block/light_gray_flower_pot",
+        "flowerpot": "coloredbricks:block/light_gray_flower_pot",
         "dirt": "block/dirt",
         "azalea_plant": "block/potted_azalea_bush_plant"
     },
