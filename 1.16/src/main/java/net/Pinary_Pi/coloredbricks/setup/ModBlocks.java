@@ -235,7 +235,7 @@ public class ModBlocks {
 
     // Flower Pots
 
-    public static final RegistryObject<FlowerPotBlock> WHITE_FLOWER_POT = register("white_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> WHITE_FLOWER_POT = register("white_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> WHITE_POTTED_OAK_SAPLING = registerNoItem("white_potted_oak_sapling", () -> getFlowerPot(() -> WHITE_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> WHITE_POTTED_SPRUCE_SAPLING = registerNoItem("white_potted_spruce_sapling", () -> getFlowerPot(() -> WHITE_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> WHITE_POTTED_BIRCH_SAPLING = registerNoItem("white_potted_birch_sapling", () -> getFlowerPot(() -> WHITE_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -266,7 +266,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> WHITE_POTTED_CRIMSON_ROOTS = registerNoItem("white_potted_crimson_roots", () -> getFlowerPot(() -> WHITE_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> WHITE_POTTED_WARPED_ROOTS = registerNoItem("white_potted_warped_roots", () -> getFlowerPot(() -> WHITE_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> ORANGE_FLOWER_POT = register("orange_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> ORANGE_FLOWER_POT = register("orange_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> ORANGE_POTTED_OAK_SAPLING = registerNoItem("orange_potted_oak_sapling", () -> getFlowerPot(() -> ORANGE_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> ORANGE_POTTED_SPRUCE_SAPLING = registerNoItem("orange_potted_spruce_sapling", () -> getFlowerPot(() -> ORANGE_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> ORANGE_POTTED_BIRCH_SAPLING = registerNoItem("orange_potted_birch_sapling", () -> getFlowerPot(() -> ORANGE_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -297,7 +297,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> ORANGE_POTTED_CRIMSON_ROOTS = registerNoItem("orange_potted_crimson_roots", () -> getFlowerPot(() -> ORANGE_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> ORANGE_POTTED_WARPED_ROOTS = registerNoItem("orange_potted_warped_roots", () -> getFlowerPot(() -> ORANGE_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> PINK_FLOWER_POT = register("pink_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> PINK_FLOWER_POT = register("pink_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> PINK_POTTED_OAK_SAPLING = registerNoItem("pink_potted_oak_sapling", () -> getFlowerPot(() -> PINK_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> PINK_POTTED_SPRUCE_SAPLING = registerNoItem("pink_potted_spruce_sapling", () -> getFlowerPot(() -> PINK_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> PINK_POTTED_BIRCH_SAPLING = registerNoItem("pink_potted_birch_sapling", () -> getFlowerPot(() -> PINK_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -328,7 +328,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> PINK_POTTED_CRIMSON_ROOTS = registerNoItem("pink_potted_crimson_roots", () -> getFlowerPot(() -> PINK_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> PINK_POTTED_WARPED_ROOTS = registerNoItem("pink_potted_warped_roots", () -> getFlowerPot(() -> PINK_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> YELLOW_FLOWER_POT = register("yellow_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> YELLOW_FLOWER_POT = register("yellow_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> YELLOW_POTTED_OAK_SAPLING = registerNoItem("yellow_potted_oak_sapling", () -> getFlowerPot(() -> YELLOW_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> YELLOW_POTTED_SPRUCE_SAPLING = registerNoItem("yellow_potted_spruce_sapling", () -> getFlowerPot(() -> YELLOW_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> YELLOW_POTTED_BIRCH_SAPLING = registerNoItem("yellow_potted_birch_sapling", () -> getFlowerPot(() -> YELLOW_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -359,7 +359,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> YELLOW_POTTED_CRIMSON_ROOTS = registerNoItem("yellow_potted_crimson_roots", () -> getFlowerPot(() -> YELLOW_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> YELLOW_POTTED_WARPED_ROOTS = registerNoItem("yellow_potted_warped_roots", () -> getFlowerPot(() -> YELLOW_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> LIME_FLOWER_POT = register("lime_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> LIME_FLOWER_POT = register("lime_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> LIME_POTTED_OAK_SAPLING = registerNoItem("lime_potted_oak_sapling", () -> getFlowerPot(() -> LIME_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> LIME_POTTED_SPRUCE_SAPLING = registerNoItem("lime_potted_spruce_sapling", () -> getFlowerPot(() -> LIME_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> LIME_POTTED_BIRCH_SAPLING = registerNoItem("lime_potted_birch_sapling", () -> getFlowerPot(() -> LIME_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -390,7 +390,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> LIME_POTTED_CRIMSON_ROOTS = registerNoItem("lime_potted_crimson_roots", () -> getFlowerPot(() -> LIME_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> LIME_POTTED_WARPED_ROOTS = registerNoItem("lime_potted_warped_roots", () -> getFlowerPot(() -> LIME_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> GREEN_FLOWER_POT = register("green_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> GREEN_FLOWER_POT = register("green_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> GREEN_POTTED_OAK_SAPLING = registerNoItem("green_potted_oak_sapling", () -> getFlowerPot(() -> GREEN_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> GREEN_POTTED_SPRUCE_SAPLING = registerNoItem("green_potted_spruce_sapling", () -> getFlowerPot(() -> GREEN_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> GREEN_POTTED_BIRCH_SAPLING = registerNoItem("green_potted_birch_sapling", () -> getFlowerPot(() -> GREEN_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -421,7 +421,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> GREEN_POTTED_CRIMSON_ROOTS = registerNoItem("green_potted_crimson_roots", () -> getFlowerPot(() -> GREEN_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> GREEN_POTTED_WARPED_ROOTS = registerNoItem("green_potted_warped_roots", () -> getFlowerPot(() -> GREEN_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_FLOWER_POT = register("light_blue_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_FLOWER_POT = register("light_blue_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_POTTED_OAK_SAPLING = registerNoItem("light_blue_potted_oak_sapling", () -> getFlowerPot(() -> LIGHT_BLUE_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_POTTED_SPRUCE_SAPLING = registerNoItem("light_blue_potted_spruce_sapling", () -> getFlowerPot(() -> LIGHT_BLUE_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_POTTED_BIRCH_SAPLING = registerNoItem("light_blue_potted_birch_sapling", () -> getFlowerPot(() -> LIGHT_BLUE_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -452,7 +452,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_POTTED_CRIMSON_ROOTS = registerNoItem("light_blue_potted_crimson_roots", () -> getFlowerPot(() -> LIGHT_BLUE_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_POTTED_WARPED_ROOTS = registerNoItem("light_blue_potted_warped_roots", () -> getFlowerPot(() -> LIGHT_BLUE_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> CYAN_FLOWER_POT = register("cyan_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> CYAN_FLOWER_POT = register("cyan_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> CYAN_POTTED_OAK_SAPLING = registerNoItem("cyan_potted_oak_sapling", () -> getFlowerPot(() -> CYAN_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> CYAN_POTTED_SPRUCE_SAPLING = registerNoItem("cyan_potted_spruce_sapling", () -> getFlowerPot(() -> CYAN_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> CYAN_POTTED_BIRCH_SAPLING = registerNoItem("cyan_potted_birch_sapling", () -> getFlowerPot(() -> CYAN_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -483,7 +483,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> CYAN_POTTED_CRIMSON_ROOTS = registerNoItem("cyan_potted_crimson_roots", () -> getFlowerPot(() -> CYAN_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> CYAN_POTTED_WARPED_ROOTS = registerNoItem("cyan_potted_warped_roots", () -> getFlowerPot(() -> CYAN_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> BLUE_FLOWER_POT = register("blue_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> BLUE_FLOWER_POT = register("blue_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> BLUE_POTTED_OAK_SAPLING = registerNoItem("blue_potted_oak_sapling", () -> getFlowerPot(() -> BLUE_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> BLUE_POTTED_SPRUCE_SAPLING = registerNoItem("blue_potted_spruce_sapling", () -> getFlowerPot(() -> BLUE_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> BLUE_POTTED_BIRCH_SAPLING = registerNoItem("blue_potted_birch_sapling", () -> getFlowerPot(() -> BLUE_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -514,7 +514,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> BLUE_POTTED_CRIMSON_ROOTS = registerNoItem("blue_potted_crimson_roots", () -> getFlowerPot(() -> BLUE_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> BLUE_POTTED_WARPED_ROOTS = registerNoItem("blue_potted_warped_roots", () -> getFlowerPot(() -> BLUE_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> MAGENTA_FLOWER_POT = register("magenta_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> MAGENTA_FLOWER_POT = register("magenta_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> MAGENTA_POTTED_OAK_SAPLING = registerNoItem("magenta_potted_oak_sapling", () -> getFlowerPot(() -> MAGENTA_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> MAGENTA_POTTED_SPRUCE_SAPLING = registerNoItem("magenta_potted_spruce_sapling", () -> getFlowerPot(() -> MAGENTA_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> MAGENTA_POTTED_BIRCH_SAPLING = registerNoItem("magenta_potted_birch_sapling", () -> getFlowerPot(() -> MAGENTA_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -545,7 +545,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> MAGENTA_POTTED_CRIMSON_ROOTS = registerNoItem("magenta_potted_crimson_roots", () -> getFlowerPot(() -> MAGENTA_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> MAGENTA_POTTED_WARPED_ROOTS = registerNoItem("magenta_potted_warped_roots", () -> getFlowerPot(() -> MAGENTA_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> PURPLE_FLOWER_POT = register("purple_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> PURPLE_FLOWER_POT = register("purple_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> PURPLE_POTTED_OAK_SAPLING = registerNoItem("purple_potted_oak_sapling", () -> getFlowerPot(() -> PURPLE_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> PURPLE_POTTED_SPRUCE_SAPLING = registerNoItem("purple_potted_spruce_sapling", () -> getFlowerPot(() -> PURPLE_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> PURPLE_POTTED_BIRCH_SAPLING = registerNoItem("purple_potted_birch_sapling", () -> getFlowerPot(() -> PURPLE_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -576,7 +576,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> PURPLE_POTTED_CRIMSON_ROOTS = registerNoItem("purple_potted_crimson_roots", () -> getFlowerPot(() -> PURPLE_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> PURPLE_POTTED_WARPED_ROOTS = registerNoItem("purple_potted_warped_roots", () -> getFlowerPot(() -> PURPLE_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> BROWN_FLOWER_POT = register("brown_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> BROWN_FLOWER_POT = register("brown_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> BROWN_POTTED_OAK_SAPLING = registerNoItem("brown_potted_oak_sapling", () -> getFlowerPot(() -> BROWN_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> BROWN_POTTED_SPRUCE_SAPLING = registerNoItem("brown_potted_spruce_sapling", () -> getFlowerPot(() -> BROWN_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> BROWN_POTTED_BIRCH_SAPLING = registerNoItem("brown_potted_birch_sapling", () -> getFlowerPot(() -> BROWN_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -607,7 +607,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> BROWN_POTTED_CRIMSON_ROOTS = registerNoItem("brown_potted_crimson_roots", () -> getFlowerPot(() -> BROWN_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> BROWN_POTTED_WARPED_ROOTS = registerNoItem("brown_potted_warped_roots", () -> getFlowerPot(() -> BROWN_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_FLOWER_POT = register("light_gray_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_FLOWER_POT = register("light_gray_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_POTTED_OAK_SAPLING = registerNoItem("light_gray_potted_oak_sapling", () -> getFlowerPot(() -> LIGHT_GRAY_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_POTTED_SPRUCE_SAPLING = registerNoItem("light_gray_potted_spruce_sapling", () -> getFlowerPot(() -> LIGHT_GRAY_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_POTTED_BIRCH_SAPLING = registerNoItem("light_gray_potted_birch_sapling", () -> getFlowerPot(() -> LIGHT_GRAY_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -638,7 +638,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_POTTED_CRIMSON_ROOTS = registerNoItem("light_gray_potted_crimson_roots", () -> getFlowerPot(() -> LIGHT_GRAY_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_POTTED_WARPED_ROOTS = registerNoItem("light_gray_potted_warped_roots", () -> getFlowerPot(() -> LIGHT_GRAY_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> GRAY_FLOWER_POT = register("gray_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> GRAY_FLOWER_POT = register("gray_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> GRAY_POTTED_OAK_SAPLING = registerNoItem("gray_potted_oak_sapling", () -> getFlowerPot(() -> GRAY_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> GRAY_POTTED_SPRUCE_SAPLING = registerNoItem("gray_potted_spruce_sapling", () -> getFlowerPot(() -> GRAY_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> GRAY_POTTED_BIRCH_SAPLING = registerNoItem("gray_potted_birch_sapling", () -> getFlowerPot(() -> GRAY_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -669,7 +669,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> GRAY_POTTED_CRIMSON_ROOTS = registerNoItem("gray_potted_crimson_roots", () -> getFlowerPot(() -> GRAY_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> GRAY_POTTED_WARPED_ROOTS = registerNoItem("gray_potted_warped_roots", () -> getFlowerPot(() -> GRAY_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> BLACK_FLOWER_POT = register("black_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> BLACK_FLOWER_POT = register("black_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> BLACK_POTTED_OAK_SAPLING = registerNoItem("black_potted_oak_sapling", () -> getFlowerPot(() -> BLACK_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> BLACK_POTTED_SPRUCE_SAPLING = registerNoItem("black_potted_spruce_sapling", () -> getFlowerPot(() -> BLACK_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> BLACK_POTTED_BIRCH_SAPLING = registerNoItem("black_potted_birch_sapling", () -> getFlowerPot(() -> BLACK_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -700,7 +700,7 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> BLACK_POTTED_CRIMSON_ROOTS = registerNoItem("black_potted_crimson_roots", () -> getFlowerPot(() -> BLACK_FLOWER_POT.get(), () -> Blocks.CRIMSON_ROOTS));
     public static final RegistryObject<FlowerPotBlock> BLACK_POTTED_WARPED_ROOTS = registerNoItem("black_potted_warped_roots", () -> getFlowerPot(() -> BLACK_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
 
-    public static final RegistryObject<FlowerPotBlock> RED_FLOWER_POT = register("red_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> RED_FLOWER_POT = register("red_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), ItemGroup.DECORATIONS);
     public static final RegistryObject<FlowerPotBlock> RED_POTTED_OAK_SAPLING = registerNoItem("red_potted_oak_sapling", () -> getFlowerPot(() -> RED_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> RED_POTTED_SPRUCE_SAPLING = registerNoItem("red_potted_spruce_sapling", () -> getFlowerPot(() -> RED_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> RED_POTTED_BIRCH_SAPLING = registerNoItem("red_potted_birch_sapling", () -> getFlowerPot(() -> RED_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -770,7 +770,9 @@ public class ModBlocks {
     }
 
     private static ModFlowerPotBlock getFlowerPot(@Nullable Supplier<FlowerPotBlock> emptyPot, Supplier<Block> content) {
-        return new ModFlowerPotBlock(emptyPot, content, AbstractBlock.Properties.copy(Blocks.FLOWER_POT));
+        return new ModFlowerPotBlock(emptyPot, content, AbstractBlock.Properties.create(Material.MISCELLANEOUS)
+            .zeroHardnessAndResistance()
+            .notSolid());
     }
 
     private static <T extends Block> RegistryObject<T> registerNoItem(String name, Supplier<T> block) {
