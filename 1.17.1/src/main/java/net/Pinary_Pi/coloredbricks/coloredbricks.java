@@ -2,6 +2,7 @@ package net.Pinary_Pi.coloredbricks;
 
 import net.Pinary_Pi.coloredbricks.setup.Registration;
 import net.Pinary_Pi.gear.util.ColoredbricksRenderer;
+import net.Pinary_Pi.gear.util.ModColorHandler;
 import net.Pinary_Pi.gear.util.ModResourceLocation;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -44,6 +45,7 @@ public class coloredbricks
         bus.addListener(this::enqueueIMC);
         bus.addListener(this::processIMC);
         bus.addListener(this::clientSetup);
+        bus.addListener(ModColorHandler::register);
 
     }
 

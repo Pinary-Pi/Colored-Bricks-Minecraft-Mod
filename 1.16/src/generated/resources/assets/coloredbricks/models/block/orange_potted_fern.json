@@ -1,0 +1,6 @@
+{
+  "parent": "coloredbricks:block/orange_tinted_flower_pot_cross",
+  "textures": {
+    "plant": "minecraft:block/fern"
+  }
+}

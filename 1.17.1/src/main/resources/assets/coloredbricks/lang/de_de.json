@@ -172,5 +172,22 @@
     "block.coloredbricks.light_gray_cracked_brick_wall" : "Hellgraue Rissige Ziegelmauer",
     "block.coloredbricks.gray_cracked_brick_wall" : "Graue Rissige Ziegelmauer",
     "block.coloredbricks.black_cracked_brick_wall" : "Schwarze Rissige Ziegelmauer",
-    "block.coloredbricks.red_cracked_brick_wall" : "Rote Rissige Ziegelmauer"
+    "block.coloredbricks.red_cracked_brick_wall" : "Rote Rissige Ziegelmauer",
+
+    "item.coloredbricks.white_flower_pot" : "Weißer Blumentopf",
+    "item.coloredbricks.orange_flower_pot" : "Orangefarbener Blumentopf",
+    "item.coloredbricks.pink_flower_pot" : "Pinker Blumentopf",
+    "item.coloredbricks.yellow_flower_pot" : "Gelber Blumentopf",
+    "item.coloredbricks.lime_flower_pot" : "Hellgrüner Blumentopf",
+    "item.coloredbricks.green_flower_pot" : "Grüner Blumentopf",
+    "item.coloredbricks.light_blue_flower_pot" : "Hellblauer Blumentopf",
+    "item.coloredbricks.cyan_flower_pot" : "Türkiser Blumentopf",
+    "item.coloredbricks.blue_flower_pot" : "Blauer Blumentopf",
+    "item.coloredbricks.magenta_flower_pot" : "Magenta Blumentopf",
+    "item.coloredbricks.purple_flower_pot" : "Lila Blumentopf",
+    "item.coloredbricks.brown_flower_pot" : "Brauner Blumentopf",
+    "item.coloredbricks.light_gray_flower_pot" : "Hellgrauer Blumentopf",
+    "item.coloredbricks.gray_flower_pot" : "Grauer Blumentopf",
+    "item.coloredbricks.black_flower_pot" : "Schwarzer Blumentopf",
+    "item.coloredbricks.red_flower_pot" : "Roter Blumentopf"
 }

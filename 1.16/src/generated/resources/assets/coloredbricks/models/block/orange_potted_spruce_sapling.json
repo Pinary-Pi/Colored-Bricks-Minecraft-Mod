@@ -1,0 +1,6 @@
+{
+  "parent": "coloredbricks:block/orange_flower_pot_cross",
+  "textures": {
+    "plant": "minecraft:block/spruce_sapling"
+  }
+}

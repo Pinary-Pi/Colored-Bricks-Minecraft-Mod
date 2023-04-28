@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:flower_pot"
+    },
+    {
+      "tag": "forge:dyes/cyan"
+    }
+  ],
+  "result": {
+    "item": "coloredbricks:cyan_flower_pot"
+  }
+}
