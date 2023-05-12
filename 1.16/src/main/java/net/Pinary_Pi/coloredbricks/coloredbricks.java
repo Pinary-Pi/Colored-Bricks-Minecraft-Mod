@@ -1,6 +1,6 @@
 package net.Pinary_Pi.coloredbricks;
 
-import net.Pinary_Pi.coloredbricks.setup.Features;
+// import net.Pinary_Pi.coloredbricks.setup.Features;
 import net.Pinary_Pi.coloredbricks.setup.Registration;
 import net.Pinary_Pi.gear.util.ColoredbricksRenderer;
 import net.Pinary_Pi.gear.util.ModColorHandler;
@@ -21,12 +21,12 @@ import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import team.chisel.api.ChiselAPIProps;
-import team.chisel.api.carving.CarvingUtils;
-import team.chisel.client.gui.PreviewType;
-import team.chisel.common.carving.CarvingVariationRegistry;
-import team.chisel.common.carving.ChiselModeRegistry;
-import team.chisel.common.item.ChiselMode;
+// import team.chisel.api.ChiselAPIProps;
+// import team.chisel.api.carving.CarvingUtils;
+// import team.chisel.client.gui.PreviewType;
+// import team.chisel.common.carving.CarvingVariationRegistry;
+// import team.chisel.common.carving.ChiselModeRegistry;
+// import team.chisel.common.item.ChiselMode;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -48,11 +48,11 @@ public class coloredbricks
     public coloredbricks() {
         Registration.register();
 
-        CarvingUtils.chisel = new CarvingVariationRegistry();
-        CarvingUtils.modes = ChiselModeRegistry.INSTANCE;
-        ChiselMode.values();
-        PreviewType.values();
-        ChiselAPIProps.MOD_ID = MOD_ID;
+        // CarvingUtils.chisel = new CarvingVariationRegistry();
+        // CarvingUtils.modes = ChiselModeRegistry.INSTANCE;
+        // ChiselMode.values();
+        // PreviewType.values();
+        // ChiselAPIProps.MOD_ID = MOD_ID;
 
         IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 
@@ -62,7 +62,7 @@ public class coloredbricks
         MinecraftForge.EVENT_BUS.addGenericListener(Block.class, this::onMissingBlock);
         MinecraftForge.EVENT_BUS.addGenericListener(Item.class, this::onMissingItem);
 
-        Features.init();
+        // Features.init();
 
         // Register the setup method for mod loading
         bus.addListener(this::setup);

@@ -126,9 +126,9 @@ dependencies {
         exclude module: "forge"
     }
 
-    implementation fg.deobf("curse.maven:ctm-267602:3137659")
+    // implementation fg.deobf("curse.maven:ctm-267602:3137659")
 
-    implementation fg.deobf("curse.maven:chisel-235279:3376782")
+    // implementation fg.deobf("curse.maven:chisel-235279:3376782")
 
     // You may put jars on which you depend on in ./libs or you may define them like so..
     // compile "some.group:artifact:version:classifier"
