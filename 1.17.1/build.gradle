@@ -17,7 +17,7 @@ apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 
-version = '1.17.1-4.3'
+version = '1.17.1-5.0'
 group = 'net.Pinary_Pi.coloredbricks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'coloredbricks'
 
@@ -151,7 +151,7 @@ jar {
         attributes([
             "Specification-Title": "coloredbricks",
             "Specification-Vendor": "Pinary-Pi",
-            "Specification-Version": "1.17.1-4.3", // We are version 1 of ourselves
+            "Specification-Version": "1.17.1-5.0", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
             "Implementation-Vendor" :"Pinary-Pi",

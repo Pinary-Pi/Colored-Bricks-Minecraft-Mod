@@ -18,7 +18,7 @@ apply plugin: 'net.minecraftforge.gradle'
 // Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
 apply plugin: 'eclipse'
 
-version = '4.3'
+version = '1.16-5.0'
 group = 'net.Pinary_Pi.coloredbricks' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'coloredbricks'
 
@@ -101,10 +101,10 @@ def gpr_creds = {
 }
 
 repositories {
-    maven {
-        setUrl("https://maven.pkg.github.com/pinary-pi/pinaryslib")
-        credentials gpr_creds
-    }
+    // maven {
+        // setUrl("https://maven.pkg.github.com/pinary-pi/pinaryslib")
+        // credentials gpr_creds
+    // }
 
     maven {
         url "https://www.cursemaven.com"
@@ -122,9 +122,9 @@ dependencies {
 
     implementation 'com.google.code.gson:gson:2.8.7'
 
-    compile fg.deobf('net.Pinary_Pi.pinaryslib:pinarys-library:1.0.2') {
-        exclude module: "forge"
-    }
+    // compile fg.deobf('net.Pinary_Pi.pinaryslib:pinarys-library:1.0.2') {
+        // exclude module: "forge"
+    // }
 
     // implementation fg.deobf("curse.maven:ctm-267602:3137659")
 
@@ -156,7 +156,7 @@ jar {
         attributes([
             "Specification-Title": "coloredbricks",
             "Specification-Vendor": "examplemodsareus",
-            "Specification-Version": "4.3", // We are version 1 of ourselves
+            "Specification-Version": "1.16-5.0", // We are version 1 of ourselves
             "Implementation-Title": project.name,
             "Implementation-Version": "${version}",
             "Implementation-Vendor" :"examplemodsareus",
