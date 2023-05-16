@@ -178,6 +178,8 @@ Makes Colored Bricks available for 1.19
 =====
 Version 1.16-1.19-5.0
 
+Now supports Japanese!
+
 Adds colored flower pots for each of the 16 vanilla Minecraft colors.
 
 Recipes:
