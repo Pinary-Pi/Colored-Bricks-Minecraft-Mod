@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "tag": "forge:stone/blue_stairs"
+  },
+  "result": "coloredbricks:blue_cracked_brick_stairs"
+}

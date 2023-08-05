@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "tag": "forge:stone/white_wall"
+  },
+  "result": "coloredbricks:white_cracked_brick_wall"
+}

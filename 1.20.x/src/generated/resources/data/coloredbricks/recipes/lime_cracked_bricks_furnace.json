@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "tag": "forge:stone/lime_block"
+  },
+  "result": "coloredbricks:lime_cracked_bricks"
+}

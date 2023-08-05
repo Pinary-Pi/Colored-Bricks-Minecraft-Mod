@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "tag": "forge:stone/purple_slab"
+  },
+  "result": "coloredbricks:purple_cracked_brick_slab"
+}

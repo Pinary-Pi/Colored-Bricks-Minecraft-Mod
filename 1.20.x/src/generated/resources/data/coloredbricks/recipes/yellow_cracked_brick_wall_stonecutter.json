@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "forge:stone/yellow_cracked_block"
+  },
+  "result": "coloredbricks:yellow_cracked_brick_wall"
+}
