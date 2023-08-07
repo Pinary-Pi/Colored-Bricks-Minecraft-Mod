@@ -188,3 +188,15 @@ Dye + Pot = Colored Pot
 Colored Brick = '#'
 			# #
 			 #
+
+=====
+Version 1.20-5.0
+
+Colored Bricks supports MC version 1.20.x now! 
+
+Creative Menu Reorganization:
+Brick Blocks -> Building Block Tab
+Pots -> Functional Blocks Tab
+Ingots -> Ingredients Tab
+
+Pots now support torchflower and cherry sapling!

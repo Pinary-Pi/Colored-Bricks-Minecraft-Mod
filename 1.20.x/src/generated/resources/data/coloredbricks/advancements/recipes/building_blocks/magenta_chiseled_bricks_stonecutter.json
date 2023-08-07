@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:magenta_chiseled_bricks_stonecutter"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

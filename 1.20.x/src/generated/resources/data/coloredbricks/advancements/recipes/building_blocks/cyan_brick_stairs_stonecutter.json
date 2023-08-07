@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:cyan_brick_stairs_stonecutter"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

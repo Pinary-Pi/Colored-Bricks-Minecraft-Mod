@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:light_blue_brick_slab_stonecutter"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

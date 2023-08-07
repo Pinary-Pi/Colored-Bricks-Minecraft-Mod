@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:gray_chiseled_bricks_alt"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

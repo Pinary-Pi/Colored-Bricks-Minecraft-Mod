@@ -1,5 +1,8 @@
 {
   "values": [
-    "coloredbricks:cyan_brick_stairs"
+    {
+      "id": "coloredbricks:cyan_brick_stairs",
+      "required": false
+    }
   ]
 }

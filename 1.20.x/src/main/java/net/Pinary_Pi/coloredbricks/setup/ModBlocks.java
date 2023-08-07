@@ -8,9 +8,11 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.SlabBlock;
 import net.minecraft.world.level.block.StairBlock;
 import net.minecraft.world.level.block.WallBlock;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
@@ -232,7 +234,7 @@ public class ModBlocks {
 
     // Flower Pots
 
-    public static final RegistryObject<FlowerPotBlock> WHITE_FLOWER_POT = register("white_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> WHITE_FLOWER_POT = registerFlowerPot("white_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> WHITE_POTTED_OAK_SAPLING = registerNoItem("white_potted_oak_sapling", () -> getFlowerPot(() -> WHITE_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> WHITE_POTTED_SPRUCE_SAPLING = registerNoItem("white_potted_spruce_sapling", () -> getFlowerPot(() -> WHITE_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> WHITE_POTTED_BIRCH_SAPLING = registerNoItem("white_potted_birch_sapling", () -> getFlowerPot(() -> WHITE_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -265,8 +267,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> WHITE_POTTED_WARPED_ROOTS = registerNoItem("white_potted_warped_roots", () -> getFlowerPot(() -> WHITE_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> WHITE_POTTED_AZALEA = registerNoItem("white_potted_azalea_bush", () -> getFlowerPot(() -> WHITE_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> WHITE_POTTED_FLOWERING_AZALEA = registerNoItem("white_potted_flowering_azalea_bush", () -> getFlowerPot(() -> WHITE_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> WHITE_POTTED_CHERRY_SAPLING = registerNoItem("white_potted_cherry_sapling", () -> getFlowerPot(() -> WHITE_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> WHITE_POTTED_TORCHFLOWER = registerNoItem("white_potted_torchflower", () -> getFlowerPot(() -> WHITE_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> ORANGE_FLOWER_POT = register("orange_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> ORANGE_FLOWER_POT = registerFlowerPot("orange_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> ORANGE_POTTED_OAK_SAPLING = registerNoItem("orange_potted_oak_sapling", () -> getFlowerPot(() -> ORANGE_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> ORANGE_POTTED_SPRUCE_SAPLING = registerNoItem("orange_potted_spruce_sapling", () -> getFlowerPot(() -> ORANGE_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> ORANGE_POTTED_BIRCH_SAPLING = registerNoItem("orange_potted_birch_sapling", () -> getFlowerPot(() -> ORANGE_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -299,8 +303,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> ORANGE_POTTED_WARPED_ROOTS = registerNoItem("orange_potted_warped_roots", () -> getFlowerPot(() -> ORANGE_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> ORANGE_POTTED_AZALEA = registerNoItem("orange_potted_azalea_bush", () -> getFlowerPot(() -> ORANGE_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> ORANGE_POTTED_FLOWERING_AZALEA = registerNoItem("orange_potted_flowering_azalea_bush", () -> getFlowerPot(() -> ORANGE_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> ORANGE_POTTED_CHERRY_SAPLING = registerNoItem("orange_potted_cherry_sapling", () -> getFlowerPot(() -> ORANGE_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> ORANGE_POTTED_TORCHFLOWER = registerNoItem("orange_potted_torchflower", () -> getFlowerPot(() -> ORANGE_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> PINK_FLOWER_POT = register("pink_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> PINK_FLOWER_POT = registerFlowerPot("pink_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> PINK_POTTED_OAK_SAPLING = registerNoItem("pink_potted_oak_sapling", () -> getFlowerPot(() -> PINK_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> PINK_POTTED_SPRUCE_SAPLING = registerNoItem("pink_potted_spruce_sapling", () -> getFlowerPot(() -> PINK_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> PINK_POTTED_BIRCH_SAPLING = registerNoItem("pink_potted_birch_sapling", () -> getFlowerPot(() -> PINK_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -333,8 +339,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> PINK_POTTED_WARPED_ROOTS = registerNoItem("pink_potted_warped_roots", () -> getFlowerPot(() -> PINK_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> PINK_POTTED_AZALEA = registerNoItem("pink_potted_azalea_bush", () -> getFlowerPot(() -> PINK_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> PINK_POTTED_FLOWERING_AZALEA = registerNoItem("pink_potted_flowering_azalea_bush", () -> getFlowerPot(() -> PINK_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> PINK_POTTED_CHERRY_SAPLING = registerNoItem("pink_potted_cherry_sapling", () -> getFlowerPot(() -> PINK_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> PINK_POTTED_TORCHFLOWER = registerNoItem("pink_potted_torchflower", () -> getFlowerPot(() -> PINK_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> YELLOW_FLOWER_POT = register("yellow_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> YELLOW_FLOWER_POT = registerFlowerPot("yellow_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> YELLOW_POTTED_OAK_SAPLING = registerNoItem("yellow_potted_oak_sapling", () -> getFlowerPot(() -> YELLOW_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> YELLOW_POTTED_SPRUCE_SAPLING = registerNoItem("yellow_potted_spruce_sapling", () -> getFlowerPot(() -> YELLOW_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> YELLOW_POTTED_BIRCH_SAPLING = registerNoItem("yellow_potted_birch_sapling", () -> getFlowerPot(() -> YELLOW_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -367,8 +375,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> YELLOW_POTTED_WARPED_ROOTS = registerNoItem("yellow_potted_warped_roots", () -> getFlowerPot(() -> YELLOW_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> YELLOW_POTTED_AZALEA = registerNoItem("yellow_potted_azalea_bush", () -> getFlowerPot(() -> YELLOW_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> YELLOW_POTTED_FLOWERING_AZALEA = registerNoItem("yellow_potted_flowering_azalea_bush", () -> getFlowerPot(() -> YELLOW_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> YELLOW_POTTED_CHERRY_SAPLING = registerNoItem("yellow_potted_cherry_sapling", () -> getFlowerPot(() -> YELLOW_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> YELLOW_POTTED_TORCHFLOWER = registerNoItem("yellow_potted_torchflower", () -> getFlowerPot(() -> YELLOW_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> LIME_FLOWER_POT = register("lime_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> LIME_FLOWER_POT = registerFlowerPot("lime_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> LIME_POTTED_OAK_SAPLING = registerNoItem("lime_potted_oak_sapling", () -> getFlowerPot(() -> LIME_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> LIME_POTTED_SPRUCE_SAPLING = registerNoItem("lime_potted_spruce_sapling", () -> getFlowerPot(() -> LIME_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> LIME_POTTED_BIRCH_SAPLING = registerNoItem("lime_potted_birch_sapling", () -> getFlowerPot(() -> LIME_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -401,8 +411,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> LIME_POTTED_WARPED_ROOTS = registerNoItem("lime_potted_warped_roots", () -> getFlowerPot(() -> LIME_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> LIME_POTTED_AZALEA = registerNoItem("lime_potted_azalea_bush", () -> getFlowerPot(() -> LIME_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> LIME_POTTED_FLOWERING_AZALEA = registerNoItem("lime_potted_flowering_azalea_bush", () -> getFlowerPot(() -> LIME_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> LIME_POTTED_CHERRY_SAPLING = registerNoItem("lime_potted_cherry_sapling", () -> getFlowerPot(() -> LIME_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> LIME_POTTED_TORCHFLOWER = registerNoItem("lime_potted_torchflower", () -> getFlowerPot(() -> LIME_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> GREEN_FLOWER_POT = register("green_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> GREEN_FLOWER_POT = registerFlowerPot("green_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> GREEN_POTTED_OAK_SAPLING = registerNoItem("green_potted_oak_sapling", () -> getFlowerPot(() -> GREEN_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> GREEN_POTTED_SPRUCE_SAPLING = registerNoItem("green_potted_spruce_sapling", () -> getFlowerPot(() -> GREEN_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> GREEN_POTTED_BIRCH_SAPLING = registerNoItem("green_potted_birch_sapling", () -> getFlowerPot(() -> GREEN_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -435,8 +447,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> GREEN_POTTED_WARPED_ROOTS = registerNoItem("green_potted_warped_roots", () -> getFlowerPot(() -> GREEN_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> GREEN_POTTED_AZALEA = registerNoItem("green_potted_azalea_bush", () -> getFlowerPot(() -> GREEN_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> GREEN_POTTED_FLOWERING_AZALEA = registerNoItem("green_potted_flowering_azalea_bush", () -> getFlowerPot(() -> GREEN_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> GREEN_POTTED_CHERRY_SAPLING = registerNoItem("green_potted_cherry_sapling", () -> getFlowerPot(() -> GREEN_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> GREEN_POTTED_TORCHFLOWER = registerNoItem("green_potted_torchflower", () -> getFlowerPot(() -> GREEN_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_FLOWER_POT = register("light_blue_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_FLOWER_POT = registerFlowerPot("light_blue_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_POTTED_OAK_SAPLING = registerNoItem("light_blue_potted_oak_sapling", () -> getFlowerPot(() -> LIGHT_BLUE_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_POTTED_SPRUCE_SAPLING = registerNoItem("light_blue_potted_spruce_sapling", () -> getFlowerPot(() -> LIGHT_BLUE_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_POTTED_BIRCH_SAPLING = registerNoItem("light_blue_potted_birch_sapling", () -> getFlowerPot(() -> LIGHT_BLUE_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -469,8 +483,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_POTTED_WARPED_ROOTS = registerNoItem("light_blue_potted_warped_roots", () -> getFlowerPot(() -> LIGHT_BLUE_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_POTTED_AZALEA = registerNoItem("light_blue_potted_azalea_bush", () -> getFlowerPot(() -> LIGHT_BLUE_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_POTTED_FLOWERING_AZALEA = registerNoItem("light_blue_potted_flowering_azalea_bush", () -> getFlowerPot(() -> LIGHT_BLUE_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_POTTED_CHERRY_SAPLING = registerNoItem("light_blue_potted_cherry_sapling", () -> getFlowerPot(() -> LIGHT_BLUE_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> LIGHT_BLUE_POTTED_TORCHFLOWER = registerNoItem("light_blue_potted_torchflower", () -> getFlowerPot(() -> LIGHT_BLUE_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> CYAN_FLOWER_POT = register("cyan_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> CYAN_FLOWER_POT = registerFlowerPot("cyan_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> CYAN_POTTED_OAK_SAPLING = registerNoItem("cyan_potted_oak_sapling", () -> getFlowerPot(() -> CYAN_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> CYAN_POTTED_SPRUCE_SAPLING = registerNoItem("cyan_potted_spruce_sapling", () -> getFlowerPot(() -> CYAN_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> CYAN_POTTED_BIRCH_SAPLING = registerNoItem("cyan_potted_birch_sapling", () -> getFlowerPot(() -> CYAN_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -503,8 +519,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> CYAN_POTTED_WARPED_ROOTS = registerNoItem("cyan_potted_warped_roots", () -> getFlowerPot(() -> CYAN_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> CYAN_POTTED_AZALEA = registerNoItem("cyan_potted_azalea_bush", () -> getFlowerPot(() -> CYAN_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> CYAN_POTTED_FLOWERING_AZALEA = registerNoItem("cyan_potted_flowering_azalea_bush", () -> getFlowerPot(() -> CYAN_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> CYAN_POTTED_CHERRY_SAPLING = registerNoItem("cyan_potted_cherry_sapling", () -> getFlowerPot(() -> CYAN_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> CYAN_POTTED_TORCHFLOWER = registerNoItem("cyan_potted_torchflower", () -> getFlowerPot(() -> CYAN_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> BLUE_FLOWER_POT = register("blue_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> BLUE_FLOWER_POT = registerFlowerPot("blue_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> BLUE_POTTED_OAK_SAPLING = registerNoItem("blue_potted_oak_sapling", () -> getFlowerPot(() -> BLUE_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> BLUE_POTTED_SPRUCE_SAPLING = registerNoItem("blue_potted_spruce_sapling", () -> getFlowerPot(() -> BLUE_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> BLUE_POTTED_BIRCH_SAPLING = registerNoItem("blue_potted_birch_sapling", () -> getFlowerPot(() -> BLUE_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -537,8 +555,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> BLUE_POTTED_WARPED_ROOTS = registerNoItem("blue_potted_warped_roots", () -> getFlowerPot(() -> BLUE_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> BLUE_POTTED_AZALEA = registerNoItem("blue_potted_azalea_bush", () -> getFlowerPot(() -> BLUE_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> BLUE_POTTED_FLOWERING_AZALEA = registerNoItem("blue_potted_flowering_azalea_bush", () -> getFlowerPot(() -> BLUE_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> BLUE_POTTED_CHERRY_SAPLING = registerNoItem("blue_potted_cherry_sapling", () -> getFlowerPot(() -> BLUE_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> BLUE_POTTED_TORCHFLOWER = registerNoItem("blue_potted_torchflower", () -> getFlowerPot(() -> BLUE_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> MAGENTA_FLOWER_POT = register("magenta_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> MAGENTA_FLOWER_POT = registerFlowerPot("magenta_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> MAGENTA_POTTED_OAK_SAPLING = registerNoItem("magenta_potted_oak_sapling", () -> getFlowerPot(() -> MAGENTA_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> MAGENTA_POTTED_SPRUCE_SAPLING = registerNoItem("magenta_potted_spruce_sapling", () -> getFlowerPot(() -> MAGENTA_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> MAGENTA_POTTED_BIRCH_SAPLING = registerNoItem("magenta_potted_birch_sapling", () -> getFlowerPot(() -> MAGENTA_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -571,8 +591,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> MAGENTA_POTTED_WARPED_ROOTS = registerNoItem("magenta_potted_warped_roots", () -> getFlowerPot(() -> MAGENTA_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> MAGENTA_POTTED_AZALEA = registerNoItem("magenta_potted_azalea_bush", () -> getFlowerPot(() -> MAGENTA_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> MAGENTA_POTTED_FLOWERING_AZALEA = registerNoItem("magenta_potted_flowering_azalea_bush", () -> getFlowerPot(() -> MAGENTA_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> MAGENTA_POTTED_CHERRY_SAPLING = registerNoItem("magenta_potted_cherry_sapling", () -> getFlowerPot(() -> MAGENTA_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> MAGENTA_POTTED_TORCHFLOWER = registerNoItem("magenta_potted_torchflower", () -> getFlowerPot(() -> MAGENTA_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> PURPLE_FLOWER_POT = register("purple_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> PURPLE_FLOWER_POT = registerFlowerPot("purple_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> PURPLE_POTTED_OAK_SAPLING = registerNoItem("purple_potted_oak_sapling", () -> getFlowerPot(() -> PURPLE_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> PURPLE_POTTED_SPRUCE_SAPLING = registerNoItem("purple_potted_spruce_sapling", () -> getFlowerPot(() -> PURPLE_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> PURPLE_POTTED_BIRCH_SAPLING = registerNoItem("purple_potted_birch_sapling", () -> getFlowerPot(() -> PURPLE_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -605,8 +627,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> PURPLE_POTTED_WARPED_ROOTS = registerNoItem("purple_potted_warped_roots", () -> getFlowerPot(() -> PURPLE_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> PURPLE_POTTED_AZALEA = registerNoItem("purple_potted_azalea_bush", () -> getFlowerPot(() -> PURPLE_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> PURPLE_POTTED_FLOWERING_AZALEA = registerNoItem("purple_potted_flowering_azalea_bush", () -> getFlowerPot(() -> PURPLE_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> PURPLE_POTTED_CHERRY_SAPLING = registerNoItem("purple_potted_cherry_sapling", () -> getFlowerPot(() -> PURPLE_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> PURPLE_POTTED_TORCHFLOWER = registerNoItem("purple_potted_torchflower", () -> getFlowerPot(() -> PURPLE_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> BROWN_FLOWER_POT = register("brown_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> BROWN_FLOWER_POT = registerFlowerPot("brown_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> BROWN_POTTED_OAK_SAPLING = registerNoItem("brown_potted_oak_sapling", () -> getFlowerPot(() -> BROWN_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> BROWN_POTTED_SPRUCE_SAPLING = registerNoItem("brown_potted_spruce_sapling", () -> getFlowerPot(() -> BROWN_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> BROWN_POTTED_BIRCH_SAPLING = registerNoItem("brown_potted_birch_sapling", () -> getFlowerPot(() -> BROWN_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -639,8 +663,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> BROWN_POTTED_WARPED_ROOTS = registerNoItem("brown_potted_warped_roots", () -> getFlowerPot(() -> BROWN_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> BROWN_POTTED_AZALEA = registerNoItem("brown_potted_azalea_bush", () -> getFlowerPot(() -> BROWN_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> BROWN_POTTED_FLOWERING_AZALEA = registerNoItem("brown_potted_flowering_azalea_bush", () -> getFlowerPot(() -> BROWN_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> BROWN_POTTED_CHERRY_SAPLING = registerNoItem("brown_potted_cherry_sapling", () -> getFlowerPot(() -> BROWN_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> BROWN_POTTED_TORCHFLOWER = registerNoItem("brown_potted_torchflower", () -> getFlowerPot(() -> BROWN_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_FLOWER_POT = register("light_gray_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_FLOWER_POT = registerFlowerPot("light_gray_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_POTTED_OAK_SAPLING = registerNoItem("light_gray_potted_oak_sapling", () -> getFlowerPot(() -> LIGHT_GRAY_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_POTTED_SPRUCE_SAPLING = registerNoItem("light_gray_potted_spruce_sapling", () -> getFlowerPot(() -> LIGHT_GRAY_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_POTTED_BIRCH_SAPLING = registerNoItem("light_gray_potted_birch_sapling", () -> getFlowerPot(() -> LIGHT_GRAY_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -673,8 +699,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_POTTED_WARPED_ROOTS = registerNoItem("light_gray_potted_warped_roots", () -> getFlowerPot(() -> LIGHT_GRAY_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_POTTED_AZALEA = registerNoItem("light_gray_potted_azalea_bush", () -> getFlowerPot(() -> LIGHT_GRAY_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_POTTED_FLOWERING_AZALEA = registerNoItem("light_gray_potted_flowering_azalea_bush", () -> getFlowerPot(() -> LIGHT_GRAY_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_POTTED_CHERRY_SAPLING = registerNoItem("light_gray_potted_cherry_sapling", () -> getFlowerPot(() -> LIGHT_GRAY_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> LIGHT_GRAY_TORCHFLOWER = registerNoItem("light_gray_potted_torchflower", () -> getFlowerPot(() -> LIGHT_GRAY_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> GRAY_FLOWER_POT = register("gray_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> GRAY_FLOWER_POT = registerFlowerPot("gray_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> GRAY_POTTED_OAK_SAPLING = registerNoItem("gray_potted_oak_sapling", () -> getFlowerPot(() -> GRAY_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> GRAY_POTTED_SPRUCE_SAPLING = registerNoItem("gray_potted_spruce_sapling", () -> getFlowerPot(() -> GRAY_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> GRAY_POTTED_BIRCH_SAPLING = registerNoItem("gray_potted_birch_sapling", () -> getFlowerPot(() -> GRAY_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -707,8 +735,10 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> GRAY_POTTED_WARPED_ROOTS = registerNoItem("gray_potted_warped_roots", () -> getFlowerPot(() -> GRAY_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> GRAY_POTTED_AZALEA = registerNoItem("gray_potted_azalea_bush", () -> getFlowerPot(() -> GRAY_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> GRAY_POTTED_FLOWERING_AZALEA = registerNoItem("gray_potted_flowering_azalea_bush", () -> getFlowerPot(() -> GRAY_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> GRAY_POTTED_CHERRY_SAPLING = registerNoItem("gray_potted_cherry_sapling", () -> getFlowerPot(() -> GRAY_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> GRAY_POTTED_TORCHFLOWER = registerNoItem("gray_potted_torchflower", () -> getFlowerPot(() -> GRAY_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> BLACK_FLOWER_POT = register("black_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+    public static final RegistryObject<FlowerPotBlock> BLACK_FLOWER_POT = registerFlowerPot("black_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> BLACK_POTTED_OAK_SAPLING = registerNoItem("black_potted_oak_sapling", () -> getFlowerPot(() -> BLACK_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> BLACK_POTTED_SPRUCE_SAPLING = registerNoItem("black_potted_spruce_sapling", () -> getFlowerPot(() -> BLACK_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> BLACK_POTTED_BIRCH_SAPLING = registerNoItem("black_potted_birch_sapling", () -> getFlowerPot(() -> BLACK_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -741,8 +771,11 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> BLACK_POTTED_WARPED_ROOTS = registerNoItem("black_potted_warped_roots", () -> getFlowerPot(() -> BLACK_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> BLACK_POTTED_AZALEA = registerNoItem("black_potted_azalea_bush", () -> getFlowerPot(() -> BLACK_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> BLACK_POTTED_FLOWERING_AZALEA = registerNoItem("black_potted_flowering_azalea_bush", () -> getFlowerPot(() -> BLACK_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> BLACK_POTTED_CHERRY_SAPLING = registerNoItem("black_potted_cherry_sapling", () -> getFlowerPot(() -> BLACK_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> BLACK_POTTED_TORCHFLOWER = registerNoItem("black_potted_torchflower", () -> getFlowerPot(() -> BLACK_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
-    public static final RegistryObject<FlowerPotBlock> RED_FLOWER_POT = register("red_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR), CreativeModeTab.TAB_DECORATIONS);
+
+    public static final RegistryObject<FlowerPotBlock> RED_FLOWER_POT = registerFlowerPot("red_flower_pot", () -> getFlowerPot(null, () -> Blocks.AIR));
     public static final RegistryObject<FlowerPotBlock> RED_POTTED_OAK_SAPLING = registerNoItem("red_potted_oak_sapling", () -> getFlowerPot(() -> RED_FLOWER_POT.get(), () -> Blocks.OAK_SAPLING));
     public static final RegistryObject<FlowerPotBlock> RED_POTTED_SPRUCE_SAPLING = registerNoItem("red_potted_spruce_sapling", () -> getFlowerPot(() -> RED_FLOWER_POT.get(), () -> Blocks.SPRUCE_SAPLING));
     public static final RegistryObject<FlowerPotBlock> RED_POTTED_BIRCH_SAPLING = registerNoItem("red_potted_birch_sapling", () -> getFlowerPot(() -> RED_FLOWER_POT.get(), () -> Blocks.BIRCH_SAPLING));
@@ -775,6 +808,8 @@ public class ModBlocks {
     public static final RegistryObject<FlowerPotBlock> RED_POTTED_WARPED_ROOTS = registerNoItem("red_potted_warped_roots", () -> getFlowerPot(() -> RED_FLOWER_POT.get(), () -> Blocks.WARPED_ROOTS));
     public static final RegistryObject<FlowerPotBlock> RED_POTTED_AZALEA = registerNoItem("red_potted_azalea_bush", () -> getFlowerPot(() -> RED_FLOWER_POT.get(), () -> Blocks.AZALEA));
     public static final RegistryObject<FlowerPotBlock> RED_POTTED_FLOWERING_AZALEA = registerNoItem("red_potted_flowering_azalea_bush", () -> getFlowerPot(() -> RED_FLOWER_POT.get(), () -> Blocks.FLOWERING_AZALEA));
+    public static final RegistryObject<FlowerPotBlock> RED_POTTED_CHERRY_SAPLING = registerNoItem("red_potted_cherry_sapling", () -> getFlowerPot(() -> RED_FLOWER_POT.get(), () -> Blocks.CHERRY_SAPLING));
+    public static final RegistryObject<FlowerPotBlock> RED_POTTED_TORCHFLOWER = registerNoItem("red_potted_torchflower", () -> getFlowerPot(() -> RED_FLOWER_POT.get(), () -> Blocks.TORCHFLOWER));
 
     static void register() {}
 
@@ -803,12 +838,18 @@ public class ModBlocks {
     }
 
     private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block) {
-        return register(name, block, CreativeModeTab.TAB_BUILDING_BLOCKS);
+        return register(name, block, CreativeModeTabs.BUILDING_BLOCKS);
     }
 
-    private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, CreativeModeTab tab) {
+    private static <T extends Block> RegistryObject<T> register(String name, Supplier<T> block, ResourceKey<CreativeModeTab> f256788) {
         RegistryObject<T> ret = registerNoItem(name, block);
-        Registration.ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties().tab(tab)));
+        ModTabs.addToBuildingBlocks(Registration.ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties())));
+        return ret;
+    }
+
+    private static <T extends Block> RegistryObject<T> registerFlowerPot(String name, Supplier<T> block) {
+        RegistryObject<T> ret = registerNoItem(name, block);
+        ModTabs.addToFunctionalBlocks(Registration.ITEMS.register(name, () -> new BlockItem(ret.get(), new Item.Properties())));
         return ret;
     }
 

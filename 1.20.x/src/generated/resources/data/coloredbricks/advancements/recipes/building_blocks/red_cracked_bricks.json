@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:red_cracked_bricks"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:pink_bricks_alt"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

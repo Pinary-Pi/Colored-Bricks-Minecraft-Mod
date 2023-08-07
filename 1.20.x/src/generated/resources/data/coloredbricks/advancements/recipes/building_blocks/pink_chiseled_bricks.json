@@ -30,5 +30,6 @@
     "recipes": [
       "coloredbricks:pink_chiseled_bricks"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

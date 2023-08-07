@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:blue_cracked_brick_wall_stonecutter"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

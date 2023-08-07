@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:pink_cracked_brick_stairs_stonecutter"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

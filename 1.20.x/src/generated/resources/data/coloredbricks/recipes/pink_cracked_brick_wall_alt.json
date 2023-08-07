@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "#": {
       "tag": "forge:stone/pink_cracked_block"
@@ -12,5 +13,6 @@
   "result": {
     "count": 6,
     "item": "coloredbricks:pink_cracked_brick_wall"
-  }
+  },
+  "show_notification": true
 }

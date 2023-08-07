@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:magenta_brick"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

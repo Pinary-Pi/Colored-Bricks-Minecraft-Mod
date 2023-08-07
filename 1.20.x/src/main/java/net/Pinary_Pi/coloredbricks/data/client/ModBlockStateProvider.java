@@ -8,7 +8,7 @@ import net.minecraftforge.common.data.ExistingFileHelper;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public ModBlockStateProvider(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, coloredbricks.MOD_ID, exFileHelper);
+        super(gen.getPackOutput(), coloredbricks.MOD_ID, exFileHelper);
     }
 
     @Override

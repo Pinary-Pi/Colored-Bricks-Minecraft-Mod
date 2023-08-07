@@ -30,5 +30,6 @@
     "recipes": [
       "coloredbricks:cracked_bricks_furnace"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

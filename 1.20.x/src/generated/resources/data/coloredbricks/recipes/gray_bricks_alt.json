@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "#": {
       "tag": "forge:stone/gray_item"
@@ -11,5 +12,6 @@
   ],
   "result": {
     "item": "coloredbricks:gray_bricks"
-  }
+  },
+  "show_notification": true
 }

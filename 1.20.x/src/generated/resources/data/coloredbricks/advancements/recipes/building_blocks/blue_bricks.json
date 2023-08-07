@@ -30,5 +30,6 @@
     "recipes": [
       "coloredbricks:blue_bricks"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

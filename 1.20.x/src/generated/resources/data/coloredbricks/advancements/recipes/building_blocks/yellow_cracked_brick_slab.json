@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:yellow_cracked_brick_slab"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

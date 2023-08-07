@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:cracked_brick_stairs_alt"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

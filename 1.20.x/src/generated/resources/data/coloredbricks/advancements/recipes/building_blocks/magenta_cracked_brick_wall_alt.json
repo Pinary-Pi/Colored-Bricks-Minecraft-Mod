@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:magenta_cracked_brick_wall_alt"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:black_cracked_brick_stairs_furnace"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

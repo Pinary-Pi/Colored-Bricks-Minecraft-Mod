@@ -1,5 +1,8 @@
 {
   "values": [
-    "coloredbricks:cracked_brick_stairs"
+    {
+      "id": "coloredbricks:cracked_brick_stairs",
+      "required": false
+    }
   ]
 }

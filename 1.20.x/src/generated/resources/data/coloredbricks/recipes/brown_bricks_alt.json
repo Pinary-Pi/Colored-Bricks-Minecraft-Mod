@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "#": {
       "tag": "forge:stone/brown_item"
@@ -11,5 +12,6 @@
   ],
   "result": {
     "item": "coloredbricks:brown_bricks"
-  }
+  },
+  "show_notification": true
 }

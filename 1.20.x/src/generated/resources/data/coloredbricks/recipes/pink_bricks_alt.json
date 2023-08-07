@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "#": {
       "tag": "forge:stone/pink_item"
@@ -11,5 +12,6 @@
   ],
   "result": {
     "item": "coloredbricks:pink_bricks"
-  }
+  },
+  "show_notification": true
 }

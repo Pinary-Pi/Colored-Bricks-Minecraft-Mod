@@ -1,5 +1,6 @@
 {
   "type": "minecraft:crafting_shaped",
+  "category": "building",
   "key": {
     "#": {
       "tag": "forge:stone/light_blue_slab"
@@ -11,5 +12,6 @@
   ],
   "result": {
     "item": "coloredbricks:light_blue_chiseled_bricks"
-  }
+  },
+  "show_notification": true
 }

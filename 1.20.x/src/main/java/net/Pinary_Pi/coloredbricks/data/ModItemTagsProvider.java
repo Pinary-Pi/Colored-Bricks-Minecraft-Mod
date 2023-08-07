@@ -3,20 +3,20 @@ package net.Pinary_Pi.coloredbricks.data;
 import net.Pinary_Pi.coloredbricks.coloredbricks;
 import net.Pinary_Pi.coloredbricks.setup.ModItems;
 import net.Pinary_Pi.coloredbricks.setup.ModTags;
-import net.minecraft.data.tags.BlockTagsProvider;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.tags.ItemTagsProvider;
 import net.minecraftforge.common.Tags;
-import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.common.data.BlockTagsProvider;
+import net.minecraftforge.data.event.GatherDataEvent;
 
 public class ModItemTagsProvider extends ItemTagsProvider {
 
-    public ModItemTagsProvider(DataGenerator dataGenerator, BlockTagsProvider blockTagsProvider, ExistingFileHelper existingFileHelper) {
-        super(dataGenerator, blockTagsProvider, coloredbricks.MOD_ID, existingFileHelper);
+    public ModItemTagsProvider(GatherDataEvent event, BlockTagsProvider blocks) {
+        super(event.getGenerator().getPackOutput(), event.getLookupProvider(), blocks.contentsGetter(), coloredbricks.MOD_ID, event.getExistingFileHelper());
     }
 
     @Override
-    protected void addTags() {
+    protected void addTags(HolderLookup.Provider provider) {
         this.copy(ModTags.Blocks.BRICKS_WHITE, ModTags.Items.BRICKS_WHITE);
         this.copy(ModTags.Blocks.BRICKS_ORANGE, ModTags.Items.BRICKS_ORANGE);
         this.copy(ModTags.Blocks.BRICKS_PINK, ModTags.Items.BRICKS_PINK);
@@ -175,37 +175,37 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         // Don't Touch
         this.copy(Tags.Blocks.STONE, Tags.Items.STONE);
 
-        this.tag(ModTags.Items.BRICK_WHITE).add(ModItems.WHITE_BRICK.get());
+        this.tag(ModTags.Items.BRICK_WHITE).add(ModItems.WHITE_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_WHITE);
-        this.tag(ModTags.Items.BRICK_ORANGE).add(ModItems.ORANGE_BRICK.get());
+        this.tag(ModTags.Items.BRICK_ORANGE).add(ModItems.ORANGE_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_ORANGE);
-        this.tag(ModTags.Items.BRICK_PINK).add(ModItems.PINK_BRICK.get());
+        this.tag(ModTags.Items.BRICK_PINK).add(ModItems.PINK_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_PINK);
-        this.tag(ModTags.Items.BRICK_YELLOW).add(ModItems.YELLOW_BRICK.get());
+        this.tag(ModTags.Items.BRICK_YELLOW).add(ModItems.YELLOW_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_YELLOW);
-        this.tag(ModTags.Items.BRICK_LIME).add(ModItems.LIME_BRICK.get());
+        this.tag(ModTags.Items.BRICK_LIME).add(ModItems.LIME_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_LIME);
-        this.tag(ModTags.Items.BRICK_GREEN).add(ModItems.GREEN_BRICK.get());
+        this.tag(ModTags.Items.BRICK_GREEN).add(ModItems.GREEN_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_GREEN);
-        this.tag(ModTags.Items.BRICK_LIGHT_BLUE).add(ModItems.LIGHT_BLUE_BRICK.get());
+        this.tag(ModTags.Items.BRICK_LIGHT_BLUE).add(ModItems.LIGHT_BLUE_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_LIGHT_BLUE);
-        this.tag(ModTags.Items.BRICK_CYAN).add(ModItems.CYAN_BRICK.get());
+        this.tag(ModTags.Items.BRICK_CYAN).add(ModItems.CYAN_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_CYAN);
-        this.tag(ModTags.Items.BRICK_BLUE).add(ModItems.BLUE_BRICK.get());
+        this.tag(ModTags.Items.BRICK_BLUE).add(ModItems.BLUE_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_BLUE);
-        this.tag(ModTags.Items.BRICK_MAGENTA).add(ModItems.MAGENTA_BRICK.get());
+        this.tag(ModTags.Items.BRICK_MAGENTA).add(ModItems.MAGENTA_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_MAGENTA);
-        this.tag(ModTags.Items.BRICK_PURPLE).add(ModItems.PURPLE_BRICK.get());
+        this.tag(ModTags.Items.BRICK_PURPLE).add(ModItems.PURPLE_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_PURPLE);
-        this.tag(ModTags.Items.BRICK_BROWN).add(ModItems.BROWN_BRICK.get());
+        this.tag(ModTags.Items.BRICK_BROWN).add(ModItems.BROWN_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_BROWN);
-        this.tag(ModTags.Items.BRICK_LIGHT_GRAY).add(ModItems.LIGHT_GRAY_BRICK.get());
+        this.tag(ModTags.Items.BRICK_LIGHT_GRAY).add(ModItems.LIGHT_GRAY_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_LIGHT_GRAY);
-        this.tag(ModTags.Items.BRICK_GRAY).add(ModItems.GRAY_BRICK.get());
+        this.tag(ModTags.Items.BRICK_GRAY).add(ModItems.GRAY_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_GRAY);
-        this.tag(ModTags.Items.BRICK_BLACK).add(ModItems.BLACK_BRICK.get());
+        this.tag(ModTags.Items.BRICK_BLACK).add(ModItems.BLACK_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_BLACK);
-        this.tag(ModTags.Items.BRICK_RED).add(ModItems.RED_BRICK.get());
+        this.tag(ModTags.Items.BRICK_RED).add(ModItems.RED_BRICK.getKey());
         this.tag(Tags.Items.STONE).addTag(ModTags.Items.BRICK_RED);
     }
 }

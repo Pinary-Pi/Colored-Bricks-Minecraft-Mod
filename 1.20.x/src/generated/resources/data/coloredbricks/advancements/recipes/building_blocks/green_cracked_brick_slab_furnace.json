@@ -28,5 +28,6 @@
     "recipes": [
       "coloredbricks:green_cracked_brick_slab_furnace"
     ]
-  }
+  },
+  "sends_telemetry_event": false
 }

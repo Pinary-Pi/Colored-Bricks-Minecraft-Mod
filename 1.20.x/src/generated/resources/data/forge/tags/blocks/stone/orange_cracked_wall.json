@@ -1,5 +1,8 @@
 {
   "values": [
-    "coloredbricks:orange_cracked_brick_wall"
+    {
+      "id": "coloredbricks:orange_cracked_brick_wall",
+      "required": false
+    }
   ]
 }
