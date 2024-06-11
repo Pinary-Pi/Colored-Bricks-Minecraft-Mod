@@ -8,5 +8,6 @@
         "modid",
         "validationtracker"
     ],
-    "cSpell.language": "en,de"
+    "cSpell.language": "en,de",
+    "java.compile.nullAnalysis.mode": "automatic"
 }

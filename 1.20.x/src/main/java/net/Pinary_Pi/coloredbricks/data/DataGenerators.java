@@ -3,7 +3,7 @@ package net.Pinary_Pi.coloredbricks.data;
 import net.Pinary_Pi.coloredbricks.coloredbricks;
 import net.Pinary_Pi.coloredbricks.data.client.ModBlockStateProvider;
 import net.Pinary_Pi.coloredbricks.data.client.ModItemModelProvider;
-import net.Pinary_Pi.coloredbricks.data.loot.ModBlockLootTables;
+// import net.Pinary_Pi.coloredbricks.data.loot.ModBlockLootTables;
 import net.Pinary_Pi.coloredbricks.data.recipes.ModRecipesProvider;
 import net.minecraft.data.DataGenerator;
 import net.minecraftforge.common.data.ExistingFileHelper;
