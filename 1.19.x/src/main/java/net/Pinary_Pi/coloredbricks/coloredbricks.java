@@ -1,15 +1,13 @@
 package net.Pinary_Pi.coloredbricks;
 
+import net.Pinary_Pi.coloredbricks.setup.ClientSetup;
 import net.Pinary_Pi.coloredbricks.setup.Registration;
-import net.Pinary_Pi.gear.util.ColoredbricksRenderer;
-import net.Pinary_Pi.gear.util.ModColorHandler;
 import net.Pinary_Pi.gear.util.ModResourceLocation;
 // import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModEnqueueEvent;
 import net.minecraftforge.fml.event.lifecycle.InterModProcessEvent;
@@ -42,8 +40,7 @@ public class coloredbricks
         bus.addListener(this::setup);
         bus.addListener(this::enqueueIMC);
         bus.addListener(this::processIMC);
-        bus.addListener(this::clientSetup);
-        bus.addListener(ModColorHandler::register);
+        bus.addListener(ClientSetup::init);
 
     }
 
@@ -52,12 +49,6 @@ public class coloredbricks
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
         // LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
-    }
-
-    private void clientSetup(final FMLClientSetupEvent event) {
-        event.enqueueWork(() -> {
-            ColoredbricksRenderer.registerRenderLayers();
-        });
     }
 
    private void enqueueIMC(final InterModEnqueueEvent event)

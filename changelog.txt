@@ -200,3 +200,9 @@ Pots -> Functional Blocks Tab
 Ingots -> Ingredients Tab
 
 Pots now support torchflower and cherry sapling!
+
+=====
+Version 5.1
+
+Fixes issue that caused Servers to crash because a class was incorrectly loading on the Server side rather than the Client side.
+Fixes texture issue for the item of the Red Flower Pot. 
