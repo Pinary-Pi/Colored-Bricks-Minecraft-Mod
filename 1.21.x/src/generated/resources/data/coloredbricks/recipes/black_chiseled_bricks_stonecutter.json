@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "forge:stone/black_block"
+  },
+  "result": "coloredbricks:black_chiseled_bricks"
+}

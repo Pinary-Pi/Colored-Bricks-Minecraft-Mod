@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "tag": "forge:stone/blue_block"
+  },
+  "result": "coloredbricks:blue_brick_wall"
+}

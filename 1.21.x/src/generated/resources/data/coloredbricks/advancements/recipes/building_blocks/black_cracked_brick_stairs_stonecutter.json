@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has item": {
+      "conditions": {
+        "items": [
+          {
+            "tag": "forge:stone/black_cracked_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "coloredbricks:black_cracked_brick_stairs_stonecutter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has item",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "coloredbricks:black_cracked_brick_stairs_stonecutter"
+    ]
+  },
+  "sends_telemetry_event": false
+}

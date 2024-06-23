@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "minecraft:brick_wall"
+    },
+    {
+      "tag": "forge:dyes/pink"
+    }
+  ],
+  "result": {
+    "item": "coloredbricks:pink_brick_wall"
+  }
+}
