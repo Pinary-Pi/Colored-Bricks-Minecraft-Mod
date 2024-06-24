@@ -1,6 +1,6 @@
 package net.Pinary_Pi.coloredbricks.data.recipes;
 
-import java.util.function.Consumer;
+import java.util.concurrent.CompletableFuture;
 
 import net.Pinary_Pi.coloredbricks.coloredbricks;
 import net.Pinary_Pi.coloredbricks.setup.ModBlocks;
@@ -8,9 +8,10 @@ import net.Pinary_Pi.coloredbricks.setup.ModItems;
 import net.Pinary_Pi.coloredbricks.setup.ModTags;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.data.DataGenerator;
-import net.minecraft.data.recipes.FinishedRecipe;
 import net.minecraft.data.recipes.RecipeCategory;
+import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
@@ -19,12 +20,12 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
 
 public class ModRecipesProvider extends RecipeProvider {
-    public ModRecipesProvider(DataGenerator generator) {
-        super(generator.getPackOutput());
+    public ModRecipesProvider(DataGenerator generator, CompletableFuture<HolderLookup.Provider> registries) {
+        super(generator.getPackOutput(), registries);
     }
 
     @Override
-    protected void buildRecipes(Consumer<FinishedRecipe> consumer) {
+    protected void buildRecipes(RecipeOutput consumer) {
         // Brick Item Recipes
 
         ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WHITE_BRICK.get())
