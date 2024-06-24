@@ -7,6 +7,7 @@ import net.minecraft.world.level.GrassColor;
 import net.minecraft.world.level.block.Block;
 
 public class ModColorHandler {
+    @SuppressWarnings("deprecation")
     private static void renderPottedFern(Block block) {
         Minecraft.getInstance().getBlockColors().register((state, reader, pos, tintIndex) ->
             reader != null && pos != null
