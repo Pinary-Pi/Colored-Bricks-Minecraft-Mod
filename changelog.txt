@@ -206,3 +206,8 @@ Version 5.1
 
 Fixes issue that caused Servers to crash because a class was incorrectly loading on the Server side rather than the Client side.
 Fixes texture issue for the item of the Red Flower Pot. 
+
+=====
+Version 1.21-5.1
+
+Colored Bricks now supports MC version 1.21.x!
