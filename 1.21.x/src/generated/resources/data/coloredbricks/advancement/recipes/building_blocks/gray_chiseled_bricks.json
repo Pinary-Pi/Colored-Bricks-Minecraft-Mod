@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "coloredbricks:chiseled_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "coloredbricks:gray_chiseled_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "coloredbricks:gray_chiseled_bricks"
+    ]
+  }
+}

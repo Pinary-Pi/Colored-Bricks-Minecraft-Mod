@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "tag": "forge:stone/gray_block"
-  },
-  "result": "coloredbricks:gray_brick_wall"
-}

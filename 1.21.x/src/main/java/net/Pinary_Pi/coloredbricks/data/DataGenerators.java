@@ -25,8 +25,8 @@ public final class DataGenerators {
         CompletableFuture<HolderLookup.Provider> registries = event.getLookupProvider();
         ModBlockTagsProvider blockTags = new ModBlockTagsProvider(event);
 
-        gen.addProvider(true, new ModItemModelProvider(gen, existingFileHelper));
         gen.addProvider(true, new ModBlockStateProvider(gen, existingFileHelper));
+        gen.addProvider(true, new ModItemModelProvider(gen, existingFileHelper));
         gen.addProvider(true, blockTags);
         gen.addProvider(true, new ModItemTagsProvider(event, blockTags));
         gen.addProvider(true, new ModRecipesProvider(gen, registries));

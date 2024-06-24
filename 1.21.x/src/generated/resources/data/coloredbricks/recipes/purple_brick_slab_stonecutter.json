@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "tag": "forge:stone/purple_block"
-  },
-  "result": "coloredbricks:purple_brick_slab"
-}

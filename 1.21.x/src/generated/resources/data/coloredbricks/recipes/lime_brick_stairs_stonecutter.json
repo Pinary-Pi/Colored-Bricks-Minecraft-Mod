@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "tag": "forge:stone/lime_block"
-  },
-  "result": "coloredbricks:lime_brick_stairs"
-}

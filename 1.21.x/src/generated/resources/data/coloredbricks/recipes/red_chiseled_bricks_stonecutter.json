@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 1,
-  "ingredient": {
-    "tag": "forge:stone/red_block"
-  },
-  "result": "coloredbricks:red_chiseled_bricks"
-}

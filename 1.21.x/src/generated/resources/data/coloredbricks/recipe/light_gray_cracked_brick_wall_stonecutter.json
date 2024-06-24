@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "forge:stone/light_gray_cracked_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "coloredbricks:light_gray_cracked_brick_wall"
+  }
+}

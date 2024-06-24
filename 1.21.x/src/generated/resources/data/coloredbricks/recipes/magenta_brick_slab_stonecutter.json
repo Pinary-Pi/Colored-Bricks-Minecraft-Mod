@@ -1,8 +1,0 @@
-{
-  "type": "minecraft:stonecutting",
-  "count": 2,
-  "ingredient": {
-    "tag": "forge:stone/magenta_block"
-  },
-  "result": "coloredbricks:magenta_brick_slab"
-}
