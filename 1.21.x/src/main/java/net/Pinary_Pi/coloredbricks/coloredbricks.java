@@ -3,6 +3,7 @@ package net.Pinary_Pi.coloredbricks;
 import net.Pinary_Pi.coloredbricks.setup.ClientSetup;
 import net.Pinary_Pi.coloredbricks.setup.Registration;
 import net.Pinary_Pi.gear.util.ModResourceLocation;
+import net.minecraft.resources.ResourceLocation;
 // import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -56,11 +57,11 @@ public class coloredbricks
         InterModComms.sendTo("examplemod", "helloworld", () -> { LOGGER.info("Hello world from the MDK"); return "Hello world";});
     }
 
-    public static ModResourceLocation getId(String path) {
+    public static ResourceLocation getId(String path) {
         if (path.contains(":")) {
             throw new IllegalArgumentException("path contains namespace");
         }
-        return new ModResourceLocation(path);
+        return ModResourceLocation.create(path);
     }
 
     private void processIMC(final InterModProcessEvent event)
