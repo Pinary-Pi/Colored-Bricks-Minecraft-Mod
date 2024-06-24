@@ -61,39 +61,39 @@ public class ModBlocks {
     
     // Stairs
 
-    public static final BlockState STAIR_BLOCKSTATE_WHITE = WHITE_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_ORANGE = ORANGE_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_PINK = PINK_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_YELLOW = YELLOW_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_LIME = LIME_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_GREEN = GREEN_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CYAN = CYAN_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_LIGHT_BLUE = LIGHT_BLUE_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_BLUE = BLUE_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_MAGENTA = MAGENTA_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_PURPLE = PURPLE_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_BROWN = BROWN_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_LIGHT_GRAY = LIGHT_GRAY_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_GRAY = GRAY_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_BLACK = BLACK_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_RED = RED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_WHITE = () -> WHITE_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_ORANGE = () -> ORANGE_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_PINK = () -> PINK_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_YELLOW = () -> YELLOW_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_LIME = () -> LIME_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_GREEN = () -> GREEN_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CYAN = () -> CYAN_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_LIGHT_BLUE = () -> LIGHT_BLUE_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_BLUE = () -> BLUE_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_MAGENTA = () -> MAGENTA_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_PURPLE = () -> PURPLE_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_BROWN = () -> BROWN_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_LIGHT_GRAY = () -> LIGHT_GRAY_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_GRAY = () -> GRAY_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_BLACK = () -> BLACK_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_RED = () -> RED_BRICKS.get().defaultBlockState();
 
-    public static final RegistryObject<StairBlock> WHITE_BRICK_STAIRS = register("white_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_WHITE));
-    public static final RegistryObject<StairBlock> ORANGE_BRICK_STAIRS = register("orange_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_ORANGE));
-    public static final RegistryObject<StairBlock> PINK_BRICK_STAIRS = register("pink_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_PINK));
-    public static final RegistryObject<StairBlock> YELLOW_BRICK_STAIRS = register("yellow_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_YELLOW));
-    public static final RegistryObject<StairBlock> LIME_BRICK_STAIRS = register("lime_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_LIME));
-    public static final RegistryObject<StairBlock> GREEN_BRICK_STAIRS = register("green_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_GREEN));
-    public static final RegistryObject<StairBlock> LIGHT_BLUE_BRICK_STAIRS = register("light_blue_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_LIGHT_BLUE));
-    public static final RegistryObject<StairBlock> CYAN_BRICK_STAIRS = register("cyan_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CYAN));
-    public static final RegistryObject<StairBlock> BLUE_BRICK_STAIRS = register("blue_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_BLUE));
-    public static final RegistryObject<StairBlock> MAGENTA_BRICK_STAIRS = register("magenta_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_MAGENTA));
-    public static final RegistryObject<StairBlock> PURPLE_BRICK_STAIRS = register("purple_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_PURPLE));
-    public static final RegistryObject<StairBlock> BROWN_BRICK_STAIRS = register("brown_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_BROWN));
-    public static final RegistryObject<StairBlock> LIGHT_GRAY_BRICK_STAIRS = register("light_gray_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_LIGHT_GRAY));
-    public static final RegistryObject<StairBlock> GRAY_BRICK_STAIRS = register("gray_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_GRAY));
-    public static final RegistryObject<StairBlock> BLACK_BRICK_STAIRS = register("black_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_BLACK));
-    public static final RegistryObject<StairBlock> RED_BRICK_STAIRS = register("red_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_RED));
+    public static final RegistryObject<StairBlock> WHITE_BRICK_STAIRS = register("white_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_WHITE.get()));
+    public static final RegistryObject<StairBlock> ORANGE_BRICK_STAIRS = register("orange_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_ORANGE.get()));
+    public static final RegistryObject<StairBlock> PINK_BRICK_STAIRS = register("pink_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_PINK.get()));
+    public static final RegistryObject<StairBlock> YELLOW_BRICK_STAIRS = register("yellow_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_YELLOW.get()));
+    public static final RegistryObject<StairBlock> LIME_BRICK_STAIRS = register("lime_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_LIME.get()));
+    public static final RegistryObject<StairBlock> GREEN_BRICK_STAIRS = register("green_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_GREEN.get()));
+    public static final RegistryObject<StairBlock> LIGHT_BLUE_BRICK_STAIRS = register("light_blue_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_LIGHT_BLUE.get()));
+    public static final RegistryObject<StairBlock> CYAN_BRICK_STAIRS = register("cyan_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CYAN.get()));
+    public static final RegistryObject<StairBlock> BLUE_BRICK_STAIRS = register("blue_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_BLUE.get()));
+    public static final RegistryObject<StairBlock> MAGENTA_BRICK_STAIRS = register("magenta_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_MAGENTA.get()));
+    public static final RegistryObject<StairBlock> PURPLE_BRICK_STAIRS = register("purple_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_PURPLE.get()));
+    public static final RegistryObject<StairBlock> BROWN_BRICK_STAIRS = register("brown_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_BROWN.get()));
+    public static final RegistryObject<StairBlock> LIGHT_GRAY_BRICK_STAIRS = register("light_gray_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_LIGHT_GRAY.get()));
+    public static final RegistryObject<StairBlock> GRAY_BRICK_STAIRS = register("gray_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_GRAY.get()));
+    public static final RegistryObject<StairBlock> BLACK_BRICK_STAIRS = register("black_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_BLACK.get()));
+    public static final RegistryObject<StairBlock> RED_BRICK_STAIRS = register("red_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_RED.get()));
 
     // Wall
 
@@ -156,41 +156,41 @@ public class ModBlocks {
 
     // Cracked Stairs
 
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED = CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_WHITE = WHITE_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_ORANGE = ORANGE_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_PINK = PINK_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_YELLOW = YELLOW_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_LIME = LIME_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_GREEN = GREEN_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_LIGHT_BLUE = LIGHT_BLUE_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_CYAN = CYAN_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_BLUE = BLUE_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_MAGENTA = MAGENTA_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_PURPLE = PURPLE_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_BROWN = BROWN_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_LIGHT_GRAY = LIGHT_GRAY_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_GRAY = GRAY_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_BLACK = BLACK_CRACKED_BRICKS.get().defaultBlockState();
-    public static final BlockState STAIR_BLOCKSTATE_CRACKED_RED = RED_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED = () -> CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_WHITE = () -> WHITE_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_ORANGE = () -> ORANGE_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_PINK = () -> PINK_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_YELLOW = () -> YELLOW_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_LIME = () -> LIME_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_GREEN = () -> GREEN_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_LIGHT_BLUE = () -> LIGHT_BLUE_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_CYAN = () -> CYAN_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_BLUE = () -> BLUE_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_MAGENTA = () -> MAGENTA_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_PURPLE = () -> PURPLE_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_BROWN = () -> BROWN_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_LIGHT_GRAY = () -> LIGHT_GRAY_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_GRAY = () -> GRAY_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_BLACK = () -> BLACK_CRACKED_BRICKS.get().defaultBlockState();
+    public static final Supplier<BlockState> STAIR_BLOCKSTATE_CRACKED_RED = () -> RED_CRACKED_BRICKS.get().defaultBlockState();
     
-    public static final RegistryObject<StairBlock> CRACKED_BRICK_STAIRS = register("cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED));
-    public static final RegistryObject<StairBlock> WHITE_CRACKED_BRICK_STAIRS = register("white_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_WHITE));
-    public static final RegistryObject<StairBlock> ORANGE_CRACKED_BRICK_STAIRS = register("orange_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_ORANGE));
-    public static final RegistryObject<StairBlock> PINK_CRACKED_BRICK_STAIRS = register("pink_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_PINK));
-    public static final RegistryObject<StairBlock> YELLOW_CRACKED_BRICK_STAIRS = register("yellow_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_YELLOW));
-    public static final RegistryObject<StairBlock> LIME_CRACKED_BRICK_STAIRS = register("lime_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_LIME));
-    public static final RegistryObject<StairBlock> GREEN_CRACKED_BRICK_STAIRS = register("green_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_GREEN));
-    public static final RegistryObject<StairBlock> LIGHT_BLUE_CRACKED_BRICK_STAIRS = register("light_blue_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_LIGHT_BLUE));
-    public static final RegistryObject<StairBlock> CYAN_CRACKED_BRICK_STAIRS = register("cyan_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_CYAN));
-    public static final RegistryObject<StairBlock> BLUE_CRACKED_BRICK_STAIRS = register("blue_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_BLUE));
-    public static final RegistryObject<StairBlock> MAGENTA_CRACKED_BRICK_STAIRS = register("magenta_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_MAGENTA));
-    public static final RegistryObject<StairBlock> PURPLE_CRACKED_BRICK_STAIRS = register("purple_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_PURPLE));
-    public static final RegistryObject<StairBlock> BROWN_CRACKED_BRICK_STAIRS = register("brown_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_BROWN));
-    public static final RegistryObject<StairBlock> LIGHT_GRAY_CRACKED_BRICK_STAIRS = register("light_gray_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_LIGHT_GRAY));
-    public static final RegistryObject<StairBlock> GRAY_CRACKED_BRICK_STAIRS = register("gray_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_GRAY));
-    public static final RegistryObject<StairBlock> BLACK_CRACKED_BRICK_STAIRS = register("black_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_BLACK));
-    public static final RegistryObject<StairBlock> RED_CRACKED_BRICK_STAIRS = register("red_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_RED));
+    public static final RegistryObject<StairBlock> CRACKED_BRICK_STAIRS = register("cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED.get()));
+    public static final RegistryObject<StairBlock> WHITE_CRACKED_BRICK_STAIRS = register("white_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_WHITE.get()));
+    public static final RegistryObject<StairBlock> ORANGE_CRACKED_BRICK_STAIRS = register("orange_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_ORANGE.get()));
+    public static final RegistryObject<StairBlock> PINK_CRACKED_BRICK_STAIRS = register("pink_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_PINK.get()));
+    public static final RegistryObject<StairBlock> YELLOW_CRACKED_BRICK_STAIRS = register("yellow_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_YELLOW.get()));
+    public static final RegistryObject<StairBlock> LIME_CRACKED_BRICK_STAIRS = register("lime_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_LIME.get()));
+    public static final RegistryObject<StairBlock> GREEN_CRACKED_BRICK_STAIRS = register("green_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_GREEN.get()));
+    public static final RegistryObject<StairBlock> LIGHT_BLUE_CRACKED_BRICK_STAIRS = register("light_blue_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_LIGHT_BLUE.get()));
+    public static final RegistryObject<StairBlock> CYAN_CRACKED_BRICK_STAIRS = register("cyan_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_CYAN.get()));
+    public static final RegistryObject<StairBlock> BLUE_CRACKED_BRICK_STAIRS = register("blue_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_BLUE.get()));
+    public static final RegistryObject<StairBlock> MAGENTA_CRACKED_BRICK_STAIRS = register("magenta_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_MAGENTA.get()));
+    public static final RegistryObject<StairBlock> PURPLE_CRACKED_BRICK_STAIRS = register("purple_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_PURPLE.get()));
+    public static final RegistryObject<StairBlock> BROWN_CRACKED_BRICK_STAIRS = register("brown_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_BROWN.get()));
+    public static final RegistryObject<StairBlock> LIGHT_GRAY_CRACKED_BRICK_STAIRS = register("light_gray_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_LIGHT_GRAY.get()));
+    public static final RegistryObject<StairBlock> GRAY_CRACKED_BRICK_STAIRS = register("gray_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_GRAY.get()));
+    public static final RegistryObject<StairBlock> BLACK_CRACKED_BRICK_STAIRS = register("black_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_BLACK.get()));
+    public static final RegistryObject<StairBlock> RED_CRACKED_BRICK_STAIRS = register("red_cracked_brick_stairs", () -> getStairsBrick(STAIR_BLOCKSTATE_CRACKED_RED.get()));
 
     // Cracked Brick Wall
 
