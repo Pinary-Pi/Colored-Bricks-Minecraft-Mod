@@ -199,11 +199,11 @@ public class ModTags {
         public static final TagKey<Block> BRICK_WALL_CRACKED_RED_MINECRAFT = minecraft("stone/red_cracked_wall");
         
         private static TagKey<Block> forge(String path) {
-            return BlockTags.create(new ResourceLocation("forge", path));
+            return BlockTags.create(ResourceLocation.fromNamespaceAndPath("forge", path));
         }
 
         private static TagKey<Block> minecraft(String path) {
-            return BlockTags.create(new ResourceLocation("minecraft", path));
+            return BlockTags.create(ResourceLocation.withDefaultNamespace(path));
         }
     }
 
@@ -389,7 +389,7 @@ public class ModTags {
         public static final TagKey<Item> BRICK_RED = forge("stone/red_item");
 
         private static TagKey<Item> forge(String path) {
-            return ItemTags.create(new ResourceLocation("forge", path));
+            return ItemTags.create(ResourceLocation.fromNamespaceAndPath("forge", path));
         }
     }
 }
