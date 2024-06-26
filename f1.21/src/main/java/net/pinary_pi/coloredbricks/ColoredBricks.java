@@ -1,6 +1,7 @@
 package net.pinary_pi.coloredbricks;
 
 import net.fabricmc.api.ModInitializer;
+import net.pinary_pi.coloredbricks.setup.ModItems;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,6 +20,8 @@ public class ColoredBricks implements ModInitializer {
 		// However, some things (like resources) may still be uninitialized.
 		// Proceed with mild caution.
 
-		LOGGER.info("Hello Fabric world!");
+		LOGGER.info("Starting Colored Bricks");
+
+		ModItems.registerModItems();
 	}
 }
