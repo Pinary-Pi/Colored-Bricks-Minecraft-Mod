@@ -77,22 +77,22 @@ public class ModBlocks {
 
     // Normal Brick Walls
 
-    public static final Block WHITE_BRICK_WALL = registerBrickBlock("white_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block ORANGE_BRICK_WALL = registerBrickBlock("orange_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block PINK_BRICK_WALL = registerBrickBlock("pink_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block YELLOW_BRICK_WALL = registerBrickBlock("yellow_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block LIME_BRICK_WALL = registerBrickBlock("lime_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block GREEN_BRICK_WALL = registerBrickBlock("green_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block LIGHT_BLUE_BRICK_WALL = registerBrickBlock("light_blue_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block CYAN_BRICK_WALL = registerBrickBlock("cyan_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block BLUE_BRICK_WALL = registerBrickBlock("blue_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block MAGENTA_BRICK_WALL = registerBrickBlock("magenta_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block PURPLE_BRICK_WALL = registerBrickBlock("purple_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block BROWN_BRICK_WALL = registerBrickBlock("brown_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block GRAY_BRICK_WALL = registerBrickBlock("gray_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block LIGHT_GRAY_BRICK_WALL = registerBrickBlock("light_gray_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block BLACK_BRICK_WALL = registerBrickBlock("black_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block RED_BRICK_WALL = registerBrickBlock("red_bricks", new WallBlock(BRICK_SETTINGS));
+    public static final Block WHITE_BRICK_WALL = registerBrickBlock("white_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block ORANGE_BRICK_WALL = registerBrickBlock("orange_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block PINK_BRICK_WALL = registerBrickBlock("pink_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block YELLOW_BRICK_WALL = registerBrickBlock("yellow_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block LIME_BRICK_WALL = registerBrickBlock("lime_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block GREEN_BRICK_WALL = registerBrickBlock("green_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block LIGHT_BLUE_BRICK_WALL = registerBrickBlock("light_blue_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block CYAN_BRICK_WALL = registerBrickBlock("cyan_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block BLUE_BRICK_WALL = registerBrickBlock("blue_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block MAGENTA_BRICK_WALL = registerBrickBlock("magenta_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block PURPLE_BRICK_WALL = registerBrickBlock("purple_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block BROWN_BRICK_WALL = registerBrickBlock("brown_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block GRAY_BRICK_WALL = registerBrickBlock("gray_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block LIGHT_GRAY_BRICK_WALL = registerBrickBlock("light_gray_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block BLACK_BRICK_WALL = registerBrickBlock("black_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block RED_BRICK_WALL = registerBrickBlock("red_brick_wall", new WallBlock(BRICK_SETTINGS));
 
     // Cracked Bricks
 
@@ -157,22 +157,22 @@ public class ModBlocks {
     // Cracked Walls
 
     public static final Block CRACKED_BRICK_WALL = registerBrickBlock("cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
-    public static final Block WHITE_CRACKED_BRICK_WALL = registerBrickBlock("white_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block ORANGE_CRACKED_BRICK_WALL = registerBrickBlock("orange_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block PINK_CRACKED_BRICK_WALL = registerBrickBlock("pink_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block YELLOW_CRACKED_BRICK_WALL = registerBrickBlock("yellow_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block LIME_CRACKED_BRICK_WALL = registerBrickBlock("lime_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block GREEN_CRACKED_BRICK_WALL = registerBrickBlock("green_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block LIGHT_BLUE_CRACKED_BRICK_WALL = registerBrickBlock("light_blue_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block CYAN_CRACKED_BRICK_WALL = registerBrickBlock("cyan_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block BLUE_CRACKED_BRICK_WALL = registerBrickBlock("blue_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block MAGENTA_CRACKED_BRICK_WALL = registerBrickBlock("magenta_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block PURPLE_CRACKED_BRICK_WALL = registerBrickBlock("purple_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block BROWN_CRACKED_BRICK_WALL = registerBrickBlock("brown_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block GRAY_CRACKED_BRICK_WALL = registerBrickBlock("gray_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block LIGHT_GRAY_CRACKED_BRICK_WALL = registerBrickBlock("light_gray_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block BLACK_CRACKED_BRICK_WALL = registerBrickBlock("black_cracked_bricks", new WallBlock(BRICK_SETTINGS));
-    public static final Block RED_CRACKED_BRICK_WALL = registerBrickBlock("red_cracked_bricks", new WallBlock(BRICK_SETTINGS));
+    public static final Block WHITE_CRACKED_BRICK_WALL = registerBrickBlock("white_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block ORANGE_CRACKED_BRICK_WALL = registerBrickBlock("orange_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block PINK_CRACKED_BRICK_WALL = registerBrickBlock("pink_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block YELLOW_CRACKED_BRICK_WALL = registerBrickBlock("yellow_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block LIME_CRACKED_BRICK_WALL = registerBrickBlock("lime_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block GREEN_CRACKED_BRICK_WALL = registerBrickBlock("green_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block LIGHT_BLUE_CRACKED_BRICK_WALL = registerBrickBlock("light_blue_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block CYAN_CRACKED_BRICK_WALL = registerBrickBlock("cyan_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block BLUE_CRACKED_BRICK_WALL = registerBrickBlock("blue_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block MAGENTA_CRACKED_BRICK_WALL = registerBrickBlock("magenta_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block PURPLE_CRACKED_BRICK_WALL = registerBrickBlock("purple_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block BROWN_CRACKED_BRICK_WALL = registerBrickBlock("brown_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block GRAY_CRACKED_BRICK_WALL = registerBrickBlock("gray_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block LIGHT_GRAY_CRACKED_BRICK_WALL = registerBrickBlock("light_gray_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block BLACK_CRACKED_BRICK_WALL = registerBrickBlock("black_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
+    public static final Block RED_CRACKED_BRICK_WALL = registerBrickBlock("red_cracked_brick_wall", new WallBlock(BRICK_SETTINGS));
 
     // Chiseled Bricks
     public static final Block CHISELED_BRICKS = registerBrickBlock("chiseled_bricks", new Block(BRICK_SETTINGS));
