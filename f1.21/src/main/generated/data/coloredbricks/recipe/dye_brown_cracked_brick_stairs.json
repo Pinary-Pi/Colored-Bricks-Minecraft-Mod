@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:brown_dye"
+    },
+    {
+      "item": "coloredbricks:cracked_brick_stairs"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "coloredbricks:brown_cracked_brick_stairs"
+  }
+}

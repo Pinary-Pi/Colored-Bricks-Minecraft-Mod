@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:magenta_dye"
+    },
+    {
+      "item": "minecraft:brick_wall"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "coloredbricks:magenta_brick_wall"
+  }
+}

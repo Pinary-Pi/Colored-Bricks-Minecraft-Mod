@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:pink_dye"
+    },
+    {
+      "item": "coloredbricks:cracked_bricks"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "coloredbricks:pink_cracked_bricks"
+  }
+}
