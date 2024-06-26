@@ -2,6 +2,8 @@ package net.pinary_pi.coloredbricks.data;
 
 import java.util.concurrent.CompletableFuture;
 
+import org.apache.commons.lang3.tuple.Pair;
+
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
@@ -12,6 +14,7 @@ import net.minecraft.registry.RegistryWrapper.WrapperLookup;
 import net.minecraft.util.Identifier;
 import net.pinary_pi.coloredbricks.ColoredBricks;
 import net.pinary_pi.coloredbricks.setup.ModBlocks;
+import net.pinary_pi.coloredbricks.setup.ModItems;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemConvertible;
 import net.minecraft.item.Items;
@@ -48,6 +51,23 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                                                               Items.BLACK_DYE,
                                                               Items.RED_DYE);
 
+    private static final List<Pair<ItemConvertible, ItemConvertible>> COMPACT_2BY2_INPUTS_OUTPUTS = List.of(Pair.of(ModItems.WHITE_BRICK, ModBlocks.WHITE_BRICKS),
+                                                                                                            Pair.of(ModItems.ORANGE_BRICK, ModBlocks.ORANGE_BRICKS),
+                                                                                                            Pair.of(ModItems.PINK_BRICK, ModBlocks.PINK_BRICKS),
+                                                                                                            Pair.of(ModItems.YELLOW_BRICK, ModBlocks.YELLOW_BRICKS),
+                                                                                                            Pair.of(ModItems.LIME_BRICK, ModBlocks.LIME_BRICKS),
+                                                                                                            Pair.of(ModItems.GREEN_BRICK, ModBlocks.GREEN_BRICKS),
+                                                                                                            Pair.of(ModItems.LIGHT_BLUE_BRICK, ModBlocks.LIGHT_BLUE_BRICKS),
+                                                                                                            Pair.of(ModItems.CYAN_BRICK, ModBlocks.CYAN_BRICKS),
+                                                                                                            Pair.of(ModItems.BLUE_BRICK, ModBlocks.BLUE_BRICKS),
+                                                                                                            Pair.of(ModItems.MAGENTA_BRICK, ModBlocks.MAGENTA_BRICKS),
+                                                                                                            Pair.of(ModItems.PURPLE_BRICK, ModBlocks.PURPLE_BRICKS),
+                                                                                                            Pair.of(ModItems.BROWN_BRICK, ModBlocks.BROWN_BRICKS),
+                                                                                                            Pair.of(ModItems.LIGHT_GRAY_BRICK, ModBlocks.LIGHT_GRAY_BRICKS),
+                                                                                                            Pair.of(ModItems.GRAY_BRICK, ModBlocks.GRAY_BRICKS),
+                                                                                                            Pair.of(ModItems.BLACK_BRICK, ModBlocks.BLACK_BRICKS),
+                                                                                                            Pair.of(ModItems.RED_BRICK, ModBlocks.RED_BRICKS));
+
     private static void offerDyeableRecipes(RecipeExporter exporter, List<ItemConvertible> dyes, List<ItemConvertible> dyeables) {
         for (ItemConvertible dyeable : dyeables) {
             for (ItemConvertible dye : dyes) {
@@ -81,7 +101,15 @@ public class ModRecipesProvider extends FabricRecipeProvider {
     @Override
     public void generate(RecipeExporter exporter) {
         ColoredBricks.LOGGER.info("Starting recipe generation for Colored Bricks");
+
         offerDyeableRecipes(exporter, DYES, DYEABLES);
+
+        for (Pair<ItemConvertible, ItemConvertible> pair : COMPACT_2BY2_INPUTS_OUTPUTS) {
+            ItemConvertible input = pair.getLeft();
+            ItemConvertible output = pair.getRight();
+
+            offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, output, input);
+        }
     }
 
 }
