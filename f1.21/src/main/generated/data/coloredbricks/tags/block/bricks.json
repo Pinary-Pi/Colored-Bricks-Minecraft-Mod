@@ -1,0 +1,20 @@
+{
+  "values": [
+    "coloredbricks:white_bricks",
+    "coloredbricks:orange_bricks",
+    "coloredbricks:pink_bricks",
+    "coloredbricks:yellow_bricks",
+    "coloredbricks:lime_bricks",
+    "coloredbricks:green_bricks",
+    "coloredbricks:light_blue_bricks",
+    "coloredbricks:cyan_bricks",
+    "coloredbricks:blue_bricks",
+    "coloredbricks:magenta_bricks",
+    "coloredbricks:purple_bricks",
+    "coloredbricks:brown_bricks",
+    "coloredbricks:gray_bricks",
+    "coloredbricks:light_gray_bricks",
+    "coloredbricks:black_bricks",
+    "coloredbricks:red_bricks"
+  ]
+}
