@@ -190,6 +190,8 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                 offerChiseledBlockRecipe(exporter, RecipeCategory.MISC, chiseled, slab);
             }
         }
+
+        offerChiseledBlockRecipe(exporter, RecipeCategory.MISC, ModBlocks.CHISELED_BRICKS, Blocks.BRICK_SLAB);
     }
 
 }
