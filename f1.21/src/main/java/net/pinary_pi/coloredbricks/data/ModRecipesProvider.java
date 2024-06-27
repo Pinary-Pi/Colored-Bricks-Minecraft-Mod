@@ -2,7 +2,8 @@ package net.pinary_pi.coloredbricks.data;
 
 import java.util.concurrent.CompletableFuture;
 
-import org.apache.commons.lang3.tuple.Pair;
+import org.javatuples.Pair;
+import org.javatuples.Quintet;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
@@ -22,6 +23,7 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.recipe.book.RecipeCategory;
 
 import java.util.List;
+import java.util.ArrayList;
 
 public class ModRecipesProvider extends FabricRecipeProvider {
     private static final List<ItemConvertible> DYEABLES = List.of(Items.BRICK,
@@ -52,22 +54,22 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                                                               Items.BLACK_DYE,
                                                               Items.RED_DYE);
 
-    private static final List<Pair<ItemConvertible, ItemConvertible>> COMPACT_2BY2_INPUTS_OUTPUTS = List.of(Pair.of(ModItems.WHITE_BRICK, ModBlocks.WHITE_BRICKS),
-                                                                                                            Pair.of(ModItems.ORANGE_BRICK, ModBlocks.ORANGE_BRICKS),
-                                                                                                            Pair.of(ModItems.PINK_BRICK, ModBlocks.PINK_BRICKS),
-                                                                                                            Pair.of(ModItems.YELLOW_BRICK, ModBlocks.YELLOW_BRICKS),
-                                                                                                            Pair.of(ModItems.LIME_BRICK, ModBlocks.LIME_BRICKS),
-                                                                                                            Pair.of(ModItems.GREEN_BRICK, ModBlocks.GREEN_BRICKS),
-                                                                                                            Pair.of(ModItems.LIGHT_BLUE_BRICK, ModBlocks.LIGHT_BLUE_BRICKS),
-                                                                                                            Pair.of(ModItems.CYAN_BRICK, ModBlocks.CYAN_BRICKS),
-                                                                                                            Pair.of(ModItems.BLUE_BRICK, ModBlocks.BLUE_BRICKS),
-                                                                                                            Pair.of(ModItems.MAGENTA_BRICK, ModBlocks.MAGENTA_BRICKS),
-                                                                                                            Pair.of(ModItems.PURPLE_BRICK, ModBlocks.PURPLE_BRICKS),
-                                                                                                            Pair.of(ModItems.BROWN_BRICK, ModBlocks.BROWN_BRICKS),
-                                                                                                            Pair.of(ModItems.LIGHT_GRAY_BRICK, ModBlocks.LIGHT_GRAY_BRICKS),
-                                                                                                            Pair.of(ModItems.GRAY_BRICK, ModBlocks.GRAY_BRICKS),
-                                                                                                            Pair.of(ModItems.BLACK_BRICK, ModBlocks.BLACK_BRICKS),
-                                                                                                            Pair.of(ModItems.RED_BRICK, ModBlocks.RED_BRICKS));
+    private static final List<Pair<ItemConvertible, ItemConvertible>> COMPACT_2BY2_INPUTS_OUTPUTS = List.of(Pair.with(ModItems.WHITE_BRICK, ModBlocks.WHITE_BRICKS),
+                                                                                                            Pair.with(ModItems.ORANGE_BRICK, ModBlocks.ORANGE_BRICKS),
+                                                                                                            Pair.with(ModItems.PINK_BRICK, ModBlocks.PINK_BRICKS),
+                                                                                                            Pair.with(ModItems.YELLOW_BRICK, ModBlocks.YELLOW_BRICKS),
+                                                                                                            Pair.with(ModItems.LIME_BRICK, ModBlocks.LIME_BRICKS),
+                                                                                                            Pair.with(ModItems.GREEN_BRICK, ModBlocks.GREEN_BRICKS),
+                                                                                                            Pair.with(ModItems.LIGHT_BLUE_BRICK, ModBlocks.LIGHT_BLUE_BRICKS),
+                                                                                                            Pair.with(ModItems.CYAN_BRICK, ModBlocks.CYAN_BRICKS),
+                                                                                                            Pair.with(ModItems.BLUE_BRICK, ModBlocks.BLUE_BRICKS),
+                                                                                                            Pair.with(ModItems.MAGENTA_BRICK, ModBlocks.MAGENTA_BRICKS),
+                                                                                                            Pair.with(ModItems.PURPLE_BRICK, ModBlocks.PURPLE_BRICKS),
+                                                                                                            Pair.with(ModItems.BROWN_BRICK, ModBlocks.BROWN_BRICKS),
+                                                                                                            Pair.with(ModItems.LIGHT_GRAY_BRICK, ModBlocks.LIGHT_GRAY_BRICKS),
+                                                                                                            Pair.with(ModItems.GRAY_BRICK, ModBlocks.GRAY_BRICKS),
+                                                                                                            Pair.with(ModItems.BLACK_BRICK, ModBlocks.BLACK_BRICKS),
+                                                                                                            Pair.with(ModItems.RED_BRICK, ModBlocks.RED_BRICKS));
     private static final List<ItemConvertible> BLOCKS = List.of(ModBlocks.WHITE_BRICKS,
                                                                 ModBlocks.ORANGE_BRICKS,
                                                                 ModBlocks.PINK_BRICKS,
@@ -101,6 +103,18 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                                                                 ModBlocks.GRAY_CRACKED_BRICKS,
                                                                 ModBlocks.BLACK_CRACKED_BRICKS,
                                                                 ModBlocks.RED_CRACKED_BRICKS);
+
+    private static List<Quintet<ItemConvertible, ItemConvertible, ItemConvertible, ItemConvertible, ItemConvertible>> STONECUTTING_BLOCKS = new ArrayList<>();
+
+    private static void addStoneCuttingBlocks() {
+        for (ItemConvertible block : BLOCKS) {
+            if (Registries.ITEM.getId(block.asItem()).getPath().contains("cracked")) {
+                STONECUTTING_BLOCKS.add(Quintet.with(block, getSlabVersion(block), getStairVersion(block), getWallVersion(block), null));
+            } else {
+                STONECUTTING_BLOCKS.add(Quintet.with(block, getSlabVersion(block), getStairVersion(block), getWallVersion(block), getChiseledVersion(block)));
+            }
+        }
+    }
 
     private static Item getSlabVersion(ItemConvertible block) {
         String block_id = Registries.ITEM.getId(block.asItem()).getPath();
@@ -165,8 +179,8 @@ public class ModRecipesProvider extends FabricRecipeProvider {
 
         // Compacting Recipes
         for (Pair<ItemConvertible, ItemConvertible> pair : COMPACT_2BY2_INPUTS_OUTPUTS) {
-            ItemConvertible input = pair.getLeft();
-            ItemConvertible output = pair.getRight();
+            ItemConvertible input = pair.getValue0();
+            ItemConvertible output = pair.getValue1();
 
             offer2x2CompactingRecipe(exporter, RecipeCategory.MISC, output, input);
         }
@@ -192,6 +206,28 @@ public class ModRecipesProvider extends FabricRecipeProvider {
         }
 
         offerChiseledBlockRecipe(exporter, RecipeCategory.MISC, ModBlocks.CHISELED_BRICKS, Blocks.BRICK_SLAB);
-    }
 
+        addStoneCuttingBlocks();
+
+        for (Quintet<ItemConvertible, ItemConvertible, ItemConvertible, ItemConvertible, ItemConvertible> set : STONECUTTING_BLOCKS) {
+            ItemConvertible block = set.getValue0();
+            ItemConvertible slab = set.getValue1();
+            ItemConvertible stair = set.getValue2();
+            ItemConvertible wall = set.getValue3();
+            ItemConvertible chiseled = set.getValue4();
+            
+            if (Registries.ITEM.getId(block.asItem()).getPath().contains("cracked")) {
+                offerStonecuttingRecipe(exporter, RecipeCategory.MISC, slab, block, 2);
+                offerStonecuttingRecipe(exporter, RecipeCategory.MISC, stair, block);
+                offerStonecuttingRecipe(exporter, RecipeCategory.MISC, wall, block);
+            } else {
+                offerStonecuttingRecipe(exporter, RecipeCategory.MISC, slab, block, 2);
+                offerStonecuttingRecipe(exporter, RecipeCategory.MISC, stair, block);
+                offerStonecuttingRecipe(exporter, RecipeCategory.MISC, wall, block);
+                offerStonecuttingRecipe(exporter, RecipeCategory.MISC, chiseled, block);
+            }
+        }
+
+        offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CHISELED_BRICKS, Blocks.BRICKS);
+    }
 }
