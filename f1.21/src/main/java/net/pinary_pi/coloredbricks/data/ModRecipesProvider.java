@@ -8,6 +8,7 @@ import org.javatuples.Quintet;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
+import net.minecraft.data.server.recipe.CookingRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeExporter;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.registry.Registries;
@@ -104,6 +105,31 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                                                                 ModBlocks.BLACK_CRACKED_BRICKS,
                                                                 ModBlocks.RED_CRACKED_BRICKS);
 
+    private static final List<Pair<ItemConvertible, ItemConvertible>> CRACKED_PAIRS = List.of(
+        Pair.with(ModBlocks.WHITE_BRICKS, ModBlocks.WHITE_CRACKED_BRICKS),
+        Pair.with(ModBlocks.ORANGE_BRICKS, ModBlocks.ORANGE_CRACKED_BRICKS),
+        Pair.with(ModBlocks.PINK_BRICKS, ModBlocks.PINK_CRACKED_BRICKS),
+        Pair.with(ModBlocks.YELLOW_BRICKS, ModBlocks.YELLOW_CRACKED_BRICKS),
+        Pair.with(ModBlocks.LIME_BRICKS, ModBlocks.LIME_CRACKED_BRICKS),
+        Pair.with(ModBlocks.GREEN_BRICKS, ModBlocks.GREEN_CRACKED_BRICKS),
+        Pair.with(ModBlocks.LIGHT_BLUE_BRICKS, ModBlocks.LIGHT_BLUE_CRACKED_BRICKS),
+        Pair.with(ModBlocks.CYAN_BRICKS, ModBlocks.CYAN_CRACKED_BRICKS),
+        Pair.with(ModBlocks.BLUE_BRICKS, ModBlocks.BLUE_CRACKED_BRICKS),
+        Pair.with(ModBlocks.MAGENTA_BRICKS, ModBlocks.MAGENTA_CRACKED_BRICKS),
+        Pair.with(ModBlocks.PURPLE_BRICKS, ModBlocks.PURPLE_CRACKED_BRICKS),
+        Pair.with(ModBlocks.BROWN_BRICKS, ModBlocks.BROWN_CRACKED_BRICKS),
+        Pair.with(ModBlocks.LIGHT_GRAY_BRICKS, ModBlocks.LIGHT_GRAY_CRACKED_BRICKS),
+        Pair.with(ModBlocks.GRAY_BRICKS, ModBlocks.GRAY_CRACKED_BRICKS),
+        Pair.with(ModBlocks.BLACK_BRICKS, ModBlocks.BLACK_CRACKED_BRICKS),
+        Pair.with(ModBlocks.RED_BRICKS, ModBlocks.RED_CRACKED_BRICKS)
+    );
+
+    public static void offerCrackingRecipe(RecipeExporter exporter, ItemConvertible output, ItemConvertible input) {
+		CookingRecipeJsonBuilder.createSmelting(Ingredient.ofItems(input), RecipeCategory.BUILDING_BLOCKS, output, 0.1F, 200)
+			.criterion(hasItem(input), conditionsFromItem(input))
+			.offerTo(exporter, "cracking_" + Registries.ITEM.getId(input.asItem()).getPath());
+	}
+
     private static List<Quintet<ItemConvertible, ItemConvertible, ItemConvertible, ItemConvertible, ItemConvertible>> STONECUTTING_BLOCKS = new ArrayList<>();
 
     private static void addStoneCuttingBlocks() {
@@ -175,6 +201,7 @@ public class ModRecipesProvider extends FabricRecipeProvider {
     public void generate(RecipeExporter exporter) {
         ColoredBricks.LOGGER.info("Starting recipe generation for Colored Bricks");
 
+        // Dye Recipes
         offerDyeableRecipes(exporter, DYES, DYEABLES);
 
         // Compacting Recipes
@@ -207,6 +234,7 @@ public class ModRecipesProvider extends FabricRecipeProvider {
 
         offerChiseledBlockRecipe(exporter, RecipeCategory.MISC, ModBlocks.CHISELED_BRICKS, Blocks.BRICK_SLAB);
 
+        // Stonecutting Recipes
         addStoneCuttingBlocks();
 
         for (Quintet<ItemConvertible, ItemConvertible, ItemConvertible, ItemConvertible, ItemConvertible> set : STONECUTTING_BLOCKS) {
@@ -229,5 +257,28 @@ public class ModRecipesProvider extends FabricRecipeProvider {
         }
 
         offerStonecuttingRecipe(exporter, RecipeCategory.MISC, ModBlocks.CHISELED_BRICKS, Blocks.BRICKS);
+
+        // Cracking Recipes/Smelting Recipes
+
+        for (Pair<ItemConvertible, ItemConvertible> pair : CRACKED_PAIRS) {
+            ItemConvertible block = pair.getValue0();
+            ItemConvertible cracked_block = pair.getValue1();
+            ItemConvertible slab = getSlabVersion(block);
+            ItemConvertible cracked_slab = getSlabVersion(cracked_block);
+            ItemConvertible stair = getStairVersion(block);
+            ItemConvertible cracked_stair = getStairVersion(cracked_block);
+            ItemConvertible wall = getWallVersion(block);
+            ItemConvertible cracked_wall = getWallVersion(cracked_block);
+
+            offerCrackingRecipe(exporter, cracked_block, block);
+            offerCrackingRecipe(exporter, cracked_slab, slab);
+            offerCrackingRecipe(exporter, cracked_stair, stair);
+            offerCrackingRecipe(exporter, cracked_wall, wall);
+        }
+
+        offerCrackingRecipe(exporter, ModBlocks.CRACKED_BRICKS, Blocks.BRICKS);
+        offerCrackingRecipe(exporter, ModBlocks.CRACKED_BRICK_SLAB, Blocks.BRICK_SLAB);
+        offerCrackingRecipe(exporter, ModBlocks.CRACKED_BRICK_STAIRS, Blocks.BRICK_STAIRS);
+        offerCrackingRecipe(exporter, ModBlocks.CRACKED_BRICK_WALL, Blocks.BRICK_WALL);
     }
 }
