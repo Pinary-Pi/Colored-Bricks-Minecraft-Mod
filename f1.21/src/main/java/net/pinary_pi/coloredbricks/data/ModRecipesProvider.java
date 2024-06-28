@@ -10,6 +10,7 @@ import net.fabricmc.fabric.api.datagen.v1.provider.FabricRecipeProvider;
 import net.minecraft.block.Blocks;
 import net.minecraft.data.server.recipe.CookingRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.RecipeExporter;
+import net.minecraft.data.server.recipe.ShapedRecipeJsonBuilder;
 import net.minecraft.data.server.recipe.ShapelessRecipeJsonBuilder;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.RegistryWrapper.WrapperLookup;
@@ -36,7 +37,8 @@ public class ModRecipesProvider extends FabricRecipeProvider {
                                                                   ModBlocks.CRACKED_BRICK_SLAB.asItem(),
                                                                   ModBlocks.CRACKED_BRICK_STAIRS.asItem(),
                                                                   ModBlocks.CRACKED_BRICK_WALL.asItem(),
-                                                                  ModBlocks.CHISELED_BRICKS.asItem());
+                                                                  ModBlocks.CHISELED_BRICKS.asItem(),
+                                                                  Blocks.FLOWER_POT.asItem());
     
     private static final List<ItemConvertible> DYES = List.of(Items.WHITE_DYE,
                                                               Items.ORANGE_DYE,
@@ -167,6 +169,13 @@ public class ModRecipesProvider extends FabricRecipeProvider {
         return Registries.ITEM.get(Identifier.of(ColoredBricks.MOD_ID, chiseled_id));
     }
 
+    private static Item getPotVersion(ItemConvertible block) {
+        String block_id = Registries.ITEM.getId(block.asItem()).getPath();
+        String pot_id = block_id.replace("bricks", "flower_pot");
+        ColoredBricks.LOGGER.info(pot_id);
+        return Registries.ITEM.get(Identifier.of(ColoredBricks.MOD_ID, pot_id));
+    }
+
     private static void offerDyeableRecipes(RecipeExporter exporter, List<ItemConvertible> dyes, List<ItemConvertible> dyeables) {
         for (ItemConvertible dyeable : dyeables) {
             for (ItemConvertible dye : dyes) {
@@ -280,5 +289,20 @@ public class ModRecipesProvider extends FabricRecipeProvider {
         offerCrackingRecipe(exporter, ModBlocks.CRACKED_BRICK_SLAB, Blocks.BRICK_SLAB);
         offerCrackingRecipe(exporter, ModBlocks.CRACKED_BRICK_STAIRS, Blocks.BRICK_STAIRS);
         offerCrackingRecipe(exporter, ModBlocks.CRACKED_BRICK_WALL, Blocks.BRICK_WALL);
+
+        // Flower Pot Recipes
+
+        for (Pair<ItemConvertible, ItemConvertible> pair : COMPACT_2BY2_INPUTS_OUTPUTS) {
+            ItemConvertible brick = pair.getValue0();
+            ItemConvertible block = pair.getValue1();
+            ItemConvertible pot = getPotVersion(block);
+
+            ShapedRecipeJsonBuilder.create(RecipeCategory.MISC, pot)
+                .input('#', brick)
+                .pattern("# #")
+                .pattern(" # ")
+                .criterion(hasItem(brick), conditionsFromItem(brick))
+                .offerTo(exporter);
+        }
     }
 }

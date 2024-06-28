@@ -13,11 +13,14 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.pinary_pi.coloredbricks.ColoredBricks;
+import net.pinary_pi.coloredbricks.setup.list.PottedContent;
 
 public class ModBlocks {
     private static final AbstractBlock.Settings BRICK_SETTINGS = AbstractBlock.Settings.copy(Blocks.BRICKS);
+    private static final AbstractBlock.Settings POT_SETTINGS = AbstractBlock.Settings.copy(Blocks.FLOWER_POT); 
 
     // Normal Brick Blocks
     public static final Block WHITE_BRICKS = registerBrickBlock("white_bricks", new Block(BRICK_SETTINGS));
@@ -193,6 +196,24 @@ public class ModBlocks {
     public static final Block BLACK_CHISELED_BRICKS = registerBrickBlock("black_chiseled_bricks", new Block(BRICK_SETTINGS));
     public static final Block RED_CHISELED_BRICKS = registerBrickBlock("red_chiseled_bricks", new Block(BRICK_SETTINGS));
 
+    // Flower Pots
+    public static final Block WHITE_FLOWER_POT = registerBrickBlock("white_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.WHITE));
+    public static final Block ORANGE_FLOWER_POT = registerBrickBlock("orange_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.ORANGE));
+    public static final Block PINK_FLOWER_POT = registerBrickBlock("pink_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.PINK));
+    public static final Block YELLOW_FLOWER_POT = registerBrickBlock("yellow_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.YELLOW));
+    public static final Block LIME_FLOWER_POT = registerBrickBlock("lime_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.LIME));
+    public static final Block GREEN_FLOWER_POT = registerBrickBlock("green_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.GREEN));
+    public static final Block LIGHT_BLUE_FLOWER_POT = registerBrickBlock("light_blue_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.LIGHT_BLUE));
+    public static final Block CYAN_FLOWER_POT = registerBrickBlock("cyan_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.CYAN));
+    public static final Block BLUE_FLOWER_POT = registerBrickBlock("blue_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.BLUE));
+    public static final Block MAGENTA_FLOWER_POT = registerBrickBlock("magenta_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.MAGENTA));
+    public static final Block PURPLE_FLOWER_POT = registerBrickBlock("purple_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.PURPLE));
+    public static final Block BROWN_FLOWER_POT = registerBrickBlock("brown_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.BROWN));
+    public static final Block LIGHT_GRAY_FLOWER_POT = registerBrickBlock("light_gray_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.LIGHT_GRAY));
+    public static final Block GRAY_FLOWER_POT = registerBrickBlock("gray_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.GRAY));
+    public static final Block BLACK_FLOWER_POT = registerBrickBlock("black_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.BLACK));
+    public static final Block RED_FLOWER_POT = registerBrickBlock("red_flower_pot", new ModFlowerPotBlock(Blocks.AIR, POT_SETTINGS, DyeColor.RED));
+
     private static void addBlocksToBuildingBlocksTab(FabricItemGroupEntries entries) {
         // Normal Brick Blocks
         entries.add(WHITE_BRICKS);
@@ -352,6 +373,81 @@ public class ModBlocks {
         entries.add(LIGHT_GRAY_CHISELED_BRICKS);
         entries.add(BLACK_CHISELED_BRICKS);
         entries.add(RED_CHISELED_BRICKS);
+        entries.add(WHITE_FLOWER_POT);
+        entries.add(ORANGE_FLOWER_POT);
+        entries.add(PINK_FLOWER_POT);
+        entries.add(YELLOW_FLOWER_POT);
+        entries.add(LIME_FLOWER_POT);
+        entries.add(GREEN_FLOWER_POT);
+        entries.add(LIGHT_BLUE_FLOWER_POT);
+        entries.add(CYAN_FLOWER_POT);
+        entries.add(BLUE_FLOWER_POT);
+        entries.add(MAGENTA_FLOWER_POT);
+        entries.add(PURPLE_FLOWER_POT);
+        entries.add(BROWN_FLOWER_POT);
+        entries.add(LIGHT_GRAY_FLOWER_POT);
+        entries.add(GRAY_FLOWER_POT);
+        entries.add(BLACK_FLOWER_POT);
+        entries.add(RED_FLOWER_POT);
+    }
+
+    private static void registerPottedFlowers(){
+        for (PottedContent content : PottedContent.values()) {
+            Block flower = content.getFlowerBlock();
+            String white_name = Registries.ITEM.getId(WHITE_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String orange_name = Registries.ITEM.getId(ORANGE_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String pink_name = Registries.ITEM.getId(PINK_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String yellow_name = Registries.ITEM.getId(YELLOW_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String lime_name = Registries.ITEM.getId(LIME_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String green_name = Registries.ITEM.getId(GREEN_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String light_blue_name = Registries.ITEM.getId(LIGHT_BLUE_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String cyan_name = Registries.ITEM.getId(CYAN_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String blue_name = Registries.ITEM.getId(BLUE_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String magenta_name = Registries.ITEM.getId(MAGENTA_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String purple_name = Registries.ITEM.getId(PURPLE_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String brown_name = Registries.ITEM.getId(BROWN_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String light_gray_name = Registries.ITEM.getId(LIGHT_GRAY_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String gray_name = Registries.ITEM.getId(GRAY_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String black_name = Registries.ITEM.getId(BLACK_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+            String red_name = Registries.ITEM.getId(RED_FLOWER_POT.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
+
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + white_name + "}");
+            registerPottedFLower(white_name, flower, DyeColor.WHITE);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + orange_name + "}");
+            registerPottedFLower(orange_name, flower, DyeColor.ORANGE);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + pink_name + "}");
+            registerPottedFLower(pink_name, flower, DyeColor.PINK);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + yellow_name + "}");
+            registerPottedFLower(yellow_name, flower, DyeColor.YELLOW);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + lime_name + "}");
+            registerPottedFLower(lime_name, flower, DyeColor.LIME);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + green_name + "}");
+            registerPottedFLower(green_name, flower, DyeColor.GREEN);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + light_blue_name + "}");
+            registerPottedFLower(light_blue_name, flower, DyeColor.LIGHT_BLUE);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + cyan_name + "}");
+            registerPottedFLower(cyan_name, flower, DyeColor.CYAN);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + blue_name + "}");
+            registerPottedFLower(blue_name, flower, DyeColor.BLUE);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + magenta_name + "}");
+            registerPottedFLower(magenta_name, flower, DyeColor.MAGENTA);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + purple_name + "}");
+            registerPottedFLower(purple_name, flower, DyeColor.PURPLE);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + brown_name + "}");
+            registerPottedFLower(brown_name, flower, DyeColor.BROWN);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + light_gray_name + "}");
+            registerPottedFLower(light_gray_name, flower, DyeColor.LIGHT_GRAY);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + gray_name + "}");
+            registerPottedFLower(gray_name, flower, DyeColor.GRAY);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + black_name + "}");
+            registerPottedFLower(black_name, flower, DyeColor.BLACK);
+            ColoredBricks.LOGGER.info("Registering: {" + ColoredBricks.MOD_ID + ":" + red_name + "}");
+            registerPottedFLower(red_name, flower, DyeColor.RED);
+        }
+    }
+
+    private static Block registerPottedFLower(String name, Block content, DyeColor color) {
+        return Registry.register(Registries.BLOCK, Identifier.of(ColoredBricks.MOD_ID, name), new ModFlowerPotBlock(content, POT_SETTINGS, color));
     }
 
     private static Block registerBrickBlock(String name, Block block) {
@@ -368,5 +464,8 @@ public class ModBlocks {
         ColoredBricks.LOGGER.info("Registering Mod Blocks for " + ColoredBricks.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(ModBlocks::addBlocksToBuildingBlocksTab);
+
+        ColoredBricks.LOGGER.info("Registering Potted Plants");
+        registerPottedFlowers();
     }
 }
