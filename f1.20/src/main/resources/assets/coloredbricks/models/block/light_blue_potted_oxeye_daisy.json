@@ -1,0 +1,6 @@
+{
+  "parent": "coloredbricks:block/light_blue_flower_pot_cross",
+  "textures": {
+    "plant": "minecraft:block/oxeye_daisy"
+  }
+}

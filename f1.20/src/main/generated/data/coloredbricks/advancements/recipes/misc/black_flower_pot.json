@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_black_brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": "coloredbricks:black_brick"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "coloredbricks:black_flower_pot"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_black_brick"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "coloredbricks:black_flower_pot"
+    ]
+  }
+}
