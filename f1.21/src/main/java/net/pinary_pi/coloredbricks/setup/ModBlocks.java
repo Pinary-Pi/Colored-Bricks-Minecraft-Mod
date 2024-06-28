@@ -373,6 +373,180 @@ public class ModBlocks {
         entries.add(LIGHT_GRAY_CHISELED_BRICKS);
         entries.add(BLACK_CHISELED_BRICKS);
         entries.add(RED_CHISELED_BRICKS);
+        // Flower Pots
+        entries.add(WHITE_FLOWER_POT);
+        entries.add(ORANGE_FLOWER_POT);
+        entries.add(PINK_FLOWER_POT);
+        entries.add(YELLOW_FLOWER_POT);
+        entries.add(LIME_FLOWER_POT);
+        entries.add(GREEN_FLOWER_POT);
+        entries.add(LIGHT_BLUE_FLOWER_POT);
+        entries.add(CYAN_FLOWER_POT);
+        entries.add(BLUE_FLOWER_POT);
+        entries.add(MAGENTA_FLOWER_POT);
+        entries.add(PURPLE_FLOWER_POT);
+        entries.add(BROWN_FLOWER_POT);
+        entries.add(LIGHT_GRAY_FLOWER_POT);
+        entries.add(GRAY_FLOWER_POT);
+        entries.add(BLACK_FLOWER_POT);
+        entries.add(RED_FLOWER_POT);
+    }
+
+    private static void addBlocksToColoredBlocksTab(FabricItemGroupEntries entries) {
+        // Normal Brick Blocks
+        entries.add(WHITE_BRICKS);
+        entries.add(ORANGE_BRICKS);
+        entries.add(PINK_BRICKS);
+        entries.add(YELLOW_BRICKS);
+        entries.add(LIME_BRICKS);
+        entries.add(GREEN_BRICKS);
+        entries.add(LIGHT_BLUE_BRICKS);
+        entries.add(CYAN_BRICKS);
+        entries.add(BLUE_BRICKS);
+        entries.add(MAGENTA_BRICKS);
+        entries.add(PURPLE_BRICKS);
+        entries.add(BROWN_BRICKS);
+        entries.add(GRAY_BRICKS);
+        entries.add(LIGHT_GRAY_BRICKS);
+        entries.add(BLACK_BRICKS);
+        entries.add(RED_BRICKS);
+        // Normal Brick Slabs
+        entries.add(WHITE_BRICK_SLAB);
+        entries.add(ORANGE_BRICK_SLAB);
+        entries.add(PINK_BRICK_SLAB);
+        entries.add(YELLOW_BRICK_SLAB);
+        entries.add(LIME_BRICK_SLAB);
+        entries.add(GREEN_BRICK_SLAB);
+        entries.add(LIGHT_BLUE_BRICK_SLAB);
+        entries.add(CYAN_BRICK_SLAB);
+        entries.add(BLUE_BRICK_SLAB);
+        entries.add(MAGENTA_BRICK_SLAB);
+        entries.add(PURPLE_BRICK_SLAB);
+        entries.add(BROWN_BRICK_SLAB);
+        entries.add(GRAY_BRICK_SLAB);
+        entries.add(LIGHT_GRAY_BRICK_SLAB);
+        entries.add(BLACK_BRICK_SLAB);
+        entries.add(RED_BRICK_SLAB);
+        // Normal Brick Stairs
+        entries.add(WHITE_BRICK_STAIRS);
+        entries.add(ORANGE_BRICK_STAIRS);
+        entries.add(PINK_BRICK_STAIRS);
+        entries.add(YELLOW_BRICK_STAIRS);
+        entries.add(LIME_BRICK_STAIRS);
+        entries.add(GREEN_BRICK_STAIRS);
+        entries.add(LIGHT_BLUE_BRICK_STAIRS);
+        entries.add(CYAN_BRICK_STAIRS);
+        entries.add(BLUE_BRICK_STAIRS);
+        entries.add(MAGENTA_BRICK_STAIRS);
+        entries.add(PURPLE_BRICK_STAIRS);
+        entries.add(BROWN_BRICK_STAIRS);
+        entries.add(GRAY_BRICK_STAIRS);
+        entries.add(LIGHT_GRAY_BRICK_STAIRS);
+        entries.add(BLACK_BRICK_STAIRS);
+        entries.add(RED_BRICK_STAIRS);
+        // Normal Brick Wall
+        entries.add(WHITE_BRICK_WALL);
+        entries.add(ORANGE_BRICK_WALL);
+        entries.add(PINK_BRICK_WALL);
+        entries.add(YELLOW_BRICK_WALL);
+        entries.add(LIME_BRICK_WALL);
+        entries.add(GREEN_BRICK_WALL);
+        entries.add(LIGHT_BLUE_BRICK_WALL);
+        entries.add(CYAN_BRICK_WALL);
+        entries.add(BLUE_BRICK_WALL);
+        entries.add(MAGENTA_BRICK_WALL);
+        entries.add(PURPLE_BRICK_WALL);
+        entries.add(BROWN_BRICK_WALL);
+        entries.add(GRAY_BRICK_WALL);
+        entries.add(LIGHT_GRAY_BRICK_WALL);
+        entries.add(BLACK_BRICK_WALL);
+        entries.add(RED_BRICK_WALL);
+        // Cracked Bricks
+        entries.add(WHITE_CRACKED_BRICKS);
+        entries.add(ORANGE_CRACKED_BRICKS);
+        entries.add(PINK_CRACKED_BRICKS);
+        entries.add(YELLOW_CRACKED_BRICKS);
+        entries.add(LIME_CRACKED_BRICKS);
+        entries.add(GREEN_CRACKED_BRICKS);
+        entries.add(LIGHT_BLUE_CRACKED_BRICKS);
+        entries.add(CYAN_CRACKED_BRICKS);
+        entries.add(BLUE_CRACKED_BRICKS);
+        entries.add(MAGENTA_CRACKED_BRICKS);
+        entries.add(PURPLE_CRACKED_BRICKS);
+        entries.add(BROWN_CRACKED_BRICKS);
+        entries.add(GRAY_CRACKED_BRICKS);
+        entries.add(LIGHT_GRAY_CRACKED_BRICKS);
+        entries.add(BLACK_CRACKED_BRICKS);
+        entries.add(RED_CRACKED_BRICKS);
+        // Cracked Slabs
+        entries.add(WHITE_CRACKED_BRICK_SLAB);
+        entries.add(ORANGE_CRACKED_BRICK_SLAB);
+        entries.add(PINK_CRACKED_BRICK_SLAB);
+        entries.add(YELLOW_CRACKED_BRICK_SLAB);
+        entries.add(LIME_CRACKED_BRICK_SLAB);
+        entries.add(GREEN_CRACKED_BRICK_SLAB);
+        entries.add(LIGHT_BLUE_CRACKED_BRICK_SLAB);
+        entries.add(CYAN_CRACKED_BRICK_SLAB);
+        entries.add(BLUE_CRACKED_BRICK_SLAB);
+        entries.add(MAGENTA_CRACKED_BRICK_SLAB);
+        entries.add(PURPLE_CRACKED_BRICK_SLAB);
+        entries.add(BROWN_CRACKED_BRICK_SLAB);
+        entries.add(GRAY_CRACKED_BRICK_SLAB);
+        entries.add(LIGHT_GRAY_CRACKED_BRICK_SLAB);
+        entries.add(BLACK_CRACKED_BRICK_SLAB);
+        entries.add(RED_CRACKED_BRICK_SLAB);
+        // Cracked Stairs
+        entries.add(WHITE_CRACKED_BRICK_STAIRS);
+        entries.add(ORANGE_CRACKED_BRICK_STAIRS);
+        entries.add(PINK_CRACKED_BRICK_STAIRS);
+        entries.add(YELLOW_CRACKED_BRICK_STAIRS);
+        entries.add(LIME_CRACKED_BRICK_STAIRS);
+        entries.add(GREEN_CRACKED_BRICK_STAIRS);
+        entries.add(LIGHT_BLUE_CRACKED_BRICK_STAIRS);
+        entries.add(CYAN_CRACKED_BRICK_STAIRS);
+        entries.add(BLUE_CRACKED_BRICK_STAIRS);
+        entries.add(MAGENTA_CRACKED_BRICK_STAIRS);
+        entries.add(PURPLE_CRACKED_BRICK_STAIRS);
+        entries.add(BROWN_CRACKED_BRICK_STAIRS);
+        entries.add(GRAY_CRACKED_BRICK_STAIRS);
+        entries.add(LIGHT_GRAY_CRACKED_BRICK_STAIRS);
+        entries.add(BLACK_CRACKED_BRICK_STAIRS);
+        entries.add(RED_CRACKED_BRICK_STAIRS);
+        // Cracked Walls
+        entries.add(WHITE_CRACKED_BRICK_WALL);
+        entries.add(ORANGE_CRACKED_BRICK_WALL);
+        entries.add(PINK_CRACKED_BRICK_WALL);
+        entries.add(YELLOW_CRACKED_BRICK_WALL);
+        entries.add(LIME_CRACKED_BRICK_WALL);
+        entries.add(GREEN_CRACKED_BRICK_WALL);
+        entries.add(LIGHT_BLUE_CRACKED_BRICK_WALL);
+        entries.add(CYAN_CRACKED_BRICK_WALL);
+        entries.add(BLUE_CRACKED_BRICK_WALL);
+        entries.add(MAGENTA_CRACKED_BRICK_WALL);
+        entries.add(PURPLE_CRACKED_BRICK_WALL);
+        entries.add(BROWN_CRACKED_BRICK_WALL);
+        entries.add(GRAY_CRACKED_BRICK_WALL);
+        entries.add(LIGHT_GRAY_CRACKED_BRICK_WALL);
+        entries.add(BLACK_CRACKED_BRICK_WALL);
+        entries.add(RED_CRACKED_BRICK_WALL);
+        // Chiseled Bricks
+        entries.add(WHITE_CHISELED_BRICKS);
+        entries.add(ORANGE_CHISELED_BRICKS);
+        entries.add(PINK_CHISELED_BRICKS);
+        entries.add(YELLOW_CHISELED_BRICKS);
+        entries.add(LIME_CHISELED_BRICKS);
+        entries.add(GREEN_CHISELED_BRICKS);
+        entries.add(LIGHT_BLUE_CHISELED_BRICKS);
+        entries.add(CYAN_CHISELED_BRICKS);
+        entries.add(BLUE_CHISELED_BRICKS);
+        entries.add(MAGENTA_CHISELED_BRICKS);
+        entries.add(PURPLE_CHISELED_BRICKS);
+        entries.add(BROWN_CHISELED_BRICKS);
+        entries.add(GRAY_CHISELED_BRICKS);
+        entries.add(LIGHT_GRAY_CHISELED_BRICKS);
+        entries.add(BLACK_CHISELED_BRICKS);
+        entries.add(RED_CHISELED_BRICKS);
+        // Flower Pots
         entries.add(WHITE_FLOWER_POT);
         entries.add(ORANGE_FLOWER_POT);
         entries.add(PINK_FLOWER_POT);
@@ -464,6 +638,7 @@ public class ModBlocks {
         ColoredBricks.LOGGER.info("Registering Mod Blocks for " + ColoredBricks.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(ModBlocks::addBlocksToBuildingBlocksTab);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(ModBlocks::addBlocksToColoredBlocksTab);
 
         ColoredBricks.LOGGER.info("Registering Potted Plants");
         registerPottedFlowers();
