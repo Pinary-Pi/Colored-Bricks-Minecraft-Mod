@@ -373,6 +373,9 @@ public class ModBlocks {
         entries.add(LIGHT_GRAY_CHISELED_BRICKS);
         entries.add(BLACK_CHISELED_BRICKS);
         entries.add(RED_CHISELED_BRICKS);
+    }
+
+    private static void addBlocksToFunctionalBlocksTab(FabricItemGroupEntries entries) {
         // Flower Pots
         entries.add(WHITE_FLOWER_POT);
         entries.add(ORANGE_FLOWER_POT);
@@ -638,6 +641,7 @@ public class ModBlocks {
         ColoredBricks.LOGGER.info("Registering Mod Blocks for " + ColoredBricks.MOD_ID);
 
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.BUILDING_BLOCKS).register(ModBlocks::addBlocksToBuildingBlocksTab);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(ModBlocks::addBlocksToFunctionalBlocksTab);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.COLORED_BLOCKS).register(ModBlocks::addBlocksToColoredBlocksTab);
 
         ColoredBricks.LOGGER.info("Registering Potted Plants");
