@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "item": "coloredbricks:magenta_brick_wall"
+  },
+  "result": "coloredbricks:magenta_cracked_brick_wall"
+}

@@ -1,0 +1,8 @@
+{
+  "type": "minecraft:stonecutting",
+  "count": 1,
+  "ingredient": {
+    "item": "coloredbricks:gray_bricks"
+  },
+  "result": "coloredbricks:gray_brick_stairs"
+}

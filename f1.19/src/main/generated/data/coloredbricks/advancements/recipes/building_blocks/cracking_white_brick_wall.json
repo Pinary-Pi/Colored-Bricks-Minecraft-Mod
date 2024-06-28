@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:cracking_white_brick_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_white_brick_wall": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:white_brick_wall"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_white_brick_wall",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:cracking_white_brick_wall"
+    ]
+  }
+}

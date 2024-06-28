@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "coloredbricks:yellow_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_brick": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:yellow_brick"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_yellow_brick",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "coloredbricks:yellow_bricks"
+    ]
+  }
+}

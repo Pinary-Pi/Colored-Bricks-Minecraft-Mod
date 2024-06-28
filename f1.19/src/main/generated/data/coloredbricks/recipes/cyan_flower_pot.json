@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "#": {
+      "item": "coloredbricks:cyan_brick"
+    }
+  },
+  "pattern": [
+    "# #",
+    " # "
+  ],
+  "result": {
+    "item": "coloredbricks:cyan_flower_pot"
+  },
+  "show_notification": true
+}

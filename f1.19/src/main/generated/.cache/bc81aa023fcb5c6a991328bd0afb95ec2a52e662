@@ -1,0 +1,4 @@
+// 1.19.4	2024-06-27T22:22:12.1080624	Colored Bricks/Tags for minecraft:block
+d5c42b1e340d364e8d9fa665f0d600ba1bdb4347 data\minecraft\tags\blocks\mineable\pickaxe.json
+e0ae1083f3be236cad8b032f696d76a7a24a8805 data\coloredbricks\tags\blocks\bricks.json
+fb6db6997ff752a6d45f6f74c7118b19ec7745eb data\minecraft\tags\blocks\walls.json

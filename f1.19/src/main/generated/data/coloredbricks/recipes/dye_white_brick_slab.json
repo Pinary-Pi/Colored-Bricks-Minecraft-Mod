@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "minecraft:white_dye"
+    },
+    {
+      "item": "minecraft:brick_slab"
+    }
+  ],
+  "result": {
+    "item": "coloredbricks:white_brick_slab"
+  }
+}
