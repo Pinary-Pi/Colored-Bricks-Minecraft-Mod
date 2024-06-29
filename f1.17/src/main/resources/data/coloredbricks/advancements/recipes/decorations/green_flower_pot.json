@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "coloredbricks:green_flower_pot"
+    ]
+  },
+  "criteria": {
+    "has_green_brick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:green_brick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "coloredbricks:green_flower_pot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_green_brick",
+      "has_the_recipe"
+    ]
+  ]
+}

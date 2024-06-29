@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:light_gray_chiseled_bricks_from_light_gray_bricks_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_light_gray_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:light_gray_bricks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:light_gray_chiseled_bricks_from_light_gray_bricks_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_light_gray_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

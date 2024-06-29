@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "coloredbricks:red_bricks"
+    }
+  },
+  "result": {
+    "item": "coloredbricks:red_brick_wall",
+    "count": 6
+  }
+}

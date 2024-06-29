@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:cyan_dye"
+    },
+    {
+      "item": "coloredbricks:chiseled_bricks"
+    }
+  ],
+  "result": {
+    "item": "coloredbricks:cyan_chiseled_bricks"
+  }
+}

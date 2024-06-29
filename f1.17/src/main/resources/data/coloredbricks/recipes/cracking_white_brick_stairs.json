@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "coloredbricks:white_brick_stairs"
+  },
+  "result": "coloredbricks:white_cracked_brick_stairs",
+  "experience": 0.1,
+  "cookingtime": 200
+}

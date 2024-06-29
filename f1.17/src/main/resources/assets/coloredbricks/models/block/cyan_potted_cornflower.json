@@ -1,0 +1,6 @@
+{
+  "parent": "coloredbricks:block/cyan_flower_pot_cross",
+  "textures": {
+    "plant": "minecraft:block/cornflower"
+  }
+}

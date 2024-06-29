@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "coloredbricks:pink_bricks"
+    ]
+  },
+  "criteria": {
+    "has_pink_brick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:pink_brick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "coloredbricks:pink_bricks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_pink_brick",
+      "has_the_recipe"
+    ]
+  ]
+}

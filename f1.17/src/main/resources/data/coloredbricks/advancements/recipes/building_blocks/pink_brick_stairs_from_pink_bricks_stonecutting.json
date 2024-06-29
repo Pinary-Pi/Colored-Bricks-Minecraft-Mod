@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:pink_brick_stairs_from_pink_bricks_stonecutting"
+    ]
+  },
+  "criteria": {
+    "has_pink_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:pink_bricks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:pink_brick_stairs_from_pink_bricks_stonecutting"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_pink_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

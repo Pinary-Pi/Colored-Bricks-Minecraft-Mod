@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:white_dye"
+    },
+    {
+      "item": "coloredbricks:cracked_bricks"
+    }
+  ],
+  "result": {
+    "item": "coloredbricks:white_cracked_bricks"
+  }
+}

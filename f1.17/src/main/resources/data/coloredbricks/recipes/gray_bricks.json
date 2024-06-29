@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "coloredbricks:gray_brick"
+    }
+  },
+  "result": {
+    "item": "coloredbricks:gray_bricks"
+  }
+}
