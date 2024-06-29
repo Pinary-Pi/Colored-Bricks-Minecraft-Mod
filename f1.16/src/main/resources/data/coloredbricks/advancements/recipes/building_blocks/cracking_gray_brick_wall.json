@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:cracking_gray_brick_wall"
+    ]
+  },
+  "criteria": {
+    "has_gray_brick_wall": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:gray_brick_wall"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:cracking_gray_brick_wall"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gray_brick_wall",
+      "has_the_recipe"
+    ]
+  ]
+}

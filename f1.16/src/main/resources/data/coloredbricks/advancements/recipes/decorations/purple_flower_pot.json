@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "coloredbricks:purple_flower_pot"
+    ]
+  },
+  "criteria": {
+    "has_purple_brick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:purple_brick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "coloredbricks:purple_flower_pot"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_purple_brick",
+      "has_the_recipe"
+    ]
+  ]
+}

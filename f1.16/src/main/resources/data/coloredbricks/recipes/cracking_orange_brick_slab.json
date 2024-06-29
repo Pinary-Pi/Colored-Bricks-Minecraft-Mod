@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "coloredbricks:orange_brick_slab"
+  },
+  "result": "coloredbricks:orange_cracked_brick_slab",
+  "experience": 0.1,
+  "cookingtime": 200
+}

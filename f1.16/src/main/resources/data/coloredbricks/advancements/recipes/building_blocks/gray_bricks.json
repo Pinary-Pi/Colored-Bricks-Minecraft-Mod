@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "coloredbricks:gray_bricks"
+    ]
+  },
+  "criteria": {
+    "has_gray_brick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:gray_brick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "coloredbricks:gray_bricks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_gray_brick",
+      "has_the_recipe"
+    ]
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "coloredbricks:brown_bricks"
+    ]
+  },
+  "criteria": {
+    "has_brown_brick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:brown_brick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "coloredbricks:brown_bricks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_brown_brick",
+      "has_the_recipe"
+    ]
+  ]
+}

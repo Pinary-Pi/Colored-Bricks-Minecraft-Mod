@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:magenta_dye"
+    },
+    {
+      "item": "coloredbricks:cracked_brick_stairs"
+    }
+  ],
+  "result": {
+    "item": "coloredbricks:magenta_cracked_brick_stairs"
+  }
+}

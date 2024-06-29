@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "coloredbricks",
+	"version": "${version}",
+	"name": "Colored Bricks",
+	"description": "Adds a different variant of each brick for all 16 colors there are in minecraft.",
+	"authors": [
+		"Pinary_Pi"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/Pinary-Pi/Colored-Bricks-Minecraft-Mod"
+	},
+	"license": "MIT",
+	"icon": "assets/coloredbricks/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.pinary_pi.coloredbricks.ColoredBricks"
+		],
+		"client": [
+			"net.pinary_pi.coloredbricks.ColoredBricksClient"
+		],
+		"fabric-datagen": [
+			"net.pinary_pi.coloredbricks.ColoredBricksDataGenerator"
+		]
+	},
+	"mixins": [
+		"coloredbricks.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.16",
+		"java": ">=21",
+		"fabric": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

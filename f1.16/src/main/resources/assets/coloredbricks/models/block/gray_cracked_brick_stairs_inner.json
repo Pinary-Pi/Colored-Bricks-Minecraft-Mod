@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/inner_stairs",
+  "textures": {
+    "bottom": "coloredbricks:block/gray_cracked_bricks",
+    "side": "coloredbricks:block/gray_cracked_bricks",
+    "top": "coloredbricks:block/gray_cracked_bricks"
+  }
+}

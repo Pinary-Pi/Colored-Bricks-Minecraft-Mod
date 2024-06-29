@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "coloredbricks:green_bricks"
+  },
+  "result": "coloredbricks:green_cracked_bricks",
+  "experience": 0.1,
+  "cookingtime": 200
+}

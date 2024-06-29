@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:cracking_orange_brick_wall"
+    ]
+  },
+  "criteria": {
+    "has_orange_brick_wall": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:orange_brick_wall"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:cracking_orange_brick_wall"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_orange_brick_wall",
+      "has_the_recipe"
+    ]
+  ]
+}

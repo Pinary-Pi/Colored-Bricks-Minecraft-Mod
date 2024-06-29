@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "coloredbricks:black_cracked_bricks"
+    }
+  },
+  "result": {
+    "item": "coloredbricks:black_cracked_brick_wall",
+    "count": 6
+  }
+}
