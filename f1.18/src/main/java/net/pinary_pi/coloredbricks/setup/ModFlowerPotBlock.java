@@ -79,8 +79,9 @@ public class ModFlowerPotBlock extends Block {
                 } else if (!player.giveItemStack(itemStack2)) {
                     player.dropItem(itemStack2, false);
                 }
+                Block emptyPotBlock = CONTENT_TO_DYED_POTTED.get(Blocks.AIR).get(this.color);
 
-                world.setBlockState(pos, Blocks.FLOWER_POT.getDefaultState(), 3);
+                world.setBlockState(pos, emptyPotBlock.getDefaultState(), 3);
             }
 
             world.emitGameEvent(player, GameEvent.BLOCK_CHANGE, pos);
