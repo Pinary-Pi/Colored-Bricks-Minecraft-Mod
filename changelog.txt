@@ -216,3 +216,13 @@ Colored Bricks now supports MC version 1.21.x!
 Version 1.21-5.1.1
 
 Hotfix, loot tables weren't working but now they should be.
+
+=====
+Version 5.2
+
+Colored Bricks now supports Fabric!!
+
+Fixed Recipes for FORGE 1.20-1.21
+Add block to Color Blocks Tab in the Creative Menu for 1.20-1.21
+
+Supports Czech and Russian now!

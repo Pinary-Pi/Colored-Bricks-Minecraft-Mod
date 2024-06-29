@@ -16,6 +16,7 @@ import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
 
@@ -2975,5 +2976,216 @@ public class ModRecipesProvider extends RecipeProvider {
         .pattern("###")
         .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_RED))
         .save(consumer, coloredbricks.getId("red_cracked_brick_wall_alt"));
+
+        // Pots
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WHITE_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_WHITE)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_WHITE))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.ORANGE_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_ORANGE)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_ORANGE))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.PINK_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_PINK)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_PINK))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.YELLOW_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_YELLOW)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_YELLOW))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.LIME_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_LIME)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_LIME))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GREEN_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_GREEN)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_GREEN))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.LIGHT_BLUE_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_LIGHT_BLUE)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_LIGHT_BLUE))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CYAN_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_CYAN)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_CYAN))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BLUE_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_BLUE)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_BLUE))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.MAGENTA_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_MAGENTA)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_MAGENTA))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.PURPLE_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_PURPLE)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_PURPLE))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BROWN_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_BROWN)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_BROWN))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.LIGHT_GRAY_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_LIGHT_GRAY)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_LIGHT_GRAY))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GRAY_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_GRAY)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_GRAY))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BLACK_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_BLACK)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_BLACK))
+        .save(consumer);
+
+        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.RED_FLOWER_POT.get())
+        .define('#', ModTags.Items.BRICK_RED)
+        .pattern("# #")
+        .pattern(" # ")
+        .unlockedBy("has item", has(ModTags.Items.BRICK_RED))
+        .save(consumer);
+
+        // Pot Dye Recipes
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.WHITE_FLOWER_POT.get())
+        .requires(Items.WHITE_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.WHITE_DYE))
+        .save(consumer, coloredbricks.getId("dye_white_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.ORANGE_FLOWER_POT.get())
+        .requires(Items.ORANGE_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.ORANGE_DYE))
+        .save(consumer, coloredbricks.getId("dye_orange_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.PINK_FLOWER_POT.get())
+        .requires(Items.PINK_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.PINK_DYE))
+        .save(consumer, coloredbricks.getId("dye_pink_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.YELLOW_FLOWER_POT.get())
+        .requires(Items.YELLOW_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.YELLOW_DYE))
+        .save(consumer, coloredbricks.getId("dye_yellow_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.LIME_FLOWER_POT.get())
+        .requires(Items.LIME_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.LIME_DYE))
+        .save(consumer, coloredbricks.getId("dye_lime_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.GREEN_FLOWER_POT.get())
+        .requires(Items.GREEN_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.GREEN_DYE))
+        .save(consumer, coloredbricks.getId("dye_green_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.LIGHT_BLUE_FLOWER_POT.get())
+        .requires(Items.LIGHT_BLUE_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.LIGHT_BLUE_DYE))
+        .save(consumer, coloredbricks.getId("dye_light_blue_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.CYAN_FLOWER_POT.get())
+        .requires(Items.CYAN_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.CYAN_DYE))
+        .save(consumer, coloredbricks.getId("dye_cyan_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.BLUE_FLOWER_POT.get())
+        .requires(Items.BLUE_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.BLUE_DYE))
+        .save(consumer, coloredbricks.getId("dye_blue_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MAGENTA_FLOWER_POT.get())
+        .requires(Items.MAGENTA_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.MAGENTA_DYE))
+        .save(consumer, coloredbricks.getId("dye_magenta_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.PURPLE_FLOWER_POT.get())
+        .requires(Items.PURPLE_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.PURPLE_DYE))
+        .save(consumer, coloredbricks.getId("dye_purple_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.BROWN_FLOWER_POT.get())
+        .requires(Items.BROWN_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.BROWN_DYE))
+        .save(consumer, coloredbricks.getId("dye_brown_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.LIGHT_GRAY_FLOWER_POT.get())
+        .requires(Items.LIGHT_GRAY_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.LIGHT_GRAY_DYE))
+        .save(consumer, coloredbricks.getId("dye_light_gray_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.GRAY_FLOWER_POT.get())
+        .requires(Items.GRAY_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.GRAY_DYE))
+        .save(consumer, coloredbricks.getId("dye_gray_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.BLACK_FLOWER_POT.get())
+        .requires(Items.BLACK_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.BLACK_DYE))
+        .save(consumer, coloredbricks.getId("dye_black_flower_pot"));
+
+        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.RED_FLOWER_POT.get())
+        .requires(Items.RED_DYE)
+        .requires(Items.FLOWER_POT)
+        .unlockedBy("has item", has(Items.RED_DYE))
+        .save(consumer, coloredbricks.getId("dye_red_flower_pot"));
     }
 }
