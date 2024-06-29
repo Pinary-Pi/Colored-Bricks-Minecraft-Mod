@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "coloredbricks:magenta_bricks"
+    ]
+  },
+  "criteria": {
+    "has_magenta_brick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:magenta_brick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "coloredbricks:magenta_bricks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_magenta_brick",
+      "has_the_recipe"
+    ]
+  ]
+}

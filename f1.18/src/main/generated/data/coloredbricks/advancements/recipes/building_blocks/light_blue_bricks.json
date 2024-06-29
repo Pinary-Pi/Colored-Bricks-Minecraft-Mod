@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "coloredbricks:light_blue_bricks"
+    ]
+  },
+  "criteria": {
+    "has_light_blue_brick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:light_blue_brick"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "coloredbricks:light_blue_bricks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_light_blue_brick",
+      "has_the_recipe"
+    ]
+  ]
+}

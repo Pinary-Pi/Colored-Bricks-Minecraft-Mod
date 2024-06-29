@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "coloredbricks:block/lime_cracked_brick_slab"
+    },
+    "type=double": {
+      "model": "coloredbricks:block/lime_cracked_bricks"
+    },
+    "type=top": {
+      "model": "coloredbricks:block/lime_cracked_brick_slab_top"
+    }
+  }
+}

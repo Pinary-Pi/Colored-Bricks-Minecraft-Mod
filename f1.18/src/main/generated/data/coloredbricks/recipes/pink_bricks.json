@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "coloredbricks:pink_brick"
+    }
+  },
+  "result": {
+    "item": "coloredbricks:pink_bricks"
+  }
+}

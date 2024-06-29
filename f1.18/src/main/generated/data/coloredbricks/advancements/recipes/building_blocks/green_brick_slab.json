@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "coloredbricks:green_brick_slab"
+    ]
+  },
+  "criteria": {
+    "has_green_bricks": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "coloredbricks:green_bricks"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "coloredbricks:green_brick_slab"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_green_bricks",
+      "has_the_recipe"
+    ]
+  ]
+}

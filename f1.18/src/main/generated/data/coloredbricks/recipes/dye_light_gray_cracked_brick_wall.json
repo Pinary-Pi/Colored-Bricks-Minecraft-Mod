@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:light_gray_dye"
+    },
+    {
+      "item": "coloredbricks:cracked_brick_wall"
+    }
+  ],
+  "result": {
+    "item": "coloredbricks:light_gray_cracked_brick_wall"
+  }
+}

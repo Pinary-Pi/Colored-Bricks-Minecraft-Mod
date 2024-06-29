@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:lime_dye"
+    },
+    {
+      "item": "coloredbricks:cracked_brick_stairs"
+    }
+  ],
+  "result": {
+    "item": "coloredbricks:lime_cracked_brick_stairs"
+  }
+}

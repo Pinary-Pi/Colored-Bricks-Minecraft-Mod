@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:orange_dye"
+    },
+    {
+      "item": "minecraft:brick_stairs"
+    }
+  ],
+  "result": {
+    "item": "coloredbricks:orange_brick_stairs"
+  }
+}

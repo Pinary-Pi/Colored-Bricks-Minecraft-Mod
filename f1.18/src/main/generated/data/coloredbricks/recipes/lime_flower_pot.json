@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "# #",
+    " # "
+  ],
+  "key": {
+    "#": {
+      "item": "coloredbricks:lime_brick"
+    }
+  },
+  "result": {
+    "item": "coloredbricks:lime_flower_pot"
+  }
+}

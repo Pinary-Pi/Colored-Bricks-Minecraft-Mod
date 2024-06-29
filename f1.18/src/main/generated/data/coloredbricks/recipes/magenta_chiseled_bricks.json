@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "#",
+    "#"
+  ],
+  "key": {
+    "#": {
+      "item": "coloredbricks:magenta_brick_slab"
+    }
+  },
+  "result": {
+    "item": "coloredbricks:magenta_chiseled_bricks"
+  }
+}

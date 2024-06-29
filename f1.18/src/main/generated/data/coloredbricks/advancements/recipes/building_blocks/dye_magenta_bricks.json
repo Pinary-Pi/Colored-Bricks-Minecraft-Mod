@@ -1,0 +1,34 @@
+{
+  "parent": "minecraft:recipes/root",
+  "rewards": {
+    "recipes": [
+      "minecraft:dye_magenta_bricks"
+    ]
+  },
+  "criteria": {
+    "has_magenta_dye": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "minecraft:magenta_dye"
+            ]
+          }
+        ]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "minecraft:dye_magenta_bricks"
+      }
+    }
+  },
+  "requirements": [
+    [
+      "has_magenta_dye",
+      "has_the_recipe"
+    ]
+  ]
+}

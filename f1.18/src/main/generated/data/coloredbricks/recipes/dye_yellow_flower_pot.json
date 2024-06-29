@@ -1,0 +1,14 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:yellow_dye"
+    },
+    {
+      "item": "minecraft:flower_pot"
+    }
+  ],
+  "result": {
+    "item": "coloredbricks:yellow_flower_pot"
+  }
+}

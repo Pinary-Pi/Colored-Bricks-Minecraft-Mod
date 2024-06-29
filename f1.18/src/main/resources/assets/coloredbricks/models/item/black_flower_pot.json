@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "coloredbricks:item/black_flower_pot"
+  }
+}
