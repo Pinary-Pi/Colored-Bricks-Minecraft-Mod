@@ -54,10 +54,16 @@ public class ModFlowerPotBlock extends Block {
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         ItemStack itemStack = player.getStackInHand(hand);
         Item item = itemStack.getItem();
-        BlockState blockState = (item instanceof BlockItem blockItem)
-            ? ((Block) CONTENT_TO_DYED_POTTED.getOrDefault(blockItem.getBlock(), new HashMap<>())
-                .getOrDefault(this.color, Blocks.AIR)).getDefaultState()
-            : Blocks.AIR.getDefaultState();
+        BlockState blockState;
+        if (item instanceof BlockItem) {
+            BlockItem blockItem = (BlockItem) item;
+            Block contentBlock = blockItem.getBlock();
+            Map<DyeColor, Block> colorMap = CONTENT_TO_DYED_POTTED.getOrDefault(contentBlock, new HashMap<>());
+            Block coloredPotBlock = colorMap.getOrDefault(this.color, Blocks.AIR);
+            blockState = coloredPotBlock.getDefaultState();
+        } else {
+            blockState = Blocks.AIR.getDefaultState();
+        }
 
         boolean isAirBlock = blockState.isOf(Blocks.AIR);
         boolean isPotEmpty = this.isEmpty();
