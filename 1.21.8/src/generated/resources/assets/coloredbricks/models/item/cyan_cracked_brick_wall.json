@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/wall_inventory",
+  "textures": {
+    "wall": "coloredbricks:block/cyan_cracked_bricks"
+  }
+}

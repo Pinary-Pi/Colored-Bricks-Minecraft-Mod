@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:smelting",
+  "category": "blocks",
+  "cookingtime": 200,
+  "experience": 0.1,
+  "ingredient": {
+    "tag": "forge:stone/purple_stairs"
+  },
+  "result": {
+    "id": "coloredbricks:purple_cracked_brick_stairs"
+  }
+}

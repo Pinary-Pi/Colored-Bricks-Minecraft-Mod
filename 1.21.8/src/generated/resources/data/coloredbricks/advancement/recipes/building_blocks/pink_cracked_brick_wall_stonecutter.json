@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "#forge:stone/pink_cracked_block"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "coloredbricks:pink_cracked_brick_wall_stonecutter"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "coloredbricks:pink_cracked_brick_wall_stonecutter"
+    ]
+  }
+}

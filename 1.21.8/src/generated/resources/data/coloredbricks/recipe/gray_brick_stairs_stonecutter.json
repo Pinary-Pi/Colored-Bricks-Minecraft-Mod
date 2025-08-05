@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "tag": "forge:stone/gray_block"
+  },
+  "result": {
+    "count": 1,
+    "id": "coloredbricks:gray_brick_stairs"
+  }
+}

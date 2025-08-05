@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:brick_wall"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "coloredbricks:orange_brick_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "coloredbricks:orange_brick_wall"
+    ]
+  }
+}
