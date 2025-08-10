@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "tag": "forge:stone/cyan_block"
-  },
+  "ingredient": "coloredbricks:cyan_bricks",
   "result": {
     "count": 2,
     "id": "coloredbricks:cyan_brick_slab"

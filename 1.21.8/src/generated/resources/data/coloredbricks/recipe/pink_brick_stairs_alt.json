@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "tag": "forge:stone/pink_block"
-    }
+    "#": "coloredbricks:pink_bricks"
   },
   "pattern": [
     "#  ",

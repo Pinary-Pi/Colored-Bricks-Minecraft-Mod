@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#forge:stone/light_gray_item"
+            "items": "coloredbricks:light_gray_brick"
           }
         ]
       },

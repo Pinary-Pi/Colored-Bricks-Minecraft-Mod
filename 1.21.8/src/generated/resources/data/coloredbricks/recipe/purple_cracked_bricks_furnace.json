@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "tag": "forge:stone/purple_block"
-  },
+  "ingredient": "coloredbricks:purple_bricks",
   "result": {
     "id": "coloredbricks:purple_cracked_bricks"
   }

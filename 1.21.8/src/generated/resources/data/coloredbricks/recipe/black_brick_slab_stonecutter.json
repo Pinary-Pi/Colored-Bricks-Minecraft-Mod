@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "tag": "forge:stone/black_block"
-  },
+  "ingredient": "coloredbricks:black_bricks",
   "result": {
     "count": 2,
     "id": "coloredbricks:black_brick_slab"

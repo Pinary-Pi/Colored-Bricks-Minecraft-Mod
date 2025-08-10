@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "tag": "forge:stone/gray_block"
-  },
+  "ingredient": "coloredbricks:gray_bricks",
   "result": {
     "count": 1,
     "id": "coloredbricks:gray_chiseled_bricks"

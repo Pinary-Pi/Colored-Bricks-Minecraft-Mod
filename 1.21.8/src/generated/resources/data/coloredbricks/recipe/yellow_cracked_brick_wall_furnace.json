@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "tag": "forge:stone/yellow_wall"
-  },
+  "ingredient": "coloredbricks:yellow_brick_wall",
   "result": {
     "id": "coloredbricks:yellow_cracked_brick_wall"
   }

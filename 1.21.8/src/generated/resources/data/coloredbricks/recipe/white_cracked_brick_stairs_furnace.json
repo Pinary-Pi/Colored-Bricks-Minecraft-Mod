@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "tag": "forge:stone/white_stairs"
-  },
+  "ingredient": "coloredbricks:white_brick_stairs",
   "result": {
     "id": "coloredbricks:white_cracked_brick_stairs"
   }

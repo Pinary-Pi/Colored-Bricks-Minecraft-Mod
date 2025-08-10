@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "tag": "forge:stone/cyan_item"
-    }
+    "#": "coloredbricks:cyan_brick"
   },
   "pattern": [
     "##",

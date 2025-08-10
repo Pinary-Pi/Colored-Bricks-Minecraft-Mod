@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#forge:stone/lime_slab"
+            "items": "coloredbricks:lime_brick_slab"
           }
         ]
       },

@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "tag": "forge:stone/red_block"
-  },
+  "ingredient": "coloredbricks:red_bricks",
   "result": {
     "count": 1,
     "id": "coloredbricks:red_brick_stairs"

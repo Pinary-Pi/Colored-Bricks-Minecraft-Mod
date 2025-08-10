@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "tag": "forge:stone/lime_cracked_block"
-  },
+  "ingredient": "coloredbricks:lime_cracked_bricks",
   "result": {
     "count": 1,
     "id": "coloredbricks:lime_cracked_brick_wall"

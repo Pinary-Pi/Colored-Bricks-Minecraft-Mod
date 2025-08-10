@@ -1,6 +1,6 @@
 package net.Pinary_Pi.gear.util;
 
-import net.Pinary_Pi.coloredbricks.setup.ModBlocks;
+import net.Pinary_Pi.coloredbricks.setup.block.ColoredFlowerPots;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.world.level.GrassColor;
@@ -18,21 +18,21 @@ public class ModColorHandler {
     }
 
     public static void setupRenderColors() {
-        renderPottedFern(ModBlocks.WHITE_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.ORANGE_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.PINK_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.YELLOW_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.LIME_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.GREEN_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.LIGHT_BLUE_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.CYAN_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.BLUE_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.MAGENTA_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.PURPLE_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.BROWN_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.GRAY_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.LIGHT_GRAY_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.BLACK_POTTED_FERN.get());
-        renderPottedFern(ModBlocks.RED_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.WHITE_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.ORANGE_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.PINK_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.YELLOW_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.LIME_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.GREEN_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.LIGHT_BLUE_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.CYAN_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.BLUE_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.MAGENTA_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.PURPLE_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.BROWN_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.GRAY_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.LIGHT_GRAY_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.BLACK_POTTED_FERN.get());
+        renderPottedFern(ColoredFlowerPots.RED_POTTED_FERN.get());
     }
 }

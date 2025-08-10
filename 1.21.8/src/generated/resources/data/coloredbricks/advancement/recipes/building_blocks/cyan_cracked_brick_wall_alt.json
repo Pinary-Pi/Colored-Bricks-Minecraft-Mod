@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#forge:stone/cyan_cracked_block"
+            "items": "coloredbricks:cyan_cracked_bricks"
           }
         ]
       },

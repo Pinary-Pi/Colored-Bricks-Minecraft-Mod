@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "tag": "forge:stone/red_wall"
-  },
+  "ingredient": "coloredbricks:red_brick_wall",
   "result": {
     "id": "coloredbricks:red_cracked_brick_wall"
   }

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "tag": "forge:stone/cracked_block"
-    },
-    {
-      "tag": "forge:dyes/purple"
-    }
+    "coloredbricks:cracked_bricks",
+    "minecraft:purple_dye"
   ],
   "result": {
     "count": 1,

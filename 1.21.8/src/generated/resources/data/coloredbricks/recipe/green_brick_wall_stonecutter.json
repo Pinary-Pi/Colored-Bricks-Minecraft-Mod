@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "tag": "forge:stone/green_block"
-  },
+  "ingredient": "coloredbricks:green_bricks",
   "result": {
     "count": 1,
     "id": "coloredbricks:green_brick_wall"

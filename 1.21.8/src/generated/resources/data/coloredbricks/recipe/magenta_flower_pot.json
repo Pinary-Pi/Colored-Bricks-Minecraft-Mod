@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "forge:stone/magenta_item"
-    }
+    "#": "coloredbricks:magenta_brick"
   },
   "pattern": [
     "# #",

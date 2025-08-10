@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "minecraft:bricks"
-    },
-    {
-      "tag": "forge:dyes/cyan"
-    }
+    "minecraft:bricks",
+    "minecraft:cyan_dye"
   ],
   "result": {
     "count": 1,

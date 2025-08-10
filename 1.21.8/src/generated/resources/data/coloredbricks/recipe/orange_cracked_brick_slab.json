@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "tag": "forge:stone/cracked_slab"
-    },
-    {
-      "tag": "forge:dyes/orange"
-    }
+    "coloredbricks:cracked_brick_slab",
+    "minecraft:orange_dye"
   ],
   "result": {
     "count": 1,

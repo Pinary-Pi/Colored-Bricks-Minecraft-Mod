@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "tag": "forge:stone/black_block"
-    }
+    "#": "coloredbricks:black_bricks"
   },
   "pattern": [
     "###"

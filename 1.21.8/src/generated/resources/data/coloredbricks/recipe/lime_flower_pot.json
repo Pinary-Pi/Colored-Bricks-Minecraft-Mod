@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "forge:stone/lime_item"
-    }
+    "#": "coloredbricks:lime_brick"
   },
   "pattern": [
     "# #",

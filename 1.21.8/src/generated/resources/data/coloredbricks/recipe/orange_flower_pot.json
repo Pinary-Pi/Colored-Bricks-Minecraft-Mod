@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "forge:stone/orange_item"
-    }
+    "#": "coloredbricks:orange_brick"
   },
   "pattern": [
     "# #",

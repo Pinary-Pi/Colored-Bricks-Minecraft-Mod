@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "tag": "forge:ingots/brick"
-    },
-    {
-      "tag": "forge:dyes/light_blue"
-    }
+    "minecraft:brick",
+    "minecraft:light_blue_dye"
   ],
   "result": {
     "count": 1,

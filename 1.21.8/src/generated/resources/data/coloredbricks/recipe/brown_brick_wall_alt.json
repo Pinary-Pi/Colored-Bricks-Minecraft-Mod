@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "tag": "forge:stone/brown_block"
-    }
+    "#": "coloredbricks:brown_bricks"
   },
   "pattern": [
     "###",

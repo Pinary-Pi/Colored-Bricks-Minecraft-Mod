@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "tag": "forge:stone/brown_slab"
-  },
+  "ingredient": "coloredbricks:brown_brick_slab",
   "result": {
     "id": "coloredbricks:brown_cracked_brick_slab"
   }

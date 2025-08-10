@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "coloredbricks:chiseled_bricks"
-    },
-    {
-      "tag": "forge:dyes/white"
-    }
+    "coloredbricks:chiseled_bricks",
+    "minecraft:white_dye"
   ],
   "result": {
     "count": 1,

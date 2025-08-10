@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "minecraft:brick_slab"
-    },
-    {
-      "tag": "forge:dyes/light_gray"
-    }
+    "minecraft:brick_slab",
+    "minecraft:light_gray_dye"
   ],
   "result": {
     "count": 1,

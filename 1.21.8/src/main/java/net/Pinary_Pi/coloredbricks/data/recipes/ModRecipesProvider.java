@@ -3,3189 +3,3215 @@ package net.Pinary_Pi.coloredbricks.data.recipes;
 import java.util.concurrent.CompletableFuture;
 
 import net.Pinary_Pi.coloredbricks.coloredbricks;
-import net.Pinary_Pi.coloredbricks.setup.ModBlocks;
 import net.Pinary_Pi.coloredbricks.setup.ModItems;
-import net.Pinary_Pi.coloredbricks.setup.ModTags;
+import net.Pinary_Pi.coloredbricks.setup.block.BrickBlocks;
+import net.Pinary_Pi.coloredbricks.setup.block.BrickSlabBlocks;
+import net.Pinary_Pi.coloredbricks.setup.block.BrickStairsBlocks;
+import net.Pinary_Pi.coloredbricks.setup.block.BrickWallBlocks;
+import net.Pinary_Pi.coloredbricks.setup.block.ColoredFlowerPots;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.data.recipes.SimpleCookingRecipeBuilder;
+import net.minecraft.core.HolderGetter;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.core.registries.Registries;
+import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.RecipeCategory;
 import net.minecraft.data.recipes.RecipeOutput;
 import net.minecraft.data.recipes.RecipeProvider;
 import net.minecraft.data.recipes.ShapedRecipeBuilder;
 import net.minecraft.data.recipes.ShapelessRecipeBuilder;
 import net.minecraft.data.recipes.SingleItemRecipeBuilder;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraftforge.common.Tags;
 
 public class ModRecipesProvider extends RecipeProvider {
-    public ModRecipesProvider(DataGenerator generator, CompletableFuture<HolderLookup.Provider> registries) {
-        super(generator.getPackOutput(), registries);
+    
+    public ModRecipesProvider(HolderLookup.Provider provider, RecipeOutput output) {
+        super(provider, output);
     }
 
     @Override
-    protected void buildRecipes(RecipeOutput consumer) {
+    protected void buildRecipes() {
+        HolderGetter<Item> items = this.registries.lookupOrThrow(Registries.ITEM);
+        RecipeOutput consumer = this.output;
+
         // Brick Item Recipes
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.WHITE_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_WHITE)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.WHITE_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.WHITE_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.ORANGE_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_ORANGE)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.ORANGE_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.ORANGE_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PINK_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_PINK)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.PINK_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.PINK_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.YELLOW_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_YELLOW)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.YELLOW_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.YELLOW_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LIME_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_LIME)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.LIME_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.LIME_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GREEN_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_GREEN)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.GREEN_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.GREEN_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LIGHT_BLUE_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_LIGHT_BLUE)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.LIGHT_BLUE_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.LIGHT_BLUE_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.CYAN_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_CYAN)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.CYAN_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.CYAN_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLUE_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_BLUE)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.BLUE_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.BLUE_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.MAGENTA_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_MAGENTA)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.MAGENTA_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.MAGENTA_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.PURPLE_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_PURPLE)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.PURPLE_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.PURPLE_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BROWN_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_BROWN)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.BROWN_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.BROWN_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.LIGHT_GRAY_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_LIGHT_GRAY)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.LIGHT_GRAY_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.LIGHT_GRAY_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.GRAY_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_GRAY)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.GRAY_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.GRAY_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.BLACK_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_BLACK)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.BLACK_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.BLACK_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.MISC, ModItems.RED_BRICK.get())
-        .requires(Tags.Items.INGOTS_BRICK)
-        .requires(Tags.Items.DYES_RED)
-        .unlockedBy("has item", has(Tags.Items.INGOTS_BRICK))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.MISC, ModItems.RED_BRICK.get())
+        .requires(Items.BRICK)
+        .requires(Items.RED_DYE)
+        .unlockedBy("has_brick", has(Items.BRICK))
         .save(consumer);
 
         // Brick Block Recipes
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.WHITE_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_WHITE)
+        .requires(Items.WHITE_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_WHITE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.WHITE_BRICKS.get())
+        .define('#', ModItems.WHITE_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WHITE))
-        .save(consumer, coloredbricks.getId("white_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.WHITE_BRICK.get()))
+        .save(consumer, coloredbricks.getId("white_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.ORANGE_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_ORANGE)
+        .requires(Items.ORANGE_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_ORANGE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.ORANGE_BRICKS.get())
+        .define('#', ModItems.ORANGE_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_ORANGE))
-        .save(consumer, coloredbricks.getId("orange_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.ORANGE_BRICK.get()))
+        .save(consumer, coloredbricks.getId("orange_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.PINK_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_PINK)
+        .requires(Items.PINK_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_PINK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.PINK_BRICKS.get())
+        .define('#', ModItems.PINK_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_PINK))
-        .save(consumer, coloredbricks.getId("pink_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.PINK_BRICK.get()))
+        .save(consumer, coloredbricks.getId("pink_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.YELLOW_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_YELLOW)
+        .requires(Items.YELLOW_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_YELLOW)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.YELLOW_BRICKS.get())
+        .define('#', ModItems.YELLOW_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_YELLOW))
-        .save(consumer, coloredbricks.getId("yellow_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.YELLOW_BRICK.get()))
+        .save(consumer, coloredbricks.getId("yellow_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIME_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_LIME)
+        .requires(Items.LIME_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_LIME)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIME_BRICKS.get())
+        .define('#', ModItems.LIME_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_LIME))
-        .save(consumer, coloredbricks.getId("lime_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.LIME_BRICK.get()))
+        .save(consumer, coloredbricks.getId("lime_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.GREEN_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_GREEN)
+        .requires(Items.GREEN_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_GREEN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.GREEN_BRICKS.get())
+        .define('#', ModItems.GREEN_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_GREEN))
-        .save(consumer, coloredbricks.getId("green_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.GREEN_BRICK.get()))
+        .save(consumer, coloredbricks.getId("green_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIGHT_BLUE_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_LIGHT_BLUE)
+        .requires(Items.LIGHT_BLUE_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_LIGHT_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIGHT_BLUE_BRICKS.get())
+        .define('#', ModItems.LIGHT_BLUE_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_LIGHT_BLUE))
-        .save(consumer, coloredbricks.getId("light_blue_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.LIGHT_BLUE_BRICK.get()))
+        .save(consumer, coloredbricks.getId("light_blue_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.CYAN_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_CYAN)
+        .requires(Items.CYAN_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_CYAN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.CYAN_BRICKS.get())
+        .define('#', ModItems.CYAN_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_CYAN))
-        .save(consumer, coloredbricks.getId("cyan_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.CYAN_BRICK.get()))
+        .save(consumer, coloredbricks.getId("cyan_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BLUE_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_BLUE)
+        .requires(Items.BLUE_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BLUE_BRICKS.get())
+        .define('#', ModItems.BLUE_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_BLUE))
-        .save(consumer, coloredbricks.getId("blue_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.BLUE_BRICK.get()))
+        .save(consumer, coloredbricks.getId("blue_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.MAGENTA_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_MAGENTA)
+        .requires(Items.MAGENTA_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_MAGENTA)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.MAGENTA_BRICKS.get())
+        .define('#', ModItems.WHITE_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_MAGENTA))
-        .save(consumer, coloredbricks.getId("magenta_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.MAGENTA_BRICK.get()))
+        .save(consumer, coloredbricks.getId("magenta_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.PURPLE_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_PURPLE)
+        .requires(Items.PURPLE_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_PURPLE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.PURPLE_BRICKS.get())
+        .define('#', ModItems.PURPLE_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_PURPLE))
-        .save(consumer, coloredbricks.getId("purple_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.PURPLE_BRICK.get()))
+        .save(consumer, coloredbricks.getId("purple_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BROWN_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_BROWN)
+        .requires(Items.BROWN_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_BROWN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BROWN_BRICKS.get())
+        .define('#', ModItems.BROWN_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_BROWN))
-        .save(consumer, coloredbricks.getId("brown_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.BROWN_BRICK.get()))
+        .save(consumer, coloredbricks.getId("brown_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIGHT_GRAY_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_LIGHT_GRAY)
+        .requires(Items.LIGHT_GRAY_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_LIGHT_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIGHT_GRAY_BRICKS.get())
+        .define('#', ModItems.LIGHT_GRAY_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_LIGHT_GRAY))
-        .save(consumer, coloredbricks.getId("light_gray_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.LIGHT_GRAY_BRICK.get()))
+        .save(consumer, coloredbricks.getId("light_gray_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.GRAY_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_GRAY)
+        .requires(Items.GRAY_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.GRAY_BRICKS.get())
+        .define('#', ModItems.GRAY_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_GRAY))
-        .save(consumer, coloredbricks.getId("gray_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.GRAY_BRICK.get()))
+        .save(consumer, coloredbricks.getId("gray_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BLACK_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_BLACK)
+        .requires(Items.BLACK_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_BLACK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BLACK_BRICKS.get())
+        .define('#', ModItems.BLACK_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_BLACK))
-        .save(consumer, coloredbricks.getId("black_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.BLACK_BRICK.get()))
+        .save(consumer, coloredbricks.getId("black_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.RED_BRICKS.get())
         .requires(Blocks.BRICKS)
-        .requires(Tags.Items.DYES_RED)
+        .requires(Items.RED_DYE)
         .unlockedBy("has item", has(Blocks.BRICKS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_RED)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.RED_BRICKS.get())
+        .define('#', ModItems.RED_BRICK.get())
         .pattern("##")
         .pattern("##")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_RED))
-        .save(consumer, coloredbricks.getId("red_bricks_alt"));
+        .unlockedBy("has item", has(ModItems.RED_BRICK.get()))
+        .save(consumer, coloredbricks.getId("red_bricks_alt").toString());
 
         // Slabs
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.WHITE_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_WHITE)
+        .requires(Items.WHITE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_WHITE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.WHITE_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.WHITE_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_WHITE))
-        .save(consumer, coloredbricks.getId("white_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.WHITE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("white_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.ORANGE_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_ORANGE)
+        .requires(Items.ORANGE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_ORANGE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.ORANGE_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.ORANGE_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_ORANGE))
-        .save(consumer, coloredbricks.getId("orange_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.ORANGE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("orange_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.PINK_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_PINK)
+        .requires(Items.PINK_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_PINK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.PINK_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.PINK_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_PINK))
-        .save(consumer, coloredbricks.getId("pink_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.PINK_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("pink_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.YELLOW_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_YELLOW)
+        .requires(Items.YELLOW_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_YELLOW)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.YELLOW_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.YELLOW_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_YELLOW))
-        .save(consumer, coloredbricks.getId("yellow_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.YELLOW_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("yellow_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.LIME_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_LIME)
+        .requires(Items.LIME_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_LIME)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.LIME_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.LIME_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_LIME))
-        .save(consumer, coloredbricks.getId("lime_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIME_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("lime_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.GREEN_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_GREEN)
+        .requires(Items.GREEN_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_GREEN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.GREEN_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.GREEN_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_GREEN))
-        .save(consumer, coloredbricks.getId("green_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.GREEN_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("green_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.LIGHT_BLUE_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_LIGHT_BLUE)
+        .requires(Items.LIGHT_BLUE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_LIGHT_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.LIGHT_BLUE_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_BLUE))
-        .save(consumer, coloredbricks.getId("light_blue_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("light_blue_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.CYAN_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_CYAN)
+        .requires(Items.CYAN_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CYAN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.CYAN_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.CYAN_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CYAN))
-        .save(consumer, coloredbricks.getId("cyan_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.CYAN_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("cyan_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.BLUE_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_BLUE)
+        .requires(Items.BLUE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.BLUE_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.BLUE_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_BLUE))
-        .save(consumer, coloredbricks.getId("blue_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BLUE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("blue_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.MAGENTA_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_MAGENTA)
+        .requires(Items.MAGENTA_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_MAGENTA)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.MAGENTA_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.MAGENTA_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_MAGENTA))
-        .save(consumer, coloredbricks.getId("magenta_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.MAGENTA_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("magenta_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.PURPLE_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_PURPLE)
+        .requires(Items.PURPLE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_PURPLE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.PURPLE_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.PURPLE_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_PURPLE))
-        .save(consumer, coloredbricks.getId("purple_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.PURPLE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("purple_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.BROWN_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_BROWN)
+        .requires(Items.BROWN_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_BROWN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.BROWN_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.BROWN_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_BROWN))
-        .save(consumer, coloredbricks.getId("brown_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BROWN_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("brown_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.LIGHT_GRAY_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_LIGHT_GRAY)
+        .requires(Items.LIGHT_GRAY_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_LIGHT_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.LIGHT_GRAY_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_GRAY))
-        .save(consumer, coloredbricks.getId("light_gray_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("light_gray_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.GRAY_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_GRAY)
+        .requires(Items.GRAY_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.GRAY_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.GRAY_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_GRAY))
-        .save(consumer, coloredbricks.getId("gray_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.GRAY_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("gray_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.BLACK_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_BLACK)
+        .requires(Items.BLACK_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_BLACK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.BLACK_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.BLACK_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_BLACK))
-        .save(consumer, coloredbricks.getId("black_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BLACK_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("black_brick_slab_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_BRICK_SLAB.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.RED_BRICK_SLAB.get())
         .requires(Blocks.BRICK_SLAB)
-        .requires(Tags.Items.DYES_RED)
+        .requires(Items.RED_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_BRICK_SLAB.get(), 6)
-        .define('#', ModTags.Items.BRICKS_RED)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.RED_BRICK_SLAB.get(), 6)
+        .define('#', BrickBlocks.RED_BRICKS.get().asItem())
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_RED))
-        .save(consumer, coloredbricks.getId("red_brick_slab_alt"));
+        .unlockedBy("has item", has(BrickBlocks.RED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("red_brick_slab_alt").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_WHITE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.WHITE_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_WHITE))
-            .save(consumer, coloredbricks.getId("white_brick_slab_stonecutter"));
+            BrickBlocks.WHITE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickSlabBlocks.WHITE_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.WHITE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("white_brick_slab_stonecutter").toString());
         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_ORANGE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.ORANGE_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_ORANGE))
-            .save(consumer, coloredbricks.getId("orange_brick_slab_stonecutter"));
+            BrickBlocks.ORANGE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.ORANGE_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.ORANGE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("orange_brick_slab_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_PINK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PINK_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_PINK))
-            .save(consumer, coloredbricks.getId("pink_brick_slab_stonecutter"));
+            BrickBlocks.PINK_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.PINK_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.PINK_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("pink_brick_slab_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_YELLOW), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.YELLOW_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_YELLOW))
-            .save(consumer, coloredbricks.getId("yellow_brick_slab_stonecutter"));
+            BrickBlocks.YELLOW_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.YELLOW_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.YELLOW_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("yellow_brick_slab_stonecutter").toString());
         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_LIME), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIME_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIME))
-            .save(consumer, coloredbricks.getId("lime_brick_slab_stonecutter"));
+            BrickBlocks.LIME_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.LIME_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.LIME_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("lime_brick_slab_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_GREEN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GREEN_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_GREEN))
-            .save(consumer, coloredbricks.getId("green_brick_slab_stonecutter"));
+            BrickBlocks.GREEN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.GREEN_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.GREEN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("green_brick_slab_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_LIGHT_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_BLUE_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_BLUE))
-            .save(consumer, coloredbricks.getId("light_blue_brick_slab_stonecutter"));
+            BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.LIGHT_BLUE_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_blue_brick_slab_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CYAN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CYAN_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CYAN))
-            .save(consumer, coloredbricks.getId("cyan_brick_slab_stonecutter"));
+            BrickBlocks.CYAN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.CYAN_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.CYAN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("cyan_brick_slab_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLUE_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BLUE))
-            .save(consumer, coloredbricks.getId("blue_brick_slab_stonecutter"));
+            BrickBlocks.BLUE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.BLUE_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.BLUE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("blue_brick_slab_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_MAGENTA), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.MAGENTA_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_MAGENTA))
-            .save(consumer, coloredbricks.getId("magenta_brick_slab_stonecutter"));
+            BrickBlocks.MAGENTA_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.MAGENTA_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.MAGENTA_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("magenta_brick_slab_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_PURPLE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PURPLE_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_PURPLE))
-            .save(consumer, coloredbricks.getId("purple_brick_slab_stonecutter"));
+            BrickBlocks.PURPLE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.PURPLE_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.PURPLE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("purple_brick_slab_stonecutter").toString());
         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_BROWN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BROWN_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BROWN))
-            .save(consumer, coloredbricks.getId("brown_brick_slab_stonecutter"));
+            BrickBlocks.BROWN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.BROWN_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.BROWN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("brown_brick_slab_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_LIGHT_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_GRAY_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_GRAY))
-            .save(consumer, coloredbricks.getId("light_gray_brick_slab_stonecutter"));
+            BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.LIGHT_GRAY_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_gray_brick_slab_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GRAY_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_GRAY))
-            .save(consumer, coloredbricks.getId("gray_brick_slab_stonecutter"));
+            BrickBlocks.GRAY_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.GRAY_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.GRAY_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("gray_brick_slab_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_BLACK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLACK_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BLACK))
-            .save(consumer, coloredbricks.getId("black_brick_slab_stonecutter"));
+            BrickBlocks.BLACK_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.BLACK_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.BLACK_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("black_brick_slab_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_RED), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.RED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_RED))
-            .save(consumer, coloredbricks.getId("red_brick_slab_stonecutter"));
+            BrickBlocks.RED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.RED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.RED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("red_brick_slab_stonecutter").toString());
 
         // Stairs 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.WHITE_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_WHITE)
+        .requires(Items.WHITE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_WHITE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.WHITE_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.WHITE_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_WHITE))
-        .save(consumer, coloredbricks.getId("white_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.WHITE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("white_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.ORANGE_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_ORANGE)
+        .requires(Items.ORANGE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_ORANGE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.ORANGE_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.ORANGE_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_ORANGE))
-        .save(consumer, coloredbricks.getId("orange_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.ORANGE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("orange_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.PINK_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_PINK)
+        .requires(Items.PINK_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_PINK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.PINK_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.PINK_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_PINK))
-        .save(consumer, coloredbricks.getId("pink_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.PINK_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("pink_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.YELLOW_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_YELLOW)
+        .requires(Items.YELLOW_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_YELLOW)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.YELLOW_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.YELLOW_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_YELLOW))
-        .save(consumer, coloredbricks.getId("yellow_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.YELLOW_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("yellow_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.LIME_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_LIME)
+        .requires(Items.LIME_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_LIME)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.LIME_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.LIME_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_LIME))
-        .save(consumer, coloredbricks.getId("lime_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIME_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("lime_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.GREEN_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_GREEN)
+        .requires(Items.GREEN_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_GREEN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.GREEN_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.GREEN_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_GREEN))
-        .save(consumer, coloredbricks.getId("green_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.GREEN_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("green_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.LIGHT_BLUE_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_LIGHT_BLUE)
+        .requires(Items.LIGHT_BLUE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_LIGHT_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.LIGHT_BLUE_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_BLUE))
-        .save(consumer, coloredbricks.getId("light_blue_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("light_blue_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.CYAN_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_CYAN)
+        .requires(Items.CYAN_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CYAN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.CYAN_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.CYAN_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CYAN))
-        .save(consumer, coloredbricks.getId("cyan_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.CYAN_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("cyan_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.BLUE_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_BLUE)
+        .requires(Items.BLUE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.BLUE_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.BLUE_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_BLUE))
-        .save(consumer, coloredbricks.getId("blue_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BLUE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("blue_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.MAGENTA_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_MAGENTA)
+        .requires(Items.MAGENTA_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_MAGENTA)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.MAGENTA_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.MAGENTA_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_MAGENTA))
-        .save(consumer, coloredbricks.getId("magenta_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.MAGENTA_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("magenta_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.PURPLE_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_PURPLE)
+        .requires(Items.PURPLE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_PURPLE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.PURPLE_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.PURPLE_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_PURPLE))
-        .save(consumer, coloredbricks.getId("purple_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.PURPLE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("purple_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.BROWN_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_BROWN)
+        .requires(Items.BROWN_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_BROWN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.BROWN_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.BROWN_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_BROWN))
-        .save(consumer, coloredbricks.getId("brown_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BROWN_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("brown_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.LIGHT_GRAY_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_LIGHT_GRAY)
+        .requires(Items.LIGHT_GRAY_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_LIGHT_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.LIGHT_GRAY_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_GRAY))
-        .save(consumer, coloredbricks.getId("light_gray_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("light_gray_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.BLACK_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_BLACK)
+        .requires(Items.BLACK_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_BLACK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.BLACK_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.BLACK_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_BLACK))
-        .save(consumer, coloredbricks.getId("black_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BLACK_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("black_brick_stairs_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_BRICK_STAIRS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.RED_BRICK_STAIRS.get())
         .requires(Blocks.BRICK_STAIRS)
-        .requires(Tags.Items.DYES_RED)
+        .requires(Items.RED_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_STAIRS))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_RED)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.RED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.RED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_RED))
-        .save(consumer, coloredbricks.getId("red_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.RED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("red_brick_stairs_alt").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_WHITE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.WHITE_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_WHITE))
-            .save(consumer, coloredbricks.getId("white_brick_stairs_stonecutter"));
+            BrickBlocks.WHITE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.WHITE_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.WHITE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("white_brick_stairs_stonecutter").toString());
             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_ORANGE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.ORANGE_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_ORANGE))
-            .save(consumer, coloredbricks.getId("orange_brick_stairs_stonecutter"));
+            BrickBlocks.ORANGE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.ORANGE_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.ORANGE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("orange_brick_stairs_stonecutter").toString());
         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_PINK), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.PINK_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_PINK))
-            .save(consumer, coloredbricks.getId("pink_brick_stairs_stonecutter"));
+            BrickBlocks.PINK_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.PINK_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.PINK_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("pink_brick_stairs_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_YELLOW), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.YELLOW_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_YELLOW))
-            .save(consumer, coloredbricks.getId("yellow_brick_stairs_stonecutter"));
+            BrickBlocks.YELLOW_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.YELLOW_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.YELLOW_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("yellow_brick_stairs_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_LIME), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.LIME_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIME))
-            .save(consumer, coloredbricks.getId("lime_brick_stairs_stonecutter"));
+            BrickBlocks.LIME_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.LIME_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.LIME_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("lime_brick_stairs_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_GREEN), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.GREEN_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_GREEN))
-            .save(consumer, coloredbricks.getId("green_brick_stairs_stonecutter"));
+            BrickBlocks.GREEN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.GREEN_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.GREEN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("green_brick_stairs_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_LIGHT_BLUE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.LIGHT_BLUE_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_BLUE))
-            .save(consumer, coloredbricks.getId("light_blue_brick_stairs_stonecutter"));
+            BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.LIGHT_BLUE_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_blue_brick_stairs_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CYAN), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.CYAN_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CYAN))
-            .save(consumer, coloredbricks.getId("cyan_brick_stairs_stonecutter"));
+            BrickBlocks.CYAN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.CYAN_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.CYAN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("cyan_brick_stairs_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_BLUE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.BLUE_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BLUE))
-            .save(consumer, coloredbricks.getId("blue_brick_stairs_stonecutter"));
+            BrickBlocks.BLUE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.BLUE_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.BLUE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("blue_brick_stairs_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_MAGENTA), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.MAGENTA_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_MAGENTA))
-            .save(consumer, coloredbricks.getId("magenta_brick_stairs_stonecutter"));
+            BrickBlocks.MAGENTA_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.MAGENTA_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.MAGENTA_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("magenta_brick_stairs_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_PURPLE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.PURPLE_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_PURPLE))
-            .save(consumer, coloredbricks.getId("purple_brick_stairs_stonecutter"));
+            BrickBlocks.PURPLE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.PURPLE_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.PURPLE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("purple_brick_stairs_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_BROWN), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.BROWN_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BROWN))
-            .save(consumer, coloredbricks.getId("brown_brick_stairs_stonecutter"));
+            BrickBlocks.BROWN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.BROWN_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.BROWN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("brown_brick_stairs_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_LIGHT_GRAY), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.LIGHT_GRAY_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_GRAY))
-            .save(consumer, coloredbricks.getId("light_gray_brick_stairs_stonecutter"));
+            BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.LIGHT_GRAY_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_gray_brick_stairs_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_GRAY), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.GRAY_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_GRAY))
-            .save(consumer, coloredbricks.getId("gray_brick_stairs_stonecutter"));
+            BrickBlocks.GRAY_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.GRAY_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.GRAY_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("gray_brick_stairs_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_BLACK), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.BLACK_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BLACK))
-            .save(consumer, coloredbricks.getId("black_brick_stairs_stonecutter"));
+            BrickBlocks.BLACK_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.BLACK_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.BLACK_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("black_brick_stairs_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_RED), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.RED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_RED))
-            .save(consumer, coloredbricks.getId("red_brick_stairs_stonecutter"));
+            BrickBlocks.RED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickStairsBlocks.RED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.RED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("red_brick_stairs_stonecutter").toString());
             
         // Walls
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.WHITE_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_WHITE)
+        .requires(Items.WHITE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_WHITE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.WHITE_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.WHITE_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_WHITE))
-        .save(consumer, coloredbricks.getId("white_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.WHITE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("white_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.ORANGE_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_ORANGE)
+        .requires(Items.ORANGE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_ORANGE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.ORANGE_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.ORANGE_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_ORANGE))
-        .save(consumer, coloredbricks.getId("orange_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.ORANGE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("orange_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.PINK_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_PINK)
+        .requires(Items.PINK_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_PINK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.PINK_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.PINK_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_PINK))
-        .save(consumer, coloredbricks.getId("pink_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.PINK_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("pink_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.YELLOW_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_YELLOW)
+        .requires(Items.YELLOW_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_YELLOW)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.YELLOW_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.YELLOW_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_YELLOW))
-        .save(consumer, coloredbricks.getId("yellow_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.YELLOW_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("yellow_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.LIME_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_LIME)
+        .requires(Items.LIME_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_LIME)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.LIME_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.LIME_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_LIME))
-        .save(consumer, coloredbricks.getId("lime_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIME_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("lime_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.GREEN_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_GREEN)
+        .requires(Items.GREEN_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_GREEN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.GREEN_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.GREEN_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_GREEN))
-        .save(consumer, coloredbricks.getId("green_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.GREEN_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("green_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.LIGHT_BLUE_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_LIGHT_BLUE)
+        .requires(Items.LIGHT_BLUE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_LIGHT_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.LIGHT_BLUE_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_BLUE))
-        .save(consumer, coloredbricks.getId("light_blue_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("light_blue_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.CYAN_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_CYAN)
+        .requires(Items.CYAN_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CYAN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.CYAN_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.CYAN_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CYAN))
-        .save(consumer, coloredbricks.getId("cyan_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.CYAN_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("cyan_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.BLUE_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_BLUE)
+        .requires(Items.BLUE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.BLUE_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.BLUE_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_BLUE))
-        .save(consumer, coloredbricks.getId("blue_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BLUE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("blue_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.MAGENTA_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_MAGENTA)
+        .requires(Items.MAGENTA_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_MAGENTA)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.MAGENTA_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.MAGENTA_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_MAGENTA))
-        .save(consumer, coloredbricks.getId("magenta_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.MAGENTA_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("magenta_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.PURPLE_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_PURPLE)
+        .requires(Items.PURPLE_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_PURPLE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.PURPLE_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.PURPLE_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_PURPLE))
-        .save(consumer, coloredbricks.getId("purple_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.PURPLE_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("purple_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.BROWN_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_BROWN)
+        .requires(Items.BROWN_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_BROWN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.BROWN_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.BROWN_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_BROWN))
-        .save(consumer, coloredbricks.getId("brown_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BROWN_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("brown_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.LIGHT_GRAY_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_LIGHT_GRAY)
+        .requires(Items.LIGHT_GRAY_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_LIGHT_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.LIGHT_GRAY_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_GRAY))
-        .save(consumer, coloredbricks.getId("light_gray_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("light_gray_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.GRAY_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
         .requires(Tags.Items.DYES_GRAY)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.GRAY_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.GRAY_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_GRAY))
-        .save(consumer, coloredbricks.getId("gray_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.GRAY_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("gray_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.BLACK_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_BLACK)
+        .requires(Items.BLACK_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_BLACK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.BLACK_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.BLACK_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_BLACK))
-        .save(consumer, coloredbricks.getId("black_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BLACK_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("black_brick_wall_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_BRICK_WALL.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.RED_BRICK_WALL.get())
         .requires(Blocks.BRICK_WALL)
-        .requires(Tags.Items.DYES_RED)
+        .requires(Items.RED_DYE)
         .unlockedBy("has item", has(Blocks.BRICK_WALL))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_RED)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.RED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.RED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_RED))
-        .save(consumer, coloredbricks.getId("red_brick_wall_alt")); 
+        .unlockedBy("has item", has(BrickBlocks.RED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("red_brick_wall_alt").toString()); 
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_WHITE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.WHITE_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_WHITE))
-            .save(consumer, coloredbricks.getId("white_brick_wall_stonecutter"));
+            BrickBlocks.WHITE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.WHITE_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.WHITE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("white_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_ORANGE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.ORANGE_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_ORANGE))
-            .save(consumer, coloredbricks.getId("orange_brick_wall_stonecutter"));
+            BrickBlocks.ORANGE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.ORANGE_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.ORANGE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("orange_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_PINK), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.PINK_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_PINK))
-            .save(consumer, coloredbricks.getId("pink_brick_wall_stonecutter"));
+            BrickBlocks.PINK_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.PINK_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.PINK_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("pink_brick_wall_stonecutter").toString());
         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_YELLOW), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.YELLOW_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_YELLOW))
-            .save(consumer, coloredbricks.getId("yellow_brick_wall_stonecutter"));
+            BrickBlocks.YELLOW_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.YELLOW_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.YELLOW_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("yellow_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_LIME), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.LIME_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIME))
-            .save(consumer, coloredbricks.getId("lime_brick_wall_stonecutter"));
+            BrickBlocks.LIME_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.LIME_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.LIME_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("lime_brick_wall_stonecutter").toString());
         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_GREEN), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.GREEN_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_GREEN))
-            .save(consumer, coloredbricks.getId("green_brick_wall_stonecutter"));
+            BrickBlocks.GREEN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.GREEN_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.GREEN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("green_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_LIGHT_BLUE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.LIGHT_BLUE_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_BLUE))
-            .save(consumer, coloredbricks.getId("light_blue_brick_wall_stonecutter"));
+            BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.LIGHT_BLUE_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_blue_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CYAN), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.CYAN_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CYAN))
-            .save(consumer, coloredbricks.getId("cyan_brick_wall_stonecutter"));
+            BrickBlocks.CYAN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.CYAN_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.CYAN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("cyan_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_BLUE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.BLUE_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BLUE))
-            .save(consumer, coloredbricks.getId("blue_brick_wall_stonecutter"));
+            BrickBlocks.BLUE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.BLUE_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.BLUE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("blue_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_MAGENTA), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.MAGENTA_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_MAGENTA))
-            .save(consumer, coloredbricks.getId("magenta_brick_wall_stonecutter"));
+            BrickBlocks.MAGENTA_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.MAGENTA_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.MAGENTA_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("magenta_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_PURPLE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.PURPLE_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_PURPLE))
-            .save(consumer, coloredbricks.getId("purple_brick_wall_stonecutter"));
+            BrickBlocks.PURPLE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.PURPLE_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.PURPLE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("purple_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_BROWN), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.BROWN_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BROWN))
-            .save(consumer, coloredbricks.getId("brown_brick_wall_stonecutter"));
+            BrickBlocks.BROWN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.BROWN_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.BROWN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("brown_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_LIGHT_GRAY), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.LIGHT_GRAY_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_GRAY))
-            .save(consumer, coloredbricks.getId("light_gray_brick_wall_stonecutter"));
+            BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.LIGHT_GRAY_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_gray_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_GRAY), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.GRAY_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_GRAY))
-            .save(consumer, coloredbricks.getId("gray_brick_wall_stonecutter"));
+            BrickBlocks.GRAY_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.GRAY_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.GRAY_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("gray_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_BLACK), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.BLACK_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BLACK))
-            .save(consumer, coloredbricks.getId("black_brick_wall_stonecutter"));
+            BrickBlocks.BLACK_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.BLACK_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.BLACK_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("black_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_RED), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.RED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_RED))
-            .save(consumer, coloredbricks.getId("red_brick_wall_stonecutter"));
+            BrickBlocks.RED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickWallBlocks.RED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.RED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("red_brick_wall_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_WHITE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.WHITE_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_WHITE))
-            .save(consumer, coloredbricks.getId("white_chiseled_bricks_stonecutter"));
+            BrickBlocks.WHITE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.WHITE_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.WHITE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("white_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_ORANGE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.ORANGE_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_ORANGE))
-            .save(consumer, coloredbricks.getId("orange_chiseled_bricks_stonecutter"));
+            BrickBlocks.ORANGE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.ORANGE_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.ORANGE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("orange_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_PINK), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.PINK_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_PINK))
-            .save(consumer, coloredbricks.getId("pink_chiseled_bricks_stonecutter"));
+            BrickBlocks.PINK_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.PINK_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.PINK_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("pink_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_YELLOW), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.YELLOW_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_YELLOW))
-            .save(consumer, coloredbricks.getId("yellow_chiseled_bricks_stonecutter"));
+            BrickBlocks.YELLOW_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.YELLOW_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.YELLOW_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("yellow_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_LIME), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.LIME_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIME))
-            .save(consumer, coloredbricks.getId("lime_chiseled_bricks_stonecutter"));
+            BrickBlocks.LIME_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.LIME_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.LIME_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("lime_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_GREEN), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.GREEN_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_GREEN))
-            .save(consumer, coloredbricks.getId("green_chiseled_bricks_stonecutter"));
+            BrickBlocks.GREEN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.GREEN_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.GREEN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("green_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_LIGHT_BLUE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.LIGHT_BLUE_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_BLUE))
-            .save(consumer, coloredbricks.getId("light_blue_chiseled_bricks_stonecutter"));
+            BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.LIGHT_BLUE_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_blue_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CYAN), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.CYAN_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CYAN))
-            .save(consumer, coloredbricks.getId("cyan_chiseled_bricks_stonecutter"));
+            BrickBlocks.CYAN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.CYAN_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.CYAN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("cyan_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_BLUE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.BLUE_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BLUE))
-            .save(consumer, coloredbricks.getId("blue_chiseled_bricks_stonecutter"));
+            BrickBlocks.BLUE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.BLUE_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.BLUE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("blue_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_MAGENTA), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.MAGENTA_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_MAGENTA))
-            .save(consumer, coloredbricks.getId("magenta_chiseled_bricks_stonecutter"));
+            BrickBlocks.MAGENTA_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.MAGENTA_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.MAGENTA_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("magenta_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_PURPLE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.PURPLE_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_PURPLE))
-            .save(consumer, coloredbricks.getId("purple_chiseled_bricks_stonecutter"));
+            BrickBlocks.PURPLE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.PURPLE_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.PURPLE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("purple_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_BROWN), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.BROWN_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BROWN))
-            .save(consumer, coloredbricks.getId("brown_chiseled_bricks_stonecutter"));
+            BrickBlocks.BROWN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.BROWN_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.BROWN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("brown_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_LIGHT_GRAY), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.LIGHT_GRAY_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_GRAY))
-            .save(consumer, coloredbricks.getId("light_gray_chiseled_bricks_stonecutter"));
+            BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.LIGHT_GRAY_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_gray_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GRAY_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_GRAY))
-            .save(consumer, coloredbricks.getId("gray_chiseled_bricks_stonecutter"));
+            BrickBlocks.GRAY_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.GRAY_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.GRAY_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("gray_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_BLACK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLACK_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BLACK))
-            .save(consumer, coloredbricks.getId("black_chiseled_bricks_stonecutter"));
+            BrickBlocks.BLACK_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.BLACK_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.BLACK_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("black_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_RED), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.RED_CHISELED_BRICKS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_RED))
-            .save(consumer, coloredbricks.getId("red_chiseled_bricks_stonecutter"));
+            BrickBlocks.RED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.RED_CHISELED_BRICKS.get())
+            .unlockedBy("has item", has(BrickBlocks.RED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("red_chiseled_bricks_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
             Blocks.BRICKS.asItem()), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CHISELED_BRICKS.get())
+            BrickBlocks.CHISELED_BRICKS.get())
             .unlockedBy("has item", has(Blocks.BRICKS))
-            .save(consumer, coloredbricks.getId("chiseled_bricks_stonecutter"));
+            .save(consumer, coloredbricks.getId("chiseled_bricks_stonecutter").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_WHITE)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.WHITE_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.WHITE_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_WHITE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.WHITE_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.WHITE_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_WHITE))
-        .save(consumer, coloredbricks.getId("white_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.WHITE_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("white_chiseled_bricks_alt").toString());
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_ORANGE)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.ORANGE_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.ORANGE_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_ORANGE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.ORANGE_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.ORANGE_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_ORANGE))
-        .save(consumer, coloredbricks.getId("orange_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.ORANGE_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("orange_chiseled_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_PINK)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.PINK_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.PINK_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_PINK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.PINK_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.PINK_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_PINK))
-        .save(consumer, coloredbricks.getId("pink_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.PINK_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("pink_chiseled_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_YELLOW)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.YELLOW_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.YELLOW_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_YELLOW)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.YELLOW_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.YELLOW_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_YELLOW))
-        .save(consumer, coloredbricks.getId("yellow_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.YELLOW_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("yellow_chiseled_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_LIME)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIME_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.LIME_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_LIME)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIME_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.LIME_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_LIME))
-        .save(consumer, coloredbricks.getId("lime_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.LIME_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("lime_chiseled_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_GREEN)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.GREEN_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.GREEN_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_GREEN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.GREEN_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.GREEN_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_GREEN))
-        .save(consumer, coloredbricks.getId("green_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.GREEN_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("green_chiseled_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_LIGHT_BLUE)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIGHT_BLUE_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.LIGHT_BLUE_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_LIGHT_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIGHT_BLUE_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.LIGHT_BLUE_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_LIGHT_BLUE))
-        .save(consumer, coloredbricks.getId("light_blue_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.LIGHT_BLUE_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("light_blue_chiseled_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_CYAN)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.CYAN_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.CYAN_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_CYAN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.CYAN_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.CYAN_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CYAN))
-        .save(consumer, coloredbricks.getId("cyan_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.CYAN_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("cyan_chiseled_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_BLUE)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BLUE_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.BLUE_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BLUE_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.BLUE_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_BLUE))
-        .save(consumer, coloredbricks.getId("blue_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.BLUE_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("blue_chiseled_bricks_alt").toString());
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_MAGENTA)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.MAGENTA_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.MAGENTA_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_MAGENTA)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.MAGENTA_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.MAGENTA_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_MAGENTA))
-        .save(consumer, coloredbricks.getId("magenta_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.MAGENTA_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("magenta_chiseled_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_PURPLE)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.PURPLE_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.PURPLE_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_PURPLE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.PURPLE_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.PURPLE_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_PURPLE))
-        .save(consumer, coloredbricks.getId("purple_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.PURPLE_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("purple_chiseled_bricks_alt").toString());
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_BROWN)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BROWN_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.BROWN_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_BROWN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BROWN_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.BROWN_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_BROWN))
-        .save(consumer, coloredbricks.getId("brown_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.BROWN_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("brown_chiseled_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_LIGHT_GRAY)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIGHT_GRAY_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.LIGHT_GRAY_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_LIGHT_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIGHT_GRAY_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.LIGHT_GRAY_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_LIGHT_GRAY))
-        .save(consumer, coloredbricks.getId("light_gray_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.LIGHT_GRAY_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("light_gray_chiseled_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.GRAY_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
         .requires(Tags.Items.DYES_GRAY)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.GRAY_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.GRAY_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_GRAY))
-        .save(consumer, coloredbricks.getId("gray_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.GRAY_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("gray_chiseled_bricks_alt").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_BLACK)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BLACK_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.BLACK_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_BLACK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BLACK_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.BLACK_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_BLACK))
-        .save(consumer, coloredbricks.getId("black_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.BLACK_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("black_chiseled_bricks_alt").toString());
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CHISELED_BRICKS.get())
-        .requires(ModBlocks.CHISELED_BRICKS.get())
-        .requires(Tags.Items.DYES_RED)
-        .unlockedBy("has item", has(ModBlocks.CHISELED_BRICKS.get()))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.RED_CHISELED_BRICKS.get())
+        .requires(BrickBlocks.CHISELED_BRICKS.get())
+        .requires(Items.RED_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CHISELED_BRICKS.get()))
         .save(consumer);
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CHISELED_BRICKS.get())
-        .define('#', ModTags.Items.BRICK_SLAB_RED)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.RED_CHISELED_BRICKS.get())
+        .define('#', BrickSlabBlocks.RED_BRICK_SLAB.get().asItem())
         .pattern("#")
         .pattern("#")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_RED))
-        .save(consumer, coloredbricks.getId("red_chiseled_bricks_alt"));
+        .unlockedBy("has item", has(BrickSlabBlocks.RED_BRICK_SLAB.get().asItem()))
+        .save(consumer, coloredbricks.getId("red_chiseled_bricks_alt").toString());
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CHISELED_BRICKS.get())
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.CHISELED_BRICKS.get())
         .define('#', Blocks.BRICK_SLAB)
         .pattern("#")
         .pattern("#")
         .unlockedBy("has item", has(Blocks.BRICK_SLAB))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_WHITE)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.WHITE_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.WHITE_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer); 
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_ORANGE)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.ORANGE_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.ORANGE_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_PINK)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.PINK_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.PINK_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_YELLOW)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.YELLOW_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.YELLOW_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_LIME)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIME_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.LIME_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_GREEN)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.GREEN_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.GREEN_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer); 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_CYAN)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.CYAN_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.CYAN_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer); 
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_LIGHT_BLUE)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIGHT_BLUE_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.LIGHT_BLUE_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_BLUE)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BLUE_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.BLUE_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer); 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_MAGENTA)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.MAGENTA_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.MAGENTA_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer); 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_PURPLE)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.PURPLE_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.PURPLE_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer); 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_BROWN)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BROWN_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.BROWN_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer); 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_LIGHT_GRAY)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.LIGHT_GRAY_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.LIGHT_GRAY_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer); 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.GRAY_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
         .requires(Tags.Items.DYES_GRAY)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer); 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_BLACK)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.BLACK_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.BLACK_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer); 
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CRACKED_BRICKS.get())
-        .requires(ModTags.Items.BRICKS_CRACKED)
-        .requires(Tags.Items.DYES_RED)
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickBlocks.RED_CRACKED_BRICKS.get())
+        .requires(BrickBlocks.CRACKED_BRICKS.get().asItem())
+        .requires(Items.RED_DYE)
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
         .save(consumer); 
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
             Blocks.BRICKS.asItem()), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CRACKED_BRICKS.get(), 
+            BrickBlocks.CRACKED_BRICKS.get(), 
             0.1f, 200)
             .unlockedBy("has item", has(Blocks.BRICKS.asItem()))
-            .save(consumer, coloredbricks.getId("cracked_bricks_furnace"));
+            .save(consumer, coloredbricks.getId("cracked_bricks_furnace").toString());
         
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_WHITE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.WHITE_CRACKED_BRICKS.get(), 
+            BrickBlocks.WHITE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.WHITE_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_WHITE))
-            .save(consumer, coloredbricks.getId("white_cracked_bricks_furnace"));     
+            .unlockedBy("has item", has(BrickBlocks.WHITE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("white_cracked_bricks_furnace").toString());     
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_ORANGE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.ORANGE_CRACKED_BRICKS.get(), 
+            BrickBlocks.ORANGE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.ORANGE_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_ORANGE))
-            .save(consumer, coloredbricks.getId("orange_cracked_bricks_furnace"));
+            .unlockedBy("has item", has(BrickBlocks.ORANGE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("orange_cracked_bricks_furnace").toString());
                 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_PINK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PINK_CRACKED_BRICKS.get(), 
+            BrickBlocks.PINK_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.PINK_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_PINK))
-            .save(consumer, coloredbricks.getId("pink_cracked_bricks_furnace"));
+            .unlockedBy("has item", has(BrickBlocks.PINK_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("pink_cracked_bricks_furnace").toString());
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_YELLOW), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.YELLOW_CRACKED_BRICKS.get(), 
+            BrickBlocks.YELLOW_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.YELLOW_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_YELLOW))
-            .save(consumer, coloredbricks.getId("yellow_cracked_bricks_furnace"));
+            .unlockedBy("has item", has(BrickBlocks.YELLOW_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("yellow_cracked_bricks_furnace").toString());
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_LIME), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIME_CRACKED_BRICKS.get(), 
+            BrickBlocks.LIME_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.LIME_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIME))
-            .save(consumer, coloredbricks.getId("lime_cracked_bricks_furnace")); 
+            .unlockedBy("has item", has(BrickBlocks.LIME_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("lime_cracked_bricks_furnace").toString()); 
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_GREEN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GREEN_CRACKED_BRICKS.get(), 
+            BrickBlocks.GREEN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.GREEN_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_GREEN))
-            .save(consumer, coloredbricks.getId("green_cracked_bricks_furnace")); 
+            .unlockedBy("has item", has(BrickBlocks.GREEN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("green_cracked_bricks_furnace").toString()); 
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_CYAN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CYAN_CRACKED_BRICKS.get(), 
+            BrickBlocks.CYAN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.CYAN_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CYAN))
-            .save(consumer, coloredbricks.getId("cyan_cracked_bricks_furnace"));  
+            .unlockedBy("has item", has(BrickBlocks.CYAN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("cyan_cracked_bricks_furnace").toString());  
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_LIGHT_BLUE), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.LIGHT_BLUE_CRACKED_BRICKS.get(), 
+            BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS, 
+            BrickBlocks.LIGHT_BLUE_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_BLUE))
-            .save(consumer, coloredbricks.getId("light_blue_cracked_bricks_furnace"));
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_BLUE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_blue_cracked_bricks_furnace").toString());
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLUE_CRACKED_BRICKS.get(), 
+            BrickBlocks.BLUE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.BLUE_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BLUE))
-            .save(consumer, coloredbricks.getId("blue_cracked_bricks_furnace"));
+            .unlockedBy("has item", has(BrickBlocks.BLUE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("blue_cracked_bricks_furnace").toString());
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_MAGENTA), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.MAGENTA_CRACKED_BRICKS.get(), 
+            BrickBlocks.MAGENTA_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.MAGENTA_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_MAGENTA))
-            .save(consumer, coloredbricks.getId("magenta_cracked_bricks_furnace")); 
+            .unlockedBy("has item", has(BrickBlocks.MAGENTA_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("magenta_cracked_bricks_furnace").toString()); 
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_PURPLE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PURPLE_CRACKED_BRICKS.get(), 
+            BrickBlocks.PURPLE_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.PURPLE_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_PURPLE))
-            .save(consumer, coloredbricks.getId("purple_cracked_bricks_furnace")); 
+            .unlockedBy("has item", has(BrickBlocks.PURPLE_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("purple_cracked_bricks_furnace").toString()); 
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_BROWN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BROWN_CRACKED_BRICKS.get(), 
+            BrickBlocks.BROWN_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.BROWN_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BROWN))
-            .save(consumer, coloredbricks.getId("brown_cracked_bricks_furnace")); 
+            .unlockedBy("has item", has(BrickBlocks.BROWN_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("brown_cracked_bricks_furnace").toString()); 
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_LIGHT_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_GRAY_CRACKED_BRICKS.get(), 
+            BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.LIGHT_GRAY_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_LIGHT_GRAY))
-            .save(consumer, coloredbricks.getId("light_gray_cracked_bricks_furnace")); 
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_GRAY_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_gray_cracked_bricks_furnace").toString()); 
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GRAY_CRACKED_BRICKS.get(), 
+            BrickBlocks.GRAY_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.GRAY_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_GRAY))
-            .save(consumer, coloredbricks.getId("gray_cracked_bricks_furnace"));  
+            .unlockedBy("has item", has(BrickBlocks.GRAY_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("gray_cracked_bricks_furnace").toString());  
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_BLACK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLACK_CRACKED_BRICKS.get(), 
+            BrickBlocks.BLACK_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.BLACK_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_BLACK))
-            .save(consumer, coloredbricks.getId("black_cracked_bricks_furnace"));
+            .unlockedBy("has item", has(BrickBlocks.BLACK_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("black_cracked_bricks_furnace").toString());
                     
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICKS_RED), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.RED_CRACKED_BRICKS.get(), 
+            BrickBlocks.RED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickBlocks.RED_CRACKED_BRICKS.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_RED))
-            .save(consumer, coloredbricks.getId("red_cracked_bricks_furnace"));
+            .unlockedBy("has item", has(BrickBlocks.RED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("red_cracked_bricks_furnace").toString());
                                 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
             Blocks.BRICK_SLAB.asItem()), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
             .unlockedBy("has item", has(Blocks.BRICK_SLAB.asItem()))
-            .save(consumer, coloredbricks.getId("cracked_brick_slab_furnace"));
+            .save(consumer, coloredbricks.getId("cracked_brick_slab_furnace").toString());
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_WHITE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.WHITE_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.WHITE_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.WHITE_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_WHITE))
-            .save(consumer, coloredbricks.getId("white_cracked_brick_slab_furnace"));  
+            .unlockedBy("has item", has(BrickSlabBlocks.WHITE_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("white_cracked_brick_slab_furnace").toString());  
         
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_ORANGE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.ORANGE_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.ORANGE_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.ORANGE_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_ORANGE))
-            .save(consumer, coloredbricks.getId("orange_cracked_brick_slab_furnace"));       
+            .unlockedBy("has item", has(BrickSlabBlocks.ORANGE_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("orange_cracked_brick_slab_furnace").toString());       
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_PINK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PINK_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.PINK_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.PINK_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_PINK))
-            .save(consumer, coloredbricks.getId("pink_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.PINK_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("pink_cracked_brick_slab_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_YELLOW), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.YELLOW_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.YELLOW_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.YELLOW_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_YELLOW))
-            .save(consumer, coloredbricks.getId("yellow_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.YELLOW_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("yellow_cracked_brick_slab_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_LIME), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIME_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.LIME_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.LIME_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_LIME))
-            .save(consumer, coloredbricks.getId("lime_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.LIME_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("lime_cracked_brick_slab_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_GREEN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GREEN_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.GREEN_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.GREEN_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_GREEN))
-            .save(consumer, coloredbricks.getId("green_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.GREEN_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("green_cracked_brick_slab_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_CYAN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CYAN_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.CYAN_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.CYAN_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CYAN))
-            .save(consumer, coloredbricks.getId("cyan_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.CYAN_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("cyan_cracked_brick_slab_furnace").toString());
         
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_LIGHT_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_BLUE_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.LIGHT_BLUE_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.LIGHT_BLUE_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_LIGHT_BLUE))
-            .save(consumer, coloredbricks.getId("light_blue_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.LIGHT_BLUE_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_blue_cracked_brick_slab_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLUE_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.BLUE_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.BLUE_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_BLUE))
-            .save(consumer, coloredbricks.getId("blue_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.BLUE_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("blue_cracked_brick_slab_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_MAGENTA), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.MAGENTA_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.MAGENTA_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.MAGENTA_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_MAGENTA))
-            .save(consumer, coloredbricks.getId("magenta_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.MAGENTA_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("magenta_cracked_brick_slab_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_PURPLE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PURPLE_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.PURPLE_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.PURPLE_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_PURPLE))
-            .save(consumer, coloredbricks.getId("purple_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.PURPLE_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("purple_cracked_brick_slab_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_BROWN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BROWN_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.BROWN_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.BROWN_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_BROWN))
-            .save(consumer, coloredbricks.getId("brown_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.BROWN_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("brown_cracked_brick_slab_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_LIGHT_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_GRAY_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.LIGHT_GRAY_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.LIGHT_GRAY_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_LIGHT_GRAY))
-            .save(consumer, coloredbricks.getId("light_gray_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.LIGHT_GRAY_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_gray_cracked_brick_slab_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GRAY_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.GRAY_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.GRAY_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_GRAY))
-            .save(consumer, coloredbricks.getId("gray_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.GRAY_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("gray_cracked_brick_slab_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_BLACK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLACK_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.BLACK_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.BLACK_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_BLACK))
-            .save(consumer, coloredbricks.getId("black_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.BLACK_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("black_cracked_brick_slab_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_SLAB_RED), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.RED_CRACKED_BRICK_SLAB.get(), 
+            BrickSlabBlocks.RED_BRICK_SLAB.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.RED_CRACKED_BRICK_SLAB.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_RED))
-            .save(consumer, coloredbricks.getId("red_cracked_brick_slab_furnace"));
+            .unlockedBy("has item", has(BrickSlabBlocks.RED_BRICK_SLAB.get().asItem()))
+            .save(consumer, coloredbricks.getId("red_cracked_brick_slab_furnace").toString());
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_WHITE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.WHITE_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.WHITE_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_ORANGE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.ORANGE_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.ORANGE_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_PINK)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.PINK_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.PINK_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_YELLOW)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.YELLOW_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.YELLOW_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_LIME)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.LIME_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.LIME_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_GREEN)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.GREEN_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.GREEN_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_CYAN)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.CYAN_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.CYAN_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_LIGHT_BLUE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.LIGHT_BLUE_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.LIGHT_BLUE_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_BLUE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.BLUE_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.BLUE_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_MAGENTA)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.MAGENTA_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.MAGENTA_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_PURPLE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.PURPLE_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.PURPLE_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_BROWN)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.BROWN_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.BROWN_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_LIGHT_GRAY)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.LIGHT_GRAY_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.LIGHT_GRAY_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.GRAY_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
         .requires(Tags.Items.DYES_GRAY)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_BLACK)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.BLACK_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.BLACK_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CRACKED_BRICK_SLAB.get())
-        .requires(ModTags.Items.BRICK_SLAB_CRACKED)
-        .requires(Tags.Items.DYES_RED)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_SLAB_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickSlabBlocks.RED_CRACKED_BRICK_SLAB.get())
+        .requires(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem())
+        .requires(Items.RED_DYE)
+        .unlockedBy("has item", has(BrickSlabBlocks.CRACKED_BRICK_SLAB.get().asItem()))
         .save(consumer);
         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
-            .save(consumer, coloredbricks.getId("cracked_brick_slab_stonecutter"));
+            BrickBlocks.CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("cracked_brick_slab_stonecutter").toString());
                 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_WHITE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.WHITE_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_WHITE))
-            .save(consumer, coloredbricks.getId("white_cracked_brick_slab_stonecutter"));
+            BrickBlocks.WHITE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.WHITE_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.WHITE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("white_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_ORANGE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.ORANGE_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_ORANGE))
-            .save(consumer, coloredbricks.getId("orange_cracked_brick_slab_stonecutter"));
+            BrickBlocks.ORANGE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.ORANGE_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.ORANGE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("orange_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_PINK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PINK_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_PINK))
-            .save(consumer, coloredbricks.getId("pink_cracked_brick_slab_stonecutter"));
+            BrickBlocks.PINK_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.PINK_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.PINK_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("pink_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_YELLOW), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.YELLOW_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_YELLOW))
-            .save(consumer, coloredbricks.getId("yellow_cracked_brick_slab_stonecutter"));
+            BrickBlocks.YELLOW_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.YELLOW_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.YELLOW_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("yellow_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_LIME), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIME_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIME))
-            .save(consumer, coloredbricks.getId("lime_cracked_brick_slab_stonecutter"));
+            BrickBlocks.LIME_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.LIME_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.LIME_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("lime_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_GREEN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GREEN_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_GREEN))
-            .save(consumer, coloredbricks.getId("green_cracked_brick_slab_stonecutter"));
+            BrickBlocks.GREEN_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.GREEN_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.GREEN_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("green_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_CYAN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CYAN_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_CYAN))
-            .save(consumer, coloredbricks.getId("cyan_cracked_brick_slab_stonecutter"));
+            BrickBlocks.CYAN_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.CYAN_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.CYAN_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("cyan_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_BLUE_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE))
-            .save(consumer, coloredbricks.getId("light_blue_cracked_brick_slab_stonecutter"));
+            BrickBlocks.LIGHT_BLUE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.LIGHT_BLUE_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_BLUE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_blue_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLUE_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BLUE))
-            .save(consumer, coloredbricks.getId("blue_cracked_brick_slab_stonecutter"));
+            BrickBlocks.BLUE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.BLUE_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.BLUE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("blue_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_MAGENTA), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.MAGENTA_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_MAGENTA))
-            .save(consumer, coloredbricks.getId("magenta_cracked_brick_slab_stonecutter"));
+            BrickBlocks.MAGENTA_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.MAGENTA_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.MAGENTA_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("magenta_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_PURPLE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PURPLE_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_PURPLE))
-            .save(consumer, coloredbricks.getId("purple_cracked_brick_slab_stonecutter"));
+            BrickBlocks.PURPLE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.PURPLE_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.PURPLE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("purple_cracked_brick_slab_stonecutter").toString().toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_BROWN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BROWN_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BROWN))
-            .save(consumer, coloredbricks.getId("brown_cracked_brick_slab_stonecutter"));
+            BrickBlocks.BROWN_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.BROWN_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.BROWN_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("brown_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_GRAY_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY))
-            .save(consumer, coloredbricks.getId("light_gray_cracked_brick_slab_stonecutter"));
+            BrickBlocks.LIGHT_GRAY_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.LIGHT_GRAY_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_GRAY_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_gray_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GRAY_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_GRAY))
-            .save(consumer, coloredbricks.getId("gray_cracked_brick_slab_stonecutter"));
+            BrickBlocks.GRAY_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.GRAY_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.GRAY_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("gray_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_BLACK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLACK_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BLACK))
-            .save(consumer, coloredbricks.getId("black_cracked_brick_slab_stonecutter"));
+            BrickBlocks.BLACK_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.BLACK_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.BLACK_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("black_cracked_brick_slab_stonecutter").toString());
                             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_RED), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.RED_CRACKED_BRICK_SLAB.get(), 2)
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_RED))
-            .save(consumer, coloredbricks.getId("red_cracked_brick_slab_stonecutter"));
+            BrickBlocks.RED_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickSlabBlocks.RED_CRACKED_BRICK_SLAB.get(), 2)
+            .unlockedBy("has item", has(BrickBlocks.RED_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("red_cracked_brick_slab_stonecutter").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
-            .save(consumer, coloredbricks.getId("cracked_brick_stairs_stonecutter"));
+            BrickBlocks.CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("cracked_brick_stairs_stonecutter").toString());
             
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_WHITE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.WHITE_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_WHITE))
-            .save(consumer, coloredbricks.getId("white_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.WHITE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.WHITE_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.WHITE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("white_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_ORANGE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.ORANGE_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_ORANGE))
-            .save(consumer, coloredbricks.getId("orange_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.ORANGE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.ORANGE_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.ORANGE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("orange_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_PINK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PINK_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_PINK))
-            .save(consumer, coloredbricks.getId("pink_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.PINK_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.PINK_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.PINK_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("pink_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_YELLOW), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.YELLOW_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_YELLOW))
-            .save(consumer, coloredbricks.getId("yellow_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.YELLOW_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.YELLOW_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.YELLOW_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("yellow_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_LIME), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIME_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIME))
-            .save(consumer, coloredbricks.getId("lime_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.LIME_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.LIME_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.LIME_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("lime_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_GREEN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GREEN_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_GREEN))
-            .save(consumer, coloredbricks.getId("green_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.GREEN_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.GREEN_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.GREEN_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("green_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_BLUE_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE))
-            .save(consumer, coloredbricks.getId("light_blue_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.LIGHT_BLUE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.LIGHT_BLUE_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_BLUE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_blue_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_CYAN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CYAN_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_CYAN))
-            .save(consumer, coloredbricks.getId("cyan_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.CYAN_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.CYAN_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.CYAN_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("cyan_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLUE_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BLUE))
-            .save(consumer, coloredbricks.getId("blue_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.BLUE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.BLUE_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.BLUE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("blue_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_MAGENTA), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.MAGENTA_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_MAGENTA))
-            .save(consumer, coloredbricks.getId("magenta_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.MAGENTA_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.MAGENTA_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.MAGENTA_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("magenta_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_PURPLE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PURPLE_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_PURPLE))
-            .save(consumer, coloredbricks.getId("purple_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.PURPLE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.PURPLE_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.PURPLE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("purple_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_BROWN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BROWN_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BROWN))
-            .save(consumer, coloredbricks.getId("brown_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.BROWN_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.BROWN_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.BROWN_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("brown_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_GRAY_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY))
-            .save(consumer, coloredbricks.getId("light_gray_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.LIGHT_GRAY_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.LIGHT_GRAY_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_GRAY_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_gray_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GRAY_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_GRAY))
-            .save(consumer, coloredbricks.getId("gray_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.GRAY_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.GRAY_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.GRAY_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("gray_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_BLACK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLACK_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BLACK))
-            .save(consumer, coloredbricks.getId("black_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.BLACK_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.BLACK_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.BLACK_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("black_cracked_brick_stairs_stonecutter").toString());
                         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_RED), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.RED_CRACKED_BRICK_STAIRS.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_RED))
-            .save(consumer, coloredbricks.getId("red_cracked_brick_stairs_stonecutter"));
+            BrickBlocks.RED_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.RED_CRACKED_BRICK_STAIRS.get())
+            .unlockedBy("has item", has(BrickBlocks.RED_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("red_cracked_brick_stairs_stonecutter").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_WHITE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.WHITE_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.WHITE_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_ORANGE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.ORANGE_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.ORANGE_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_PINK)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.PINK_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.PINK_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_YELLOW)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.YELLOW_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.YELLOW_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_LIME)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.LIME_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.LIME_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_GREEN)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.GREEN_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.GREEN_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_LIGHT_BLUE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.LIGHT_BLUE_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.LIGHT_BLUE_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_CYAN)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.CYAN_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.CYAN_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_BLUE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.BLUE_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.BLUE_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_MAGENTA)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.MAGENTA_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.MAGENTA_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_PURPLE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.PURPLE_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.PURPLE_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_BROWN)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.BROWN_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.BROWN_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_LIGHT_GRAY)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.LIGHT_GRAY_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.LIGHT_GRAY_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.GRAY_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
         .requires(Tags.Items.DYES_GRAY)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_BLACK)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.BLACK_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.BLACK_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CRACKED_BRICK_STAIRS.get())
-        .requires(ModTags.Items.BRICK_STAIRS_CRACKED)
-        .requires(Tags.Items.DYES_RED)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.RED_CRACKED_BRICK_STAIRS.get())
+        .requires(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem())
+        .requires(Items.RED_DYE)
+        .unlockedBy("has item", has(BrickStairsBlocks.CRACKED_BRICK_STAIRS.get().asItem()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
-        .save(consumer, coloredbricks.getId("cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("cracked_brick_stairs_alt").toString());
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_WHITE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.WHITE_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.WHITE_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_WHITE))
-        .save(consumer, coloredbricks.getId("white_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.WHITE_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("white_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_ORANGE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.ORANGE_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.ORANGE_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_ORANGE))
-        .save(consumer, coloredbricks.getId("orange_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.ORANGE_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("orange_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_PINK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.PINK_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.PINK_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_PINK))
-        .save(consumer, coloredbricks.getId("pink_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.PINK_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("pink_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_YELLOW)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.YELLOW_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.YELLOW_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_YELLOW))
-        .save(consumer, coloredbricks.getId("yellow_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.YELLOW_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("yellow_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_LIME)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.LIME_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.LIME_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIME))
-        .save(consumer, coloredbricks.getId("lime_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIME_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("lime_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_GREEN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.GREEN_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.GREEN_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_GREEN))
-        .save(consumer, coloredbricks.getId("green_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.GREEN_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("green_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.LIGHT_BLUE_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.LIGHT_BLUE_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE))
-        .save(consumer, coloredbricks.getId("light_blue_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIGHT_BLUE_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("light_blue_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_CYAN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.CYAN_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.CYAN_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_CYAN))
-        .save(consumer, coloredbricks.getId("cyan_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.CYAN_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("cyan_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.BLUE_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.BLUE_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BLUE))
-        .save(consumer, coloredbricks.getId("blue_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BLUE_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("blue_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_MAGENTA)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.MAGENTA_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.MAGENTA_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_MAGENTA))
-        .save(consumer, coloredbricks.getId("magenta_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.MAGENTA_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("magenta_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_PURPLE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.PURPLE_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.PURPLE_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_PURPLE))
-        .save(consumer, coloredbricks.getId("purple_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.PURPLE_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("purple_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_BROWN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.BROWN_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.BROWN_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BROWN))
-        .save(consumer, coloredbricks.getId("brown_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BROWN_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("brown_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.LIGHT_GRAY_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.LIGHT_GRAY_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY))
-        .save(consumer, coloredbricks.getId("light_gray_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIGHT_GRAY_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("light_gray_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.GRAY_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.GRAY_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_GRAY))
-        .save(consumer, coloredbricks.getId("gray_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.GRAY_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("gray_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_BLACK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.BLACK_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.BLACK_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BLACK))
-        .save(consumer, coloredbricks.getId("black_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BLACK_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("black_cracked_brick_stairs_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CRACKED_BRICK_STAIRS.get(), 4)
-        .define('#', ModTags.Items.BRICKS_CRACKED_RED)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickStairsBlocks.RED_CRACKED_BRICK_STAIRS.get(), 4)
+        .define('#', BrickBlocks.RED_CRACKED_BRICKS.get().asItem())
         .pattern("#  ")
         .pattern("## ")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_RED))
-        .save(consumer, coloredbricks.getId("red_cracked_brick_stairs_alt"));
+        .unlockedBy("has item", has(BrickBlocks.RED_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("red_cracked_brick_stairs_alt").toString());
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
             Blocks.BRICK_STAIRS.asItem()), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CRACKED_BRICK_STAIRS.get(), 
+            BrickStairsBlocks.CRACKED_BRICK_STAIRS.get(), 
             0.1f, 200)
             .unlockedBy("has item", has(Blocks.BRICK_STAIRS.asItem()))
-            .save(consumer, coloredbricks.getId("cracked_brick_stairs_furnace"));
+            .save(consumer, coloredbricks.getId("cracked_brick_stairs_furnace").toString());
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_WHITE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.WHITE_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.WHITE_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.WHITE_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_WHITE))
-            .save(consumer, coloredbricks.getId("white_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.WHITE_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("white_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_ORANGE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.ORANGE_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.ORANGE_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.ORANGE_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_ORANGE))
-            .save(consumer, coloredbricks.getId("orange_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.ORANGE_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("orange_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_PINK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PINK_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.PINK_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.PINK_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_PINK))
-            .save(consumer, coloredbricks.getId("pink_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.PINK_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("pink_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_YELLOW), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.YELLOW_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.YELLOW_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.YELLOW_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_YELLOW))
-            .save(consumer, coloredbricks.getId("yellow_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.YELLOW_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("yellow_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_LIME), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIME_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.LIME_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.LIME_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_LIME))
-            .save(consumer, coloredbricks.getId("lime_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.LIME_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("lime_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_GREEN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GREEN_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.GREEN_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.GREEN_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_GREEN))
-            .save(consumer, coloredbricks.getId("green_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.GREEN_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("green_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_LIGHT_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_BLUE_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.LIGHT_BLUE_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.LIGHT_BLUE_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_LIGHT_BLUE))
-            .save(consumer, coloredbricks.getId("light_blue_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.LIGHT_BLUE_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_blue_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_CYAN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CYAN_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.CYAN_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.CYAN_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_CYAN))
-            .save(consumer, coloredbricks.getId("cyan_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.CYAN_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("cyan_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLUE_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.BLUE_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.BLUE_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_BLUE))
-            .save(consumer, coloredbricks.getId("blue_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.BLUE_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("blue_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_MAGENTA), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.MAGENTA_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.MAGENTA_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.MAGENTA_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_MAGENTA))
-            .save(consumer, coloredbricks.getId("magenta_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.MAGENTA_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("magenta_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_PURPLE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PURPLE_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.PURPLE_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.PURPLE_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_PURPLE))
-            .save(consumer, coloredbricks.getId("purple_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.PURPLE_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("purple_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_BROWN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BROWN_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.BROWN_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.BROWN_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_BROWN))
-            .save(consumer, coloredbricks.getId("brown_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.BROWN_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("brown_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_LIGHT_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_GRAY_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.LIGHT_GRAY_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.LIGHT_GRAY_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_LIGHT_GRAY))
-            .save(consumer, coloredbricks.getId("light_gray_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.LIGHT_GRAY_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_gray_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GRAY_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.GRAY_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.GRAY_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_GRAY))
-            .save(consumer, coloredbricks.getId("gray_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.GRAY_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("gray_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_BLACK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLACK_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.BLACK_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.BLACK_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_BLACK))
-            .save(consumer, coloredbricks.getId("black_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.BLACK_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("black_cracked_brick_stairs_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_STAIRS_RED), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.RED_CRACKED_BRICK_STAIRS.get(),
+            BrickStairsBlocks.RED_BRICK_STAIRS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickStairsBlocks.RED_CRACKED_BRICK_STAIRS.get(),
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_STAIRS_RED))
-            .save(consumer, coloredbricks.getId("red_cracked_brick_stairs_furnace"));
+            .unlockedBy("has item", has(BrickStairsBlocks.RED_BRICK_STAIRS.get().asItem()))
+            .save(consumer, coloredbricks.getId("red_cracked_brick_stairs_furnace").toString());
 
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
-            .save(consumer, coloredbricks.getId("cracked_brick_wall_stonecutter"));
+            BrickBlocks.CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("cracked_brick_wall_stonecutter").toString());
         
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_WHITE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.WHITE_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_WHITE))
-            .save(consumer, coloredbricks.getId("white_cracked_brick_wall_stonecutter"));
+            BrickBlocks.WHITE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.WHITE_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.WHITE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("white_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_ORANGE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.ORANGE_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_ORANGE))
-            .save(consumer, coloredbricks.getId("orange_cracked_brick_wall_stonecutter"));
+            BrickBlocks.ORANGE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.ORANGE_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.ORANGE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("orange_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_PINK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PINK_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_PINK))
-            .save(consumer, coloredbricks.getId("pink_cracked_brick_wall_stonecutter"));
+            BrickBlocks.PINK_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.PINK_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.PINK_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("pink_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_YELLOW), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.YELLOW_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_YELLOW))
-            .save(consumer, coloredbricks.getId("yellow_cracked_brick_wall_stonecutter"));
+            BrickBlocks.YELLOW_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.YELLOW_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.YELLOW_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("yellow_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_LIME), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIME_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIME))
-            .save(consumer, coloredbricks.getId("lime_cracked_brick_wall_stonecutter"));
+            BrickBlocks.LIME_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.LIME_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.LIME_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("lime_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_GREEN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GREEN_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_GREEN))
-            .save(consumer, coloredbricks.getId("green_cracked_brick_wall_stonecutter"));
+            BrickBlocks.GREEN_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.GREEN_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.GREEN_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("green_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_BLUE_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE))
-            .save(consumer, coloredbricks.getId("light_blue_cracked_brick_wall_stonecutter"));
+            BrickBlocks.LIGHT_BLUE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.LIGHT_BLUE_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_BLUE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_blue_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_CYAN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CYAN_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_CYAN))
-            .save(consumer, coloredbricks.getId("cyan_cracked_brick_wall_stonecutter"));
+            BrickBlocks.CYAN_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.CYAN_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.CYAN_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("cyan_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLUE_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BLUE))
-            .save(consumer, coloredbricks.getId("blue_cracked_brick_wall_stonecutter"));
+            BrickBlocks.BLUE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.BLUE_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.BLUE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("blue_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_MAGENTA), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.MAGENTA_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_MAGENTA))
-            .save(consumer, coloredbricks.getId("magenta_cracked_brick_wall_stonecutter"));
+            BrickBlocks.MAGENTA_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.MAGENTA_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.MAGENTA_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("magenta_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_PURPLE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PURPLE_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_PURPLE))
-            .save(consumer, coloredbricks.getId("purple_cracked_brick_wall_stonecutter"));
+            BrickBlocks.PURPLE_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.PURPLE_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.PURPLE_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("purple_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_BROWN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BROWN_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BROWN))
-            .save(consumer, coloredbricks.getId("brown_cracked_brick_wall_stonecutter"));
+            BrickBlocks.BROWN_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.BROWN_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.BROWN_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("brown_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_GRAY_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY))
-            .save(consumer, coloredbricks.getId("light_gray_cracked_brick_wall_stonecutter"));
+            BrickBlocks.LIGHT_GRAY_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.LIGHT_GRAY_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.LIGHT_GRAY_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_gray_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GRAY_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_GRAY))
-            .save(consumer, coloredbricks.getId("gray_cracked_brick_wall_stonecutter"));
+            BrickBlocks.GRAY_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.GRAY_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.GRAY_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("gray_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_BLACK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLACK_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BLACK))
-            .save(consumer, coloredbricks.getId("black_cracked_brick_wall_stonecutter"));
+            BrickBlocks.BLACK_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.BLACK_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.BLACK_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("black_cracked_brick_wall_stonecutter").toString());
                     
         SingleItemRecipeBuilder.stonecutting(Ingredient.of(
-            ModTags.Items.BRICKS_CRACKED_RED), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.RED_CRACKED_BRICK_WALL.get())
-            .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_RED))
-            .save(consumer, coloredbricks.getId("red_cracked_brick_wall_stonecutter"));
+            BrickBlocks.RED_CRACKED_BRICKS.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.RED_CRACKED_BRICK_WALL.get())
+            .unlockedBy("has item", has(BrickBlocks.RED_CRACKED_BRICKS.get().asItem()))
+            .save(consumer, coloredbricks.getId("red_cracked_brick_wall_stonecutter").toString());
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
             Blocks.BRICK_WALL.asItem()), RecipeCategory.BUILDING_BLOCKS, 
-            ModBlocks.CRACKED_BRICK_WALL.get(),
+            BrickWallBlocks.CRACKED_BRICK_WALL.get(),
             0.1f, 200)
             .unlockedBy("has item", has(Blocks.BRICK_WALL.asItem()))
-            .save(consumer, coloredbricks.getId("cracked_brick_wall_furnace"));
+            .save(consumer, coloredbricks.getId("cracked_brick_wall_furnace").toString());
 
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_WHITE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.WHITE_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.WHITE_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.WHITE_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_WHITE))
-            .save(consumer, coloredbricks.getId("white_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.WHITE_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("white_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_ORANGE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.ORANGE_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.ORANGE_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.ORANGE_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_ORANGE))
-            .save(consumer, coloredbricks.getId("orange_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.ORANGE_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("orange_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_PINK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PINK_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.PINK_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.PINK_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_PINK))
-            .save(consumer, coloredbricks.getId("pink_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.PINK_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("pink_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_YELLOW), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.YELLOW_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.YELLOW_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.YELLOW_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_YELLOW))
-            .save(consumer, coloredbricks.getId("yellow_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.YELLOW_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("yellow_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_LIME), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIME_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.LIME_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.LIME_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_LIME))
-            .save(consumer, coloredbricks.getId("lime_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.LIME_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("lime_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_GREEN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GREEN_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.GREEN_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.GREEN_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_GREEN))
-            .save(consumer, coloredbricks.getId("green_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.GREEN_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("green_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_LIGHT_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_BLUE_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.LIGHT_BLUE_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.LIGHT_BLUE_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_LIGHT_BLUE))
-            .save(consumer, coloredbricks.getId("light_blue_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.LIGHT_BLUE_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_blue_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_CYAN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.CYAN_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.CYAN_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.CYAN_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CYAN))
-            .save(consumer, coloredbricks.getId("cyan_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.CYAN_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("cyan_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_BLUE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLUE_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.BLUE_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.BLUE_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_BLUE))
-            .save(consumer, coloredbricks.getId("blue_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.BLUE_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("blue_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_MAGENTA), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.MAGENTA_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.MAGENTA_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.MAGENTA_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_MAGENTA))
-            .save(consumer, coloredbricks.getId("magenta_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.MAGENTA_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("magenta_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_PURPLE), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.PURPLE_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.PURPLE_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.PURPLE_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_PURPLE))
-            .save(consumer, coloredbricks.getId("purple_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.PURPLE_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("purple_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_BROWN), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BROWN_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.BROWN_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.BROWN_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_BROWN))
-            .save(consumer, coloredbricks.getId("brown_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.BROWN_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("brown_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_LIGHT_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.LIGHT_GRAY_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.LIGHT_GRAY_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.LIGHT_GRAY_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_LIGHT_GRAY))
-            .save(consumer, coloredbricks.getId("light_gray_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.LIGHT_GRAY_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("light_gray_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_GRAY), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.GRAY_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.GRAY_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.GRAY_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_GRAY))
-            .save(consumer, coloredbricks.getId("gray_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.GRAY_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("gray_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_BLACK), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.BLACK_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.BLACK_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.BLACK_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_BLACK))
-            .save(consumer, coloredbricks.getId("black_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.BLACK_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("black_cracked_brick_wall_furnace").toString());
             
         SimpleCookingRecipeBuilder.smelting(Ingredient.of(
-            ModTags.Items.BRICK_WALL_RED), RecipeCategory.BUILDING_BLOCKS,
-            ModBlocks.RED_CRACKED_BRICK_WALL.get(), 
+            BrickWallBlocks.RED_BRICK_WALL.get().asItem()), RecipeCategory.BUILDING_BLOCKS,
+            BrickWallBlocks.RED_CRACKED_BRICK_WALL.get(), 
             0.1f, 200)
-            .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_RED))
-            .save(consumer, coloredbricks.getId("red_cracked_brick_wall_furnace"));
+            .unlockedBy("has item", has(BrickWallBlocks.RED_BRICK_WALL.get().asItem()))
+            .save(consumer, coloredbricks.getId("red_cracked_brick_wall_furnace").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_WHITE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.WHITE_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.WHITE_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_ORANGE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.ORANGE_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.ORANGE_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_PINK)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.PINK_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.PINK_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_YELLOW)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.YELLOW_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.YELLOW_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_LIME)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.LIME_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.LIME_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_GREEN)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.GREEN_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.GREEN_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_LIGHT_BLUE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.LIGHT_BLUE_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.LIGHT_BLUE_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_CYAN)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.CYAN_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.CYAN_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_BLUE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.BLUE_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.BLUE_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_MAGENTA)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.MAGENTA_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.MAGENTA_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_PURPLE)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.PURPLE_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.PURPLE_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_BROWN)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.BROWN_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.BROWN_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_LIGHT_GRAY)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.LIGHT_GRAY_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.LIGHT_GRAY_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.GRAY_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
         .requires(Tags.Items.DYES_GRAY)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_BLACK)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.BLACK_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.BLACK_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
         
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CRACKED_BRICK_WALL.get())
-        .requires(ModTags.Items.BRICK_WALL_CRACKED)
-        .requires(Tags.Items.DYES_RED)
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WALL_CRACKED))
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.RED_CRACKED_BRICK_WALL.get())
+        .requires(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem())
+        .requires(Items.RED_DYE)
+        .unlockedBy("has item", has(BrickWallBlocks.CRACKED_BRICK_WALL.get().asItem()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED))
-        .save(consumer, coloredbricks.getId("cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("cracked_brick_wall_alt").toString());
         
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.WHITE_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_WHITE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.WHITE_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.WHITE_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_WHITE))
-        .save(consumer, coloredbricks.getId("white_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.WHITE_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("white_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.ORANGE_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_ORANGE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.ORANGE_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.ORANGE_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_ORANGE))
-        .save(consumer, coloredbricks.getId("orange_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.ORANGE_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("orange_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PINK_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_PINK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.PINK_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.PINK_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_PINK))
-        .save(consumer, coloredbricks.getId("pink_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.PINK_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("pink_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.YELLOW_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_YELLOW)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.YELLOW_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.YELLOW_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_YELLOW))
-        .save(consumer, coloredbricks.getId("yellow_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.YELLOW_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("yellow_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIME_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_LIME)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.LIME_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.LIME_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIME))
-        .save(consumer, coloredbricks.getId("lime_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIME_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("lime_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GREEN_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_GREEN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.GREEN_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.GREEN_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_GREEN))
-        .save(consumer, coloredbricks.getId("green_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.GREEN_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("green_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_BLUE_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.LIGHT_BLUE_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.LIGHT_BLUE_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIGHT_BLUE))
-        .save(consumer, coloredbricks.getId("light_blue_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIGHT_BLUE_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("light_blue_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.CYAN_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_CYAN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.CYAN_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.CYAN_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_CYAN))
-        .save(consumer, coloredbricks.getId("cyan_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.CYAN_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("cyan_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLUE_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.BLUE_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.BLUE_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BLUE))
-        .save(consumer, coloredbricks.getId("blue_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BLUE_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("blue_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.MAGENTA_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_MAGENTA)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.MAGENTA_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.MAGENTA_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_MAGENTA))
-        .save(consumer, coloredbricks.getId("magenta_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.MAGENTA_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("magenta_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.PURPLE_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_PURPLE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.PURPLE_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.PURPLE_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_PURPLE))
-        .save(consumer, coloredbricks.getId("purple_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.PURPLE_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("purple_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BROWN_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_BROWN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.BROWN_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.BROWN_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BROWN))
-        .save(consumer, coloredbricks.getId("brown_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BROWN_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("brown_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.LIGHT_GRAY_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.LIGHT_GRAY_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.LIGHT_GRAY_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_LIGHT_GRAY))
-        .save(consumer, coloredbricks.getId("light_gray_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.LIGHT_GRAY_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("light_gray_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.GRAY_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.GRAY_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.GRAY_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_GRAY))
-        .save(consumer, coloredbricks.getId("gray_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.GRAY_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("gray_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_BLACK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.BLACK_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.BLACK_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_BLACK))
-        .save(consumer, coloredbricks.getId("black_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.BLACK_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("black_cracked_brick_wall_alt").toString());
                 
-        ShapedRecipeBuilder.shaped(RecipeCategory.BUILDING_BLOCKS, ModBlocks.RED_CRACKED_BRICK_WALL.get(), 6)
-        .define('#', ModTags.Items.BRICKS_CRACKED_RED)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.BUILDING_BLOCKS, BrickWallBlocks.RED_CRACKED_BRICK_WALL.get(), 6)
+        .define('#', BrickBlocks.RED_CRACKED_BRICKS.get().asItem())
         .pattern("###")
         .pattern("###")
-        .unlockedBy("has item", has(ModTags.Items.BRICKS_CRACKED_RED))
-        .save(consumer, coloredbricks.getId("red_cracked_brick_wall_alt"));
+        .unlockedBy("has item", has(BrickBlocks.RED_CRACKED_BRICKS.get().asItem()))
+        .save(consumer, coloredbricks.getId("red_cracked_brick_wall_alt").toString());
 
         // Pots
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.WHITE_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_WHITE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.WHITE_FLOWER_POT.get())
+        .define('#', ModItems.WHITE_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_WHITE))
+        .unlockedBy("has item", has(ModItems.WHITE_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.ORANGE_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_ORANGE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.ORANGE_FLOWER_POT.get())
+        .define('#', ModItems.ORANGE_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_ORANGE))
+        .unlockedBy("has item", has(ModItems.ORANGE_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.PINK_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_PINK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.PINK_FLOWER_POT.get())
+        .define('#', ModItems.PINK_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_PINK))
+        .unlockedBy("has item", has(ModItems.PINK_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.YELLOW_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_YELLOW)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.YELLOW_FLOWER_POT.get())
+        .define('#', ModItems.YELLOW_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_YELLOW))
+        .unlockedBy("has item", has(ModItems.YELLOW_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.LIME_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_LIME)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.LIME_FLOWER_POT.get())
+        .define('#', ModItems.LIME_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_LIME))
+        .unlockedBy("has item", has(ModItems.LIME_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GREEN_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_GREEN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.GREEN_FLOWER_POT.get())
+        .define('#', ModItems.GREEN_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_GREEN))
+        .unlockedBy("has item", has(ModItems.GREEN_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.LIGHT_BLUE_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_LIGHT_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.LIGHT_BLUE_FLOWER_POT.get())
+        .define('#', ModItems.LIGHT_BLUE_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_LIGHT_BLUE))
+        .unlockedBy("has item", has(ModItems.LIGHT_BLUE_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.CYAN_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_CYAN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.CYAN_FLOWER_POT.get())
+        .define('#', ModItems.CYAN_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_CYAN))
+        .unlockedBy("has item", has(ModItems.CYAN_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BLUE_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_BLUE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.BLUE_FLOWER_POT.get())
+        .define('#', ModItems.BLUE_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_BLUE))
+        .unlockedBy("has item", has(ModItems.BLUE_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.MAGENTA_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_MAGENTA)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.MAGENTA_FLOWER_POT.get())
+        .define('#', ModItems.MAGENTA_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_MAGENTA))
+        .unlockedBy("has item", has(ModItems.MAGENTA_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.PURPLE_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_PURPLE)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.PURPLE_FLOWER_POT.get())
+        .define('#', ModItems.PURPLE_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_PURPLE))
+        .unlockedBy("has item", has(ModItems.PURPLE_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BROWN_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_BROWN)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.BROWN_FLOWER_POT.get())
+        .define('#', ModItems.BROWN_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_BROWN))
+        .unlockedBy("has item", has(ModItems.BROWN_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.LIGHT_GRAY_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_LIGHT_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.LIGHT_GRAY_FLOWER_POT.get())
+        .define('#', ModItems.LIGHT_GRAY_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_LIGHT_GRAY))
+        .unlockedBy("has item", has(ModItems.LIGHT_GRAY_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.GRAY_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_GRAY)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.GRAY_FLOWER_POT.get())
+        .define('#', ModItems.GRAY_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_GRAY))
+        .unlockedBy("has item", has(ModItems.GRAY_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.BLACK_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_BLACK)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.BLACK_FLOWER_POT.get())
+        .define('#', ModItems.BLACK_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_BLACK))
+        .unlockedBy("has item", has(ModItems.BLACK_BRICK.get()))
         .save(consumer);
 
-        ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.RED_FLOWER_POT.get())
-        .define('#', ModTags.Items.BRICK_RED)
+        ShapedRecipeBuilder.shaped(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.RED_FLOWER_POT.get())
+        .define('#', ModItems.RED_BRICK.get())
         .pattern("# #")
         .pattern(" # ")
-        .unlockedBy("has item", has(ModTags.Items.BRICK_RED))
+        .unlockedBy("has item", has(ModItems.RED_BRICK.get()))
         .save(consumer);
 
         // Pot Dye Recipes
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.WHITE_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.WHITE_FLOWER_POT.get())
         .requires(Items.WHITE_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.WHITE_DYE))
-        .save(consumer, coloredbricks.getId("dye_white_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_white_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.ORANGE_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.ORANGE_FLOWER_POT.get())
         .requires(Items.ORANGE_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.ORANGE_DYE))
-        .save(consumer, coloredbricks.getId("dye_orange_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_orange_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.PINK_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.PINK_FLOWER_POT.get())
         .requires(Items.PINK_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.PINK_DYE))
-        .save(consumer, coloredbricks.getId("dye_pink_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_pink_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.YELLOW_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.YELLOW_FLOWER_POT.get())
         .requires(Items.YELLOW_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.YELLOW_DYE))
-        .save(consumer, coloredbricks.getId("dye_yellow_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_yellow_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.LIME_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.LIME_FLOWER_POT.get())
         .requires(Items.LIME_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.LIME_DYE))
-        .save(consumer, coloredbricks.getId("dye_lime_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_lime_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.GREEN_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.GREEN_FLOWER_POT.get())
         .requires(Items.GREEN_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.GREEN_DYE))
-        .save(consumer, coloredbricks.getId("dye_green_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_green_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.LIGHT_BLUE_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.LIGHT_BLUE_FLOWER_POT.get())
         .requires(Items.LIGHT_BLUE_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.LIGHT_BLUE_DYE))
-        .save(consumer, coloredbricks.getId("dye_light_blue_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_light_blue_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.CYAN_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.CYAN_FLOWER_POT.get())
         .requires(Items.CYAN_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.CYAN_DYE))
-        .save(consumer, coloredbricks.getId("dye_cyan_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_cyan_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.BLUE_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.BLUE_FLOWER_POT.get())
         .requires(Items.BLUE_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.BLUE_DYE))
-        .save(consumer, coloredbricks.getId("dye_blue_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_blue_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.MAGENTA_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.MAGENTA_FLOWER_POT.get())
         .requires(Items.MAGENTA_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.MAGENTA_DYE))
-        .save(consumer, coloredbricks.getId("dye_magenta_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_magenta_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.PURPLE_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.PURPLE_FLOWER_POT.get())
         .requires(Items.PURPLE_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.PURPLE_DYE))
-        .save(consumer, coloredbricks.getId("dye_purple_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_purple_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.BROWN_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.BROWN_FLOWER_POT.get())
         .requires(Items.BROWN_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.BROWN_DYE))
-        .save(consumer, coloredbricks.getId("dye_brown_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_brown_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.LIGHT_GRAY_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.LIGHT_GRAY_FLOWER_POT.get())
         .requires(Items.LIGHT_GRAY_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.LIGHT_GRAY_DYE))
-        .save(consumer, coloredbricks.getId("dye_light_gray_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_light_gray_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.GRAY_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.GRAY_FLOWER_POT.get())
         .requires(Items.GRAY_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.GRAY_DYE))
-        .save(consumer, coloredbricks.getId("dye_gray_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_gray_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.BLACK_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.BLACK_FLOWER_POT.get())
         .requires(Items.BLACK_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.BLACK_DYE))
-        .save(consumer, coloredbricks.getId("dye_black_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_black_flower_pot").toString());
 
-        ShapelessRecipeBuilder.shapeless(RecipeCategory.DECORATIONS, ModBlocks.RED_FLOWER_POT.get())
+        ShapelessRecipeBuilder.shapeless(items, RecipeCategory.DECORATIONS, ColoredFlowerPots.RED_FLOWER_POT.get())
         .requires(Items.RED_DYE)
         .requires(Items.FLOWER_POT)
         .unlockedBy("has item", has(Items.RED_DYE))
-        .save(consumer, coloredbricks.getId("dye_red_flower_pot"));
+        .save(consumer, coloredbricks.getId("dye_red_flower_pot").toString());
+    }
+
+    public static class Runner extends RecipeProvider.Runner {
+        public Runner(PackOutput packOutput, CompletableFuture<HolderLookup.Provider> lookupProvider) {
+            super(packOutput, lookupProvider);
+        }
+
+        @Override
+        protected RecipeProvider createRecipeProvider(HolderLookup.Provider provider, RecipeOutput output) {
+            return new ModRecipesProvider(provider, output);
+        }
+
+        @Override
+        public String getName() {
+            return "Colored Bricks Mod Recipes Provider";
+        }
     }
 }

@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "item": "minecraft:brick_stairs"
-  },
+  "ingredient": "minecraft:brick_stairs",
   "result": {
     "id": "coloredbricks:cracked_brick_stairs"
   }

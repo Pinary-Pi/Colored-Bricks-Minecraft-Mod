@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "tag": "forge:stone/cyan_slab"
-  },
+  "ingredient": "coloredbricks:cyan_brick_slab",
   "result": {
     "id": "coloredbricks:cyan_cracked_brick_slab"
   }

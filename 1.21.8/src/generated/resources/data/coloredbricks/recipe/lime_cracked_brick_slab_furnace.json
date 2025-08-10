@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "tag": "forge:stone/lime_slab"
-  },
+  "ingredient": "coloredbricks:lime_brick_slab",
   "result": {
     "id": "coloredbricks:lime_cracked_brick_slab"
   }

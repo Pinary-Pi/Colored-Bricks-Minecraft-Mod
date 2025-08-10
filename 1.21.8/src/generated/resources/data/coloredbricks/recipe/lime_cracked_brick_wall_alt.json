@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "tag": "forge:stone/lime_cracked_block"
-    }
+    "#": "coloredbricks:lime_cracked_bricks"
   },
   "pattern": [
     "###",

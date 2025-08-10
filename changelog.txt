@@ -226,3 +226,8 @@ Fixed Recipes for FORGE 1.20-1.21
 Add block to Color Blocks Tab in the Creative Menu for 1.20-1.21
 
 Supports Czech and Russian now!
+
+=====
+Version 1.21.8-5.2
+
+Colored Bricks now supports MC Version 1.21.8 (On Forge, Fabric coming soon)

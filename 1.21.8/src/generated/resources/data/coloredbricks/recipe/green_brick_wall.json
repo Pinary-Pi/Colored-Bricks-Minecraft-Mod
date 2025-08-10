@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "minecraft:brick_wall"
-    },
-    {
-      "tag": "forge:dyes/green"
-    }
+    "minecraft:brick_wall",
+    "minecraft:green_dye"
   ],
   "result": {
     "count": 1,

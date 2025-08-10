@@ -3,6 +3,10 @@
     {
       "id": "coloredbricks:lime_cracked_brick_slab",
       "required": false
+    },
+    {
+      "id": "coloredbricks:lime_cracked_brick_stairs",
+      "required": false
     }
   ]
 }

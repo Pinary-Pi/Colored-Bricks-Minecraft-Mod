@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "building",
   "ingredients": [
-    {
-      "item": "minecraft:brick_wall"
-    },
-    {
-      "tag": "forge:dyes/black"
-    }
+    "minecraft:brick_wall",
+    "minecraft:black_dye"
   ],
   "result": {
     "count": 1,

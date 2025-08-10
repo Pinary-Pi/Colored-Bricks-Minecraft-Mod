@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "tag": "forge:stone/pink_slab"
-  },
+  "ingredient": "coloredbricks:pink_brick_slab",
   "result": {
     "id": "coloredbricks:pink_cracked_brick_slab"
   }

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "tag": "forge:stone/gray_item"
-    }
+    "#": "coloredbricks:gray_brick"
   },
   "pattern": [
     "# #",

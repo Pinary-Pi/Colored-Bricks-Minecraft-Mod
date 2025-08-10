@@ -5,6 +5,7 @@ bin
 .metadata
 .classpath
 .project
+.eclipse
 
 # idea
 out
@@ -18,10 +19,10 @@ build
 .gradle
 
 # other
-eclipse
 run
 run-data
 .vscode
+python
 
 # Files from Forge MDK
 forge*changelog.txt

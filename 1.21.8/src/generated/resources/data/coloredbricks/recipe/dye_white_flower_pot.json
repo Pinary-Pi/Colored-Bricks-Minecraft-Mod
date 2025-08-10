@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:white_dye"
-    },
-    {
-      "item": "minecraft:flower_pot"
-    }
+    "minecraft:white_dye",
+    "minecraft:flower_pot"
   ],
   "result": {
     "count": 1,

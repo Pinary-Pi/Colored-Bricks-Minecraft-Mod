@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "tag": "forge:stone/white_slab"
-    }
+    "#": "coloredbricks:white_brick_slab"
   },
   "pattern": [
     "#",

@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#forge:stone/orange_stairs"
+            "items": "coloredbricks:orange_brick_stairs"
           }
         ]
       },

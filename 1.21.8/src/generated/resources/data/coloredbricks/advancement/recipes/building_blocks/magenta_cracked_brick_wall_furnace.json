@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#forge:stone/magenta_wall"
+            "items": "coloredbricks:magenta_brick_wall"
           }
         ]
       },

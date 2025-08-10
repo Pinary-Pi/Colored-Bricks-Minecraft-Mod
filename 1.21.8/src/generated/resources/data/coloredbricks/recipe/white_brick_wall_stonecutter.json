@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "tag": "forge:stone/white_block"
-  },
+  "ingredient": "coloredbricks:white_bricks",
   "result": {
     "count": 1,
     "id": "coloredbricks:white_brick_wall"

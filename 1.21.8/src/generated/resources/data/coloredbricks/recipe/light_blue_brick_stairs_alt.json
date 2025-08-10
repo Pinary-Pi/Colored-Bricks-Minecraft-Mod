@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "tag": "forge:stone/light_blue_block"
-    }
+    "#": "coloredbricks:light_blue_bricks"
   },
   "pattern": [
     "#  ",

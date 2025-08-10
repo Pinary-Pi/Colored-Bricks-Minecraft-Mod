@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "tag": "forge:stone/yellow_cracked_block"
-    }
+    "#": "coloredbricks:yellow_cracked_bricks"
   },
   "pattern": [
     "###",

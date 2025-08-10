@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "tag": "forge:stone/orange_cracked_block"
-    }
+    "#": "coloredbricks:orange_cracked_bricks"
   },
   "pattern": [
     "###",

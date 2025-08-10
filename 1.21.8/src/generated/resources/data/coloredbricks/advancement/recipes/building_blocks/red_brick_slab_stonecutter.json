@@ -5,7 +5,7 @@
       "conditions": {
         "items": [
           {
-            "items": "#forge:stone/red_block"
+            "items": "coloredbricks:red_bricks"
           }
         ]
       },

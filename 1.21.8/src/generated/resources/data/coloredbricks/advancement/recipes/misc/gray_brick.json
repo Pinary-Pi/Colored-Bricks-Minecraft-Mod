@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has item": {
+    "has_brick": {
       "conditions": {
         "items": [
           {
-            "items": "#forge:ingots/brick"
+            "items": "minecraft:brick"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has item"
+      "has_brick"
     ]
   ],
   "rewards": {

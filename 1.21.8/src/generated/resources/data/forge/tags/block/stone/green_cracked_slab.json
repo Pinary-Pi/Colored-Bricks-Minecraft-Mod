@@ -3,6 +3,10 @@
     {
       "id": "coloredbricks:green_cracked_brick_slab",
       "required": false
+    },
+    {
+      "id": "coloredbricks:green_cracked_brick_stairs",
+      "required": false
     }
   ]
 }
