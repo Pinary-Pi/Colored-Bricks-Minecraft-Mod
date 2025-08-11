@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "coloredbricks:yellow_brick_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "has_yellow_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "coloredbricks:yellow_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_yellow_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "coloredbricks:yellow_brick_stairs"
+    ]
+  }
+}

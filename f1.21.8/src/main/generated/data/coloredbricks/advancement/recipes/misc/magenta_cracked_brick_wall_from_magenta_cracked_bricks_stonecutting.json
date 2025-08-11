@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_magenta_cracked_bricks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "coloredbricks:magenta_cracked_bricks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "minecraft:magenta_cracked_brick_wall_from_magenta_cracked_bricks_stonecutting"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_magenta_cracked_bricks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "minecraft:magenta_cracked_brick_wall_from_magenta_cracked_bricks_stonecutting"
+    ]
+  }
+}

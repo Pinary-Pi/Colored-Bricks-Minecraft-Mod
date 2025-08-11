@@ -1,0 +1,6 @@
+{
+  "parent": "coloredbricks:block/purple_flower_pot_cross",
+  "textures": {
+    "plant": "minecraft:block/dandelion"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "coloredbricks:cyan_cracked_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "coloredbricks:cyan_cracked_brick_wall"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+    "item": "coloredbricks:pink_bricks"
+  },
+  "result": {
+    "count": 1,
+    "id": "coloredbricks:pink_chiseled_bricks"
+  }
+}

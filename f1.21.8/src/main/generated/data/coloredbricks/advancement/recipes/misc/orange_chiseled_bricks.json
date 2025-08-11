@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_orange_brick_slab": {
+      "conditions": {
+        "items": [
+          {
+            "items": "coloredbricks:orange_brick_slab"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "coloredbricks:orange_chiseled_bricks"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_orange_brick_slab"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "coloredbricks:orange_chiseled_bricks"
+    ]
+  }
+}

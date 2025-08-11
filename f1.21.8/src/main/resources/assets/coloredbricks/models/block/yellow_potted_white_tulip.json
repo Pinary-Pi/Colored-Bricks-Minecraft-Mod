@@ -1,0 +1,6 @@
+{
+  "parent": "coloredbricks:block/yellow_flower_pot_cross",
+  "textures": {
+    "plant": "minecraft:block/white_tulip"
+  }
+}
