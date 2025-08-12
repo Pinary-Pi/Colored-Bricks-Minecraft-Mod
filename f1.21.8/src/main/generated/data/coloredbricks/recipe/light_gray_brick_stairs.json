@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "coloredbricks:light_gray_bricks"
-    }
+    "#": "coloredbricks:light_gray_bricks"
   },
   "pattern": [
     "#  ",

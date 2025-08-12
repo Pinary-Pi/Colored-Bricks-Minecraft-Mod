@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:light_gray_dye"
-    },
-    {
-      "item": "coloredbricks:cracked_bricks"
-    }
+    "minecraft:light_gray_dye",
+    "coloredbricks:cracked_bricks"
   ],
   "result": {
     "count": 1,

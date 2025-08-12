@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:cyan_dye"
-    },
-    {
-      "item": "minecraft:brick_slab"
-    }
+    "minecraft:cyan_dye",
+    "minecraft:brick_slab"
   ],
   "result": {
     "count": 1,

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:red_dye"
-    },
-    {
-      "item": "minecraft:brick"
-    }
+    "minecraft:red_dye",
+    "minecraft:brick"
   ],
   "result": {
     "count": 1,

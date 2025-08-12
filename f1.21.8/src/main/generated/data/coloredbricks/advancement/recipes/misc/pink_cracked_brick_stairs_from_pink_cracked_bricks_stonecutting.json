@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:pink_cracked_brick_stairs_from_pink_cracked_bricks_stonecutting"
+        "recipe": "coloredbricks:pink_cracked_brick_stairs_from_pink_cracked_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:pink_cracked_brick_stairs_from_pink_cracked_bricks_stonecutting"
+      "coloredbricks:pink_cracked_brick_stairs_from_pink_cracked_bricks_stonecutting"
     ]
   }
 }

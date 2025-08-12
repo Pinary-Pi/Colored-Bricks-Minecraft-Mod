@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:yellow_dye"
-    },
-    {
-      "item": "minecraft:bricks"
-    }
+    "minecraft:yellow_dye",
+    "minecraft:bricks"
   ],
   "result": {
     "count": 1,

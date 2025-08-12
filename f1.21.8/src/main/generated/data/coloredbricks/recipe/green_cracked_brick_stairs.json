@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "building",
   "key": {
-    "#": {
-      "item": "coloredbricks:green_cracked_bricks"
-    }
+    "#": "coloredbricks:green_cracked_bricks"
   },
   "pattern": [
     "#  ",

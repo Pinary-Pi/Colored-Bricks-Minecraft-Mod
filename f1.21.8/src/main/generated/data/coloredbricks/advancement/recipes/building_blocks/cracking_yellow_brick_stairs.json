@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cracking_yellow_brick_stairs"
+        "recipe": "coloredbricks:cracking_yellow_brick_stairs"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cracking_yellow_brick_stairs"
+      "coloredbricks:cracking_yellow_brick_stairs"
     ]
   }
 }

@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:magenta_dye"
-    },
-    {
-      "item": "coloredbricks:chiseled_bricks"
-    }
+    "minecraft:magenta_dye",
+    "coloredbricks:chiseled_bricks"
   ],
   "result": {
     "count": 1,

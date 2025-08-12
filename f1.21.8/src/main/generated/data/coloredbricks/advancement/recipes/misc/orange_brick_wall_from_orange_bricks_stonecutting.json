@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:orange_brick_wall_from_orange_bricks_stonecutting"
+        "recipe": "coloredbricks:orange_brick_wall_from_orange_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:orange_brick_wall_from_orange_bricks_stonecutting"
+      "coloredbricks:orange_brick_wall_from_orange_bricks_stonecutting"
     ]
   }
 }

@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "item": "coloredbricks:magenta_brick_slab"
-  },
+  "ingredient": "coloredbricks:magenta_brick_slab",
   "result": {
     "id": "coloredbricks:magenta_cracked_brick_slab"
   }

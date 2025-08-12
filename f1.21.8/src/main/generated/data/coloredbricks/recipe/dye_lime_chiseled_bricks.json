@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:lime_dye"
-    },
-    {
-      "item": "coloredbricks:chiseled_bricks"
-    }
+    "minecraft:lime_dye",
+    "coloredbricks:chiseled_bricks"
   ],
   "result": {
     "count": 1,

@@ -2,9 +2,7 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "#": {
-      "item": "coloredbricks:yellow_brick"
-    }
+    "#": "coloredbricks:yellow_brick"
   },
   "pattern": [
     "##",

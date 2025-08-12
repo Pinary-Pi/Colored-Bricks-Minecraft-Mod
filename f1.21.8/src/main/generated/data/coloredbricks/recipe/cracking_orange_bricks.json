@@ -3,9 +3,7 @@
   "category": "blocks",
   "cookingtime": 200,
   "experience": 0.1,
-  "ingredient": {
-    "item": "coloredbricks:orange_bricks"
-  },
+  "ingredient": "coloredbricks:orange_bricks",
   "result": {
     "id": "coloredbricks:orange_cracked_bricks"
   }

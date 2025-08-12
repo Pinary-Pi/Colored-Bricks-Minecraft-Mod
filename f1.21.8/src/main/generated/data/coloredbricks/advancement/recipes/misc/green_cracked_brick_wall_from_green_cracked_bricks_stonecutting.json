@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:green_cracked_brick_wall_from_green_cracked_bricks_stonecutting"
+        "recipe": "coloredbricks:green_cracked_brick_wall_from_green_cracked_bricks_stonecutting"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:green_cracked_brick_wall_from_green_cracked_bricks_stonecutting"
+      "coloredbricks:green_cracked_brick_wall_from_green_cracked_bricks_stonecutting"
     ]
   }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cracking_pink_bricks"
+        "recipe": "coloredbricks:cracking_pink_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cracking_pink_bricks"
+      "coloredbricks:cracking_pink_bricks"
     ]
   }
 }

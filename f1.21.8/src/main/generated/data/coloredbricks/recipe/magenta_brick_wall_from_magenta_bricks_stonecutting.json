@@ -1,8 +1,6 @@
 {
   "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "coloredbricks:magenta_bricks"
-  },
+  "ingredient": "coloredbricks:magenta_bricks",
   "result": {
     "count": 1,
     "id": "coloredbricks:magenta_brick_wall"

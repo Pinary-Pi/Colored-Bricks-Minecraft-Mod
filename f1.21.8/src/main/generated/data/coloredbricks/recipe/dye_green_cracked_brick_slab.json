@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:green_dye"
-    },
-    {
-      "item": "coloredbricks:cracked_brick_slab"
-    }
+    "minecraft:green_dye",
+    "coloredbricks:cracked_brick_slab"
   ],
   "result": {
     "count": 1,

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:dye_magenta_brick_slab"
+        "recipe": "coloredbricks:dye_magenta_brick_slab"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:dye_magenta_brick_slab"
+      "coloredbricks:dye_magenta_brick_slab"
     ]
   }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cracking_cyan_bricks"
+        "recipe": "coloredbricks:cracking_cyan_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cracking_cyan_bricks"
+      "coloredbricks:cracking_cyan_bricks"
     ]
   }
 }

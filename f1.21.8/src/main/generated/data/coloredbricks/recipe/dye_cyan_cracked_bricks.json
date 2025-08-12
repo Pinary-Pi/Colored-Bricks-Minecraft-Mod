@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:cyan_dye"
-    },
-    {
-      "item": "coloredbricks:cracked_bricks"
-    }
+    "minecraft:cyan_dye",
+    "coloredbricks:cracked_bricks"
   ],
   "result": {
     "count": 1,

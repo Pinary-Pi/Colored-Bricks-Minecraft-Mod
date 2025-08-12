@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:green_dye"
-    },
-    {
-      "item": "minecraft:brick_wall"
-    }
+    "minecraft:green_dye",
+    "minecraft:brick_wall"
   ],
   "result": {
     "count": 1,

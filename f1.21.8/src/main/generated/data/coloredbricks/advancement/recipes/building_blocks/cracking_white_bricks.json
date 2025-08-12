@@ -3,7 +3,7 @@
   "criteria": {
     "has_the_recipe": {
       "conditions": {
-        "recipe": "minecraft:cracking_white_bricks"
+        "recipe": "coloredbricks:cracking_white_bricks"
       },
       "trigger": "minecraft:recipe_unlocked"
     },
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "minecraft:cracking_white_bricks"
+      "coloredbricks:cracking_white_bricks"
     ]
   }
 }

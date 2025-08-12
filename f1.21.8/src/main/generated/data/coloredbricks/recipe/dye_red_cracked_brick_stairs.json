@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:red_dye"
-    },
-    {
-      "item": "coloredbricks:cracked_brick_stairs"
-    }
+    "minecraft:red_dye",
+    "coloredbricks:cracked_brick_stairs"
   ],
   "result": {
     "count": 1,

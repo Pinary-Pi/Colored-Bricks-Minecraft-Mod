@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:brown_dye"
-    },
-    {
-      "item": "minecraft:bricks"
-    }
+    "minecraft:brown_dye",
+    "minecraft:bricks"
   ],
   "result": {
     "count": 1,
