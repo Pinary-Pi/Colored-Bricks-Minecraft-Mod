@@ -231,3 +231,8 @@ Supports Czech and Russian now!
 Version 1.21.8-5.2
 
 Colored Bricks now supports MC Version 1.21.8 (On Forge, Fabric coming soon)
+
+=====
+Version f1.21.8-5.2
+
+Colored Bricks now supports MC Versions 1.21.8 on Fabric!
