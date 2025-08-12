@@ -1,11 +1,11 @@
 package net.pinary_pi.coloredbricks;
 
 import net.fabricmc.api.ClientModInitializer;
-import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.rendering.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.minecraft.block.Block;
 import net.minecraft.client.color.world.BiomeColors;
-import net.minecraft.client.render.RenderLayer;
+import net.minecraft.client.render.BlockRenderLayer;
 import net.minecraft.registry.Registries;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
@@ -19,31 +19,32 @@ public class ColoredBricksClient implements ClientModInitializer {
         ColoredBricks.LOGGER.info("Colored Bricks Client Setup");
 
         ColoredBricks.LOGGER.info("Render Blocks");
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.WHITE_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.ORANGE_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PINK_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.YELLOW_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LIME_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GREEN_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LIGHT_BLUE_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.CYAN_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLUE_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.MAGENTA_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.PURPLE_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BROWN_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.LIGHT_GRAY_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.GRAY_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.BLACK_FLOWER_POT, RenderLayer.getCutout());
-        BlockRenderLayerMap.INSTANCE.putBlock(ModBlocks.RED_FLOWER_POT, RenderLayer.getCutout());
+
+        BlockRenderLayerMap.putBlock(ModBlocks.WHITE_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.ORANGE_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.PINK_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.YELLOW_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.LIME_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.GREEN_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.LIGHT_BLUE_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.CYAN_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.BLUE_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.MAGENTA_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.PURPLE_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.BROWN_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.LIGHT_GRAY_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.GRAY_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.BLACK_FLOWER_POT, BlockRenderLayer.CUTOUT);
+        BlockRenderLayerMap.putBlock(ModBlocks.RED_FLOWER_POT, BlockRenderLayer.CUTOUT);
 
         for (PottedContent content : PottedContent.values()) {
             for (DyeColor dyeColor : DyeColor.values()) {
-                String color = dyeColor.getName();
+                String color = dyeColor.name().toLowerCase();
                 Block emptyPot = Registries.BLOCK.get(Identifier.of(ColoredBricks.MOD_ID, color + "_flower_pot"));
                 String potted_name = Registries.ITEM.getId(emptyPot.asItem()).getPath().replace("flower_pot", "potted_") + content.getFlowerName();
                 Block potted_block = Registries.BLOCK.get(Identifier.of(ColoredBricks.MOD_ID, potted_name));
                 // ColoredBricks.LOGGER.info(ColoredBricks.MOD_ID + ":" + potted_name);
-                BlockRenderLayerMap.INSTANCE.putBlock(potted_block, RenderLayer.getCutout());
+                BlockRenderLayerMap.putBlock(potted_block, BlockRenderLayer.CUTOUT);
             }
         }
 
